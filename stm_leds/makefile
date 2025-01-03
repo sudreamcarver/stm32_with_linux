@@ -145,8 +145,8 @@ clean:
 #######################################
 #flash
 #######################################
-flash: $(BUILD_DIR)/$(TARGET).bin
-	openocd -f interface/stlink.cfg -f target/stm32f1x.cfg -c init -c "reset halt; wait_halt; flash write_image $(BUILD_DIR)/$(TARGET).elf" -c reset -c shutdown
+flash: $(BUILD_DIR)/$(TARGET).hex
+	openocd -f /usr/share/openocd/scripts/interface/stlink-v2.cfg -f /usr/share/openocd/scripts/target/stm32f1x.cfg -c init -c "reset halt; wait_halt; flash write_image erase $(BUILD_DIR)/$(TARGET).hex" -c reset -c shutdown
 
 #######################################
 # dependencies

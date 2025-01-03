@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccIbaTNT.s 			page 1
+ARM GAS  /tmp/ccQtSmoz.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccIbaTNT.s 			page 1
   30:./Drivers/src/stm32f10x_pwr.c ****   * @brief PWR driver modules
   31:./Drivers/src/stm32f10x_pwr.c ****   * @{
   32:./Drivers/src/stm32f10x_pwr.c ****   */ 
-ARM GAS  /tmp/ccIbaTNT.s 			page 2
+ARM GAS  /tmp/ccQtSmoz.s 			page 2
 
 
   33:./Drivers/src/stm32f10x_pwr.c **** 
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccIbaTNT.s 			page 1
   87:./Drivers/src/stm32f10x_pwr.c ****   * @{
   88:./Drivers/src/stm32f10x_pwr.c ****   */
   89:./Drivers/src/stm32f10x_pwr.c **** 
-ARM GAS  /tmp/ccIbaTNT.s 			page 3
+ARM GAS  /tmp/ccQtSmoz.s 			page 3
 
 
   90:./Drivers/src/stm32f10x_pwr.c **** /**
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccIbaTNT.s 			page 1
   56              		.thumb_func
   58              	PWR_BackupAccessCmd:
   59              	.LVL2:
-ARM GAS  /tmp/ccIbaTNT.s 			page 4
+ARM GAS  /tmp/ccQtSmoz.s 			page 4
 
 
   60              	.LFB30:
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccIbaTNT.s 			page 1
   94              		@ link register save eliminated.
  138:./Drivers/src/stm32f10x_pwr.c ****   /* Check the parameters */
  139:./Drivers/src/stm32f10x_pwr.c ****   assert_param(IS_FUNCTIONAL_STATE(NewState));
-ARM GAS  /tmp/ccIbaTNT.s 			page 5
+ARM GAS  /tmp/ccQtSmoz.s 			page 5
 
 
   95              		.loc 1 139 3 view .LVU10
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccIbaTNT.s 			page 1
  128 0000 034A     		ldr	r2, .L10
  129 0002 1368     		ldr	r3, [r2]
  130              	.LVL5:
-ARM GAS  /tmp/ccIbaTNT.s 			page 6
+ARM GAS  /tmp/ccQtSmoz.s 			page 6
 
 
  163:./Drivers/src/stm32f10x_pwr.c ****   /* Clear PLS[7:5] bits */
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccIbaTNT.s 			page 1
  168              		.loc 1 181 34 is_stmt 0 view .LVU29
  169 0000 014B     		ldr	r3, .L13
  170 0002 C3F8A000 		str	r0, [r3, #160]
-ARM GAS  /tmp/ccIbaTNT.s 			page 7
+ARM GAS  /tmp/ccQtSmoz.s 			page 7
 
 
  182:./Drivers/src/stm32f10x_pwr.c **** }
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccIbaTNT.s 			page 1
  206:./Drivers/src/stm32f10x_pwr.c ****   tmpreg &= CR_DS_MASK;
  203              		.loc 1 206 3 is_stmt 1 view .LVU37
  204              		.loc 1 206 10 is_stmt 0 view .LVU38
-ARM GAS  /tmp/ccIbaTNT.s 			page 8
+ARM GAS  /tmp/ccQtSmoz.s 			page 8
 
 
  205 0004 23F00303 		bic	r3, r3, #3
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccIbaTNT.s 			page 1
   12:cmsis/core_cm3.h ****  * processor based microcontrollers.  This file can be freely distributed 
   13:cmsis/core_cm3.h ****  * within development tools that are supporting such ARM based processors. 
   14:cmsis/core_cm3.h ****  *
-ARM GAS  /tmp/ccIbaTNT.s 			page 9
+ARM GAS  /tmp/ccQtSmoz.s 			page 9
 
 
   15:cmsis/core_cm3.h ****  * @par
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccIbaTNT.s 			page 1
   69:cmsis/core_cm3.h **** /*lint -e751 */
   70:cmsis/core_cm3.h **** 
   71:cmsis/core_cm3.h **** 
-ARM GAS  /tmp/ccIbaTNT.s 			page 10
+ARM GAS  /tmp/ccQtSmoz.s 			page 10
 
 
   72:cmsis/core_cm3.h **** /** @addtogroup CMSIS_CM3_core_definitions CM3 Core Definitions
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccIbaTNT.s 			page 1
  126:cmsis/core_cm3.h **** 
  127:cmsis/core_cm3.h **** 
  128:cmsis/core_cm3.h **** /** @addtogroup CMSIS_CM3_NVIC CMSIS CM3 NVIC
-ARM GAS  /tmp/ccIbaTNT.s 			page 11
+ARM GAS  /tmp/ccQtSmoz.s 			page 11
 
 
  129:cmsis/core_cm3.h ****   memory mapped structure for Nested Vectored Interrupt Controller (NVIC)
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccIbaTNT.s 			page 1
  183:cmsis/core_cm3.h **** #define SCB_CPUID_VARIANT_Msk              (0xFul << SCB_CPUID_VARIANT_Pos)               /*!< SCB 
  184:cmsis/core_cm3.h **** 
  185:cmsis/core_cm3.h **** #define SCB_CPUID_PARTNO_Pos                4                                             /*!< SCB 
-ARM GAS  /tmp/ccIbaTNT.s 			page 12
+ARM GAS  /tmp/ccQtSmoz.s 			page 12
 
 
  186:cmsis/core_cm3.h **** #define SCB_CPUID_PARTNO_Msk               (0xFFFul << SCB_CPUID_PARTNO_Pos)              /*!< SCB 
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccIbaTNT.s 			page 1
  240:cmsis/core_cm3.h **** #define SCB_AIRCR_PRIGROUP_Msk             (7ul << SCB_AIRCR_PRIGROUP_Pos)                /*!< SCB 
  241:cmsis/core_cm3.h **** 
  242:cmsis/core_cm3.h **** #define SCB_AIRCR_SYSRESETREQ_Pos           2                                             /*!< SCB 
-ARM GAS  /tmp/ccIbaTNT.s 			page 13
+ARM GAS  /tmp/ccQtSmoz.s 			page 13
 
 
  243:cmsis/core_cm3.h **** #define SCB_AIRCR_SYSRESETREQ_Msk          (1ul << SCB_AIRCR_SYSRESETREQ_Pos)             /*!< SCB 
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccIbaTNT.s 			page 1
  297:cmsis/core_cm3.h **** #define SCB_SHCSR_MEMFAULTPENDED_Msk       (1ul << SCB_SHCSR_MEMFAULTPENDED_Pos)          /*!< SCB 
  298:cmsis/core_cm3.h **** 
  299:cmsis/core_cm3.h **** #define SCB_SHCSR_USGFAULTPENDED_Pos       12                                             /*!< SCB 
-ARM GAS  /tmp/ccIbaTNT.s 			page 14
+ARM GAS  /tmp/ccQtSmoz.s 			page 14
 
 
  300:cmsis/core_cm3.h **** #define SCB_SHCSR_USGFAULTPENDED_Msk       (1ul << SCB_SHCSR_USGFAULTPENDED_Pos)          /*!< SCB 
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccIbaTNT.s 			page 1
  354:cmsis/core_cm3.h **** #define SCB_DFSR_BKPT_Msk                  (1ul << SCB_DFSR_BKPT_Pos)                     /*!< SCB 
  355:cmsis/core_cm3.h **** 
  356:cmsis/core_cm3.h **** #define SCB_DFSR_HALTED_Pos                 0                                             /*!< SCB 
-ARM GAS  /tmp/ccIbaTNT.s 			page 15
+ARM GAS  /tmp/ccQtSmoz.s 			page 15
 
 
  357:cmsis/core_cm3.h **** #define SCB_DFSR_HALTED_Msk                (1ul << SCB_DFSR_HALTED_Pos)                   /*!< SCB 
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccIbaTNT.s 			page 1
  411:cmsis/core_cm3.h **** {
  412:cmsis/core_cm3.h ****   __O  union  
  413:cmsis/core_cm3.h ****   {
-ARM GAS  /tmp/ccIbaTNT.s 			page 16
+ARM GAS  /tmp/ccQtSmoz.s 			page 16
 
 
  414:cmsis/core_cm3.h ****     __O  uint8_t    u8;                       /*!< Offset:       ITM Stimulus Port 8-bit           
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccIbaTNT.s 			page 1
  468:cmsis/core_cm3.h **** 
  469:cmsis/core_cm3.h **** #define ITM_TCR_TSENA_Pos                   1                                             /*!< ITM 
  470:cmsis/core_cm3.h **** #define ITM_TCR_TSENA_Msk                  (1ul << ITM_TCR_TSENA_Pos)                     /*!< ITM 
-ARM GAS  /tmp/ccIbaTNT.s 			page 17
+ARM GAS  /tmp/ccQtSmoz.s 			page 17
 
 
  471:cmsis/core_cm3.h **** 
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccIbaTNT.s 			page 1
  525:cmsis/core_cm3.h **** #define InterruptType_ACTLR_DISMCYCINT_Pos  0                                             /*!< Inte
  526:cmsis/core_cm3.h **** #define InterruptType_ACTLR_DISMCYCINT_Msk (1ul << InterruptType_ACTLR_DISMCYCINT_Pos)    /*!< Inte
  527:cmsis/core_cm3.h **** /*@}*/ /* end of group CMSIS_CM3_InterruptType */
-ARM GAS  /tmp/ccIbaTNT.s 			page 18
+ARM GAS  /tmp/ccQtSmoz.s 			page 18
 
 
  528:cmsis/core_cm3.h **** 
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccIbaTNT.s 			page 1
  582:cmsis/core_cm3.h **** #define MPU_RBAR_REGION_Msk                (0xFul << MPU_RBAR_REGION_Pos)                 /*!< MPU 
  583:cmsis/core_cm3.h **** 
  584:cmsis/core_cm3.h **** /* MPU Region Attribute and Size Register */
-ARM GAS  /tmp/ccIbaTNT.s 			page 19
+ARM GAS  /tmp/ccQtSmoz.s 			page 19
 
 
  585:cmsis/core_cm3.h **** #define MPU_RASR_XN_Pos                    28                                             /*!< MPU 
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccIbaTNT.s 			page 1
  639:cmsis/core_cm3.h **** #define CoreDebug_DHCSR_S_LOCKUP_Msk       (1ul << CoreDebug_DHCSR_S_LOCKUP_Pos)          /*!< Core
  640:cmsis/core_cm3.h **** 
  641:cmsis/core_cm3.h **** #define CoreDebug_DHCSR_S_SLEEP_Pos        18                                             /*!< Core
-ARM GAS  /tmp/ccIbaTNT.s 			page 20
+ARM GAS  /tmp/ccQtSmoz.s 			page 20
 
 
  642:cmsis/core_cm3.h **** #define CoreDebug_DHCSR_S_SLEEP_Msk        (1ul << CoreDebug_DHCSR_S_SLEEP_Pos)           /*!< Core
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccIbaTNT.s 			page 1
  696:cmsis/core_cm3.h **** 
  697:cmsis/core_cm3.h **** #define CoreDebug_DEMCR_VC_STATERR_Pos      7                                             /*!< Core
  698:cmsis/core_cm3.h **** #define CoreDebug_DEMCR_VC_STATERR_Msk     (1ul << CoreDebug_DEMCR_VC_STATERR_Pos)        /*!< Core
-ARM GAS  /tmp/ccIbaTNT.s 			page 21
+ARM GAS  /tmp/ccQtSmoz.s 			page 21
 
 
  699:cmsis/core_cm3.h **** 
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccIbaTNT.s 			page 1
  753:cmsis/core_cm3.h **** #elif defined   (  __TASKING__  )
  754:cmsis/core_cm3.h ****   #define __ASM            __asm                                      /*!< asm keyword for TASKING 
  755:cmsis/core_cm3.h ****   #define __INLINE         inline                                     /*!< inline keyword for TASKI
-ARM GAS  /tmp/ccIbaTNT.s 			page 22
+ARM GAS  /tmp/ccQtSmoz.s 			page 22
 
 
  756:cmsis/core_cm3.h **** 
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccIbaTNT.s 			page 1
  810:cmsis/core_cm3.h **** /**
  811:cmsis/core_cm3.h ****  * @brief  Return the Main Stack Pointer
  812:cmsis/core_cm3.h ****  *
-ARM GAS  /tmp/ccIbaTNT.s 			page 23
+ARM GAS  /tmp/ccQtSmoz.s 			page 23
 
 
  813:cmsis/core_cm3.h ****  * @return Main Stack Pointer
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/ccIbaTNT.s 			page 1
  867:cmsis/core_cm3.h **** extern uint32_t __get_BASEPRI(void);
  868:cmsis/core_cm3.h **** 
  869:cmsis/core_cm3.h **** /**
-ARM GAS  /tmp/ccIbaTNT.s 			page 24
+ARM GAS  /tmp/ccQtSmoz.s 			page 24
 
 
  870:cmsis/core_cm3.h ****  * @brief  Set the Base Priority value
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/ccIbaTNT.s 			page 1
  924:cmsis/core_cm3.h ****  * @brief  Set the Control Register value
  925:cmsis/core_cm3.h ****  *
  926:cmsis/core_cm3.h ****  * @param  control  Control value
-ARM GAS  /tmp/ccIbaTNT.s 			page 25
+ARM GAS  /tmp/ccQtSmoz.s 			page 25
 
 
  927:cmsis/core_cm3.h ****  *
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/ccIbaTNT.s 			page 1
  981:cmsis/core_cm3.h ****  * @brief  Set the Priority Mask value
  982:cmsis/core_cm3.h ****  *
  983:cmsis/core_cm3.h ****  * @param  priMask  PriMask
-ARM GAS  /tmp/ccIbaTNT.s 			page 26
+ARM GAS  /tmp/ccQtSmoz.s 			page 26
 
 
  984:cmsis/core_cm3.h ****  *
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/ccIbaTNT.s 			page 1
 1038:cmsis/core_cm3.h ****  */
 1039:cmsis/core_cm3.h **** static __INLINE void __set_CONTROL(uint32_t control)
 1040:cmsis/core_cm3.h **** {
-ARM GAS  /tmp/ccIbaTNT.s 			page 27
+ARM GAS  /tmp/ccQtSmoz.s 			page 27
 
 
 1041:cmsis/core_cm3.h ****   register uint32_t __regControl         __ASM("control");
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/ccIbaTNT.s 			page 1
 1095:cmsis/core_cm3.h **** 
 1096:cmsis/core_cm3.h **** /**
 1097:cmsis/core_cm3.h ****  * @brief  Return the Main Stack Pointer
-ARM GAS  /tmp/ccIbaTNT.s 			page 28
+ARM GAS  /tmp/ccQtSmoz.s 			page 28
 
 
 1098:cmsis/core_cm3.h ****  *
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/ccIbaTNT.s 			page 1
 1152:cmsis/core_cm3.h ****  * Exclusive LDR command for 16 bit values
 1153:cmsis/core_cm3.h ****  */
 1154:cmsis/core_cm3.h **** extern uint16_t __LDREXH(uint16_t *addr);
-ARM GAS  /tmp/ccIbaTNT.s 			page 29
+ARM GAS  /tmp/ccQtSmoz.s 			page 29
 
 
 1155:cmsis/core_cm3.h **** 
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/ccIbaTNT.s 			page 1
 1209:cmsis/core_cm3.h **** 
 1210:cmsis/core_cm3.h **** static __INLINE void __NOP()                      { __ASM volatile ("nop"); }
 1211:cmsis/core_cm3.h **** static __INLINE void __WFI()                      { __ASM volatile ("wfi"); }
-ARM GAS  /tmp/ccIbaTNT.s 			page 30
+ARM GAS  /tmp/ccQtSmoz.s 			page 30
 
 
 1212:cmsis/core_cm3.h **** static __INLINE void __WFE()                      { __ASM volatile ("wfe"); }
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/ccIbaTNT.s 			page 1
  275              	.LFE34:
  277              		.section	.text.PWR_EnterSTANDBYMode,"ax",%progbits
  278              		.align	1
-ARM GAS  /tmp/ccIbaTNT.s 			page 31
+ARM GAS  /tmp/ccQtSmoz.s 			page 31
 
 
  279              		.global	PWR_EnterSTANDBYMode
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/ccIbaTNT.s 			page 1
  313 0014 30BF     		wfi
  314              	@ 0 "" 2
  315              		.thumb
-ARM GAS  /tmp/ccIbaTNT.s 			page 32
+ARM GAS  /tmp/ccQtSmoz.s 			page 32
 
 
  316              		.syntax unified
@@ -1918,7 +1918,7 @@ ARM GAS  /tmp/ccIbaTNT.s 			page 1
  267:./Drivers/src/stm32f10x_pwr.c ****     bitstatus = SET;
  353              		.loc 1 267 15 view .LVU76
  354 0008 0120     		movs	r0, #1
-ARM GAS  /tmp/ccIbaTNT.s 			page 33
+ARM GAS  /tmp/ccQtSmoz.s 			page 33
 
 
  355              	.LVL16:
@@ -1978,7 +1978,7 @@ ARM GAS  /tmp/ccIbaTNT.s 			page 1
  290:./Drivers/src/stm32f10x_pwr.c ****   PWR->CR |=  PWR_FLAG << 2;
  389              		.loc 1 290 3 view .LVU83
  390              		.loc 1 290 6 is_stmt 0 view .LVU84
-ARM GAS  /tmp/ccIbaTNT.s 			page 34
+ARM GAS  /tmp/ccQtSmoz.s 			page 34
 
 
  391 0000 024A     		ldr	r2, .L30
@@ -2000,37 +2000,37 @@ ARM GAS  /tmp/ccIbaTNT.s 			page 1
  407              		.file 3 "/usr/lib/gcc/arm-none-eabi/12.2.1/include/stdint.h"
  408              		.file 4 "cmsis/stm32f10x.h"
  409              		.file 5 "Drivers/inc/stm32f10x_rcc.h"
-ARM GAS  /tmp/ccIbaTNT.s 			page 35
+ARM GAS  /tmp/ccQtSmoz.s 			page 35
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f10x_pwr.c
-     /tmp/ccIbaTNT.s:19     .text.PWR_DeInit:00000000 $t
-     /tmp/ccIbaTNT.s:25     .text.PWR_DeInit:00000000 PWR_DeInit
-     /tmp/ccIbaTNT.s:52     .text.PWR_BackupAccessCmd:00000000 $t
-     /tmp/ccIbaTNT.s:58     .text.PWR_BackupAccessCmd:00000000 PWR_BackupAccessCmd
-     /tmp/ccIbaTNT.s:76     .text.PWR_BackupAccessCmd:00000008 $d
-     /tmp/ccIbaTNT.s:81     .text.PWR_PVDCmd:00000000 $t
-     /tmp/ccIbaTNT.s:87     .text.PWR_PVDCmd:00000000 PWR_PVDCmd
-     /tmp/ccIbaTNT.s:105    .text.PWR_PVDCmd:00000008 $d
-     /tmp/ccIbaTNT.s:110    .text.PWR_PVDLevelConfig:00000000 $t
-     /tmp/ccIbaTNT.s:116    .text.PWR_PVDLevelConfig:00000000 PWR_PVDLevelConfig
-     /tmp/ccIbaTNT.s:147    .text.PWR_PVDLevelConfig:00000010 $d
-     /tmp/ccIbaTNT.s:152    .text.PWR_WakeUpPinCmd:00000000 $t
-     /tmp/ccIbaTNT.s:158    .text.PWR_WakeUpPinCmd:00000000 PWR_WakeUpPinCmd
-     /tmp/ccIbaTNT.s:176    .text.PWR_WakeUpPinCmd:00000008 $d
-     /tmp/ccIbaTNT.s:181    .text.PWR_EnterSTOPMode:00000000 $t
-     /tmp/ccIbaTNT.s:187    .text.PWR_EnterSTOPMode:00000000 PWR_EnterSTOPMode
-     /tmp/ccIbaTNT.s:270    .text.PWR_EnterSTOPMode:0000002c $d
-     /tmp/ccIbaTNT.s:278    .text.PWR_EnterSTANDBYMode:00000000 $t
-     /tmp/ccIbaTNT.s:284    .text.PWR_EnterSTANDBYMode:00000000 PWR_EnterSTANDBYMode
-     /tmp/ccIbaTNT.s:324    .text.PWR_EnterSTANDBYMode:00000018 $d
-     /tmp/ccIbaTNT.s:330    .text.PWR_GetFlagStatus:00000000 $t
-     /tmp/ccIbaTNT.s:336    .text.PWR_GetFlagStatus:00000000 PWR_GetFlagStatus
-     /tmp/ccIbaTNT.s:369    .text.PWR_GetFlagStatus:00000010 $d
-     /tmp/ccIbaTNT.s:374    .text.PWR_ClearFlag:00000000 $t
-     /tmp/ccIbaTNT.s:380    .text.PWR_ClearFlag:00000000 PWR_ClearFlag
-     /tmp/ccIbaTNT.s:401    .text.PWR_ClearFlag:0000000c $d
+     /tmp/ccQtSmoz.s:19     .text.PWR_DeInit:00000000 $t
+     /tmp/ccQtSmoz.s:25     .text.PWR_DeInit:00000000 PWR_DeInit
+     /tmp/ccQtSmoz.s:52     .text.PWR_BackupAccessCmd:00000000 $t
+     /tmp/ccQtSmoz.s:58     .text.PWR_BackupAccessCmd:00000000 PWR_BackupAccessCmd
+     /tmp/ccQtSmoz.s:76     .text.PWR_BackupAccessCmd:00000008 $d
+     /tmp/ccQtSmoz.s:81     .text.PWR_PVDCmd:00000000 $t
+     /tmp/ccQtSmoz.s:87     .text.PWR_PVDCmd:00000000 PWR_PVDCmd
+     /tmp/ccQtSmoz.s:105    .text.PWR_PVDCmd:00000008 $d
+     /tmp/ccQtSmoz.s:110    .text.PWR_PVDLevelConfig:00000000 $t
+     /tmp/ccQtSmoz.s:116    .text.PWR_PVDLevelConfig:00000000 PWR_PVDLevelConfig
+     /tmp/ccQtSmoz.s:147    .text.PWR_PVDLevelConfig:00000010 $d
+     /tmp/ccQtSmoz.s:152    .text.PWR_WakeUpPinCmd:00000000 $t
+     /tmp/ccQtSmoz.s:158    .text.PWR_WakeUpPinCmd:00000000 PWR_WakeUpPinCmd
+     /tmp/ccQtSmoz.s:176    .text.PWR_WakeUpPinCmd:00000008 $d
+     /tmp/ccQtSmoz.s:181    .text.PWR_EnterSTOPMode:00000000 $t
+     /tmp/ccQtSmoz.s:187    .text.PWR_EnterSTOPMode:00000000 PWR_EnterSTOPMode
+     /tmp/ccQtSmoz.s:270    .text.PWR_EnterSTOPMode:0000002c $d
+     /tmp/ccQtSmoz.s:278    .text.PWR_EnterSTANDBYMode:00000000 $t
+     /tmp/ccQtSmoz.s:284    .text.PWR_EnterSTANDBYMode:00000000 PWR_EnterSTANDBYMode
+     /tmp/ccQtSmoz.s:324    .text.PWR_EnterSTANDBYMode:00000018 $d
+     /tmp/ccQtSmoz.s:330    .text.PWR_GetFlagStatus:00000000 $t
+     /tmp/ccQtSmoz.s:336    .text.PWR_GetFlagStatus:00000000 PWR_GetFlagStatus
+     /tmp/ccQtSmoz.s:369    .text.PWR_GetFlagStatus:00000010 $d
+     /tmp/ccQtSmoz.s:374    .text.PWR_ClearFlag:00000000 $t
+     /tmp/ccQtSmoz.s:380    .text.PWR_ClearFlag:00000000 PWR_ClearFlag
+     /tmp/ccQtSmoz.s:401    .text.PWR_ClearFlag:0000000c $d
 
 UNDEFINED SYMBOLS
 RCC_APB1PeriphResetCmd

@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccfRinZ2.s 			page 1
+ARM GAS  /tmp/ccOVJTXk.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
   30:./Drivers/src/stm32f10x_rcc.c ****   * @{
   31:./Drivers/src/stm32f10x_rcc.c ****   */ 
   32:./Drivers/src/stm32f10x_rcc.c **** 
-ARM GAS  /tmp/ccfRinZ2.s 			page 2
+ARM GAS  /tmp/ccOVJTXk.s 			page 2
 
 
   33:./Drivers/src/stm32f10x_rcc.c **** /** @defgroup RCC_Private_TypesDefinitions
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
   87:./Drivers/src/stm32f10x_rcc.c **** 
   88:./Drivers/src/stm32f10x_rcc.c **** /* Alias word address of RTCEN bit */
   89:./Drivers/src/stm32f10x_rcc.c **** #define BDCR_OFFSET               (RCC_OFFSET + 0x20)
-ARM GAS  /tmp/ccfRinZ2.s 			page 3
+ARM GAS  /tmp/ccOVJTXk.s 			page 3
 
 
   90:./Drivers/src/stm32f10x_rcc.c **** #define RTCEN_BitNumber           0x0F
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
  144:./Drivers/src/stm32f10x_rcc.c **** #define CFGR_ADCPRE_Reset_Mask    ((uint32_t)0xFFFF3FFF)
  145:./Drivers/src/stm32f10x_rcc.c **** #define CFGR_ADCPRE_Set_Mask      ((uint32_t)0x0000C000)
  146:./Drivers/src/stm32f10x_rcc.c **** 
-ARM GAS  /tmp/ccfRinZ2.s 			page 4
+ARM GAS  /tmp/ccOVJTXk.s 			page 4
 
 
  147:./Drivers/src/stm32f10x_rcc.c **** /* CSR register bit mask */
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
  201:./Drivers/src/stm32f10x_rcc.c ****   */
  202:./Drivers/src/stm32f10x_rcc.c **** 
  203:./Drivers/src/stm32f10x_rcc.c **** /**
-ARM GAS  /tmp/ccfRinZ2.s 			page 5
+ARM GAS  /tmp/ccOVJTXk.s 			page 5
 
 
  204:./Drivers/src/stm32f10x_rcc.c ****   * @}
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
  232:./Drivers/src/stm32f10x_rcc.c ****   RCC->CR &= (uint32_t)0xFFFBFFFF;
   53              		.loc 1 232 3 is_stmt 1 view .LVU10
   54              		.loc 1 232 6 is_stmt 0 view .LVU11
-ARM GAS  /tmp/ccfRinZ2.s 			page 6
+ARM GAS  /tmp/ccOVJTXk.s 			page 6
 
 
   55 001e 1A68     		ldr	r2, [r3]
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
   86              	RCC_HSEConfig:
   87              	.LVL0:
   88              	.LFB30:
-ARM GAS  /tmp/ccfRinZ2.s 			page 7
+ARM GAS  /tmp/ccOVJTXk.s 			page 7
 
 
  258:./Drivers/src/stm32f10x_rcc.c **** 
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
  117 0020 054A     		ldr	r2, .L8
  118 0022 1368     		ldr	r3, [r2]
  119              		.loc 1 283 15 view .LVU30
-ARM GAS  /tmp/ccfRinZ2.s 			page 8
+ARM GAS  /tmp/ccOVJTXk.s 			page 8
 
 
  120 0024 43F48033 		orr	r3, r3, #65536
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
  308:./Drivers/src/stm32f10x_rcc.c ****   
  309:./Drivers/src/stm32f10x_rcc.c ****   /* Wait till HSE is ready and if Time out is reached exit */
  310:./Drivers/src/stm32f10x_rcc.c ****   do
-ARM GAS  /tmp/ccfRinZ2.s 			page 9
+ARM GAS  /tmp/ccOVJTXk.s 			page 9
 
 
  311:./Drivers/src/stm32f10x_rcc.c ****   {
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
  172              		.loc 1 344 3 is_stmt 1 view .LVU46
  173              		.loc 1 344 11 is_stmt 0 view .LVU47
  174 000c 1360     		str	r3, [r2]
-ARM GAS  /tmp/ccfRinZ2.s 			page 10
+ARM GAS  /tmp/ccOVJTXk.s 			page 10
 
 
  345:./Drivers/src/stm32f10x_rcc.c **** }
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
  218              		.thumb_func
  220              	RCC_PLLConfig:
  221              	.LVL6:
-ARM GAS  /tmp/ccfRinZ2.s 			page 11
+ARM GAS  /tmp/ccOVJTXk.s 			page 11
 
 
  222              	.LFB34:
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
  245 000a 1843     		orrs	r0, r0, r3
  246              	.LVL10:
  390:./Drivers/src/stm32f10x_rcc.c ****   /* Store the new value */
-ARM GAS  /tmp/ccfRinZ2.s 			page 12
+ARM GAS  /tmp/ccOVJTXk.s 			page 12
 
 
  391:./Drivers/src/stm32f10x_rcc.c ****   RCC->CFGR = tmpreg;
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
  288              		.section	.text.RCC_SYSCLKConfig,"ax",%progbits
  289              		.align	1
  290              		.global	RCC_SYSCLKConfig
-ARM GAS  /tmp/ccfRinZ2.s 			page 13
+ARM GAS  /tmp/ccOVJTXk.s 			page 13
 
 
  291              		.syntax unified
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
  455:./Drivers/src/stm32f10x_rcc.c ****   uint32_t tmpreg = 0;
  456:./Drivers/src/stm32f10x_rcc.c **** 
  457:./Drivers/src/stm32f10x_rcc.c ****   /* Check the parameters */
-ARM GAS  /tmp/ccfRinZ2.s 			page 14
+ARM GAS  /tmp/ccOVJTXk.s 			page 14
 
 
  458:./Drivers/src/stm32f10x_rcc.c ****   assert_param(IS_RCC_PREDIV2(RCC_PREDIV2_Div));
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
  512:./Drivers/src/stm32f10x_rcc.c **** 
  513:./Drivers/src/stm32f10x_rcc.c **** /**
  514:./Drivers/src/stm32f10x_rcc.c ****   * @brief  Configures the PLL3 multiplication factor.
-ARM GAS  /tmp/ccfRinZ2.s 			page 15
+ARM GAS  /tmp/ccOVJTXk.s 			page 15
 
 
  515:./Drivers/src/stm32f10x_rcc.c ****   * @note 
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
  302              		@ link register save eliminated.
  565:./Drivers/src/stm32f10x_rcc.c ****   uint32_t tmpreg = 0;
  303              		.loc 1 565 3 view .LVU74
-ARM GAS  /tmp/ccfRinZ2.s 			page 16
+ARM GAS  /tmp/ccOVJTXk.s 			page 16
 
 
  566:./Drivers/src/stm32f10x_rcc.c ****   /* Check the parameters */
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
  587:./Drivers/src/stm32f10x_rcc.c **** {
  339              		.loc 1 587 1 is_stmt 1 view -0
  340              		.cfi_startproc
-ARM GAS  /tmp/ccfRinZ2.s 			page 17
+ARM GAS  /tmp/ccOVJTXk.s 			page 17
 
 
  341              		@ args = 0, pretend = 0, frame = 0
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
  611:./Drivers/src/stm32f10x_rcc.c ****   assert_param(IS_RCC_HCLK(RCC_SYSCLK));
  374              		.loc 1 611 3 view .LVU91
  612:./Drivers/src/stm32f10x_rcc.c ****   tmpreg = RCC->CFGR;
-ARM GAS  /tmp/ccfRinZ2.s 			page 18
+ARM GAS  /tmp/ccOVJTXk.s 			page 18
 
 
  375              		.loc 1 612 3 view .LVU92
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
  634:./Drivers/src/stm32f10x_rcc.c **** {
  410              		.loc 1 634 1 is_stmt 1 view -0
  411              		.cfi_startproc
-ARM GAS  /tmp/ccfRinZ2.s 			page 19
+ARM GAS  /tmp/ccOVJTXk.s 			page 19
 
 
  412              		@ args = 0, pretend = 0, frame = 0
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
  651:./Drivers/src/stm32f10x_rcc.c ****   *   This parameter can be one of the following values:
  652:./Drivers/src/stm32f10x_rcc.c ****   *     @arg RCC_HCLK_Div1: APB2 clock = HCLK
  653:./Drivers/src/stm32f10x_rcc.c ****   *     @arg RCC_HCLK_Div2: APB2 clock = HCLK/2
-ARM GAS  /tmp/ccfRinZ2.s 			page 20
+ARM GAS  /tmp/ccOVJTXk.s 			page 20
 
 
  654:./Drivers/src/stm32f10x_rcc.c ****   *     @arg RCC_HCLK_Div4: APB2 clock = HCLK/4
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
  489              		.thumb_func
  491              	RCC_ITConfig:
  492              	.LVL28:
-ARM GAS  /tmp/ccfRinZ2.s 			page 21
+ARM GAS  /tmp/ccOVJTXk.s 			page 21
 
 
  493              	.LFB41:
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
  511              	.L38:
  708:./Drivers/src/stm32f10x_rcc.c ****   }
  709:./Drivers/src/stm32f10x_rcc.c ****   else
-ARM GAS  /tmp/ccfRinZ2.s 			page 22
+ARM GAS  /tmp/ccOVJTXk.s 			page 22
 
 
  710:./Drivers/src/stm32f10x_rcc.c ****   {
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
  545 0000 014B     		ldr	r3, .L43
  546 0002 C3F8D800 		str	r0, [r3, #216]
  733:./Drivers/src/stm32f10x_rcc.c **** }
-ARM GAS  /tmp/ccfRinZ2.s 			page 23
+ARM GAS  /tmp/ccOVJTXk.s 			page 23
 
 
  547              		.loc 1 733 1 view .LVU139
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
  570              		@ link register save eliminated.
  767:./Drivers/src/stm32f10x_rcc.c ****   uint32_t tmpreg = 0;
  571              		.loc 1 767 3 view .LVU141
-ARM GAS  /tmp/ccfRinZ2.s 			page 24
+ARM GAS  /tmp/ccOVJTXk.s 			page 24
 
 
  768:./Drivers/src/stm32f10x_rcc.c ****   /* Check the parameters */
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
  788:./Drivers/src/stm32f10x_rcc.c ****   *     @arg RCC_I2S2CLKSource_PLL3_VCO: PLL3 VCO clock selected as I2S2 clock entry
  789:./Drivers/src/stm32f10x_rcc.c ****   * @retval None
  790:./Drivers/src/stm32f10x_rcc.c ****   */
-ARM GAS  /tmp/ccfRinZ2.s 			page 25
+ARM GAS  /tmp/ccOVJTXk.s 			page 25
 
 
  791:./Drivers/src/stm32f10x_rcc.c **** void RCC_I2S2CLKConfig(uint32_t RCC_I2S2CLKSource)
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
  617 0002 0022     		movs	r2, #0
  618 0004 83F82020 		strb	r2, [r3, #32]
  836:./Drivers/src/stm32f10x_rcc.c ****   /* Reset LSEBYP bit */
-ARM GAS  /tmp/ccfRinZ2.s 			page 26
+ARM GAS  /tmp/ccOVJTXk.s 			page 26
 
 
  837:./Drivers/src/stm32f10x_rcc.c ****   *(__IO uint8_t *) BDCR_ADDRESS = RCC_LSE_OFF;
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
  656              		.thumb
  657              		.thumb_func
  659              	RCC_LSICmd:
-ARM GAS  /tmp/ccfRinZ2.s 			page 27
+ARM GAS  /tmp/ccOVJTXk.s 			page 27
 
 
  660              	.LVL35:
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
  880:./Drivers/src/stm32f10x_rcc.c **** {
  691              		.loc 1 880 1 is_stmt 1 view -0
  692              		.cfi_startproc
-ARM GAS  /tmp/ccfRinZ2.s 			page 28
+ARM GAS  /tmp/ccOVJTXk.s 			page 28
 
 
  693              		@ args = 0, pretend = 0, frame = 0
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
  732 0002 C3F83C04 		str	r0, [r3, #1084]
  898:./Drivers/src/stm32f10x_rcc.c **** }
  733              		.loc 1 898 1 view .LVU181
-ARM GAS  /tmp/ccfRinZ2.s 			page 29
+ARM GAS  /tmp/ccOVJTXk.s 			page 29
 
 
  734 0006 7047     		bx	lr
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
  767 0004 5B68     		ldr	r3, [r3, #4]
  768              		.loc 1 921 7 view .LVU187
  769 0006 03F00C03 		and	r3, r3, #12
-ARM GAS  /tmp/ccfRinZ2.s 			page 30
+ARM GAS  /tmp/ccOVJTXk.s 			page 30
 
 
  770              	.LVL40:
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
  969:./Drivers/src/stm32f10x_rcc.c ****       else
  970:./Drivers/src/stm32f10x_rcc.c ****       { /* PLL multiplication factor = PLL input clock * 6.5 */
  971:./Drivers/src/stm32f10x_rcc.c ****         pllmull = 13 / 2; 
-ARM GAS  /tmp/ccfRinZ2.s 			page 31
+ARM GAS  /tmp/ccOVJTXk.s 			page 31
 
 
  972:./Drivers/src/stm32f10x_rcc.c ****       }
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
  795              	.L67:
 1004:./Drivers/src/stm32f10x_rcc.c ****   }
 1005:./Drivers/src/stm32f10x_rcc.c **** 
-ARM GAS  /tmp/ccfRinZ2.s 			page 32
+ARM GAS  /tmp/ccOVJTXk.s 			page 32
 
 
 1006:./Drivers/src/stm32f10x_rcc.c ****   /* Compute HCLK, PCLK1, PCLK2 and ADCCLK clocks frequencies ----------------*/
@@ -1918,7 +1918,7 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
  837              	.LVL53:
  838              		.loc 1 1018 31 view .LVU216
  839 0040 8260     		str	r2, [r0, #8]
-ARM GAS  /tmp/ccfRinZ2.s 			page 33
+ARM GAS  /tmp/ccOVJTXk.s 			page 33
 
 
 1019:./Drivers/src/stm32f10x_rcc.c ****   /* Get PCLK2 prescaler */
@@ -1978,7 +1978,7 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
  881              		.loc 1 1031 1 view .LVU237
  882 0062 10BC     		pop	{r4}
  883              	.LCFI1:
-ARM GAS  /tmp/ccfRinZ2.s 			page 34
+ARM GAS  /tmp/ccOVJTXk.s 			page 34
 
 
  884              		.cfi_remember_state
@@ -2038,7 +2038,7 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
  923              		.loc 1 942 57 is_stmt 0 view .LVU252
  924 007e 0E4A     		ldr	r2, .L72+16
  925              	.LVL69:
-ARM GAS  /tmp/ccfRinZ2.s 			page 35
+ARM GAS  /tmp/ccOVJTXk.s 			page 35
 
 
  942:./Drivers/src/stm32f10x_rcc.c ****       }
@@ -2098,7 +2098,7 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
  968 00b8 00093D00 		.word	4000000
  969              		.cfi_endproc
  970              	.LFE48:
-ARM GAS  /tmp/ccfRinZ2.s 			page 36
+ARM GAS  /tmp/ccOVJTXk.s 			page 36
 
 
  972              		.section	.text.RCC_AHBPeriphClockCmd,"ax",%progbits
@@ -2158,7 +2158,7 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
 1070:./Drivers/src/stm32f10x_rcc.c ****   if (NewState != DISABLE)
  989              		.loc 1 1070 3 view .LVU268
  990              		.loc 1 1070 6 is_stmt 0 view .LVU269
-ARM GAS  /tmp/ccfRinZ2.s 			page 37
+ARM GAS  /tmp/ccOVJTXk.s 			page 37
 
 
  991 0000 21B1     		cbz	r1, .L75
@@ -2218,7 +2218,7 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
 1091:./Drivers/src/stm32f10x_rcc.c ****   * @param  NewState: new state of the specified peripheral clock.
 1092:./Drivers/src/stm32f10x_rcc.c ****   *   This parameter can be: ENABLE or DISABLE.
 1093:./Drivers/src/stm32f10x_rcc.c ****   * @retval None
-ARM GAS  /tmp/ccfRinZ2.s 			page 38
+ARM GAS  /tmp/ccOVJTXk.s 			page 38
 
 
 1094:./Drivers/src/stm32f10x_rcc.c ****   */
@@ -2278,7 +2278,7 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
  1067              		.thumb_func
  1069              	RCC_APB1PeriphClockCmd:
  1070              	.LVL78:
-ARM GAS  /tmp/ccfRinZ2.s 			page 39
+ARM GAS  /tmp/ccOVJTXk.s 			page 39
 
 
  1071              	.LFB51:
@@ -2338,7 +2338,7 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
  1096 0010 23EA0003 		bic	r3, r3, r0
  1097 0014 D361     		str	r3, [r2, #28]
 1138:./Drivers/src/stm32f10x_rcc.c ****   }
-ARM GAS  /tmp/ccfRinZ2.s 			page 40
+ARM GAS  /tmp/ccOVJTXk.s 			page 40
 
 
 1139:./Drivers/src/stm32f10x_rcc.c **** }
@@ -2398,7 +2398,7 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
 1176:./Drivers/src/stm32f10x_rcc.c ****   *          RCC_APB2Periph_GPIOF, RCC_APB2Periph_GPIOG, RCC_APB2Periph_ADC1,
 1177:./Drivers/src/stm32f10x_rcc.c ****   *          RCC_APB2Periph_ADC2, RCC_APB2Periph_TIM1, RCC_APB2Periph_SPI1,
 1178:./Drivers/src/stm32f10x_rcc.c ****   *          RCC_APB2Periph_TIM8, RCC_APB2Periph_USART1, RCC_APB2Periph_ADC3,
-ARM GAS  /tmp/ccfRinZ2.s 			page 41
+ARM GAS  /tmp/ccOVJTXk.s 			page 41
 
 
 1179:./Drivers/src/stm32f10x_rcc.c ****   *          RCC_APB2Periph_TIM15, RCC_APB2Periph_TIM16, RCC_APB2Periph_TIM17,
@@ -2458,7 +2458,7 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
  1152              		.section	.text.RCC_APB1PeriphResetCmd,"ax",%progbits
  1153              		.align	1
  1154              		.global	RCC_APB1PeriphResetCmd
-ARM GAS  /tmp/ccfRinZ2.s 			page 42
+ARM GAS  /tmp/ccOVJTXk.s 			page 42
 
 
  1155              		.syntax unified
@@ -2518,7 +2518,7 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
  1181              		.loc 1 1227 5 is_stmt 1 view .LVU321
  1182              		.loc 1 1227 8 is_stmt 0 view .LVU322
  1183 000c 024A     		ldr	r2, .L97
-ARM GAS  /tmp/ccfRinZ2.s 			page 43
+ARM GAS  /tmp/ccOVJTXk.s 			page 43
 
 
  1184 000e 1369     		ldr	r3, [r2, #16]
@@ -2578,7 +2578,7 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
  1226              		.section	.text.RCC_ClockSecuritySystemCmd,"ax",%progbits
  1227              		.align	1
  1228              		.global	RCC_ClockSecuritySystemCmd
-ARM GAS  /tmp/ccfRinZ2.s 			page 44
+ARM GAS  /tmp/ccOVJTXk.s 			page 44
 
 
  1229              		.syntax unified
@@ -2638,7 +2638,7 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
 1264:./Drivers/src/stm32f10x_rcc.c ****   *     @arg RCC_MCO_SYSCLK: System clock selected
 1265:./Drivers/src/stm32f10x_rcc.c ****   *     @arg RCC_MCO_HSI: HSI oscillator clock selected
 1266:./Drivers/src/stm32f10x_rcc.c ****   *     @arg RCC_MCO_HSE: HSE oscillator clock selected
-ARM GAS  /tmp/ccfRinZ2.s 			page 45
+ARM GAS  /tmp/ccOVJTXk.s 			page 45
 
 
 1267:./Drivers/src/stm32f10x_rcc.c ****   *     @arg RCC_MCO_PLLCLK_Div2: PLL clock divided by 2 selected
@@ -2698,7 +2698,7 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
 1294:./Drivers/src/stm32f10x_rcc.c ****   *   
 1295:./Drivers/src/stm32f10x_rcc.c ****   *   For @b STM32_Connectivity_line_devices, this parameter can be one of the
 1296:./Drivers/src/stm32f10x_rcc.c ****   *   following values:
-ARM GAS  /tmp/ccfRinZ2.s 			page 46
+ARM GAS  /tmp/ccOVJTXk.s 			page 46
 
 
 1297:./Drivers/src/stm32f10x_rcc.c ****   *     @arg RCC_FLAG_HSIRDY: HSI oscillator clock ready
@@ -2758,7 +2758,7 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
  1308              		.loc 1 1336 6 is_stmt 0 view .LVU348
  1309 0002 012B     		cmp	r3, #1
  1310 0004 0BD0     		beq	.L114
-ARM GAS  /tmp/ccfRinZ2.s 			page 47
+ARM GAS  /tmp/ccOVJTXk.s 			page 47
 
 
 1337:./Drivers/src/stm32f10x_rcc.c ****   {
@@ -2818,7 +2818,7 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
  1345              		.loc 1 1338 15 view .LVU363
  1346 0020 1B68     		ldr	r3, [r3]
  1347              	.LVL93:
-ARM GAS  /tmp/ccfRinZ2.s 			page 48
+ARM GAS  /tmp/ccOVJTXk.s 			page 48
 
 
 1338:./Drivers/src/stm32f10x_rcc.c ****   }
@@ -2878,7 +2878,7 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
  1389 0000 00B5     		push	{lr}
  1390              	.LCFI3:
  1391              		.cfi_def_cfa_offset 4
-ARM GAS  /tmp/ccfRinZ2.s 			page 49
+ARM GAS  /tmp/ccOVJTXk.s 			page 49
 
 
  1392              		.cfi_offset 14, -4
@@ -2938,7 +2938,7 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
  1430              		.loc 1 316 7 view .LVU388
  1431 0024 FFF7FEFF 		bl	RCC_GetFlagStatus
  1432              	.LVL102:
-ARM GAS  /tmp/ccfRinZ2.s 			page 50
+ARM GAS  /tmp/ccOVJTXk.s 			page 50
 
 
  316:./Drivers/src/stm32f10x_rcc.c ****   {
@@ -2998,7 +2998,7 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
  1472              	.L125:
  1473              		.align	2
  1474              	.L124:
-ARM GAS  /tmp/ccfRinZ2.s 			page 51
+ARM GAS  /tmp/ccOVJTXk.s 			page 51
 
 
  1475 000c 00100240 		.word	1073876992
@@ -3058,7 +3058,7 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
  1497              		.loc 1 1409 11 is_stmt 0 view .LVU402
  1498 0000 034B     		ldr	r3, .L129
  1499 0002 9B68     		ldr	r3, [r3, #8]
-ARM GAS  /tmp/ccfRinZ2.s 			page 52
+ARM GAS  /tmp/ccOVJTXk.s 			page 52
 
 
  1500              		.loc 1 1409 6 view .LVU403
@@ -3118,7 +3118,7 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
 1433:./Drivers/src/stm32f10x_rcc.c ****   *     @arg RCC_IT_PLL2RDY: PLL2 ready interrupt 
 1434:./Drivers/src/stm32f10x_rcc.c ****   *     @arg RCC_IT_PLL3RDY: PLL3 ready interrupt                      
 1435:./Drivers/src/stm32f10x_rcc.c ****   *     @arg RCC_IT_CSS: Clock Security System interrupt
-ARM GAS  /tmp/ccfRinZ2.s 			page 53
+ARM GAS  /tmp/ccOVJTXk.s 			page 53
 
 
 1436:./Drivers/src/stm32f10x_rcc.c ****   * 
@@ -3177,112 +3177,112 @@ ARM GAS  /tmp/ccfRinZ2.s 			page 1
  1567              		.file 2 "/usr/lib/gcc/arm-none-eabi/12.2.1/include/stdint.h"
  1568              		.file 3 "cmsis/stm32f10x.h"
  1569              		.file 4 "Drivers/inc/stm32f10x_rcc.h"
-ARM GAS  /tmp/ccfRinZ2.s 			page 54
+ARM GAS  /tmp/ccOVJTXk.s 			page 54
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f10x_rcc.c
-     /tmp/ccfRinZ2.s:19     .text.RCC_DeInit:00000000 $t
-     /tmp/ccfRinZ2.s:25     .text.RCC_DeInit:00000000 RCC_DeInit
-     /tmp/ccfRinZ2.s:74     .text.RCC_DeInit:00000038 $d
-     /tmp/ccfRinZ2.s:80     .text.RCC_HSEConfig:00000000 $t
-     /tmp/ccfRinZ2.s:86     .text.RCC_HSEConfig:00000000 RCC_HSEConfig
-     /tmp/ccfRinZ2.s:138    .text.RCC_HSEConfig:00000038 $d
-     /tmp/ccfRinZ2.s:143    .text.RCC_AdjustHSICalibrationValue:00000000 $t
-     /tmp/ccfRinZ2.s:149    .text.RCC_AdjustHSICalibrationValue:00000000 RCC_AdjustHSICalibrationValue
-     /tmp/ccfRinZ2.s:180    .text.RCC_AdjustHSICalibrationValue:00000010 $d
-     /tmp/ccfRinZ2.s:185    .text.RCC_HSICmd:00000000 $t
-     /tmp/ccfRinZ2.s:191    .text.RCC_HSICmd:00000000 RCC_HSICmd
-     /tmp/ccfRinZ2.s:209    .text.RCC_HSICmd:00000008 $d
-     /tmp/ccfRinZ2.s:214    .text.RCC_PLLConfig:00000000 $t
-     /tmp/ccfRinZ2.s:220    .text.RCC_PLLConfig:00000000 RCC_PLLConfig
-     /tmp/ccfRinZ2.s:255    .text.RCC_PLLConfig:00000010 $d
-     /tmp/ccfRinZ2.s:260    .text.RCC_PLLCmd:00000000 $t
-     /tmp/ccfRinZ2.s:266    .text.RCC_PLLCmd:00000000 RCC_PLLCmd
-     /tmp/ccfRinZ2.s:284    .text.RCC_PLLCmd:00000008 $d
-     /tmp/ccfRinZ2.s:289    .text.RCC_SYSCLKConfig:00000000 $t
-     /tmp/ccfRinZ2.s:295    .text.RCC_SYSCLKConfig:00000000 RCC_SYSCLKConfig
-     /tmp/ccfRinZ2.s:326    .text.RCC_SYSCLKConfig:00000010 $d
-     /tmp/ccfRinZ2.s:331    .text.RCC_GetSYSCLKSource:00000000 $t
-     /tmp/ccfRinZ2.s:337    .text.RCC_GetSYSCLKSource:00000000 RCC_GetSYSCLKSource
-     /tmp/ccfRinZ2.s:354    .text.RCC_GetSYSCLKSource:0000000c $d
-     /tmp/ccfRinZ2.s:359    .text.RCC_HCLKConfig:00000000 $t
-     /tmp/ccfRinZ2.s:365    .text.RCC_HCLKConfig:00000000 RCC_HCLKConfig
-     /tmp/ccfRinZ2.s:396    .text.RCC_HCLKConfig:00000010 $d
-     /tmp/ccfRinZ2.s:401    .text.RCC_PCLK1Config:00000000 $t
-     /tmp/ccfRinZ2.s:407    .text.RCC_PCLK1Config:00000000 RCC_PCLK1Config
-     /tmp/ccfRinZ2.s:438    .text.RCC_PCLK1Config:00000010 $d
-     /tmp/ccfRinZ2.s:443    .text.RCC_PCLK2Config:00000000 $t
-     /tmp/ccfRinZ2.s:449    .text.RCC_PCLK2Config:00000000 RCC_PCLK2Config
-     /tmp/ccfRinZ2.s:480    .text.RCC_PCLK2Config:00000010 $d
-     /tmp/ccfRinZ2.s:485    .text.RCC_ITConfig:00000000 $t
-     /tmp/ccfRinZ2.s:491    .text.RCC_ITConfig:00000000 RCC_ITConfig
-     /tmp/ccfRinZ2.s:523    .text.RCC_ITConfig:00000018 $d
-     /tmp/ccfRinZ2.s:528    .text.RCC_USBCLKConfig:00000000 $t
-     /tmp/ccfRinZ2.s:534    .text.RCC_USBCLKConfig:00000000 RCC_USBCLKConfig
-     /tmp/ccfRinZ2.s:552    .text.RCC_USBCLKConfig:00000008 $d
-     /tmp/ccfRinZ2.s:557    .text.RCC_ADCCLKConfig:00000000 $t
-     /tmp/ccfRinZ2.s:563    .text.RCC_ADCCLKConfig:00000000 RCC_ADCCLKConfig
-     /tmp/ccfRinZ2.s:594    .text.RCC_ADCCLKConfig:00000010 $d
-     /tmp/ccfRinZ2.s:599    .text.RCC_LSEConfig:00000000 $t
-     /tmp/ccfRinZ2.s:605    .text.RCC_LSEConfig:00000000 RCC_LSEConfig
-     /tmp/ccfRinZ2.s:648    .text.RCC_LSEConfig:0000002c $d
-     /tmp/ccfRinZ2.s:653    .text.RCC_LSICmd:00000000 $t
-     /tmp/ccfRinZ2.s:659    .text.RCC_LSICmd:00000000 RCC_LSICmd
-     /tmp/ccfRinZ2.s:677    .text.RCC_LSICmd:00000008 $d
-     /tmp/ccfRinZ2.s:682    .text.RCC_RTCCLKConfig:00000000 $t
-     /tmp/ccfRinZ2.s:688    .text.RCC_RTCCLKConfig:00000000 RCC_RTCCLKConfig
-     /tmp/ccfRinZ2.s:709    .text.RCC_RTCCLKConfig:0000000c $d
-     /tmp/ccfRinZ2.s:714    .text.RCC_RTCCLKCmd:00000000 $t
-     /tmp/ccfRinZ2.s:720    .text.RCC_RTCCLKCmd:00000000 RCC_RTCCLKCmd
-     /tmp/ccfRinZ2.s:738    .text.RCC_RTCCLKCmd:00000008 $d
-     /tmp/ccfRinZ2.s:743    .text.RCC_GetClocksFreq:00000000 $t
-ARM GAS  /tmp/ccfRinZ2.s 			page 55
+     /tmp/ccOVJTXk.s:19     .text.RCC_DeInit:00000000 $t
+     /tmp/ccOVJTXk.s:25     .text.RCC_DeInit:00000000 RCC_DeInit
+     /tmp/ccOVJTXk.s:74     .text.RCC_DeInit:00000038 $d
+     /tmp/ccOVJTXk.s:80     .text.RCC_HSEConfig:00000000 $t
+     /tmp/ccOVJTXk.s:86     .text.RCC_HSEConfig:00000000 RCC_HSEConfig
+     /tmp/ccOVJTXk.s:138    .text.RCC_HSEConfig:00000038 $d
+     /tmp/ccOVJTXk.s:143    .text.RCC_AdjustHSICalibrationValue:00000000 $t
+     /tmp/ccOVJTXk.s:149    .text.RCC_AdjustHSICalibrationValue:00000000 RCC_AdjustHSICalibrationValue
+     /tmp/ccOVJTXk.s:180    .text.RCC_AdjustHSICalibrationValue:00000010 $d
+     /tmp/ccOVJTXk.s:185    .text.RCC_HSICmd:00000000 $t
+     /tmp/ccOVJTXk.s:191    .text.RCC_HSICmd:00000000 RCC_HSICmd
+     /tmp/ccOVJTXk.s:209    .text.RCC_HSICmd:00000008 $d
+     /tmp/ccOVJTXk.s:214    .text.RCC_PLLConfig:00000000 $t
+     /tmp/ccOVJTXk.s:220    .text.RCC_PLLConfig:00000000 RCC_PLLConfig
+     /tmp/ccOVJTXk.s:255    .text.RCC_PLLConfig:00000010 $d
+     /tmp/ccOVJTXk.s:260    .text.RCC_PLLCmd:00000000 $t
+     /tmp/ccOVJTXk.s:266    .text.RCC_PLLCmd:00000000 RCC_PLLCmd
+     /tmp/ccOVJTXk.s:284    .text.RCC_PLLCmd:00000008 $d
+     /tmp/ccOVJTXk.s:289    .text.RCC_SYSCLKConfig:00000000 $t
+     /tmp/ccOVJTXk.s:295    .text.RCC_SYSCLKConfig:00000000 RCC_SYSCLKConfig
+     /tmp/ccOVJTXk.s:326    .text.RCC_SYSCLKConfig:00000010 $d
+     /tmp/ccOVJTXk.s:331    .text.RCC_GetSYSCLKSource:00000000 $t
+     /tmp/ccOVJTXk.s:337    .text.RCC_GetSYSCLKSource:00000000 RCC_GetSYSCLKSource
+     /tmp/ccOVJTXk.s:354    .text.RCC_GetSYSCLKSource:0000000c $d
+     /tmp/ccOVJTXk.s:359    .text.RCC_HCLKConfig:00000000 $t
+     /tmp/ccOVJTXk.s:365    .text.RCC_HCLKConfig:00000000 RCC_HCLKConfig
+     /tmp/ccOVJTXk.s:396    .text.RCC_HCLKConfig:00000010 $d
+     /tmp/ccOVJTXk.s:401    .text.RCC_PCLK1Config:00000000 $t
+     /tmp/ccOVJTXk.s:407    .text.RCC_PCLK1Config:00000000 RCC_PCLK1Config
+     /tmp/ccOVJTXk.s:438    .text.RCC_PCLK1Config:00000010 $d
+     /tmp/ccOVJTXk.s:443    .text.RCC_PCLK2Config:00000000 $t
+     /tmp/ccOVJTXk.s:449    .text.RCC_PCLK2Config:00000000 RCC_PCLK2Config
+     /tmp/ccOVJTXk.s:480    .text.RCC_PCLK2Config:00000010 $d
+     /tmp/ccOVJTXk.s:485    .text.RCC_ITConfig:00000000 $t
+     /tmp/ccOVJTXk.s:491    .text.RCC_ITConfig:00000000 RCC_ITConfig
+     /tmp/ccOVJTXk.s:523    .text.RCC_ITConfig:00000018 $d
+     /tmp/ccOVJTXk.s:528    .text.RCC_USBCLKConfig:00000000 $t
+     /tmp/ccOVJTXk.s:534    .text.RCC_USBCLKConfig:00000000 RCC_USBCLKConfig
+     /tmp/ccOVJTXk.s:552    .text.RCC_USBCLKConfig:00000008 $d
+     /tmp/ccOVJTXk.s:557    .text.RCC_ADCCLKConfig:00000000 $t
+     /tmp/ccOVJTXk.s:563    .text.RCC_ADCCLKConfig:00000000 RCC_ADCCLKConfig
+     /tmp/ccOVJTXk.s:594    .text.RCC_ADCCLKConfig:00000010 $d
+     /tmp/ccOVJTXk.s:599    .text.RCC_LSEConfig:00000000 $t
+     /tmp/ccOVJTXk.s:605    .text.RCC_LSEConfig:00000000 RCC_LSEConfig
+     /tmp/ccOVJTXk.s:648    .text.RCC_LSEConfig:0000002c $d
+     /tmp/ccOVJTXk.s:653    .text.RCC_LSICmd:00000000 $t
+     /tmp/ccOVJTXk.s:659    .text.RCC_LSICmd:00000000 RCC_LSICmd
+     /tmp/ccOVJTXk.s:677    .text.RCC_LSICmd:00000008 $d
+     /tmp/ccOVJTXk.s:682    .text.RCC_RTCCLKConfig:00000000 $t
+     /tmp/ccOVJTXk.s:688    .text.RCC_RTCCLKConfig:00000000 RCC_RTCCLKConfig
+     /tmp/ccOVJTXk.s:709    .text.RCC_RTCCLKConfig:0000000c $d
+     /tmp/ccOVJTXk.s:714    .text.RCC_RTCCLKCmd:00000000 $t
+     /tmp/ccOVJTXk.s:720    .text.RCC_RTCCLKCmd:00000000 RCC_RTCCLKCmd
+     /tmp/ccOVJTXk.s:738    .text.RCC_RTCCLKCmd:00000008 $d
+     /tmp/ccOVJTXk.s:743    .text.RCC_GetClocksFreq:00000000 $t
+ARM GAS  /tmp/ccOVJTXk.s 			page 55
 
 
-     /tmp/ccfRinZ2.s:749    .text.RCC_GetClocksFreq:00000000 RCC_GetClocksFreq
-     /tmp/ccfRinZ2.s:964    .text.RCC_GetClocksFreq:000000a8 $d
-     /tmp/ccfRinZ2.s:1562   .data.APBAHBPrescTable:00000000 APBAHBPrescTable
-     /tmp/ccfRinZ2.s:1556   .data.ADCPrescTable:00000000 ADCPrescTable
-     /tmp/ccfRinZ2.s:973    .text.RCC_AHBPeriphClockCmd:00000000 $t
-     /tmp/ccfRinZ2.s:979    .text.RCC_AHBPeriphClockCmd:00000000 RCC_AHBPeriphClockCmd
-     /tmp/ccfRinZ2.s:1013   .text.RCC_AHBPeriphClockCmd:00000018 $d
-     /tmp/ccfRinZ2.s:1018   .text.RCC_APB2PeriphClockCmd:00000000 $t
-     /tmp/ccfRinZ2.s:1024   .text.RCC_APB2PeriphClockCmd:00000000 RCC_APB2PeriphClockCmd
-     /tmp/ccfRinZ2.s:1058   .text.RCC_APB2PeriphClockCmd:00000018 $d
-     /tmp/ccfRinZ2.s:1063   .text.RCC_APB1PeriphClockCmd:00000000 $t
-     /tmp/ccfRinZ2.s:1069   .text.RCC_APB1PeriphClockCmd:00000000 RCC_APB1PeriphClockCmd
-     /tmp/ccfRinZ2.s:1103   .text.RCC_APB1PeriphClockCmd:00000018 $d
-     /tmp/ccfRinZ2.s:1108   .text.RCC_APB2PeriphResetCmd:00000000 $t
-     /tmp/ccfRinZ2.s:1114   .text.RCC_APB2PeriphResetCmd:00000000 RCC_APB2PeriphResetCmd
-     /tmp/ccfRinZ2.s:1148   .text.RCC_APB2PeriphResetCmd:00000018 $d
-     /tmp/ccfRinZ2.s:1153   .text.RCC_APB1PeriphResetCmd:00000000 $t
-     /tmp/ccfRinZ2.s:1159   .text.RCC_APB1PeriphResetCmd:00000000 RCC_APB1PeriphResetCmd
-     /tmp/ccfRinZ2.s:1193   .text.RCC_APB1PeriphResetCmd:00000018 $d
-     /tmp/ccfRinZ2.s:1198   .text.RCC_BackupResetCmd:00000000 $t
-     /tmp/ccfRinZ2.s:1204   .text.RCC_BackupResetCmd:00000000 RCC_BackupResetCmd
-     /tmp/ccfRinZ2.s:1222   .text.RCC_BackupResetCmd:00000008 $d
-     /tmp/ccfRinZ2.s:1227   .text.RCC_ClockSecuritySystemCmd:00000000 $t
-     /tmp/ccfRinZ2.s:1233   .text.RCC_ClockSecuritySystemCmd:00000000 RCC_ClockSecuritySystemCmd
-     /tmp/ccfRinZ2.s:1251   .text.RCC_ClockSecuritySystemCmd:00000008 $d
-     /tmp/ccfRinZ2.s:1256   .text.RCC_MCOConfig:00000000 $t
-     /tmp/ccfRinZ2.s:1262   .text.RCC_MCOConfig:00000000 RCC_MCOConfig
-     /tmp/ccfRinZ2.s:1280   .text.RCC_MCOConfig:00000008 $d
-     /tmp/ccfRinZ2.s:1285   .text.RCC_GetFlagStatus:00000000 $t
-     /tmp/ccfRinZ2.s:1291   .text.RCC_GetFlagStatus:00000000 RCC_GetFlagStatus
-     /tmp/ccfRinZ2.s:1372   .text.RCC_GetFlagStatus:00000030 $d
-     /tmp/ccfRinZ2.s:1377   .text.RCC_WaitForHSEStartUp:00000000 $t
-     /tmp/ccfRinZ2.s:1383   .text.RCC_WaitForHSEStartUp:00000000 RCC_WaitForHSEStartUp
-     /tmp/ccfRinZ2.s:1450   .text.RCC_ClearFlag:00000000 $t
-     /tmp/ccfRinZ2.s:1456   .text.RCC_ClearFlag:00000000 RCC_ClearFlag
-     /tmp/ccfRinZ2.s:1475   .text.RCC_ClearFlag:0000000c $d
-     /tmp/ccfRinZ2.s:1480   .text.RCC_GetITStatus:00000000 $t
-     /tmp/ccfRinZ2.s:1486   .text.RCC_GetITStatus:00000000 RCC_GetITStatus
-     /tmp/ccfRinZ2.s:1519   .text.RCC_GetITStatus:00000010 $d
-     /tmp/ccfRinZ2.s:1524   .text.RCC_ClearITPendingBit:00000000 $t
-     /tmp/ccfRinZ2.s:1530   .text.RCC_ClearITPendingBit:00000000 RCC_ClearITPendingBit
-     /tmp/ccfRinZ2.s:1548   .text.RCC_ClearITPendingBit:00000008 $d
-     /tmp/ccfRinZ2.s:1553   .data.ADCPrescTable:00000000 $d
-     /tmp/ccfRinZ2.s:1559   .data.APBAHBPrescTable:00000000 $d
+     /tmp/ccOVJTXk.s:749    .text.RCC_GetClocksFreq:00000000 RCC_GetClocksFreq
+     /tmp/ccOVJTXk.s:964    .text.RCC_GetClocksFreq:000000a8 $d
+     /tmp/ccOVJTXk.s:1562   .data.APBAHBPrescTable:00000000 APBAHBPrescTable
+     /tmp/ccOVJTXk.s:1556   .data.ADCPrescTable:00000000 ADCPrescTable
+     /tmp/ccOVJTXk.s:973    .text.RCC_AHBPeriphClockCmd:00000000 $t
+     /tmp/ccOVJTXk.s:979    .text.RCC_AHBPeriphClockCmd:00000000 RCC_AHBPeriphClockCmd
+     /tmp/ccOVJTXk.s:1013   .text.RCC_AHBPeriphClockCmd:00000018 $d
+     /tmp/ccOVJTXk.s:1018   .text.RCC_APB2PeriphClockCmd:00000000 $t
+     /tmp/ccOVJTXk.s:1024   .text.RCC_APB2PeriphClockCmd:00000000 RCC_APB2PeriphClockCmd
+     /tmp/ccOVJTXk.s:1058   .text.RCC_APB2PeriphClockCmd:00000018 $d
+     /tmp/ccOVJTXk.s:1063   .text.RCC_APB1PeriphClockCmd:00000000 $t
+     /tmp/ccOVJTXk.s:1069   .text.RCC_APB1PeriphClockCmd:00000000 RCC_APB1PeriphClockCmd
+     /tmp/ccOVJTXk.s:1103   .text.RCC_APB1PeriphClockCmd:00000018 $d
+     /tmp/ccOVJTXk.s:1108   .text.RCC_APB2PeriphResetCmd:00000000 $t
+     /tmp/ccOVJTXk.s:1114   .text.RCC_APB2PeriphResetCmd:00000000 RCC_APB2PeriphResetCmd
+     /tmp/ccOVJTXk.s:1148   .text.RCC_APB2PeriphResetCmd:00000018 $d
+     /tmp/ccOVJTXk.s:1153   .text.RCC_APB1PeriphResetCmd:00000000 $t
+     /tmp/ccOVJTXk.s:1159   .text.RCC_APB1PeriphResetCmd:00000000 RCC_APB1PeriphResetCmd
+     /tmp/ccOVJTXk.s:1193   .text.RCC_APB1PeriphResetCmd:00000018 $d
+     /tmp/ccOVJTXk.s:1198   .text.RCC_BackupResetCmd:00000000 $t
+     /tmp/ccOVJTXk.s:1204   .text.RCC_BackupResetCmd:00000000 RCC_BackupResetCmd
+     /tmp/ccOVJTXk.s:1222   .text.RCC_BackupResetCmd:00000008 $d
+     /tmp/ccOVJTXk.s:1227   .text.RCC_ClockSecuritySystemCmd:00000000 $t
+     /tmp/ccOVJTXk.s:1233   .text.RCC_ClockSecuritySystemCmd:00000000 RCC_ClockSecuritySystemCmd
+     /tmp/ccOVJTXk.s:1251   .text.RCC_ClockSecuritySystemCmd:00000008 $d
+     /tmp/ccOVJTXk.s:1256   .text.RCC_MCOConfig:00000000 $t
+     /tmp/ccOVJTXk.s:1262   .text.RCC_MCOConfig:00000000 RCC_MCOConfig
+     /tmp/ccOVJTXk.s:1280   .text.RCC_MCOConfig:00000008 $d
+     /tmp/ccOVJTXk.s:1285   .text.RCC_GetFlagStatus:00000000 $t
+     /tmp/ccOVJTXk.s:1291   .text.RCC_GetFlagStatus:00000000 RCC_GetFlagStatus
+     /tmp/ccOVJTXk.s:1372   .text.RCC_GetFlagStatus:00000030 $d
+     /tmp/ccOVJTXk.s:1377   .text.RCC_WaitForHSEStartUp:00000000 $t
+     /tmp/ccOVJTXk.s:1383   .text.RCC_WaitForHSEStartUp:00000000 RCC_WaitForHSEStartUp
+     /tmp/ccOVJTXk.s:1450   .text.RCC_ClearFlag:00000000 $t
+     /tmp/ccOVJTXk.s:1456   .text.RCC_ClearFlag:00000000 RCC_ClearFlag
+     /tmp/ccOVJTXk.s:1475   .text.RCC_ClearFlag:0000000c $d
+     /tmp/ccOVJTXk.s:1480   .text.RCC_GetITStatus:00000000 $t
+     /tmp/ccOVJTXk.s:1486   .text.RCC_GetITStatus:00000000 RCC_GetITStatus
+     /tmp/ccOVJTXk.s:1519   .text.RCC_GetITStatus:00000010 $d
+     /tmp/ccOVJTXk.s:1524   .text.RCC_ClearITPendingBit:00000000 $t
+     /tmp/ccOVJTXk.s:1530   .text.RCC_ClearITPendingBit:00000000 RCC_ClearITPendingBit
+     /tmp/ccOVJTXk.s:1548   .text.RCC_ClearITPendingBit:00000008 $d
+     /tmp/ccOVJTXk.s:1553   .data.ADCPrescTable:00000000 $d
+     /tmp/ccOVJTXk.s:1559   .data.APBAHBPrescTable:00000000 $d
 
 NO UNDEFINED SYMBOLS

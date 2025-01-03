@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccbcqXFh.s 			page 1
+ARM GAS  /tmp/cc6Gu2fa.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
   30:./Drivers/src/stm32f10x_tim.c ****   * @brief TIM driver modules
   31:./Drivers/src/stm32f10x_tim.c ****   * @{
   32:./Drivers/src/stm32f10x_tim.c ****   */
-ARM GAS  /tmp/ccbcqXFh.s 			page 2
+ARM GAS  /tmp/cc6Gu2fa.s 			page 2
 
 
   33:./Drivers/src/stm32f10x_tim.c **** 
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
   87:./Drivers/src/stm32f10x_tim.c **** 
   88:./Drivers/src/stm32f10x_tim.c **** /** @defgroup TIM_Private_Macros
   89:./Drivers/src/stm32f10x_tim.c ****   * @{
-ARM GAS  /tmp/ccbcqXFh.s 			page 3
+ARM GAS  /tmp/cc6Gu2fa.s 			page 3
 
 
   90:./Drivers/src/stm32f10x_tim.c ****   */
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  144:./Drivers/src/stm32f10x_tim.c ****     RCC_APB1PeriphResetCmd(RCC_APB1Periph_TIM4, DISABLE);
  145:./Drivers/src/stm32f10x_tim.c ****   } 
  146:./Drivers/src/stm32f10x_tim.c ****   else if (TIMx == TIM5)
-ARM GAS  /tmp/ccbcqXFh.s 			page 4
+ARM GAS  /tmp/cc6Gu2fa.s 			page 4
 
 
  147:./Drivers/src/stm32f10x_tim.c ****   {
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  201:./Drivers/src/stm32f10x_tim.c ****   else if (TIMx == TIM16)
  202:./Drivers/src/stm32f10x_tim.c ****   {
  203:./Drivers/src/stm32f10x_tim.c ****     RCC_APB2PeriphResetCmd(RCC_APB2Periph_TIM16, ENABLE);
-ARM GAS  /tmp/ccbcqXFh.s 			page 5
+ARM GAS  /tmp/cc6Gu2fa.s 			page 5
 
 
  204:./Drivers/src/stm32f10x_tim.c ****     RCC_APB2PeriphResetCmd(RCC_APB2Periph_TIM16, DISABLE);
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  258:./Drivers/src/stm32f10x_tim.c ****     
  259:./Drivers/src/stm32f10x_tim.c ****   if ((TIMx == TIM1) || (TIMx == TIM8)|| (TIMx == TIM15)|| (TIMx == TIM16) || (TIMx == TIM17))  
  260:./Drivers/src/stm32f10x_tim.c ****   {
-ARM GAS  /tmp/ccbcqXFh.s 			page 6
+ARM GAS  /tmp/cc6Gu2fa.s 			page 6
 
 
  261:./Drivers/src/stm32f10x_tim.c ****     /* Set the Repetition Counter value */
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  315:./Drivers/src/stm32f10x_tim.c ****     assert_param(IS_TIM_OUTPUTN_STATE(TIM_OCInitStruct->TIM_OutputNState));
  316:./Drivers/src/stm32f10x_tim.c ****     assert_param(IS_TIM_OCN_POLARITY(TIM_OCInitStruct->TIM_OCNPolarity));
  317:./Drivers/src/stm32f10x_tim.c ****     assert_param(IS_TIM_OCNIDLE_STATE(TIM_OCInitStruct->TIM_OCNIdleState));
-ARM GAS  /tmp/ccbcqXFh.s 			page 7
+ARM GAS  /tmp/cc6Gu2fa.s 			page 7
 
 
  318:./Drivers/src/stm32f10x_tim.c ****     assert_param(IS_TIM_OCIDLE_STATE(TIM_OCInitStruct->TIM_OCIdleState));
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  372:./Drivers/src/stm32f10x_tim.c ****   
  373:./Drivers/src/stm32f10x_tim.c ****   /* Get the TIMx CCER register value */  
  374:./Drivers/src/stm32f10x_tim.c ****   tmpccer = TIMx->CCER;
-ARM GAS  /tmp/ccbcqXFh.s 			page 8
+ARM GAS  /tmp/cc6Gu2fa.s 			page 8
 
 
  375:./Drivers/src/stm32f10x_tim.c ****   /* Get the TIMx CR2 register value */
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  429:./Drivers/src/stm32f10x_tim.c ****   TIMx->CCR2 = TIM_OCInitStruct->TIM_Pulse;
  430:./Drivers/src/stm32f10x_tim.c ****   
  431:./Drivers/src/stm32f10x_tim.c ****   /* Write to TIMx CCER */
-ARM GAS  /tmp/ccbcqXFh.s 			page 9
+ARM GAS  /tmp/cc6Gu2fa.s 			page 9
 
 
  432:./Drivers/src/stm32f10x_tim.c ****   TIMx->CCER = tmpccer;
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  486:./Drivers/src/stm32f10x_tim.c ****     /* Set the Output N Polarity */
  487:./Drivers/src/stm32f10x_tim.c ****     tmpccer |= (uint16_t)(TIM_OCInitStruct->TIM_OCNPolarity << 8);
  488:./Drivers/src/stm32f10x_tim.c ****     /* Reset the Output N State */
-ARM GAS  /tmp/ccbcqXFh.s 			page 10
+ARM GAS  /tmp/cc6Gu2fa.s 			page 10
 
 
  489:./Drivers/src/stm32f10x_tim.c ****     tmpccer &= (uint16_t)(~((uint16_t)TIM_CCER_CC3NE));
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  543:./Drivers/src/stm32f10x_tim.c ****   tmpccmrx &= (uint16_t)(~((uint16_t)TIM_CCMR2_OC4M));
  544:./Drivers/src/stm32f10x_tim.c ****   tmpccmrx &= (uint16_t)(~((uint16_t)TIM_CCMR2_CC4S));
  545:./Drivers/src/stm32f10x_tim.c ****   
-ARM GAS  /tmp/ccbcqXFh.s 			page 11
+ARM GAS  /tmp/cc6Gu2fa.s 			page 11
 
 
  546:./Drivers/src/stm32f10x_tim.c ****   /* Select the Output Compare Mode */
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  600:./Drivers/src/stm32f10x_tim.c ****   {
  601:./Drivers/src/stm32f10x_tim.c ****     assert_param(IS_TIM_IC_POLARITY_LITE(TIM_ICInitStruct->TIM_ICPolarity));
  602:./Drivers/src/stm32f10x_tim.c ****   }
-ARM GAS  /tmp/ccbcqXFh.s 			page 12
+ARM GAS  /tmp/cc6Gu2fa.s 			page 12
 
 
  603:./Drivers/src/stm32f10x_tim.c ****   if (TIM_ICInitStruct->TIM_Channel == TIM_Channel_1)
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  657:./Drivers/src/stm32f10x_tim.c ****   /* Check the parameters */
  658:./Drivers/src/stm32f10x_tim.c ****   assert_param(IS_TIM_LIST6_PERIPH(TIMx));
  659:./Drivers/src/stm32f10x_tim.c ****   /* Select the Opposite Input Polarity */
-ARM GAS  /tmp/ccbcqXFh.s 			page 13
+ARM GAS  /tmp/cc6Gu2fa.s 			page 13
 
 
  660:./Drivers/src/stm32f10x_tim.c ****   if (TIM_ICInitStruct->TIM_ICPolarity == TIM_ICPolarity_Rising)
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  714:./Drivers/src/stm32f10x_tim.c ****   assert_param(IS_TIM_LIST2_PERIPH(TIMx));
  715:./Drivers/src/stm32f10x_tim.c ****   assert_param(IS_TIM_OSSR_STATE(TIM_BDTRInitStruct->TIM_OSSRState));
  716:./Drivers/src/stm32f10x_tim.c ****   assert_param(IS_TIM_OSSI_STATE(TIM_BDTRInitStruct->TIM_OSSIState));
-ARM GAS  /tmp/ccbcqXFh.s 			page 14
+ARM GAS  /tmp/cc6Gu2fa.s 			page 14
 
 
  717:./Drivers/src/stm32f10x_tim.c ****   assert_param(IS_TIM_LOCK_LEVEL(TIM_BDTRInitStruct->TIM_LOCKLevel));
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  771:./Drivers/src/stm32f10x_tim.c **** {
  772:./Drivers/src/stm32f10x_tim.c ****   /* Set the default configuration */
  773:./Drivers/src/stm32f10x_tim.c ****   TIM_ICInitStruct->TIM_Channel = TIM_Channel_1;
-ARM GAS  /tmp/ccbcqXFh.s 			page 15
+ARM GAS  /tmp/cc6Gu2fa.s 			page 15
 
 
  774:./Drivers/src/stm32f10x_tim.c ****   TIM_ICInitStruct->TIM_ICPolarity = TIM_ICPolarity_Rising;
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  828:./Drivers/src/stm32f10x_tim.c ****   * @retval None
  829:./Drivers/src/stm32f10x_tim.c ****   */
  830:./Drivers/src/stm32f10x_tim.c **** void TIM_CtrlPWMOutputs(TIM_TypeDef* TIMx, FunctionalState NewState)
-ARM GAS  /tmp/ccbcqXFh.s 			page 16
+ARM GAS  /tmp/cc6Gu2fa.s 			page 16
 
 
  831:./Drivers/src/stm32f10x_tim.c **** {
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  885:./Drivers/src/stm32f10x_tim.c ****     /* Disable the Interrupt sources */
  886:./Drivers/src/stm32f10x_tim.c ****     TIMx->DIER &= (uint16_t)~TIM_IT;
  887:./Drivers/src/stm32f10x_tim.c ****   }
-ARM GAS  /tmp/ccbcqXFh.s 			page 17
+ARM GAS  /tmp/cc6Gu2fa.s 			page 17
 
 
  888:./Drivers/src/stm32f10x_tim.c **** }
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  942:./Drivers/src/stm32f10x_tim.c ****   /* Set the DMA Base and the DMA Burst Length */
  943:./Drivers/src/stm32f10x_tim.c ****   TIMx->DCR = TIM_DMABase | TIM_DMABurstLength;
  944:./Drivers/src/stm32f10x_tim.c **** }
-ARM GAS  /tmp/ccbcqXFh.s 			page 18
+ARM GAS  /tmp/cc6Gu2fa.s 			page 18
 
 
  945:./Drivers/src/stm32f10x_tim.c **** 
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  999:./Drivers/src/stm32f10x_tim.c ****   * @param  TIM_ITRSource: Trigger source.
 1000:./Drivers/src/stm32f10x_tim.c ****   *   This parameter can be one of the following values:
 1001:./Drivers/src/stm32f10x_tim.c ****   * @param  TIM_TS_ITR0: Internal Trigger 0
-ARM GAS  /tmp/ccbcqXFh.s 			page 19
+ARM GAS  /tmp/cc6Gu2fa.s 			page 19
 
 
 1002:./Drivers/src/stm32f10x_tim.c ****   * @param  TIM_TS_ITR1: Internal Trigger 1
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
 1056:./Drivers/src/stm32f10x_tim.c **** 
 1057:./Drivers/src/stm32f10x_tim.c **** /**
 1058:./Drivers/src/stm32f10x_tim.c ****   * @brief  Configures the External clock Mode1
-ARM GAS  /tmp/ccbcqXFh.s 			page 20
+ARM GAS  /tmp/cc6Gu2fa.s 			page 20
 
 
 1059:./Drivers/src/stm32f10x_tim.c ****   * @param  TIMx: where x can be  1, 2, 3, 4, 5 or 8 to select the TIM peripheral.
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
 1113:./Drivers/src/stm32f10x_tim.c ****   *   This parameter must be a value between 0x00 and 0x0F
 1114:./Drivers/src/stm32f10x_tim.c ****   * @retval None
 1115:./Drivers/src/stm32f10x_tim.c ****   */
-ARM GAS  /tmp/ccbcqXFh.s 			page 21
+ARM GAS  /tmp/cc6Gu2fa.s 			page 21
 
 
 1116:./Drivers/src/stm32f10x_tim.c **** void TIM_ETRClockMode2Config(TIM_TypeDef* TIMx, uint16_t TIM_ExtTRGPrescaler, 
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
 1170:./Drivers/src/stm32f10x_tim.c ****   *   This parameter can be one of the following values:
 1171:./Drivers/src/stm32f10x_tim.c ****   *     @arg TIM_PSCReloadMode_Update: The Prescaler is loaded at the update event.
 1172:./Drivers/src/stm32f10x_tim.c ****   *     @arg TIM_PSCReloadMode_Immediate: The Prescaler is loaded immediately.
-ARM GAS  /tmp/ccbcqXFh.s 			page 22
+ARM GAS  /tmp/cc6Gu2fa.s 			page 22
 
 
 1173:./Drivers/src/stm32f10x_tim.c ****   * @retval None
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
 1227:./Drivers/src/stm32f10x_tim.c ****   */
 1228:./Drivers/src/stm32f10x_tim.c **** void TIM_SelectInputTrigger(TIM_TypeDef* TIMx, uint16_t TIM_InputTriggerSource)
 1229:./Drivers/src/stm32f10x_tim.c **** {
-ARM GAS  /tmp/ccbcqXFh.s 			page 23
+ARM GAS  /tmp/cc6Gu2fa.s 			page 23
 
 
 1230:./Drivers/src/stm32f10x_tim.c ****   uint16_t tmpsmcr = 0;
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
 1284:./Drivers/src/stm32f10x_tim.c ****   
 1285:./Drivers/src/stm32f10x_tim.c ****   /* Set the encoder Mode */
 1286:./Drivers/src/stm32f10x_tim.c ****   tmpsmcr &= (uint16_t)(~((uint16_t)TIM_SMCR_SMS));
-ARM GAS  /tmp/ccbcqXFh.s 			page 24
+ARM GAS  /tmp/cc6Gu2fa.s 			page 24
 
 
 1287:./Drivers/src/stm32f10x_tim.c ****   tmpsmcr |= TIM_EncoderMode;
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
 1341:./Drivers/src/stm32f10x_tim.c ****   /* Check the parameters */
 1342:./Drivers/src/stm32f10x_tim.c ****   assert_param(IS_TIM_LIST6_PERIPH(TIMx));
 1343:./Drivers/src/stm32f10x_tim.c ****   assert_param(IS_TIM_FORCED_ACTION(TIM_ForcedAction));
-ARM GAS  /tmp/ccbcqXFh.s 			page 25
+ARM GAS  /tmp/cc6Gu2fa.s 			page 25
 
 
 1344:./Drivers/src/stm32f10x_tim.c ****   tmpccmr1 = TIMx->CCMR1;
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
 1398:./Drivers/src/stm32f10x_tim.c ****   TIMx->CCMR2 = tmpccmr2;
 1399:./Drivers/src/stm32f10x_tim.c **** }
 1400:./Drivers/src/stm32f10x_tim.c **** 
-ARM GAS  /tmp/ccbcqXFh.s 			page 26
+ARM GAS  /tmp/cc6Gu2fa.s 			page 26
 
 
 1401:./Drivers/src/stm32f10x_tim.c **** /**
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
 1455:./Drivers/src/stm32f10x_tim.c ****   * @retval None
 1456:./Drivers/src/stm32f10x_tim.c ****   */
 1457:./Drivers/src/stm32f10x_tim.c **** void TIM_SelectCCDMA(TIM_TypeDef* TIMx, FunctionalState NewState)
-ARM GAS  /tmp/ccbcqXFh.s 			page 27
+ARM GAS  /tmp/cc6Gu2fa.s 			page 27
 
 
 1458:./Drivers/src/stm32f10x_tim.c **** {
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
 1512:./Drivers/src/stm32f10x_tim.c ****   assert_param(IS_TIM_LIST8_PERIPH(TIMx));
 1513:./Drivers/src/stm32f10x_tim.c ****   assert_param(IS_TIM_OCPRELOAD_STATE(TIM_OCPreload));
 1514:./Drivers/src/stm32f10x_tim.c ****   tmpccmr1 = TIMx->CCMR1;
-ARM GAS  /tmp/ccbcqXFh.s 			page 28
+ARM GAS  /tmp/cc6Gu2fa.s 			page 28
 
 
 1515:./Drivers/src/stm32f10x_tim.c ****   /* Reset the OC1PE Bit */
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
 1569:./Drivers/src/stm32f10x_tim.c ****   TIMx->CCMR2 = tmpccmr2;
 1570:./Drivers/src/stm32f10x_tim.c **** }
 1571:./Drivers/src/stm32f10x_tim.c **** 
-ARM GAS  /tmp/ccbcqXFh.s 			page 29
+ARM GAS  /tmp/cc6Gu2fa.s 			page 29
 
 
 1572:./Drivers/src/stm32f10x_tim.c **** /**
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
 1626:./Drivers/src/stm32f10x_tim.c ****   *   This parameter can be one of the following values:
 1627:./Drivers/src/stm32f10x_tim.c ****   *     @arg TIM_OCFast_Enable: TIM output compare fast enable
 1628:./Drivers/src/stm32f10x_tim.c ****   *     @arg TIM_OCFast_Disable: TIM output compare fast disable
-ARM GAS  /tmp/ccbcqXFh.s 			page 30
+ARM GAS  /tmp/cc6Gu2fa.s 			page 30
 
 
 1629:./Drivers/src/stm32f10x_tim.c ****   * @retval None
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
 1683:./Drivers/src/stm32f10x_tim.c ****   uint16_t tmpccmr2 = 0;
 1684:./Drivers/src/stm32f10x_tim.c ****   /* Check the parameters */
 1685:./Drivers/src/stm32f10x_tim.c ****   assert_param(IS_TIM_LIST3_PERIPH(TIMx));
-ARM GAS  /tmp/ccbcqXFh.s 			page 31
+ARM GAS  /tmp/cc6Gu2fa.s 			page 31
 
 
 1686:./Drivers/src/stm32f10x_tim.c ****   assert_param(IS_TIM_OCFAST_STATE(TIM_OCFast));
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
 1740:./Drivers/src/stm32f10x_tim.c ****   tmpccmr1 &= (uint16_t)~((uint16_t)TIM_CCMR1_OC2CE);
 1741:./Drivers/src/stm32f10x_tim.c ****   /* Enable or Disable the Output Compare Clear Bit */
 1742:./Drivers/src/stm32f10x_tim.c ****   tmpccmr1 |= (uint16_t)(TIM_OCClear << 8);
-ARM GAS  /tmp/ccbcqXFh.s 			page 32
+ARM GAS  /tmp/cc6Gu2fa.s 			page 32
 
 
 1743:./Drivers/src/stm32f10x_tim.c ****   /* Write to TIMx CCMR1 register */
@@ -1918,7 +1918,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
 1797:./Drivers/src/stm32f10x_tim.c ****   * @param  TIMx: where x can be 1 to 17 except 6 and 7 to select the TIM peripheral.
 1798:./Drivers/src/stm32f10x_tim.c ****   * @param  TIM_OCPolarity: specifies the OC1 Polarity
 1799:./Drivers/src/stm32f10x_tim.c ****   *   This parameter can be one of the following values:
-ARM GAS  /tmp/ccbcqXFh.s 			page 33
+ARM GAS  /tmp/cc6Gu2fa.s 			page 33
 
 
 1800:./Drivers/src/stm32f10x_tim.c ****   *     @arg TIM_OCPolarity_High: Output Compare active high
@@ -1978,7 +1978,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
 1854:./Drivers/src/stm32f10x_tim.c ****   /* Check the parameters */
 1855:./Drivers/src/stm32f10x_tim.c ****   assert_param(IS_TIM_LIST6_PERIPH(TIMx));
 1856:./Drivers/src/stm32f10x_tim.c ****   assert_param(IS_TIM_OC_POLARITY(TIM_OCPolarity));
-ARM GAS  /tmp/ccbcqXFh.s 			page 34
+ARM GAS  /tmp/cc6Gu2fa.s 			page 34
 
 
 1857:./Drivers/src/stm32f10x_tim.c ****   tmpccer = TIMx->CCER;
@@ -2038,7 +2038,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
 1911:./Drivers/src/stm32f10x_tim.c **** 
 1912:./Drivers/src/stm32f10x_tim.c **** /**
 1913:./Drivers/src/stm32f10x_tim.c ****   * @brief  Configures the TIMx Channel 3N polarity.
-ARM GAS  /tmp/ccbcqXFh.s 			page 35
+ARM GAS  /tmp/cc6Gu2fa.s 			page 35
 
 
 1914:./Drivers/src/stm32f10x_tim.c ****   * @param  TIMx: where x can be 1 or 8 to select the TIM peripheral.
@@ -2098,7 +2098,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
 1968:./Drivers/src/stm32f10x_tim.c ****   *     @arg TIM_Channel_4: TIM Channel 4
 1969:./Drivers/src/stm32f10x_tim.c ****   * @param  TIM_CCx: specifies the TIM Channel CCxE bit new state.
 1970:./Drivers/src/stm32f10x_tim.c ****   *   This parameter can be: TIM_CCx_Enable or TIM_CCx_Disable. 
-ARM GAS  /tmp/ccbcqXFh.s 			page 36
+ARM GAS  /tmp/cc6Gu2fa.s 			page 36
 
 
 1971:./Drivers/src/stm32f10x_tim.c ****   * @retval None
@@ -2158,7 +2158,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
 2025:./Drivers/src/stm32f10x_tim.c ****   *         User has to enable this channel using TIM_CCxCmd and TIM_CCxNCmd functions.
 2026:./Drivers/src/stm32f10x_tim.c ****   * @param  TIMx: where x can be 1 to 17 except 6 and 7 to select the TIM peripheral.
 2027:./Drivers/src/stm32f10x_tim.c ****   * @param  TIM_Channel: specifies the TIM Channel
-ARM GAS  /tmp/ccbcqXFh.s 			page 37
+ARM GAS  /tmp/cc6Gu2fa.s 			page 37
 
 
 2028:./Drivers/src/stm32f10x_tim.c ****   *   This parameter can be one of the following values:
@@ -2218,7 +2218,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
 2082:./Drivers/src/stm32f10x_tim.c **** }
 2083:./Drivers/src/stm32f10x_tim.c **** 
 2084:./Drivers/src/stm32f10x_tim.c **** /**
-ARM GAS  /tmp/ccbcqXFh.s 			page 38
+ARM GAS  /tmp/cc6Gu2fa.s 			page 38
 
 
 2085:./Drivers/src/stm32f10x_tim.c ****   * @brief  Enables or Disables the TIMx Update event.
@@ -2278,7 +2278,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
 2139:./Drivers/src/stm32f10x_tim.c ****   * @param  NewState: new state of the TIMx Hall sensor interface.
 2140:./Drivers/src/stm32f10x_tim.c ****   *   This parameter can be: ENABLE or DISABLE.
 2141:./Drivers/src/stm32f10x_tim.c ****   * @retval None
-ARM GAS  /tmp/ccbcqXFh.s 			page 39
+ARM GAS  /tmp/cc6Gu2fa.s 			page 39
 
 
 2142:./Drivers/src/stm32f10x_tim.c ****   */
@@ -2338,7 +2338,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
 2196:./Drivers/src/stm32f10x_tim.c ****   *     @arg TIM_TRGOSource_OC3Ref: OC3REF signal is used as the trigger output (TRGO).
 2197:./Drivers/src/stm32f10x_tim.c ****   *     @arg TIM_TRGOSource_OC4Ref: OC4REF signal is used as the trigger output (TRGO).
 2198:./Drivers/src/stm32f10x_tim.c ****   *
-ARM GAS  /tmp/ccbcqXFh.s 			page 40
+ARM GAS  /tmp/cc6Gu2fa.s 			page 40
 
 
 2199:./Drivers/src/stm32f10x_tim.c ****   * @retval None
@@ -2398,7 +2398,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
 2253:./Drivers/src/stm32f10x_tim.c ****   /* Set or Reset the MSM Bit */
 2254:./Drivers/src/stm32f10x_tim.c ****   TIMx->SMCR |= TIM_MasterSlaveMode;
 2255:./Drivers/src/stm32f10x_tim.c **** }
-ARM GAS  /tmp/ccbcqXFh.s 			page 41
+ARM GAS  /tmp/cc6Gu2fa.s 			page 41
 
 
 2256:./Drivers/src/stm32f10x_tim.c **** 
@@ -2458,7 +2458,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
 2310:./Drivers/src/stm32f10x_tim.c ****   TIMx->CCR2 = Compare2;
 2311:./Drivers/src/stm32f10x_tim.c **** }
 2312:./Drivers/src/stm32f10x_tim.c **** 
-ARM GAS  /tmp/ccbcqXFh.s 			page 42
+ARM GAS  /tmp/cc6Gu2fa.s 			page 42
 
 
 2313:./Drivers/src/stm32f10x_tim.c **** /**
@@ -2518,7 +2518,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
 2367:./Drivers/src/stm32f10x_tim.c ****   *   This parameter can be one of the following values:
 2368:./Drivers/src/stm32f10x_tim.c ****   *     @arg TIM_ICPSC_DIV1: no prescaler
 2369:./Drivers/src/stm32f10x_tim.c ****   *     @arg TIM_ICPSC_DIV2: capture is done once every 2 events
-ARM GAS  /tmp/ccbcqXFh.s 			page 43
+ARM GAS  /tmp/cc6Gu2fa.s 			page 43
 
 
 2370:./Drivers/src/stm32f10x_tim.c ****   *     @arg TIM_ICPSC_DIV4: capture is done once every 4 events
@@ -2578,7 +2578,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
 2424:./Drivers/src/stm32f10x_tim.c ****   TIMx->CCMR2 &= (uint16_t)~((uint16_t)TIM_CCMR2_IC4PSC);
 2425:./Drivers/src/stm32f10x_tim.c ****   /* Set the IC4PSC value */
 2426:./Drivers/src/stm32f10x_tim.c ****   TIMx->CCMR2 |= (uint16_t)(TIM_ICPSC << 8);
-ARM GAS  /tmp/ccbcqXFh.s 			page 44
+ARM GAS  /tmp/cc6Gu2fa.s 			page 44
 
 
 2427:./Drivers/src/stm32f10x_tim.c **** }
@@ -2638,7 +2638,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
 2481:./Drivers/src/stm32f10x_tim.c ****   */
 2482:./Drivers/src/stm32f10x_tim.c **** uint16_t TIM_GetCapture3(TIM_TypeDef* TIMx)
 2483:./Drivers/src/stm32f10x_tim.c **** {
-ARM GAS  /tmp/ccbcqXFh.s 			page 45
+ARM GAS  /tmp/cc6Gu2fa.s 			page 45
 
 
 2484:./Drivers/src/stm32f10x_tim.c ****   /* Check the parameters */
@@ -2698,7 +2698,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
 2538:./Drivers/src/stm32f10x_tim.c ****   *     @arg TIM_FLAG_CC4: TIM Capture Compare 4 Flag
 2539:./Drivers/src/stm32f10x_tim.c ****   *     @arg TIM_FLAG_COM: TIM Commutation Flag
 2540:./Drivers/src/stm32f10x_tim.c ****   *     @arg TIM_FLAG_Trigger: TIM Trigger Flag
-ARM GAS  /tmp/ccbcqXFh.s 			page 46
+ARM GAS  /tmp/cc6Gu2fa.s 			page 46
 
 
 2541:./Drivers/src/stm32f10x_tim.c ****   *     @arg TIM_FLAG_Break: TIM Break Flag
@@ -2758,7 +2758,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
 2595:./Drivers/src/stm32f10x_tim.c ****   *   - TIM_FLAG_Break is used only with TIM1, TIM8 and TIM15. 
 2596:./Drivers/src/stm32f10x_tim.c ****   *   - TIM_FLAG_COM is used only with TIM1, TIM8, TIM15, TIM16 and TIM17.   
 2597:./Drivers/src/stm32f10x_tim.c ****   * @retval None
-ARM GAS  /tmp/ccbcqXFh.s 			page 47
+ARM GAS  /tmp/cc6Gu2fa.s 			page 47
 
 
 2598:./Drivers/src/stm32f10x_tim.c ****   */
@@ -2818,7 +2818,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
 2652:./Drivers/src/stm32f10x_tim.c **** 
 2653:./Drivers/src/stm32f10x_tim.c **** /**
 2654:./Drivers/src/stm32f10x_tim.c ****   * @brief  Clears the TIMx's interrupt pending bits.
-ARM GAS  /tmp/ccbcqXFh.s 			page 48
+ARM GAS  /tmp/cc6Gu2fa.s 			page 48
 
 
 2655:./Drivers/src/stm32f10x_tim.c ****   * @param  TIMx: where x can be 1 to 17 to select the TIM peripheral.
@@ -2878,7 +2878,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
   33              	.LCFI0:
   34              		.cfi_def_cfa_offset 4
   35              		.cfi_offset 14, -4
-ARM GAS  /tmp/ccbcqXFh.s 			page 49
+ARM GAS  /tmp/cc6Gu2fa.s 			page 49
 
 
 2703:./Drivers/src/stm32f10x_tim.c ****   uint16_t tmpccmr1 = 0, tmpccer = 0;
@@ -2938,7 +2938,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
   80 003c 9842     		cmp	r0, r3
   81 003e 14D0     		beq	.L2
   82              		.loc 1 2712 39 discriminator 2 view .LVU21
-ARM GAS  /tmp/ccbcqXFh.s 			page 50
+ARM GAS  /tmp/cc6Gu2fa.s 			page 50
 
 
   83 0040 B0F1804F 		cmp	r0, #1073741824
@@ -2998,7 +2998,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  121 0070 43F00103 		orr	r3, r3, #1
  122              	.LVL14:
  123              	.L4:
-ARM GAS  /tmp/ccbcqXFh.s 			page 51
+ARM GAS  /tmp/cc6Gu2fa.s 			page 51
 
 
 2724:./Drivers/src/stm32f10x_tim.c ****   }
@@ -3058,7 +3058,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  154 0000 10B5     		push	{r4, lr}
  155              	.LCFI1:
  156              		.cfi_def_cfa_offset 8
-ARM GAS  /tmp/ccbcqXFh.s 			page 52
+ARM GAS  /tmp/cc6Gu2fa.s 			page 52
 
 
  157              		.cfi_offset 4, -8
@@ -3118,7 +3118,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  201              		.loc 1 2759 15 is_stmt 0 view .LVU61
  202 003a 1202     		lsls	r2, r2, #8
  203              	.LVL24:
-ARM GAS  /tmp/ccbcqXFh.s 			page 53
+ARM GAS  /tmp/cc6Gu2fa.s 			page 53
 
 
  204              		.loc 1 2759 15 view .LVU62
@@ -3178,7 +3178,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  245 0078 05E0     		b	.L11
  246              	.LVL29:
  247              	.L9:
-ARM GAS  /tmp/ccbcqXFh.s 			page 54
+ARM GAS  /tmp/cc6Gu2fa.s 			page 54
 
 
 2765:./Drivers/src/stm32f10x_tim.c ****     tmpccer |=  (uint16_t)(tmp | (uint16_t)TIM_CCER_CC2E);
@@ -3238,7 +3238,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
 2786:./Drivers/src/stm32f10x_tim.c ****   *     @arg TIM_ICPolarity_Falling
 2787:./Drivers/src/stm32f10x_tim.c ****   * @param  TIM_ICSelection: specifies the input to be used.
 2788:./Drivers/src/stm32f10x_tim.c ****   *   This parameter can be one of the following values:
-ARM GAS  /tmp/ccbcqXFh.s 			page 55
+ARM GAS  /tmp/cc6Gu2fa.s 			page 55
 
 
 2789:./Drivers/src/stm32f10x_tim.c ****   *     @arg TIM_ICSelection_DirectTI: TIM Input 3 is selected to be connected to IC3.
@@ -3298,7 +3298,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
 2805:./Drivers/src/stm32f10x_tim.c ****   /* Select the Input and set the filter */
 2806:./Drivers/src/stm32f10x_tim.c ****   tmpccmr2 &= (uint16_t)(((uint16_t)~((uint16_t)TIM_CCMR2_CC3S)) & ((uint16_t)~((uint16_t)TIM_CCMR2
  324              		.loc 1 2806 3 is_stmt 1 view .LVU101
-ARM GAS  /tmp/ccbcqXFh.s 			page 56
+ARM GAS  /tmp/cc6Gu2fa.s 			page 56
 
 
  325              		.loc 1 2806 12 is_stmt 0 view .LVU102
@@ -3358,7 +3358,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  366              		.loc 1 2819 13 is_stmt 0 view .LVU117
  367 0062 21F42063 		bic	r3, r1, #2560
  368              	.LVL44:
-ARM GAS  /tmp/ccbcqXFh.s 			page 57
+ARM GAS  /tmp/cc6Gu2fa.s 			page 57
 
 
 2820:./Drivers/src/stm32f10x_tim.c ****     tmpccer |= (uint16_t)(TIM_ICPolarity | (uint16_t)TIM_CCER_CC3E);
@@ -3418,7 +3418,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  413              	TI4_Config:
  414              	.LVL50:
  415              	.LFB119:
-ARM GAS  /tmp/ccbcqXFh.s 			page 58
+ARM GAS  /tmp/cc6Gu2fa.s 			page 58
 
 
 2827:./Drivers/src/stm32f10x_tim.c **** 
@@ -3478,7 +3478,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  444              	.LVL53:
 2853:./Drivers/src/stm32f10x_tim.c ****   tmp = (uint16_t)(TIM_ICPolarity << 12);
  445              		.loc 1 2853 3 is_stmt 1 view .LVU142
-ARM GAS  /tmp/ccbcqXFh.s 			page 59
+ARM GAS  /tmp/cc6Gu2fa.s 			page 59
 
 
  446              		.loc 1 2853 7 is_stmt 0 view .LVU143
@@ -3538,7 +3538,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  494 0060 9042     		cmp	r0, r2
  495 0062 0ED0     		beq	.L23
 2860:./Drivers/src/stm32f10x_tim.c ****      (TIMx == TIM4) ||(TIMx == TIM5))
-ARM GAS  /tmp/ccbcqXFh.s 			page 60
+ARM GAS  /tmp/cc6Gu2fa.s 			page 60
 
 
  496              		.loc 1 2860 21 view .LVU161
@@ -3598,7 +3598,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  532              		.loc 1 2873 15 is_stmt 0 view .LVU175
  533 008c 8383     		strh	r3, [r0, #28]	@ movhi
 2874:./Drivers/src/stm32f10x_tim.c ****   TIMx->CCER = tmpccer;
-ARM GAS  /tmp/ccbcqXFh.s 			page 61
+ARM GAS  /tmp/cc6Gu2fa.s 			page 61
 
 
  534              		.loc 1 2874 3 is_stmt 1 view .LVU176
@@ -3658,7 +3658,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  580 000e 704B     		ldr	r3, .L64+4
  581 0010 9842     		cmp	r0, r3
  582 0012 4ED0     		beq	.L50
-ARM GAS  /tmp/ccbcqXFh.s 			page 62
+ARM GAS  /tmp/cc6Gu2fa.s 			page 62
 
 
  141:./Drivers/src/stm32f10x_tim.c ****   {
@@ -3718,7 +3718,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  621 0040 9842     		cmp	r0, r3
  622 0042 00F08480 		beq	.L58
  181:./Drivers/src/stm32f10x_tim.c ****   {      
-ARM GAS  /tmp/ccbcqXFh.s 			page 63
+ARM GAS  /tmp/cc6Gu2fa.s 			page 63
 
 
  623              		.loc 1 181 8 is_stmt 1 view .LVU205
@@ -3778,7 +3778,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  663 0084 FFF7FEFF 		bl	RCC_APB2PeriphResetCmd
  664              	.LVL73:
  214:./Drivers/src/stm32f10x_tim.c **** 
-ARM GAS  /tmp/ccbcqXFh.s 			page 64
+ARM GAS  /tmp/cc6Gu2fa.s 			page 64
 
 
  665              		.loc 1 214 1 is_stmt 0 view .LVU220
@@ -3838,7 +3838,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  709 00ba 0021     		movs	r1, #0
  710 00bc 0220     		movs	r0, #2
  711 00be FFF7FEFF 		bl	RCC_APB1PeriphResetCmd
-ARM GAS  /tmp/ccbcqXFh.s 			page 65
+ARM GAS  /tmp/cc6Gu2fa.s 			page 65
 
 
  712              	.LVL85:
@@ -3898,7 +3898,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  757              	.LVL97:
  758 00f8 D1E7     		b	.L29
  759              	.LVL98:
-ARM GAS  /tmp/ccbcqXFh.s 			page 66
+ARM GAS  /tmp/cc6Gu2fa.s 			page 66
 
 
  760              	.L54:
@@ -3958,7 +3958,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  805              	.L57:
  173:./Drivers/src/stm32f10x_tim.c ****     RCC_APB2PeriphResetCmd(RCC_APB2Periph_TIM10, DISABLE);  
  806              		.loc 1 173 5 view .LVU249
-ARM GAS  /tmp/ccbcqXFh.s 			page 67
+ARM GAS  /tmp/cc6Gu2fa.s 			page 67
 
 
  807 0138 0121     		movs	r1, #1
@@ -4018,7 +4018,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  852 0176 0121     		movs	r1, #1
  853 0178 8020     		movs	r0, #128
  854              	.LVL123:
-ARM GAS  /tmp/ccbcqXFh.s 			page 68
+ARM GAS  /tmp/cc6Gu2fa.s 			page 68
 
 
  188:./Drivers/src/stm32f10x_tim.c ****     RCC_APB1PeriphResetCmd(RCC_APB1Periph_TIM13, DISABLE);  
@@ -4078,7 +4078,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  203:./Drivers/src/stm32f10x_tim.c ****     RCC_APB2PeriphResetCmd(RCC_APB2Periph_TIM16, DISABLE);
  900              		.loc 1 203 5 is_stmt 0 view .LVU268
  901 01ba FFF7FEFF 		bl	RCC_APB2PeriphResetCmd
-ARM GAS  /tmp/ccbcqXFh.s 			page 69
+ARM GAS  /tmp/cc6Gu2fa.s 			page 69
 
 
  902              	.LVL136:
@@ -4138,7 +4138,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  234:./Drivers/src/stm32f10x_tim.c **** 
  951              		.loc 1 234 10 is_stmt 0 view .LVU276
  952 0000 0388     		ldrh	r3, [r0]
-ARM GAS  /tmp/ccbcqXFh.s 			page 70
+ARM GAS  /tmp/cc6Gu2fa.s 			page 70
 
 
  953 0002 9BB2     		uxth	r3, r3
@@ -4198,7 +4198,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  993 0038 154A     		ldr	r2, .L72+4
  994 003a 9042     		cmp	r0, r2
  995 003c 08D0     		beq	.L69
-ARM GAS  /tmp/ccbcqXFh.s 			page 71
+ARM GAS  /tmp/cc6Gu2fa.s 			page 71
 
 
  244:./Drivers/src/stm32f10x_tim.c ****   {
@@ -4258,7 +4258,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  1033 005e 0FD0     		beq	.L70
  259:./Drivers/src/stm32f10x_tim.c ****   {
  1034              		.loc 1 259 22 discriminator 1 view .LVU308
-ARM GAS  /tmp/ccbcqXFh.s 			page 72
+ARM GAS  /tmp/cc6Gu2fa.s 			page 72
 
 
  1035 0060 03F50063 		add	r3, r3, #2048
@@ -4318,7 +4318,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  1081              		.loc 1 279 1 is_stmt 1 view -0
  1082              		.cfi_startproc
  1083              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /tmp/ccbcqXFh.s 			page 73
+ARM GAS  /tmp/cc6Gu2fa.s 			page 73
 
 
  1084              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -4378,7 +4378,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  299:./Drivers/src/stm32f10x_tim.c **** 
  1121              		.loc 1 299 12 is_stmt 0 view .LVU336
  1122 001e 23F07303 		bic	r3, r3, #115
-ARM GAS  /tmp/ccbcqXFh.s 			page 74
+ARM GAS  /tmp/cc6Gu2fa.s 			page 74
 
 
  1123              	.LVL152:
@@ -4438,7 +4438,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  1161 0050 9042     		cmp	r0, r2
  1162 0052 03D0     		beq	.L75
  313:./Drivers/src/stm32f10x_tim.c ****   {
-ARM GAS  /tmp/ccbcqXFh.s 			page 75
+ARM GAS  /tmp/cc6Gu2fa.s 			page 75
 
 
  1163              		.loc 1 313 21 view .LVU353
@@ -4498,7 +4498,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  1198              		.loc 1 335 31 is_stmt 0 view .LVU372
  1199 0070 8A89     		ldrh	r2, [r1, #12]
  335:./Drivers/src/stm32f10x_tim.c ****     /* Set the Output N Idle state */
-ARM GAS  /tmp/ccbcqXFh.s 			page 76
+ARM GAS  /tmp/cc6Gu2fa.s 			page 76
 
 
  1200              		.loc 1 335 12 view .LVU373
@@ -4558,7 +4558,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  362:./Drivers/src/stm32f10x_tim.c ****   uint16_t tmpccmrx = 0, tmpccer = 0, tmpcr2 = 0;
  1243              		.loc 1 362 1 is_stmt 1 view -0
  1244              		.cfi_startproc
-ARM GAS  /tmp/ccbcqXFh.s 			page 77
+ARM GAS  /tmp/cc6Gu2fa.s 			page 77
 
 
  1245              		@ args = 0, pretend = 0, frame = 0
@@ -4618,7 +4618,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  1282              		.loc 1 383 3 view .LVU404
  383:./Drivers/src/stm32f10x_tim.c ****   
  1283              		.loc 1 383 12 is_stmt 0 view .LVU405
-ARM GAS  /tmp/ccbcqXFh.s 			page 78
+ARM GAS  /tmp/cc6Gu2fa.s 			page 78
 
 
  1284 0022 2CF4E64C 		bic	ip, ip, #29440
@@ -4678,7 +4678,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  396:./Drivers/src/stm32f10x_tim.c ****   {
  1322              		.loc 1 396 21 discriminator 1 view .LVU422
  1323 004a 02F50062 		add	r2, r2, #2048
-ARM GAS  /tmp/ccbcqXFh.s 			page 79
+ARM GAS  /tmp/cc6Gu2fa.s 			page 79
 
 
  1324 004e 9042     		cmp	r0, r2
@@ -4738,7 +4738,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  1359              		.loc 1 415 12 is_stmt 0 view .LVU441
  1360 006a 2EF4406E 		bic	lr, lr, #3072
  1361              	.LVL178:
-ARM GAS  /tmp/ccbcqXFh.s 			page 80
+ARM GAS  /tmp/cc6Gu2fa.s 			page 80
 
 
  418:./Drivers/src/stm32f10x_tim.c ****     /* Set the Output N Idle state */
@@ -4798,7 +4798,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  1398              		.align	2
  1399              	.L84:
  1400 0094 002C0140 		.word	1073818624
-ARM GAS  /tmp/ccbcqXFh.s 			page 81
+ARM GAS  /tmp/cc6Gu2fa.s 			page 81
 
 
  1401              		.cfi_endproc
@@ -4858,7 +4858,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  1443              		.loc 1 458 10 is_stmt 0 view .LVU473
  1444 0012 B0F804E0 		ldrh	lr, [r0, #4]
  1445 0016 1FFA8EFE 		uxth	lr, lr
-ARM GAS  /tmp/ccbcqXFh.s 			page 82
+ARM GAS  /tmp/cc6Gu2fa.s 			page 82
 
 
  1446              	.LVL184:
@@ -4918,7 +4918,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  1482              		.loc 1 475 11 view .LVU491
  1483 003e 1343     		orrs	r3, r3, r2
  1484              	.LVL190:
-ARM GAS  /tmp/ccbcqXFh.s 			page 83
+ARM GAS  /tmp/cc6Gu2fa.s 			page 83
 
 
  477:./Drivers/src/stm32f10x_tim.c ****   {
@@ -4978,7 +4978,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  1521 0062 92B2     		uxth	r2, r2
  492:./Drivers/src/stm32f10x_tim.c ****     /* Reset the Output Compare and Output Compare N IDLE State */
  1522              		.loc 1 492 13 view .LVU510
-ARM GAS  /tmp/ccbcqXFh.s 			page 84
+ARM GAS  /tmp/cc6Gu2fa.s 			page 84
 
 
  1523 0064 1343     		orrs	r3, r3, r2
@@ -5038,7 +5038,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  1559 0088 8287     		strh	r2, [r0, #60]	@ movhi
  511:./Drivers/src/stm32f10x_tim.c **** }
  1560              		.loc 1 511 3 is_stmt 1 view .LVU529
-ARM GAS  /tmp/ccbcqXFh.s 			page 85
+ARM GAS  /tmp/cc6Gu2fa.s 			page 85
 
 
  511:./Drivers/src/stm32f10x_tim.c **** }
@@ -5098,7 +5098,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  1605 000c 0384     		strh	r3, [r0, #32]	@ movhi
  535:./Drivers/src/stm32f10x_tim.c ****   /* Get the TIMx CR2 register value */
  1606              		.loc 1 535 3 is_stmt 1 view .LVU542
-ARM GAS  /tmp/ccbcqXFh.s 			page 86
+ARM GAS  /tmp/cc6Gu2fa.s 			page 86
 
 
  535:./Drivers/src/stm32f10x_tim.c ****   /* Get the TIMx CR2 register value */
@@ -5158,7 +5158,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  1644 0036 9BB2     		uxth	r3, r3
  552:./Drivers/src/stm32f10x_tim.c ****   
  1645              		.loc 1 552 11 view .LVU560
-ARM GAS  /tmp/ccbcqXFh.s 			page 87
+ARM GAS  /tmp/cc6Gu2fa.s 			page 87
 
 
  1646 0038 4CEA030C 		orr	ip, ip, r3
@@ -5218,7 +5218,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  1684 0068 A0F804E0 		strh	lr, [r0, #4]	@ movhi
  569:./Drivers/src/stm32f10x_tim.c **** 
  1685              		.loc 1 569 3 is_stmt 1 view .LVU577
-ARM GAS  /tmp/ccbcqXFh.s 			page 88
+ARM GAS  /tmp/cc6Gu2fa.s 			page 88
 
 
  569:./Drivers/src/stm32f10x_tim.c **** 
@@ -5278,7 +5278,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  716:./Drivers/src/stm32f10x_tim.c ****   assert_param(IS_TIM_LOCK_LEVEL(TIM_BDTRInitStruct->TIM_LOCKLevel));
  1731              		.loc 1 716 3 view .LVU589
  717:./Drivers/src/stm32f10x_tim.c ****   assert_param(IS_TIM_BREAK_STATE(TIM_BDTRInitStruct->TIM_Break));
-ARM GAS  /tmp/ccbcqXFh.s 			page 89
+ARM GAS  /tmp/cc6Gu2fa.s 			page 89
 
 
  1732              		.loc 1 717 3 view .LVU590
@@ -5338,7 +5338,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  1774              	.LVL214:
  1775              	.LFB38:
  736:./Drivers/src/stm32f10x_tim.c ****   /* Set the default configuration */
-ARM GAS  /tmp/ccbcqXFh.s 			page 90
+ARM GAS  /tmp/cc6Gu2fa.s 			page 90
 
 
  1776              		.loc 1 736 1 is_stmt 1 view -0
@@ -5398,7 +5398,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  754:./Drivers/src/stm32f10x_tim.c ****   TIM_OCInitStruct->TIM_OutputState = TIM_OutputState_Disable;
  1819              		.loc 1 754 32 is_stmt 0 view .LVU619
  1820 0000 0023     		movs	r3, #0
-ARM GAS  /tmp/ccbcqXFh.s 			page 91
+ARM GAS  /tmp/cc6Gu2fa.s 			page 91
 
 
  1821 0002 0380     		strh	r3, [r0]	@ movhi
@@ -5458,7 +5458,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  1861              		@ frame_needed = 0, uses_anonymous_args = 0
  1862              		@ link register save eliminated.
  773:./Drivers/src/stm32f10x_tim.c ****   TIM_ICInitStruct->TIM_ICPolarity = TIM_ICPolarity_Rising;
-ARM GAS  /tmp/ccbcqXFh.s 			page 92
+ARM GAS  /tmp/cc6Gu2fa.s 			page 92
 
 
  1863              		.loc 1 773 3 view .LVU636
@@ -5518,7 +5518,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  790:./Drivers/src/stm32f10x_tim.c ****   TIM_BDTRInitStruct->TIM_LOCKLevel = TIM_LOCKLevel_OFF;
  1905              		.loc 1 790 37 is_stmt 0 view .LVU651
  1906 0004 4380     		strh	r3, [r0, #2]	@ movhi
-ARM GAS  /tmp/ccbcqXFh.s 			page 93
+ARM GAS  /tmp/cc6Gu2fa.s 			page 93
 
 
  791:./Drivers/src/stm32f10x_tim.c ****   TIM_BDTRInitStruct->TIM_DeadTime = 0x00;
@@ -5578,7 +5578,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  814:./Drivers/src/stm32f10x_tim.c ****   }
  1947              		.loc 1 814 5 is_stmt 1 view .LVU668
  814:./Drivers/src/stm32f10x_tim.c ****   }
-ARM GAS  /tmp/ccbcqXFh.s 			page 94
+ARM GAS  /tmp/cc6Gu2fa.s 			page 94
 
 
  1948              		.loc 1 814 9 is_stmt 0 view .LVU669
@@ -5638,7 +5638,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  838:./Drivers/src/stm32f10x_tim.c ****   }
  1992              		.loc 1 838 16 view .LVU682
  1993 0006 6FEA4343 		mvn	r3, r3, lsl #17
-ARM GAS  /tmp/ccbcqXFh.s 			page 95
+ARM GAS  /tmp/cc6Gu2fa.s 			page 95
 
 
  1994 000a 6FEA5343 		mvn	r3, r3, lsr #17
@@ -5698,7 +5698,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  2037 0008 8381     		strh	r3, [r0, #12]	@ movhi
  2038 000a 7047     		bx	lr
  2039              	.L111:
-ARM GAS  /tmp/ccbcqXFh.s 			page 96
+ARM GAS  /tmp/cc6Gu2fa.s 			page 96
 
 
  886:./Drivers/src/stm32f10x_tim.c ****   }
@@ -5758,7 +5758,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  2085              		.thumb
  2086              		.thumb_func
  2088              	TIM_DMAConfig:
-ARM GAS  /tmp/ccbcqXFh.s 			page 97
+ARM GAS  /tmp/cc6Gu2fa.s 			page 97
 
 
  2089              	.LVL223:
@@ -5818,7 +5818,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  973:./Drivers/src/stm32f10x_tim.c ****   }
  2131              		.loc 1 973 5 is_stmt 1 view .LVU722
  973:./Drivers/src/stm32f10x_tim.c ****   }
-ARM GAS  /tmp/ccbcqXFh.s 			page 98
+ARM GAS  /tmp/cc6Gu2fa.s 			page 98
 
 
  2132              		.loc 1 973 9 is_stmt 0 view .LVU723
@@ -5878,7 +5878,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  2176              		.loc 1 993 14 view .LVU735
  2177 0004 23F00703 		bic	r3, r3, #7
  2178 0008 9BB2     		uxth	r3, r3
-ARM GAS  /tmp/ccbcqXFh.s 			page 99
+ARM GAS  /tmp/cc6Gu2fa.s 			page 99
 
 
  2179 000a 0381     		strh	r3, [r0, #8]	@ movhi
@@ -5938,7 +5938,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  2220 000c 1343     		orrs	r3, r3, r2
 1160:./Drivers/src/stm32f10x_tim.c ****   /* Write to TIMx SMCR */
  2221              		.loc 1 1160 14 view .LVU751
-ARM GAS  /tmp/ccbcqXFh.s 			page 100
+ARM GAS  /tmp/cc6Gu2fa.s 			page 100
 
 
  2222 000e 0B43     		orrs	r3, r3, r1
@@ -5998,7 +5998,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
 1087:./Drivers/src/stm32f10x_tim.c ****   /* Reset the SMS Bits */
  2265              		.loc 1 1087 11 is_stmt 0 view .LVU765
  2266 0008 2389     		ldrh	r3, [r4, #8]
-ARM GAS  /tmp/ccbcqXFh.s 			page 101
+ARM GAS  /tmp/cc6Gu2fa.s 			page 101
 
 
  2267 000a 9BB2     		uxth	r3, r3
@@ -6058,7 +6058,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
 1123:./Drivers/src/stm32f10x_tim.c ****   /* Configure the ETR Clock source */
  2309              		.loc 1 1123 3 view .LVU780
 1125:./Drivers/src/stm32f10x_tim.c ****   /* Enable the External clock mode2 */
-ARM GAS  /tmp/ccbcqXFh.s 			page 102
+ARM GAS  /tmp/cc6Gu2fa.s 			page 102
 
 
  2310              		.loc 1 1125 3 view .LVU781
@@ -6118,7 +6118,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  2354              		.section	.text.TIM_CounterModeConfig,"ax",%progbits
  2355              		.align	1
  2356              		.global	TIM_CounterModeConfig
-ARM GAS  /tmp/ccbcqXFh.s 			page 103
+ARM GAS  /tmp/cc6Gu2fa.s 			page 103
 
 
  2357              		.syntax unified
@@ -6178,7 +6178,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  2401              	.LVL245:
  2402              	.LFB56:
 1229:./Drivers/src/stm32f10x_tim.c ****   uint16_t tmpsmcr = 0;
-ARM GAS  /tmp/ccbcqXFh.s 			page 104
+ARM GAS  /tmp/cc6Gu2fa.s 			page 104
 
 
  2403              		.loc 1 1229 1 is_stmt 1 view -0
@@ -6238,7 +6238,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
 1008:./Drivers/src/stm32f10x_tim.c ****   /* Check the parameters */
  2446              		.loc 1 1008 1 is_stmt 0 view .LVU822
  2447 0000 10B5     		push	{r4, lr}
-ARM GAS  /tmp/ccbcqXFh.s 			page 105
+ARM GAS  /tmp/cc6Gu2fa.s 			page 105
 
 
  2448              	.LCFI12:
@@ -6298,7 +6298,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  2494 0004 0D46     		mov	r5, r1
  2495 0006 1146     		mov	r1, r2
  2496              	.LVL252:
-ARM GAS  /tmp/ccbcqXFh.s 			page 106
+ARM GAS  /tmp/cc6Gu2fa.s 			page 106
 
 
 1038:./Drivers/src/stm32f10x_tim.c ****   assert_param(IS_TIM_TIXCLK_SOURCE(TIM_TIxExternalCLKSource));
@@ -6358,7 +6358,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  2535 002c F1E7     		b	.L131
  2536              		.cfi_endproc
  2537              	.LFE50:
-ARM GAS  /tmp/ccbcqXFh.s 			page 107
+ARM GAS  /tmp/cc6Gu2fa.s 			page 107
 
 
  2539              		.section	.text.TIM_EncoderInterfaceConfig,"ax",%progbits
@@ -6418,7 +6418,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  2579 000e B0F820E0 		ldrh	lr, [r0, #32]
  2580 0012 1FFA8EFE 		uxth	lr, lr
  2581              	.LVL263:
-ARM GAS  /tmp/ccbcqXFh.s 			page 108
+ARM GAS  /tmp/cc6Gu2fa.s 			page 108
 
 
 1286:./Drivers/src/stm32f10x_tim.c ****   tmpsmcr |= TIM_EncoderMode;
@@ -6478,7 +6478,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
 1298:./Drivers/src/stm32f10x_tim.c ****   /* Write to TIMx CCMR1 */
  2619              		.loc 1 1298 3 is_stmt 1 view .LVU881
 1298:./Drivers/src/stm32f10x_tim.c ****   /* Write to TIMx CCMR1 */
-ARM GAS  /tmp/ccbcqXFh.s 			page 109
+ARM GAS  /tmp/cc6Gu2fa.s 			page 109
 
 
  2620              		.loc 1 1298 14 is_stmt 0 view .LVU882
@@ -6538,7 +6538,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  2661              		.loc 1 1324 3 is_stmt 1 view .LVU897
 1324:./Drivers/src/stm32f10x_tim.c ****   /* Write to TIMx CCMR1 register */
  2662              		.loc 1 1324 12 is_stmt 0 view .LVU898
-ARM GAS  /tmp/ccbcqXFh.s 			page 110
+ARM GAS  /tmp/cc6Gu2fa.s 			page 110
 
 
  2663 0008 0B43     		orrs	r3, r3, r1
@@ -6598,7 +6598,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  2705 000a 89B2     		uxth	r1, r1
 1348:./Drivers/src/stm32f10x_tim.c ****   /* Write to TIMx CCMR1 register */
  2706              		.loc 1 1348 12 view .LVU913
-ARM GAS  /tmp/ccbcqXFh.s 			page 111
+ARM GAS  /tmp/cc6Gu2fa.s 			page 111
 
 
  2707 000c 0B43     		orrs	r3, r3, r1
@@ -6658,7 +6658,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
 1374:./Drivers/src/stm32f10x_tim.c **** }
  2749              		.loc 1 1374 15 is_stmt 0 view .LVU928
  2750 000a 8383     		strh	r3, [r0, #28]	@ movhi
-ARM GAS  /tmp/ccbcqXFh.s 			page 112
+ARM GAS  /tmp/cc6Gu2fa.s 			page 112
 
 
 1375:./Drivers/src/stm32f10x_tim.c **** 
@@ -6718,7 +6718,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
 1398:./Drivers/src/stm32f10x_tim.c **** }
  2793              		.loc 1 1398 15 is_stmt 0 view .LVU943
  2794 000e 8383     		strh	r3, [r0, #28]	@ movhi
-ARM GAS  /tmp/ccbcqXFh.s 			page 113
+ARM GAS  /tmp/cc6Gu2fa.s 			page 113
 
 
 1399:./Drivers/src/stm32f10x_tim.c **** 
@@ -6778,7 +6778,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  2838 001a 7047     		bx	lr
  2839              		.cfi_endproc
  2840              	.LFE62:
-ARM GAS  /tmp/ccbcqXFh.s 			page 114
+ARM GAS  /tmp/cc6Gu2fa.s 			page 114
 
 
  2842              		.section	.text.TIM_SelectCOM,"ax",%progbits
@@ -6838,7 +6838,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  2886              		.global	TIM_SelectCCDMA
  2887              		.syntax unified
  2888              		.thumb
-ARM GAS  /tmp/ccbcqXFh.s 			page 115
+ARM GAS  /tmp/cc6Gu2fa.s 			page 115
 
 
  2889              		.thumb_func
@@ -6898,7 +6898,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  2934              	.LVL294:
  2935              	.LFB65:
 1483:./Drivers/src/stm32f10x_tim.c ****   /* Check the parameters */
-ARM GAS  /tmp/ccbcqXFh.s 			page 116
+ARM GAS  /tmp/cc6Gu2fa.s 			page 116
 
 
  2936              		.loc 1 1483 1 is_stmt 1 view -0
@@ -6958,7 +6958,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  2980              		@ args = 0, pretend = 0, frame = 0
  2981              		@ frame_needed = 0, uses_anonymous_args = 0
  2982              		@ link register save eliminated.
-ARM GAS  /tmp/ccbcqXFh.s 			page 117
+ARM GAS  /tmp/cc6Gu2fa.s 			page 117
 
 
 1510:./Drivers/src/stm32f10x_tim.c ****   /* Check the parameters */
@@ -7018,7 +7018,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
 1538:./Drivers/src/stm32f10x_tim.c ****   tmpccmr1 = TIMx->CCMR1;
  3024              		.loc 1 1538 3 view .LVU1009
 1539:./Drivers/src/stm32f10x_tim.c ****   /* Reset the OC2PE Bit */
-ARM GAS  /tmp/ccbcqXFh.s 			page 118
+ARM GAS  /tmp/cc6Gu2fa.s 			page 118
 
 
  3025              		.loc 1 1539 3 view .LVU1010
@@ -7078,7 +7078,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
 1562:./Drivers/src/stm32f10x_tim.c ****   tmpccmr2 = TIMx->CCMR2;
  3068              		.loc 1 1562 3 view .LVU1024
 1563:./Drivers/src/stm32f10x_tim.c ****   /* Reset the OC3PE Bit */
-ARM GAS  /tmp/ccbcqXFh.s 			page 119
+ARM GAS  /tmp/cc6Gu2fa.s 			page 119
 
 
  3069              		.loc 1 1563 3 view .LVU1025
@@ -7138,7 +7138,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  3111 0002 9BB2     		uxth	r3, r3
  3112              	.LVL309:
 1589:./Drivers/src/stm32f10x_tim.c ****   /* Enable or Disable the Output Compare Preload feature */
-ARM GAS  /tmp/ccbcqXFh.s 			page 120
+ARM GAS  /tmp/cc6Gu2fa.s 			page 120
 
 
  3113              		.loc 1 1589 3 is_stmt 1 view .LVU1040
@@ -7198,7 +7198,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  3155 0002 9BB2     		uxth	r3, r3
  3156              	.LVL314:
 1614:./Drivers/src/stm32f10x_tim.c ****   /* Enable or Disable the Output Compare Fast Bit */
-ARM GAS  /tmp/ccbcqXFh.s 			page 121
+ARM GAS  /tmp/cc6Gu2fa.s 			page 121
 
 
  3157              		.loc 1 1614 3 is_stmt 1 view .LVU1055
@@ -7258,7 +7258,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  3199              	.LVL319:
 1642:./Drivers/src/stm32f10x_tim.c ****   /* Write to TIMx CCMR1 */
  3200              		.loc 1 1642 3 is_stmt 1 view .LVU1070
-ARM GAS  /tmp/ccbcqXFh.s 			page 122
+ARM GAS  /tmp/cc6Gu2fa.s 			page 122
 
 
 1642:./Drivers/src/stm32f10x_tim.c ****   /* Write to TIMx CCMR1 */
@@ -7318,7 +7318,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  3243              	.LVL324:
 1667:./Drivers/src/stm32f10x_tim.c ****   /* Write to TIMx CCMR2 */
  3244              		.loc 1 1667 3 is_stmt 1 view .LVU1085
-ARM GAS  /tmp/ccbcqXFh.s 			page 123
+ARM GAS  /tmp/cc6Gu2fa.s 			page 123
 
 
 1667:./Drivers/src/stm32f10x_tim.c ****   /* Write to TIMx CCMR2 */
@@ -7378,7 +7378,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
 1692:./Drivers/src/stm32f10x_tim.c ****   /* Write to TIMx CCMR2 */
  3287              		.loc 1 1692 15 view .LVU1100
  3288 000a 89B2     		uxth	r1, r1
-ARM GAS  /tmp/ccbcqXFh.s 			page 124
+ARM GAS  /tmp/cc6Gu2fa.s 			page 124
 
 
 1692:./Drivers/src/stm32f10x_tim.c ****   /* Write to TIMx CCMR2 */
@@ -7438,7 +7438,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
 1720:./Drivers/src/stm32f10x_tim.c **** }
  3331              		.loc 1 1720 3 is_stmt 1 view .LVU1115
 1720:./Drivers/src/stm32f10x_tim.c **** }
-ARM GAS  /tmp/ccbcqXFh.s 			page 125
+ARM GAS  /tmp/cc6Gu2fa.s 			page 125
 
 
  3332              		.loc 1 1720 15 is_stmt 0 view .LVU1116
@@ -7498,7 +7498,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  3374              		.loc 1 1744 3 is_stmt 1 view .LVU1130
 1744:./Drivers/src/stm32f10x_tim.c **** }
  3375              		.loc 1 1744 15 is_stmt 0 view .LVU1131
-ARM GAS  /tmp/ccbcqXFh.s 			page 126
+ARM GAS  /tmp/cc6Gu2fa.s 			page 126
 
 
  3376 000c 0183     		strh	r1, [r0, #24]	@ movhi
@@ -7558,7 +7558,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  3418              		.cfi_endproc
  3419              	.LFE76:
  3421              		.section	.text.TIM_ClearOC4Ref,"ax",%progbits
-ARM GAS  /tmp/ccbcqXFh.s 			page 127
+ARM GAS  /tmp/cc6Gu2fa.s 			page 127
 
 
  3422              		.align	1
@@ -7618,7 +7618,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  3462              	.LFE77:
  3464              		.section	.text.TIM_OC1PolarityConfig,"ax",%progbits
  3465              		.align	1
-ARM GAS  /tmp/ccbcqXFh.s 			page 128
+ARM GAS  /tmp/cc6Gu2fa.s 			page 128
 
 
  3466              		.global	TIM_OC1PolarityConfig
@@ -7678,7 +7678,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  3510              	TIM_OC1NPolarityConfig:
  3511              	.LVL353:
  3512              	.LFB79:
-ARM GAS  /tmp/ccbcqXFh.s 			page 129
+ARM GAS  /tmp/cc6Gu2fa.s 			page 129
 
 
 1828:./Drivers/src/stm32f10x_tim.c ****   uint16_t tmpccer = 0;
@@ -7738,7 +7738,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  3555              		@ frame_needed = 0, uses_anonymous_args = 0
  3556              		@ link register save eliminated.
 1853:./Drivers/src/stm32f10x_tim.c ****   /* Check the parameters */
-ARM GAS  /tmp/ccbcqXFh.s 			page 130
+ARM GAS  /tmp/cc6Gu2fa.s 			page 130
 
 
  3557              		.loc 1 1853 3 view .LVU1188
@@ -7798,7 +7798,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  3599              		@ frame_needed = 0, uses_anonymous_args = 0
  3600              		@ link register save eliminated.
 1876:./Drivers/src/stm32f10x_tim.c ****   /* Check the parameters */
-ARM GAS  /tmp/ccbcqXFh.s 			page 131
+ARM GAS  /tmp/cc6Gu2fa.s 			page 131
 
 
  3601              		.loc 1 1876 3 view .LVU1203
@@ -7858,7 +7858,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  3643              		@ frame_needed = 0, uses_anonymous_args = 0
  3644              		@ link register save eliminated.
 1900:./Drivers/src/stm32f10x_tim.c ****   /* Check the parameters */
-ARM GAS  /tmp/ccbcqXFh.s 			page 132
+ARM GAS  /tmp/cc6Gu2fa.s 			page 132
 
 
  3645              		.loc 1 1900 3 view .LVU1218
@@ -7918,7 +7918,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  3687              		@ frame_needed = 0, uses_anonymous_args = 0
  3688              		@ link register save eliminated.
 1923:./Drivers/src/stm32f10x_tim.c ****  
-ARM GAS  /tmp/ccbcqXFh.s 			page 133
+ARM GAS  /tmp/cc6Gu2fa.s 			page 133
 
 
  3689              		.loc 1 1923 3 view .LVU1233
@@ -7978,7 +7978,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  3731              		@ frame_needed = 0, uses_anonymous_args = 0
  3732              		@ link register save eliminated.
 1948:./Drivers/src/stm32f10x_tim.c ****   /* Check the parameters */
-ARM GAS  /tmp/ccbcqXFh.s 			page 134
+ARM GAS  /tmp/cc6Gu2fa.s 			page 134
 
 
  3733              		.loc 1 1948 3 view .LVU1248
@@ -8038,7 +8038,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  3775              		@ frame_needed = 0, uses_anonymous_args = 0
  3776              		@ link register save eliminated.
 1975:./Drivers/src/stm32f10x_tim.c **** 
-ARM GAS  /tmp/ccbcqXFh.s 			page 135
+ARM GAS  /tmp/cc6Gu2fa.s 			page 135
 
 
  3777              		.loc 1 1975 3 view .LVU1263
@@ -8098,7 +8098,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  3814              		.cfi_endproc
  3815              	.LFE85:
  3817              		.section	.text.TIM_CCxNCmd,"ax",%progbits
-ARM GAS  /tmp/ccbcqXFh.s 			page 136
+ARM GAS  /tmp/cc6Gu2fa.s 			page 136
 
 
  3818              		.align	1
@@ -8158,7 +8158,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  3858 0016 9BB2     		uxth	r3, r3
 2018:./Drivers/src/stm32f10x_tim.c **** }
  3859              		.loc 1 2018 38 view .LVU1296
-ARM GAS  /tmp/ccbcqXFh.s 			page 137
+ARM GAS  /tmp/cc6Gu2fa.s 			page 137
 
 
  3860 0018 8A40     		lsls	r2, r2, r1
@@ -8218,7 +8218,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  3902              		.loc 1 2057 3 is_stmt 1 view .LVU1310
 2057:./Drivers/src/stm32f10x_tim.c **** 
  3903              		.loc 1 2057 23 is_stmt 0 view .LVU1311
-ARM GAS  /tmp/ccbcqXFh.s 			page 138
+ARM GAS  /tmp/cc6Gu2fa.s 			page 138
 
 
  3904 0006 0123     		movs	r3, #1
@@ -8278,7 +8278,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  3942 0036 1202     		lsls	r2, r2, #8
  3943              	.LVL400:
 2080:./Drivers/src/stm32f10x_tim.c ****   }
-ARM GAS  /tmp/ccbcqXFh.s 			page 139
+ARM GAS  /tmp/cc6Gu2fa.s 			page 139
 
 
  3944              		.loc 1 2080 31 view .LVU1328
@@ -8338,7 +8338,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  3989              		.loc 1 2094 3 view .LVU1339
 2095:./Drivers/src/stm32f10x_tim.c ****   if (NewState != DISABLE)
  3990              		.loc 1 2095 3 view .LVU1340
-ARM GAS  /tmp/ccbcqXFh.s 			page 140
+ARM GAS  /tmp/cc6Gu2fa.s 			page 140
 
 
 2096:./Drivers/src/stm32f10x_tim.c ****   {
@@ -8398,7 +8398,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
 2124:./Drivers/src/stm32f10x_tim.c ****   {
  4034              		.loc 1 2124 6 is_stmt 0 view .LVU1354
  4035 0000 29B1     		cbz	r1, .L182
-ARM GAS  /tmp/ccbcqXFh.s 			page 141
+ARM GAS  /tmp/cc6Gu2fa.s 			page 141
 
 
 2127:./Drivers/src/stm32f10x_tim.c ****   }
@@ -8458,7 +8458,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
 2151:./Drivers/src/stm32f10x_tim.c ****   }
  4079              		.loc 1 2151 9 is_stmt 0 view .LVU1368
  4080 0002 8388     		ldrh	r3, [r0, #4]
-ARM GAS  /tmp/ccbcqXFh.s 			page 142
+ARM GAS  /tmp/cc6Gu2fa.s 			page 142
 
 
  4081 0004 9BB2     		uxth	r3, r3
@@ -8518,7 +8518,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  4125              		.loc 1 2177 3 is_stmt 1 view .LVU1380
 2177:./Drivers/src/stm32f10x_tim.c **** }
  4126              		.loc 1 2177 7 is_stmt 0 view .LVU1381
-ARM GAS  /tmp/ccbcqXFh.s 			page 143
+ARM GAS  /tmp/cc6Gu2fa.s 			page 143
 
 
  4127 000c 0388     		ldrh	r3, [r0]
@@ -8578,7 +8578,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  4171              		.cfi_endproc
  4172              	.LFE92:
  4174              		.section	.text.TIM_SelectSlaveMode,"ax",%progbits
-ARM GAS  /tmp/ccbcqXFh.s 			page 144
+ARM GAS  /tmp/cc6Gu2fa.s 			page 144
 
 
  4175              		.align	1
@@ -8638,7 +8638,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  4221              		.loc 1 2246 1 is_stmt 1 view -0
  4222              		.cfi_startproc
  4223              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /tmp/ccbcqXFh.s 			page 145
+ARM GAS  /tmp/cc6Gu2fa.s 			page 145
 
 
  4224              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -8698,7 +8698,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
 2269:./Drivers/src/stm32f10x_tim.c **** 
  4267              		.loc 1 2269 1 view .LVU1418
  4268 0002 7047     		bx	lr
-ARM GAS  /tmp/ccbcqXFh.s 			page 146
+ARM GAS  /tmp/cc6Gu2fa.s 			page 146
 
 
  4269              		.cfi_endproc
@@ -8758,7 +8758,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  4317              		.cfi_endproc
  4318              	.LFE97:
  4320              		.section	.text.TIM_SetCompare2,"ax",%progbits
-ARM GAS  /tmp/ccbcqXFh.s 			page 147
+ARM GAS  /tmp/cc6Gu2fa.s 			page 147
 
 
  4321              		.align	1
@@ -8818,7 +8818,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  4369              		.align	1
  4370              		.global	TIM_SetCompare4
  4371              		.syntax unified
-ARM GAS  /tmp/ccbcqXFh.s 			page 148
+ARM GAS  /tmp/cc6Gu2fa.s 			page 148
 
 
  4372              		.thumb
@@ -8878,7 +8878,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  4417              		.loc 1 2360 3 is_stmt 1 view .LVU1450
 2360:./Drivers/src/stm32f10x_tim.c **** }
  4418              		.loc 1 2360 7 is_stmt 0 view .LVU1451
-ARM GAS  /tmp/ccbcqXFh.s 			page 149
+ARM GAS  /tmp/cc6Gu2fa.s 			page 149
 
 
  4419 000c 038B     		ldrh	r3, [r0, #24]
@@ -8938,7 +8938,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
 2382:./Drivers/src/stm32f10x_tim.c **** }
  4463              		.loc 1 2382 15 view .LVU1464
  4464 0014 0B43     		orrs	r3, r3, r1
-ARM GAS  /tmp/ccbcqXFh.s 			page 150
+ARM GAS  /tmp/cc6Gu2fa.s 			page 150
 
 
  4465 0016 0383     		strh	r3, [r0, #24]	@ movhi
@@ -8998,7 +8998,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  669:./Drivers/src/stm32f10x_tim.c ****   {
  4511              		.loc 1 669 3 is_stmt 1 view .LVU1475
  669:./Drivers/src/stm32f10x_tim.c ****   {
-ARM GAS  /tmp/ccbcqXFh.s 			page 151
+ARM GAS  /tmp/cc6Gu2fa.s 			page 151
 
 
  4512              		.loc 1 669 23 is_stmt 0 view .LVU1476
@@ -9058,7 +9058,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  666:./Drivers/src/stm32f10x_tim.c ****   }
  4555              		.loc 1 666 24 view .LVU1488
  4556 003e 0026     		movs	r6, #0
-ARM GAS  /tmp/ccbcqXFh.s 			page 152
+ARM GAS  /tmp/cc6Gu2fa.s 			page 152
 
 
  4557 0040 E4E7     		b	.L200
@@ -9118,7 +9118,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  4605              		.cfi_startproc
  4606              		@ args = 0, pretend = 0, frame = 0
  4607              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/ccbcqXFh.s 			page 153
+ARM GAS  /tmp/cc6Gu2fa.s 			page 153
 
 
  4608              		@ link register save eliminated.
@@ -9178,7 +9178,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  4650 0000 838B     		ldrh	r3, [r0, #28]
  4651 0002 9BB2     		uxth	r3, r3
 2424:./Drivers/src/stm32f10x_tim.c ****   /* Set the IC4PSC value */
-ARM GAS  /tmp/ccbcqXFh.s 			page 154
+ARM GAS  /tmp/cc6Gu2fa.s 			page 154
 
 
  4652              		.loc 1 2424 15 view .LVU1511
@@ -9238,7 +9238,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  4698              		.loc 1 590 3 view .LVU1521
  591:./Drivers/src/stm32f10x_tim.c ****   assert_param(IS_TIM_IC_FILTER(TIM_ICInitStruct->TIM_ICFilter));
  4699              		.loc 1 591 3 view .LVU1522
-ARM GAS  /tmp/ccbcqXFh.s 			page 155
+ARM GAS  /tmp/cc6Gu2fa.s 			page 155
 
 
  592:./Drivers/src/stm32f10x_tim.c ****   
@@ -9298,7 +9298,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  4737 0026 0B89     		ldrh	r3, [r1, #8]
  4738 0028 8A88     		ldrh	r2, [r1, #4]
  4739 002a 4988     		ldrh	r1, [r1, #2]
-ARM GAS  /tmp/ccbcqXFh.s 			page 156
+ARM GAS  /tmp/cc6Gu2fa.s 			page 156
 
 
  4740              	.LVL446:
@@ -9358,7 +9358,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  4784              		.cfi_endproc
  4785              	.LFE35:
  4787              		.section	.text.TIM_SetClockDivision,"ax",%progbits
-ARM GAS  /tmp/ccbcqXFh.s 			page 157
+ARM GAS  /tmp/cc6Gu2fa.s 			page 157
 
 
  4788              		.align	1
@@ -9418,7 +9418,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  4834              		.loc 1 2457 1 is_stmt 1 view -0
  4835              		.cfi_startproc
  4836              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /tmp/ccbcqXFh.s 			page 158
+ARM GAS  /tmp/cc6Gu2fa.s 			page 158
 
 
  4837              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -9478,7 +9478,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
 2483:./Drivers/src/stm32f10x_tim.c ****   /* Check the parameters */
  4886              		.loc 1 2483 1 is_stmt 1 view -0
  4887              		.cfi_startproc
-ARM GAS  /tmp/ccbcqXFh.s 			page 159
+ARM GAS  /tmp/cc6Gu2fa.s 			page 159
 
 
  4888              		@ args = 0, pretend = 0, frame = 0
@@ -9538,7 +9538,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  4937              	.LFB110:
 2509:./Drivers/src/stm32f10x_tim.c ****   /* Check the parameters */
  4938              		.loc 1 2509 1 is_stmt 1 view -0
-ARM GAS  /tmp/ccbcqXFh.s 			page 160
+ARM GAS  /tmp/cc6Gu2fa.s 			page 160
 
 
  4939              		.cfi_startproc
@@ -9598,7 +9598,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  4988              	.LVL470:
  4989              	.LFB112:
 2556:./Drivers/src/stm32f10x_tim.c ****   ITStatus bitstatus = RESET;  
-ARM GAS  /tmp/ccbcqXFh.s 			page 161
+ARM GAS  /tmp/cc6Gu2fa.s 			page 161
 
 
  4990              		.loc 1 2556 1 is_stmt 1 view -0
@@ -9658,7 +9658,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  5034              		@ link register save eliminated.
 2602:./Drivers/src/stm32f10x_tim.c ****   assert_param(IS_TIM_CLEAR_FLAG(TIM_FLAG));
  5035              		.loc 1 2602 3 view .LVU1603
-ARM GAS  /tmp/ccbcqXFh.s 			page 162
+ARM GAS  /tmp/cc6Gu2fa.s 			page 162
 
 
 2603:./Drivers/src/stm32f10x_tim.c ****    
@@ -9718,7 +9718,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  5076              		.loc 1 2641 12 view .LVU1619
  5077 0004 0B40     		ands	r3, r3, r1
  5078              	.LVL478:
-ARM GAS  /tmp/ccbcqXFh.s 			page 163
+ARM GAS  /tmp/cc6Gu2fa.s 			page 163
 
 
 2642:./Drivers/src/stm32f10x_tim.c ****   {
@@ -9778,7 +9778,7 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  5123              		.loc 1 2678 3 view .LVU1631
 2679:./Drivers/src/stm32f10x_tim.c ****   /* Clear the IT pending Bit */
  5124              		.loc 1 2679 3 view .LVU1632
-ARM GAS  /tmp/ccbcqXFh.s 			page 164
+ARM GAS  /tmp/cc6Gu2fa.s 			page 164
 
 
 2681:./Drivers/src/stm32f10x_tim.c **** }
@@ -9804,212 +9804,212 @@ ARM GAS  /tmp/ccbcqXFh.s 			page 1
  5141              		.file 3 "cmsis/stm32f10x.h"
  5142              		.file 4 "Drivers/inc/stm32f10x_tim.h"
  5143              		.file 5 "Drivers/inc/stm32f10x_rcc.h"
-ARM GAS  /tmp/ccbcqXFh.s 			page 165
+ARM GAS  /tmp/cc6Gu2fa.s 			page 165
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f10x_tim.c
-     /tmp/ccbcqXFh.s:19     .text.TI1_Config:00000000 $t
-     /tmp/ccbcqXFh.s:24     .text.TI1_Config:00000000 TI1_Config
-     /tmp/ccbcqXFh.s:135    .text.TI1_Config:00000080 $d
-     /tmp/ccbcqXFh.s:141    .text.TI2_Config:00000000 $t
-     /tmp/ccbcqXFh.s:146    .text.TI2_Config:00000000 TI2_Config
-     /tmp/ccbcqXFh.s:273    .text.TI2_Config:00000090 $d
-     /tmp/ccbcqXFh.s:278    .text.TI3_Config:00000000 $t
-     /tmp/ccbcqXFh.s:283    .text.TI3_Config:00000000 TI3_Config
-     /tmp/ccbcqXFh.s:402    .text.TI3_Config:00000084 $d
-     /tmp/ccbcqXFh.s:408    .text.TI4_Config:00000000 $t
-     /tmp/ccbcqXFh.s:413    .text.TI4_Config:00000000 TI4_Config
-     /tmp/ccbcqXFh.s:544    .text.TI4_Config:00000094 $d
-     /tmp/ccbcqXFh.s:549    .text.TIM_DeInit:00000000 $t
-     /tmp/ccbcqXFh.s:555    .text.TIM_DeInit:00000000 TIM_DeInit
-     /tmp/ccbcqXFh.s:912    .text.TIM_DeInit:000001cc $d
-     /tmp/ccbcqXFh.s:932    .text.TIM_TimeBaseInit:00000000 $t
-     /tmp/ccbcqXFh.s:938    .text.TIM_TimeBaseInit:00000000 TIM_TimeBaseInit
-     /tmp/ccbcqXFh.s:1066   .text.TIM_TimeBaseInit:0000008c $d
-     /tmp/ccbcqXFh.s:1072   .text.TIM_OC1Init:00000000 $t
-     /tmp/ccbcqXFh.s:1078   .text.TIM_OC1Init:00000000 TIM_OC1Init
-     /tmp/ccbcqXFh.s:1229   .text.TIM_OC1Init:00000090 $d
-     /tmp/ccbcqXFh.s:1234   .text.TIM_OC2Init:00000000 $t
-     /tmp/ccbcqXFh.s:1240   .text.TIM_OC2Init:00000000 TIM_OC2Init
-     /tmp/ccbcqXFh.s:1400   .text.TIM_OC2Init:00000094 $d
-     /tmp/ccbcqXFh.s:1405   .text.TIM_OC3Init:00000000 $t
-     /tmp/ccbcqXFh.s:1411   .text.TIM_OC3Init:00000000 TIM_OC3Init
-     /tmp/ccbcqXFh.s:1568   .text.TIM_OC3Init:00000090 $d
-     /tmp/ccbcqXFh.s:1573   .text.TIM_OC4Init:00000000 $t
-     /tmp/ccbcqXFh.s:1579   .text.TIM_OC4Init:00000000 TIM_OC4Init
-     /tmp/ccbcqXFh.s:1703   .text.TIM_OC4Init:00000078 $d
-     /tmp/ccbcqXFh.s:1708   .text.TIM_BDTRConfig:00000000 $t
-     /tmp/ccbcqXFh.s:1714   .text.TIM_BDTRConfig:00000000 TIM_BDTRConfig
-     /tmp/ccbcqXFh.s:1767   .text.TIM_TimeBaseStructInit:00000000 $t
-     /tmp/ccbcqXFh.s:1773   .text.TIM_TimeBaseStructInit:00000000 TIM_TimeBaseStructInit
-     /tmp/ccbcqXFh.s:1804   .text.TIM_OCStructInit:00000000 $t
-     /tmp/ccbcqXFh.s:1810   .text.TIM_OCStructInit:00000000 TIM_OCStructInit
-     /tmp/ccbcqXFh.s:1849   .text.TIM_ICStructInit:00000000 $t
-     /tmp/ccbcqXFh.s:1855   .text.TIM_ICStructInit:00000000 TIM_ICStructInit
-     /tmp/ccbcqXFh.s:1886   .text.TIM_BDTRStructInit:00000000 $t
-     /tmp/ccbcqXFh.s:1892   .text.TIM_BDTRStructInit:00000000 TIM_BDTRStructInit
-     /tmp/ccbcqXFh.s:1928   .text.TIM_Cmd:00000000 $t
-     /tmp/ccbcqXFh.s:1934   .text.TIM_Cmd:00000000 TIM_Cmd
-     /tmp/ccbcqXFh.s:1970   .text.TIM_CtrlPWMOutputs:00000000 $t
-     /tmp/ccbcqXFh.s:1976   .text.TIM_CtrlPWMOutputs:00000000 TIM_CtrlPWMOutputs
-     /tmp/ccbcqXFh.s:2011   .text.TIM_ITConfig:00000000 $t
-     /tmp/ccbcqXFh.s:2017   .text.TIM_ITConfig:00000000 TIM_ITConfig
-     /tmp/ccbcqXFh.s:2057   .text.TIM_GenerateEvent:00000000 $t
-     /tmp/ccbcqXFh.s:2063   .text.TIM_GenerateEvent:00000000 TIM_GenerateEvent
-     /tmp/ccbcqXFh.s:2082   .text.TIM_DMAConfig:00000000 $t
-     /tmp/ccbcqXFh.s:2088   .text.TIM_DMAConfig:00000000 TIM_DMAConfig
-     /tmp/ccbcqXFh.s:2111   .text.TIM_DMACmd:00000000 $t
-     /tmp/ccbcqXFh.s:2117   .text.TIM_DMACmd:00000000 TIM_DMACmd
-     /tmp/ccbcqXFh.s:2157   .text.TIM_InternalClockConfig:00000000 $t
-     /tmp/ccbcqXFh.s:2163   .text.TIM_InternalClockConfig:00000000 TIM_InternalClockConfig
-     /tmp/ccbcqXFh.s:2186   .text.TIM_ETRConfig:00000000 $t
-ARM GAS  /tmp/ccbcqXFh.s 			page 166
+     /tmp/cc6Gu2fa.s:19     .text.TI1_Config:00000000 $t
+     /tmp/cc6Gu2fa.s:24     .text.TI1_Config:00000000 TI1_Config
+     /tmp/cc6Gu2fa.s:135    .text.TI1_Config:00000080 $d
+     /tmp/cc6Gu2fa.s:141    .text.TI2_Config:00000000 $t
+     /tmp/cc6Gu2fa.s:146    .text.TI2_Config:00000000 TI2_Config
+     /tmp/cc6Gu2fa.s:273    .text.TI2_Config:00000090 $d
+     /tmp/cc6Gu2fa.s:278    .text.TI3_Config:00000000 $t
+     /tmp/cc6Gu2fa.s:283    .text.TI3_Config:00000000 TI3_Config
+     /tmp/cc6Gu2fa.s:402    .text.TI3_Config:00000084 $d
+     /tmp/cc6Gu2fa.s:408    .text.TI4_Config:00000000 $t
+     /tmp/cc6Gu2fa.s:413    .text.TI4_Config:00000000 TI4_Config
+     /tmp/cc6Gu2fa.s:544    .text.TI4_Config:00000094 $d
+     /tmp/cc6Gu2fa.s:549    .text.TIM_DeInit:00000000 $t
+     /tmp/cc6Gu2fa.s:555    .text.TIM_DeInit:00000000 TIM_DeInit
+     /tmp/cc6Gu2fa.s:912    .text.TIM_DeInit:000001cc $d
+     /tmp/cc6Gu2fa.s:932    .text.TIM_TimeBaseInit:00000000 $t
+     /tmp/cc6Gu2fa.s:938    .text.TIM_TimeBaseInit:00000000 TIM_TimeBaseInit
+     /tmp/cc6Gu2fa.s:1066   .text.TIM_TimeBaseInit:0000008c $d
+     /tmp/cc6Gu2fa.s:1072   .text.TIM_OC1Init:00000000 $t
+     /tmp/cc6Gu2fa.s:1078   .text.TIM_OC1Init:00000000 TIM_OC1Init
+     /tmp/cc6Gu2fa.s:1229   .text.TIM_OC1Init:00000090 $d
+     /tmp/cc6Gu2fa.s:1234   .text.TIM_OC2Init:00000000 $t
+     /tmp/cc6Gu2fa.s:1240   .text.TIM_OC2Init:00000000 TIM_OC2Init
+     /tmp/cc6Gu2fa.s:1400   .text.TIM_OC2Init:00000094 $d
+     /tmp/cc6Gu2fa.s:1405   .text.TIM_OC3Init:00000000 $t
+     /tmp/cc6Gu2fa.s:1411   .text.TIM_OC3Init:00000000 TIM_OC3Init
+     /tmp/cc6Gu2fa.s:1568   .text.TIM_OC3Init:00000090 $d
+     /tmp/cc6Gu2fa.s:1573   .text.TIM_OC4Init:00000000 $t
+     /tmp/cc6Gu2fa.s:1579   .text.TIM_OC4Init:00000000 TIM_OC4Init
+     /tmp/cc6Gu2fa.s:1703   .text.TIM_OC4Init:00000078 $d
+     /tmp/cc6Gu2fa.s:1708   .text.TIM_BDTRConfig:00000000 $t
+     /tmp/cc6Gu2fa.s:1714   .text.TIM_BDTRConfig:00000000 TIM_BDTRConfig
+     /tmp/cc6Gu2fa.s:1767   .text.TIM_TimeBaseStructInit:00000000 $t
+     /tmp/cc6Gu2fa.s:1773   .text.TIM_TimeBaseStructInit:00000000 TIM_TimeBaseStructInit
+     /tmp/cc6Gu2fa.s:1804   .text.TIM_OCStructInit:00000000 $t
+     /tmp/cc6Gu2fa.s:1810   .text.TIM_OCStructInit:00000000 TIM_OCStructInit
+     /tmp/cc6Gu2fa.s:1849   .text.TIM_ICStructInit:00000000 $t
+     /tmp/cc6Gu2fa.s:1855   .text.TIM_ICStructInit:00000000 TIM_ICStructInit
+     /tmp/cc6Gu2fa.s:1886   .text.TIM_BDTRStructInit:00000000 $t
+     /tmp/cc6Gu2fa.s:1892   .text.TIM_BDTRStructInit:00000000 TIM_BDTRStructInit
+     /tmp/cc6Gu2fa.s:1928   .text.TIM_Cmd:00000000 $t
+     /tmp/cc6Gu2fa.s:1934   .text.TIM_Cmd:00000000 TIM_Cmd
+     /tmp/cc6Gu2fa.s:1970   .text.TIM_CtrlPWMOutputs:00000000 $t
+     /tmp/cc6Gu2fa.s:1976   .text.TIM_CtrlPWMOutputs:00000000 TIM_CtrlPWMOutputs
+     /tmp/cc6Gu2fa.s:2011   .text.TIM_ITConfig:00000000 $t
+     /tmp/cc6Gu2fa.s:2017   .text.TIM_ITConfig:00000000 TIM_ITConfig
+     /tmp/cc6Gu2fa.s:2057   .text.TIM_GenerateEvent:00000000 $t
+     /tmp/cc6Gu2fa.s:2063   .text.TIM_GenerateEvent:00000000 TIM_GenerateEvent
+     /tmp/cc6Gu2fa.s:2082   .text.TIM_DMAConfig:00000000 $t
+     /tmp/cc6Gu2fa.s:2088   .text.TIM_DMAConfig:00000000 TIM_DMAConfig
+     /tmp/cc6Gu2fa.s:2111   .text.TIM_DMACmd:00000000 $t
+     /tmp/cc6Gu2fa.s:2117   .text.TIM_DMACmd:00000000 TIM_DMACmd
+     /tmp/cc6Gu2fa.s:2157   .text.TIM_InternalClockConfig:00000000 $t
+     /tmp/cc6Gu2fa.s:2163   .text.TIM_InternalClockConfig:00000000 TIM_InternalClockConfig
+     /tmp/cc6Gu2fa.s:2186   .text.TIM_ETRConfig:00000000 $t
+ARM GAS  /tmp/cc6Gu2fa.s 			page 166
 
 
-     /tmp/ccbcqXFh.s:2192   .text.TIM_ETRConfig:00000000 TIM_ETRConfig
-     /tmp/ccbcqXFh.s:2235   .text.TIM_ETRClockMode1Config:00000000 $t
-     /tmp/ccbcqXFh.s:2241   .text.TIM_ETRClockMode1Config:00000000 TIM_ETRClockMode1Config
-     /tmp/ccbcqXFh.s:2286   .text.TIM_ETRClockMode2Config:00000000 $t
-     /tmp/ccbcqXFh.s:2292   .text.TIM_ETRClockMode2Config:00000000 TIM_ETRClockMode2Config
-     /tmp/ccbcqXFh.s:2327   .text.TIM_PrescalerConfig:00000000 $t
-     /tmp/ccbcqXFh.s:2333   .text.TIM_PrescalerConfig:00000000 TIM_PrescalerConfig
-     /tmp/ccbcqXFh.s:2355   .text.TIM_CounterModeConfig:00000000 $t
-     /tmp/ccbcqXFh.s:2361   .text.TIM_CounterModeConfig:00000000 TIM_CounterModeConfig
-     /tmp/ccbcqXFh.s:2394   .text.TIM_SelectInputTrigger:00000000 $t
-     /tmp/ccbcqXFh.s:2400   .text.TIM_SelectInputTrigger:00000000 TIM_SelectInputTrigger
-     /tmp/ccbcqXFh.s:2433   .text.TIM_ITRxExternalClockConfig:00000000 $t
-     /tmp/ccbcqXFh.s:2439   .text.TIM_ITRxExternalClockConfig:00000000 TIM_ITRxExternalClockConfig
-     /tmp/ccbcqXFh.s:2472   .text.TIM_TIxExternalClockConfig:00000000 $t
-     /tmp/ccbcqXFh.s:2478   .text.TIM_TIxExternalClockConfig:00000000 TIM_TIxExternalClockConfig
-     /tmp/ccbcqXFh.s:2540   .text.TIM_EncoderInterfaceConfig:00000000 $t
-     /tmp/ccbcqXFh.s:2546   .text.TIM_EncoderInterfaceConfig:00000000 TIM_EncoderInterfaceConfig
-     /tmp/ccbcqXFh.s:2635   .text.TIM_ForcedOC1Config:00000000 $t
-     /tmp/ccbcqXFh.s:2641   .text.TIM_ForcedOC1Config:00000000 TIM_ForcedOC1Config
-     /tmp/ccbcqXFh.s:2674   .text.TIM_ForcedOC2Config:00000000 $t
-     /tmp/ccbcqXFh.s:2680   .text.TIM_ForcedOC2Config:00000000 TIM_ForcedOC2Config
-     /tmp/ccbcqXFh.s:2718   .text.TIM_ForcedOC3Config:00000000 $t
-     /tmp/ccbcqXFh.s:2724   .text.TIM_ForcedOC3Config:00000000 TIM_ForcedOC3Config
-     /tmp/ccbcqXFh.s:2757   .text.TIM_ForcedOC4Config:00000000 $t
-     /tmp/ccbcqXFh.s:2763   .text.TIM_ForcedOC4Config:00000000 TIM_ForcedOC4Config
-     /tmp/ccbcqXFh.s:2801   .text.TIM_ARRPreloadConfig:00000000 $t
-     /tmp/ccbcqXFh.s:2807   .text.TIM_ARRPreloadConfig:00000000 TIM_ARRPreloadConfig
-     /tmp/ccbcqXFh.s:2843   .text.TIM_SelectCOM:00000000 $t
-     /tmp/ccbcqXFh.s:2849   .text.TIM_SelectCOM:00000000 TIM_SelectCOM
-     /tmp/ccbcqXFh.s:2885   .text.TIM_SelectCCDMA:00000000 $t
-     /tmp/ccbcqXFh.s:2891   .text.TIM_SelectCCDMA:00000000 TIM_SelectCCDMA
-     /tmp/ccbcqXFh.s:2927   .text.TIM_CCPreloadControl:00000000 $t
-     /tmp/ccbcqXFh.s:2933   .text.TIM_CCPreloadControl:00000000 TIM_CCPreloadControl
-     /tmp/ccbcqXFh.s:2969   .text.TIM_OC1PreloadConfig:00000000 $t
-     /tmp/ccbcqXFh.s:2975   .text.TIM_OC1PreloadConfig:00000000 TIM_OC1PreloadConfig
-     /tmp/ccbcqXFh.s:3008   .text.TIM_OC2PreloadConfig:00000000 $t
-     /tmp/ccbcqXFh.s:3014   .text.TIM_OC2PreloadConfig:00000000 TIM_OC2PreloadConfig
-     /tmp/ccbcqXFh.s:3052   .text.TIM_OC3PreloadConfig:00000000 $t
-     /tmp/ccbcqXFh.s:3058   .text.TIM_OC3PreloadConfig:00000000 TIM_OC3PreloadConfig
-     /tmp/ccbcqXFh.s:3091   .text.TIM_OC4PreloadConfig:00000000 $t
-     /tmp/ccbcqXFh.s:3097   .text.TIM_OC4PreloadConfig:00000000 TIM_OC4PreloadConfig
-     /tmp/ccbcqXFh.s:3135   .text.TIM_OC1FastConfig:00000000 $t
-     /tmp/ccbcqXFh.s:3141   .text.TIM_OC1FastConfig:00000000 TIM_OC1FastConfig
-     /tmp/ccbcqXFh.s:3174   .text.TIM_OC2FastConfig:00000000 $t
-     /tmp/ccbcqXFh.s:3180   .text.TIM_OC2FastConfig:00000000 TIM_OC2FastConfig
-     /tmp/ccbcqXFh.s:3218   .text.TIM_OC3FastConfig:00000000 $t
-     /tmp/ccbcqXFh.s:3224   .text.TIM_OC3FastConfig:00000000 TIM_OC3FastConfig
-     /tmp/ccbcqXFh.s:3257   .text.TIM_OC4FastConfig:00000000 $t
-     /tmp/ccbcqXFh.s:3263   .text.TIM_OC4FastConfig:00000000 TIM_OC4FastConfig
-     /tmp/ccbcqXFh.s:3301   .text.TIM_ClearOC1Ref:00000000 $t
-     /tmp/ccbcqXFh.s:3307   .text.TIM_ClearOC1Ref:00000000 TIM_ClearOC1Ref
-     /tmp/ccbcqXFh.s:3340   .text.TIM_ClearOC2Ref:00000000 $t
-     /tmp/ccbcqXFh.s:3346   .text.TIM_ClearOC2Ref:00000000 TIM_ClearOC2Ref
-     /tmp/ccbcqXFh.s:3383   .text.TIM_ClearOC3Ref:00000000 $t
-     /tmp/ccbcqXFh.s:3389   .text.TIM_ClearOC3Ref:00000000 TIM_ClearOC3Ref
-     /tmp/ccbcqXFh.s:3422   .text.TIM_ClearOC4Ref:00000000 $t
-     /tmp/ccbcqXFh.s:3428   .text.TIM_ClearOC4Ref:00000000 TIM_ClearOC4Ref
-ARM GAS  /tmp/ccbcqXFh.s 			page 167
+     /tmp/cc6Gu2fa.s:2192   .text.TIM_ETRConfig:00000000 TIM_ETRConfig
+     /tmp/cc6Gu2fa.s:2235   .text.TIM_ETRClockMode1Config:00000000 $t
+     /tmp/cc6Gu2fa.s:2241   .text.TIM_ETRClockMode1Config:00000000 TIM_ETRClockMode1Config
+     /tmp/cc6Gu2fa.s:2286   .text.TIM_ETRClockMode2Config:00000000 $t
+     /tmp/cc6Gu2fa.s:2292   .text.TIM_ETRClockMode2Config:00000000 TIM_ETRClockMode2Config
+     /tmp/cc6Gu2fa.s:2327   .text.TIM_PrescalerConfig:00000000 $t
+     /tmp/cc6Gu2fa.s:2333   .text.TIM_PrescalerConfig:00000000 TIM_PrescalerConfig
+     /tmp/cc6Gu2fa.s:2355   .text.TIM_CounterModeConfig:00000000 $t
+     /tmp/cc6Gu2fa.s:2361   .text.TIM_CounterModeConfig:00000000 TIM_CounterModeConfig
+     /tmp/cc6Gu2fa.s:2394   .text.TIM_SelectInputTrigger:00000000 $t
+     /tmp/cc6Gu2fa.s:2400   .text.TIM_SelectInputTrigger:00000000 TIM_SelectInputTrigger
+     /tmp/cc6Gu2fa.s:2433   .text.TIM_ITRxExternalClockConfig:00000000 $t
+     /tmp/cc6Gu2fa.s:2439   .text.TIM_ITRxExternalClockConfig:00000000 TIM_ITRxExternalClockConfig
+     /tmp/cc6Gu2fa.s:2472   .text.TIM_TIxExternalClockConfig:00000000 $t
+     /tmp/cc6Gu2fa.s:2478   .text.TIM_TIxExternalClockConfig:00000000 TIM_TIxExternalClockConfig
+     /tmp/cc6Gu2fa.s:2540   .text.TIM_EncoderInterfaceConfig:00000000 $t
+     /tmp/cc6Gu2fa.s:2546   .text.TIM_EncoderInterfaceConfig:00000000 TIM_EncoderInterfaceConfig
+     /tmp/cc6Gu2fa.s:2635   .text.TIM_ForcedOC1Config:00000000 $t
+     /tmp/cc6Gu2fa.s:2641   .text.TIM_ForcedOC1Config:00000000 TIM_ForcedOC1Config
+     /tmp/cc6Gu2fa.s:2674   .text.TIM_ForcedOC2Config:00000000 $t
+     /tmp/cc6Gu2fa.s:2680   .text.TIM_ForcedOC2Config:00000000 TIM_ForcedOC2Config
+     /tmp/cc6Gu2fa.s:2718   .text.TIM_ForcedOC3Config:00000000 $t
+     /tmp/cc6Gu2fa.s:2724   .text.TIM_ForcedOC3Config:00000000 TIM_ForcedOC3Config
+     /tmp/cc6Gu2fa.s:2757   .text.TIM_ForcedOC4Config:00000000 $t
+     /tmp/cc6Gu2fa.s:2763   .text.TIM_ForcedOC4Config:00000000 TIM_ForcedOC4Config
+     /tmp/cc6Gu2fa.s:2801   .text.TIM_ARRPreloadConfig:00000000 $t
+     /tmp/cc6Gu2fa.s:2807   .text.TIM_ARRPreloadConfig:00000000 TIM_ARRPreloadConfig
+     /tmp/cc6Gu2fa.s:2843   .text.TIM_SelectCOM:00000000 $t
+     /tmp/cc6Gu2fa.s:2849   .text.TIM_SelectCOM:00000000 TIM_SelectCOM
+     /tmp/cc6Gu2fa.s:2885   .text.TIM_SelectCCDMA:00000000 $t
+     /tmp/cc6Gu2fa.s:2891   .text.TIM_SelectCCDMA:00000000 TIM_SelectCCDMA
+     /tmp/cc6Gu2fa.s:2927   .text.TIM_CCPreloadControl:00000000 $t
+     /tmp/cc6Gu2fa.s:2933   .text.TIM_CCPreloadControl:00000000 TIM_CCPreloadControl
+     /tmp/cc6Gu2fa.s:2969   .text.TIM_OC1PreloadConfig:00000000 $t
+     /tmp/cc6Gu2fa.s:2975   .text.TIM_OC1PreloadConfig:00000000 TIM_OC1PreloadConfig
+     /tmp/cc6Gu2fa.s:3008   .text.TIM_OC2PreloadConfig:00000000 $t
+     /tmp/cc6Gu2fa.s:3014   .text.TIM_OC2PreloadConfig:00000000 TIM_OC2PreloadConfig
+     /tmp/cc6Gu2fa.s:3052   .text.TIM_OC3PreloadConfig:00000000 $t
+     /tmp/cc6Gu2fa.s:3058   .text.TIM_OC3PreloadConfig:00000000 TIM_OC3PreloadConfig
+     /tmp/cc6Gu2fa.s:3091   .text.TIM_OC4PreloadConfig:00000000 $t
+     /tmp/cc6Gu2fa.s:3097   .text.TIM_OC4PreloadConfig:00000000 TIM_OC4PreloadConfig
+     /tmp/cc6Gu2fa.s:3135   .text.TIM_OC1FastConfig:00000000 $t
+     /tmp/cc6Gu2fa.s:3141   .text.TIM_OC1FastConfig:00000000 TIM_OC1FastConfig
+     /tmp/cc6Gu2fa.s:3174   .text.TIM_OC2FastConfig:00000000 $t
+     /tmp/cc6Gu2fa.s:3180   .text.TIM_OC2FastConfig:00000000 TIM_OC2FastConfig
+     /tmp/cc6Gu2fa.s:3218   .text.TIM_OC3FastConfig:00000000 $t
+     /tmp/cc6Gu2fa.s:3224   .text.TIM_OC3FastConfig:00000000 TIM_OC3FastConfig
+     /tmp/cc6Gu2fa.s:3257   .text.TIM_OC4FastConfig:00000000 $t
+     /tmp/cc6Gu2fa.s:3263   .text.TIM_OC4FastConfig:00000000 TIM_OC4FastConfig
+     /tmp/cc6Gu2fa.s:3301   .text.TIM_ClearOC1Ref:00000000 $t
+     /tmp/cc6Gu2fa.s:3307   .text.TIM_ClearOC1Ref:00000000 TIM_ClearOC1Ref
+     /tmp/cc6Gu2fa.s:3340   .text.TIM_ClearOC2Ref:00000000 $t
+     /tmp/cc6Gu2fa.s:3346   .text.TIM_ClearOC2Ref:00000000 TIM_ClearOC2Ref
+     /tmp/cc6Gu2fa.s:3383   .text.TIM_ClearOC3Ref:00000000 $t
+     /tmp/cc6Gu2fa.s:3389   .text.TIM_ClearOC3Ref:00000000 TIM_ClearOC3Ref
+     /tmp/cc6Gu2fa.s:3422   .text.TIM_ClearOC4Ref:00000000 $t
+     /tmp/cc6Gu2fa.s:3428   .text.TIM_ClearOC4Ref:00000000 TIM_ClearOC4Ref
+ARM GAS  /tmp/cc6Gu2fa.s 			page 167
 
 
-     /tmp/ccbcqXFh.s:3465   .text.TIM_OC1PolarityConfig:00000000 $t
-     /tmp/ccbcqXFh.s:3471   .text.TIM_OC1PolarityConfig:00000000 TIM_OC1PolarityConfig
-     /tmp/ccbcqXFh.s:3504   .text.TIM_OC1NPolarityConfig:00000000 $t
-     /tmp/ccbcqXFh.s:3510   .text.TIM_OC1NPolarityConfig:00000000 TIM_OC1NPolarityConfig
-     /tmp/ccbcqXFh.s:3543   .text.TIM_OC2PolarityConfig:00000000 $t
-     /tmp/ccbcqXFh.s:3549   .text.TIM_OC2PolarityConfig:00000000 TIM_OC2PolarityConfig
-     /tmp/ccbcqXFh.s:3587   .text.TIM_OC2NPolarityConfig:00000000 $t
-     /tmp/ccbcqXFh.s:3593   .text.TIM_OC2NPolarityConfig:00000000 TIM_OC2NPolarityConfig
-     /tmp/ccbcqXFh.s:3631   .text.TIM_OC3PolarityConfig:00000000 $t
-     /tmp/ccbcqXFh.s:3637   .text.TIM_OC3PolarityConfig:00000000 TIM_OC3PolarityConfig
-     /tmp/ccbcqXFh.s:3675   .text.TIM_OC3NPolarityConfig:00000000 $t
-     /tmp/ccbcqXFh.s:3681   .text.TIM_OC3NPolarityConfig:00000000 TIM_OC3NPolarityConfig
-     /tmp/ccbcqXFh.s:3719   .text.TIM_OC4PolarityConfig:00000000 $t
-     /tmp/ccbcqXFh.s:3725   .text.TIM_OC4PolarityConfig:00000000 TIM_OC4PolarityConfig
-     /tmp/ccbcqXFh.s:3763   .text.TIM_CCxCmd:00000000 $t
-     /tmp/ccbcqXFh.s:3769   .text.TIM_CCxCmd:00000000 TIM_CCxCmd
-     /tmp/ccbcqXFh.s:3818   .text.TIM_CCxNCmd:00000000 $t
-     /tmp/ccbcqXFh.s:3824   .text.TIM_CCxNCmd:00000000 TIM_CCxNCmd
-     /tmp/ccbcqXFh.s:3873   .text.TIM_SelectOCxM:00000000 $t
-     /tmp/ccbcqXFh.s:3879   .text.TIM_SelectOCxM:00000000 TIM_SelectOCxM
-     /tmp/ccbcqXFh.s:3975   .text.TIM_UpdateDisableConfig:00000000 $t
-     /tmp/ccbcqXFh.s:3981   .text.TIM_UpdateDisableConfig:00000000 TIM_UpdateDisableConfig
-     /tmp/ccbcqXFh.s:4017   .text.TIM_UpdateRequestConfig:00000000 $t
-     /tmp/ccbcqXFh.s:4023   .text.TIM_UpdateRequestConfig:00000000 TIM_UpdateRequestConfig
-     /tmp/ccbcqXFh.s:4059   .text.TIM_SelectHallSensor:00000000 $t
-     /tmp/ccbcqXFh.s:4065   .text.TIM_SelectHallSensor:00000000 TIM_SelectHallSensor
-     /tmp/ccbcqXFh.s:4101   .text.TIM_SelectOnePulseMode:00000000 $t
-     /tmp/ccbcqXFh.s:4107   .text.TIM_SelectOnePulseMode:00000000 TIM_SelectOnePulseMode
-     /tmp/ccbcqXFh.s:4138   .text.TIM_SelectOutputTrigger:00000000 $t
-     /tmp/ccbcqXFh.s:4144   .text.TIM_SelectOutputTrigger:00000000 TIM_SelectOutputTrigger
-     /tmp/ccbcqXFh.s:4175   .text.TIM_SelectSlaveMode:00000000 $t
-     /tmp/ccbcqXFh.s:4181   .text.TIM_SelectSlaveMode:00000000 TIM_SelectSlaveMode
-     /tmp/ccbcqXFh.s:4212   .text.TIM_SelectMasterSlaveMode:00000000 $t
-     /tmp/ccbcqXFh.s:4218   .text.TIM_SelectMasterSlaveMode:00000000 TIM_SelectMasterSlaveMode
-     /tmp/ccbcqXFh.s:4249   .text.TIM_SetCounter:00000000 $t
-     /tmp/ccbcqXFh.s:4255   .text.TIM_SetCounter:00000000 TIM_SetCounter
-     /tmp/ccbcqXFh.s:4273   .text.TIM_SetAutoreload:00000000 $t
-     /tmp/ccbcqXFh.s:4279   .text.TIM_SetAutoreload:00000000 TIM_SetAutoreload
-     /tmp/ccbcqXFh.s:4297   .text.TIM_SetCompare1:00000000 $t
-     /tmp/ccbcqXFh.s:4303   .text.TIM_SetCompare1:00000000 TIM_SetCompare1
-     /tmp/ccbcqXFh.s:4321   .text.TIM_SetCompare2:00000000 $t
-     /tmp/ccbcqXFh.s:4327   .text.TIM_SetCompare2:00000000 TIM_SetCompare2
-     /tmp/ccbcqXFh.s:4345   .text.TIM_SetCompare3:00000000 $t
-     /tmp/ccbcqXFh.s:4351   .text.TIM_SetCompare3:00000000 TIM_SetCompare3
-     /tmp/ccbcqXFh.s:4369   .text.TIM_SetCompare4:00000000 $t
-     /tmp/ccbcqXFh.s:4375   .text.TIM_SetCompare4:00000000 TIM_SetCompare4
-     /tmp/ccbcqXFh.s:4393   .text.TIM_SetIC1Prescaler:00000000 $t
-     /tmp/ccbcqXFh.s:4399   .text.TIM_SetIC1Prescaler:00000000 TIM_SetIC1Prescaler
-     /tmp/ccbcqXFh.s:4430   .text.TIM_SetIC2Prescaler:00000000 $t
-     /tmp/ccbcqXFh.s:4436   .text.TIM_SetIC2Prescaler:00000000 TIM_SetIC2Prescaler
-     /tmp/ccbcqXFh.s:4472   .text.TIM_PWMIConfig:00000000 $t
-     /tmp/ccbcqXFh.s:4478   .text.TIM_PWMIConfig:00000000 TIM_PWMIConfig
-     /tmp/ccbcqXFh.s:4595   .text.TIM_SetIC3Prescaler:00000000 $t
-     /tmp/ccbcqXFh.s:4601   .text.TIM_SetIC3Prescaler:00000000 TIM_SetIC3Prescaler
-     /tmp/ccbcqXFh.s:4632   .text.TIM_SetIC4Prescaler:00000000 $t
-     /tmp/ccbcqXFh.s:4638   .text.TIM_SetIC4Prescaler:00000000 TIM_SetIC4Prescaler
-     /tmp/ccbcqXFh.s:4674   .text.TIM_ICInit:00000000 $t
-ARM GAS  /tmp/ccbcqXFh.s 			page 168
+     /tmp/cc6Gu2fa.s:3465   .text.TIM_OC1PolarityConfig:00000000 $t
+     /tmp/cc6Gu2fa.s:3471   .text.TIM_OC1PolarityConfig:00000000 TIM_OC1PolarityConfig
+     /tmp/cc6Gu2fa.s:3504   .text.TIM_OC1NPolarityConfig:00000000 $t
+     /tmp/cc6Gu2fa.s:3510   .text.TIM_OC1NPolarityConfig:00000000 TIM_OC1NPolarityConfig
+     /tmp/cc6Gu2fa.s:3543   .text.TIM_OC2PolarityConfig:00000000 $t
+     /tmp/cc6Gu2fa.s:3549   .text.TIM_OC2PolarityConfig:00000000 TIM_OC2PolarityConfig
+     /tmp/cc6Gu2fa.s:3587   .text.TIM_OC2NPolarityConfig:00000000 $t
+     /tmp/cc6Gu2fa.s:3593   .text.TIM_OC2NPolarityConfig:00000000 TIM_OC2NPolarityConfig
+     /tmp/cc6Gu2fa.s:3631   .text.TIM_OC3PolarityConfig:00000000 $t
+     /tmp/cc6Gu2fa.s:3637   .text.TIM_OC3PolarityConfig:00000000 TIM_OC3PolarityConfig
+     /tmp/cc6Gu2fa.s:3675   .text.TIM_OC3NPolarityConfig:00000000 $t
+     /tmp/cc6Gu2fa.s:3681   .text.TIM_OC3NPolarityConfig:00000000 TIM_OC3NPolarityConfig
+     /tmp/cc6Gu2fa.s:3719   .text.TIM_OC4PolarityConfig:00000000 $t
+     /tmp/cc6Gu2fa.s:3725   .text.TIM_OC4PolarityConfig:00000000 TIM_OC4PolarityConfig
+     /tmp/cc6Gu2fa.s:3763   .text.TIM_CCxCmd:00000000 $t
+     /tmp/cc6Gu2fa.s:3769   .text.TIM_CCxCmd:00000000 TIM_CCxCmd
+     /tmp/cc6Gu2fa.s:3818   .text.TIM_CCxNCmd:00000000 $t
+     /tmp/cc6Gu2fa.s:3824   .text.TIM_CCxNCmd:00000000 TIM_CCxNCmd
+     /tmp/cc6Gu2fa.s:3873   .text.TIM_SelectOCxM:00000000 $t
+     /tmp/cc6Gu2fa.s:3879   .text.TIM_SelectOCxM:00000000 TIM_SelectOCxM
+     /tmp/cc6Gu2fa.s:3975   .text.TIM_UpdateDisableConfig:00000000 $t
+     /tmp/cc6Gu2fa.s:3981   .text.TIM_UpdateDisableConfig:00000000 TIM_UpdateDisableConfig
+     /tmp/cc6Gu2fa.s:4017   .text.TIM_UpdateRequestConfig:00000000 $t
+     /tmp/cc6Gu2fa.s:4023   .text.TIM_UpdateRequestConfig:00000000 TIM_UpdateRequestConfig
+     /tmp/cc6Gu2fa.s:4059   .text.TIM_SelectHallSensor:00000000 $t
+     /tmp/cc6Gu2fa.s:4065   .text.TIM_SelectHallSensor:00000000 TIM_SelectHallSensor
+     /tmp/cc6Gu2fa.s:4101   .text.TIM_SelectOnePulseMode:00000000 $t
+     /tmp/cc6Gu2fa.s:4107   .text.TIM_SelectOnePulseMode:00000000 TIM_SelectOnePulseMode
+     /tmp/cc6Gu2fa.s:4138   .text.TIM_SelectOutputTrigger:00000000 $t
+     /tmp/cc6Gu2fa.s:4144   .text.TIM_SelectOutputTrigger:00000000 TIM_SelectOutputTrigger
+     /tmp/cc6Gu2fa.s:4175   .text.TIM_SelectSlaveMode:00000000 $t
+     /tmp/cc6Gu2fa.s:4181   .text.TIM_SelectSlaveMode:00000000 TIM_SelectSlaveMode
+     /tmp/cc6Gu2fa.s:4212   .text.TIM_SelectMasterSlaveMode:00000000 $t
+     /tmp/cc6Gu2fa.s:4218   .text.TIM_SelectMasterSlaveMode:00000000 TIM_SelectMasterSlaveMode
+     /tmp/cc6Gu2fa.s:4249   .text.TIM_SetCounter:00000000 $t
+     /tmp/cc6Gu2fa.s:4255   .text.TIM_SetCounter:00000000 TIM_SetCounter
+     /tmp/cc6Gu2fa.s:4273   .text.TIM_SetAutoreload:00000000 $t
+     /tmp/cc6Gu2fa.s:4279   .text.TIM_SetAutoreload:00000000 TIM_SetAutoreload
+     /tmp/cc6Gu2fa.s:4297   .text.TIM_SetCompare1:00000000 $t
+     /tmp/cc6Gu2fa.s:4303   .text.TIM_SetCompare1:00000000 TIM_SetCompare1
+     /tmp/cc6Gu2fa.s:4321   .text.TIM_SetCompare2:00000000 $t
+     /tmp/cc6Gu2fa.s:4327   .text.TIM_SetCompare2:00000000 TIM_SetCompare2
+     /tmp/cc6Gu2fa.s:4345   .text.TIM_SetCompare3:00000000 $t
+     /tmp/cc6Gu2fa.s:4351   .text.TIM_SetCompare3:00000000 TIM_SetCompare3
+     /tmp/cc6Gu2fa.s:4369   .text.TIM_SetCompare4:00000000 $t
+     /tmp/cc6Gu2fa.s:4375   .text.TIM_SetCompare4:00000000 TIM_SetCompare4
+     /tmp/cc6Gu2fa.s:4393   .text.TIM_SetIC1Prescaler:00000000 $t
+     /tmp/cc6Gu2fa.s:4399   .text.TIM_SetIC1Prescaler:00000000 TIM_SetIC1Prescaler
+     /tmp/cc6Gu2fa.s:4430   .text.TIM_SetIC2Prescaler:00000000 $t
+     /tmp/cc6Gu2fa.s:4436   .text.TIM_SetIC2Prescaler:00000000 TIM_SetIC2Prescaler
+     /tmp/cc6Gu2fa.s:4472   .text.TIM_PWMIConfig:00000000 $t
+     /tmp/cc6Gu2fa.s:4478   .text.TIM_PWMIConfig:00000000 TIM_PWMIConfig
+     /tmp/cc6Gu2fa.s:4595   .text.TIM_SetIC3Prescaler:00000000 $t
+     /tmp/cc6Gu2fa.s:4601   .text.TIM_SetIC3Prescaler:00000000 TIM_SetIC3Prescaler
+     /tmp/cc6Gu2fa.s:4632   .text.TIM_SetIC4Prescaler:00000000 $t
+     /tmp/cc6Gu2fa.s:4638   .text.TIM_SetIC4Prescaler:00000000 TIM_SetIC4Prescaler
+     /tmp/cc6Gu2fa.s:4674   .text.TIM_ICInit:00000000 $t
+ARM GAS  /tmp/cc6Gu2fa.s 			page 168
 
 
-     /tmp/ccbcqXFh.s:4680   .text.TIM_ICInit:00000000 TIM_ICInit
-     /tmp/ccbcqXFh.s:4788   .text.TIM_SetClockDivision:00000000 $t
-     /tmp/ccbcqXFh.s:4794   .text.TIM_SetClockDivision:00000000 TIM_SetClockDivision
-     /tmp/ccbcqXFh.s:4825   .text.TIM_GetCapture1:00000000 $t
-     /tmp/ccbcqXFh.s:4831   .text.TIM_GetCapture1:00000000 TIM_GetCapture1
-     /tmp/ccbcqXFh.s:4851   .text.TIM_GetCapture2:00000000 $t
-     /tmp/ccbcqXFh.s:4857   .text.TIM_GetCapture2:00000000 TIM_GetCapture2
-     /tmp/ccbcqXFh.s:4877   .text.TIM_GetCapture3:00000000 $t
-     /tmp/ccbcqXFh.s:4883   .text.TIM_GetCapture3:00000000 TIM_GetCapture3
-     /tmp/ccbcqXFh.s:4903   .text.TIM_GetCapture4:00000000 $t
-     /tmp/ccbcqXFh.s:4909   .text.TIM_GetCapture4:00000000 TIM_GetCapture4
-     /tmp/ccbcqXFh.s:4929   .text.TIM_GetCounter:00000000 $t
-     /tmp/ccbcqXFh.s:4935   .text.TIM_GetCounter:00000000 TIM_GetCounter
-     /tmp/ccbcqXFh.s:4955   .text.TIM_GetPrescaler:00000000 $t
-     /tmp/ccbcqXFh.s:4961   .text.TIM_GetPrescaler:00000000 TIM_GetPrescaler
-     /tmp/ccbcqXFh.s:4981   .text.TIM_GetFlagStatus:00000000 $t
-     /tmp/ccbcqXFh.s:4987   .text.TIM_GetFlagStatus:00000000 TIM_GetFlagStatus
-     /tmp/ccbcqXFh.s:5021   .text.TIM_ClearFlag:00000000 $t
-     /tmp/ccbcqXFh.s:5027   .text.TIM_ClearFlag:00000000 TIM_ClearFlag
-     /tmp/ccbcqXFh.s:5051   .text.TIM_GetITStatus:00000000 $t
-     /tmp/ccbcqXFh.s:5057   .text.TIM_GetITStatus:00000000 TIM_GetITStatus
-     /tmp/ccbcqXFh.s:5109   .text.TIM_ClearITPendingBit:00000000 $t
-     /tmp/ccbcqXFh.s:5115   .text.TIM_ClearITPendingBit:00000000 TIM_ClearITPendingBit
+     /tmp/cc6Gu2fa.s:4680   .text.TIM_ICInit:00000000 TIM_ICInit
+     /tmp/cc6Gu2fa.s:4788   .text.TIM_SetClockDivision:00000000 $t
+     /tmp/cc6Gu2fa.s:4794   .text.TIM_SetClockDivision:00000000 TIM_SetClockDivision
+     /tmp/cc6Gu2fa.s:4825   .text.TIM_GetCapture1:00000000 $t
+     /tmp/cc6Gu2fa.s:4831   .text.TIM_GetCapture1:00000000 TIM_GetCapture1
+     /tmp/cc6Gu2fa.s:4851   .text.TIM_GetCapture2:00000000 $t
+     /tmp/cc6Gu2fa.s:4857   .text.TIM_GetCapture2:00000000 TIM_GetCapture2
+     /tmp/cc6Gu2fa.s:4877   .text.TIM_GetCapture3:00000000 $t
+     /tmp/cc6Gu2fa.s:4883   .text.TIM_GetCapture3:00000000 TIM_GetCapture3
+     /tmp/cc6Gu2fa.s:4903   .text.TIM_GetCapture4:00000000 $t
+     /tmp/cc6Gu2fa.s:4909   .text.TIM_GetCapture4:00000000 TIM_GetCapture4
+     /tmp/cc6Gu2fa.s:4929   .text.TIM_GetCounter:00000000 $t
+     /tmp/cc6Gu2fa.s:4935   .text.TIM_GetCounter:00000000 TIM_GetCounter
+     /tmp/cc6Gu2fa.s:4955   .text.TIM_GetPrescaler:00000000 $t
+     /tmp/cc6Gu2fa.s:4961   .text.TIM_GetPrescaler:00000000 TIM_GetPrescaler
+     /tmp/cc6Gu2fa.s:4981   .text.TIM_GetFlagStatus:00000000 $t
+     /tmp/cc6Gu2fa.s:4987   .text.TIM_GetFlagStatus:00000000 TIM_GetFlagStatus
+     /tmp/cc6Gu2fa.s:5021   .text.TIM_ClearFlag:00000000 $t
+     /tmp/cc6Gu2fa.s:5027   .text.TIM_ClearFlag:00000000 TIM_ClearFlag
+     /tmp/cc6Gu2fa.s:5051   .text.TIM_GetITStatus:00000000 $t
+     /tmp/cc6Gu2fa.s:5057   .text.TIM_GetITStatus:00000000 TIM_GetITStatus
+     /tmp/cc6Gu2fa.s:5109   .text.TIM_ClearITPendingBit:00000000 $t
+     /tmp/cc6Gu2fa.s:5115   .text.TIM_ClearITPendingBit:00000000 TIM_ClearITPendingBit
 
 UNDEFINED SYMBOLS
 RCC_APB2PeriphResetCmd

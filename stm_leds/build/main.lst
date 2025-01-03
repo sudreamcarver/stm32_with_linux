@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccBHs6FE.s 			page 1
+ARM GAS  /tmp/ccBRe65r.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccBHs6FE.s 			page 1
   48 000e 8DF80730 		strb	r3, [sp, #7]
    9:./source/main.c ****   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0;
   49              		.loc 1 9 3 is_stmt 1 view .LVU5
-ARM GAS  /tmp/ccBHs6FE.s 			page 2
+ARM GAS  /tmp/ccBRe65r.s 			page 2
 
 
   50              		.loc 1 9 31 is_stmt 0 view .LVU6
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccBHs6FE.s 			page 1
   21:./source/main.c ****     GPIO_WriteBit(GPIOA, GPIO_Pin_0, Bit_SET);
   93              		.loc 1 21 5 discriminator 1 view .LVU17
   94 005a 0122     		movs	r2, #1
-ARM GAS  /tmp/ccBHs6FE.s 			page 3
+ARM GAS  /tmp/ccBRe65r.s 			page 3
 
 
   95 005c 1146     		mov	r1, r2
@@ -171,14 +171,14 @@ ARM GAS  /tmp/ccBHs6FE.s 			page 1
  136              		.file 4 "Drivers/inc/stm32f10x_gpio.h"
  137              		.file 5 "Libraries/inc/Delay.h"
  138              		.file 6 "Drivers/inc/stm32f10x_rcc.h"
-ARM GAS  /tmp/ccBHs6FE.s 			page 4
+ARM GAS  /tmp/ccBRe65r.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 main.c
-     /tmp/ccBHs6FE.s:19     .text.main:00000000 $t
-     /tmp/ccBHs6FE.s:25     .text.main:00000000 main
-     /tmp/ccBHs6FE.s:128    .text.main:00000094 $d
+     /tmp/ccBRe65r.s:19     .text.main:00000000 $t
+     /tmp/ccBRe65r.s:25     .text.main:00000000 main
+     /tmp/ccBRe65r.s:128    .text.main:00000094 $d
 
 UNDEFINED SYMBOLS
 RCC_APB2PeriphClockCmd
