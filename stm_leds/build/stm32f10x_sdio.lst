@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccJG9I2H.s 			page 1
+ARM GAS  /tmp/ccuDjkvx.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccJG9I2H.s 			page 1
   30:./Drivers/src/stm32f10x_sdio.c ****   * @brief SDIO driver modules
   31:./Drivers/src/stm32f10x_sdio.c ****   * @{
   32:./Drivers/src/stm32f10x_sdio.c ****   */ 
-ARM GAS  /tmp/ccJG9I2H.s 			page 2
+ARM GAS  /tmp/ccuDjkvx.s 			page 2
 
 
   33:./Drivers/src/stm32f10x_sdio.c **** 
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccJG9I2H.s 			page 1
   87:./Drivers/src/stm32f10x_sdio.c **** #define SDIOEN_BitNumber          0x0B
   88:./Drivers/src/stm32f10x_sdio.c **** #define DCTRL_SDIOEN_BB           (PERIPH_BB_BASE + (DCTRL_OFFSET * 32) + (SDIOEN_BitNumber * 4))
   89:./Drivers/src/stm32f10x_sdio.c **** 
-ARM GAS  /tmp/ccJG9I2H.s 			page 3
+ARM GAS  /tmp/ccuDjkvx.s 			page 3
 
 
   90:./Drivers/src/stm32f10x_sdio.c **** /* ---------------------- SDIO registers bit mask ------------------------ */
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccJG9I2H.s 			page 1
  144:./Drivers/src/stm32f10x_sdio.c ****   * @{
  145:./Drivers/src/stm32f10x_sdio.c ****   */
  146:./Drivers/src/stm32f10x_sdio.c **** 
-ARM GAS  /tmp/ccJG9I2H.s 			page 4
+ARM GAS  /tmp/ccuDjkvx.s 			page 4
 
 
  147:./Drivers/src/stm32f10x_sdio.c **** /**
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccJG9I2H.s 			page 1
   58 0014 9963     		str	r1, [r3, #56]
  170:./Drivers/src/stm32f10x_sdio.c ****   SDIO->MASK = 0x00000000;
   59              		.loc 1 170 3 is_stmt 1 view .LVU17
-ARM GAS  /tmp/ccJG9I2H.s 			page 5
+ARM GAS  /tmp/ccuDjkvx.s 			page 5
 
 
   60              		.loc 1 170 14 is_stmt 0 view .LVU18
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccJG9I2H.s 			page 1
  189:./Drivers/src/stm32f10x_sdio.c ****   assert_param(IS_SDIO_HARDWARE_FLOW_CONTROL(SDIO_InitStruct->SDIO_HardwareFlowControl)); 
   98              		.loc 1 189 3 view .LVU27
  190:./Drivers/src/stm32f10x_sdio.c ****    
-ARM GAS  /tmp/ccJG9I2H.s 			page 6
+ARM GAS  /tmp/ccuDjkvx.s 			page 6
 
 
  191:./Drivers/src/stm32f10x_sdio.c **** /*---------------------------- SDIO CLKCR Configuration ------------------------*/  
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccJG9I2H.s 			page 1
  209:./Drivers/src/stm32f10x_sdio.c ****   SDIO->CLKCR = tmpreg;
  134              		.loc 1 209 3 is_stmt 1 view .LVU42
  135              		.loc 1 209 15 is_stmt 0 view .LVU43
-ARM GAS  /tmp/ccJG9I2H.s 			page 7
+ARM GAS  /tmp/ccuDjkvx.s 			page 7
 
 
  136 0026 4B60     		str	r3, [r1, #4]
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccJG9I2H.s 			page 1
  177 0008 8360     		str	r3, [r0, #8]
  225:./Drivers/src/stm32f10x_sdio.c ****   SDIO_InitStruct->SDIO_BusWide = SDIO_BusWide_1b;
  178              		.loc 1 225 3 is_stmt 1 view .LVU54
-ARM GAS  /tmp/ccJG9I2H.s 			page 8
+ARM GAS  /tmp/ccuDjkvx.s 			page 8
 
 
  179              		.loc 1 225 33 is_stmt 0 view .LVU55
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccJG9I2H.s 			page 1
  221              		.syntax unified
  222              		.thumb
  223              		.thumb_func
-ARM GAS  /tmp/ccJG9I2H.s 			page 9
+ARM GAS  /tmp/ccuDjkvx.s 			page 9
 
 
  225              	SDIO_SetPowerState:
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccJG9I2H.s 			page 1
  266:./Drivers/src/stm32f10x_sdio.c ****   */
  267:./Drivers/src/stm32f10x_sdio.c **** uint32_t SDIO_GetPowerState(void)
  268:./Drivers/src/stm32f10x_sdio.c **** {
-ARM GAS  /tmp/ccJG9I2H.s 			page 10
+ARM GAS  /tmp/ccuDjkvx.s 			page 10
 
 
  256              		.loc 1 268 1 is_stmt 1 view -0
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccJG9I2H.s 			page 1
  296:./Drivers/src/stm32f10x_sdio.c ****   *     @arg SDIO_IT_RXFIFOE:  Receive FIFO empty interrupt
  297:./Drivers/src/stm32f10x_sdio.c ****   *     @arg SDIO_IT_TXDAVL:   Data available in transmit FIFO interrupt
  298:./Drivers/src/stm32f10x_sdio.c ****   *     @arg SDIO_IT_RXDAVL:   Data available in receive FIFO interrupt
-ARM GAS  /tmp/ccJG9I2H.s 			page 11
+ARM GAS  /tmp/ccuDjkvx.s 			page 11
 
 
  299:./Drivers/src/stm32f10x_sdio.c ****   *     @arg SDIO_IT_SDIOIT:   SD I/O interrupt received interrupt
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccJG9I2H.s 			page 1
  316 0018 00800140 		.word	1073840128
  317              		.cfi_endproc
  318              	.LFE35:
-ARM GAS  /tmp/ccJG9I2H.s 			page 12
+ARM GAS  /tmp/ccuDjkvx.s 			page 12
 
 
  320              		.section	.text.SDIO_DMACmd,"ax",%progbits
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccJG9I2H.s 			page 1
  340:./Drivers/src/stm32f10x_sdio.c ****   * @param  SDIO_CmdInitStruct : pointer to a SDIO_CmdInitTypeDef 
  341:./Drivers/src/stm32f10x_sdio.c ****   *         structure that contains the configuration information for the SDIO command.
  342:./Drivers/src/stm32f10x_sdio.c ****   * @retval None
-ARM GAS  /tmp/ccJG9I2H.s 			page 13
+ARM GAS  /tmp/ccuDjkvx.s 			page 13
 
 
  343:./Drivers/src/stm32f10x_sdio.c ****   */
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccJG9I2H.s 			page 1
  364:./Drivers/src/stm32f10x_sdio.c ****   /* Set WAITRESP bits according to SDIO_Response value */
  365:./Drivers/src/stm32f10x_sdio.c ****   /* Set WAITINT and WAITPEND bits according to SDIO_Wait value */
  366:./Drivers/src/stm32f10x_sdio.c ****   /* Set CPSMEN bits according to SDIO_CPSM value */
-ARM GAS  /tmp/ccJG9I2H.s 			page 14
+ARM GAS  /tmp/ccuDjkvx.s 			page 14
 
 
  367:./Drivers/src/stm32f10x_sdio.c ****   tmpreg |= (uint32_t)SDIO_CmdInitStruct->SDIO_CmdIndex | SDIO_CmdInitStruct->SDIO_Response
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccJG9I2H.s 			page 1
  379:./Drivers/src/stm32f10x_sdio.c ****   */
  380:./Drivers/src/stm32f10x_sdio.c **** void SDIO_CmdStructInit(SDIO_CmdInitTypeDef* SDIO_CmdInitStruct)
  381:./Drivers/src/stm32f10x_sdio.c **** {
-ARM GAS  /tmp/ccJG9I2H.s 			page 15
+ARM GAS  /tmp/ccuDjkvx.s 			page 15
 
 
  435              		.loc 1 381 1 is_stmt 1 view -0
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccJG9I2H.s 			page 1
  475              		.loc 1 397 3 view .LVU128
  476              		.loc 1 397 24 is_stmt 0 view .LVU129
  477 0000 014B     		ldr	r3, .L32
-ARM GAS  /tmp/ccJG9I2H.s 			page 16
+ARM GAS  /tmp/ccuDjkvx.s 			page 16
 
 
  478 0002 1869     		ldr	r0, [r3, #16]
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccJG9I2H.s 			page 1
  514              		.loc 1 417 24 is_stmt 0 view .LVU137
  515 0006 034B     		ldr	r3, .L36
  516 0008 0344     		add	r3, r3, r0
-ARM GAS  /tmp/ccJG9I2H.s 			page 17
+ARM GAS  /tmp/ccuDjkvx.s 			page 17
 
 
  517              		.loc 1 417 7 view .LVU138
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccJG9I2H.s 			page 1
  559              	.LVL23:
  432:./Drivers/src/stm32f10x_sdio.c ****   
  433:./Drivers/src/stm32f10x_sdio.c ****   /* Check the parameters */
-ARM GAS  /tmp/ccJG9I2H.s 			page 18
+ARM GAS  /tmp/ccuDjkvx.s 			page 18
 
 
  434:./Drivers/src/stm32f10x_sdio.c ****   assert_param(IS_SDIO_DATA_LENGTH(SDIO_DataInitStruct->SDIO_DataLength));
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccJG9I2H.s 			page 1
  458:./Drivers/src/stm32f10x_sdio.c ****            | SDIO_DataInitStruct->SDIO_TransferMode | SDIO_DataInitStruct->SDIO_DPSM;
  590              		.loc 1 458 12 view .LVU164
  591 0018 0469     		ldr	r4, [r0, #16]
-ARM GAS  /tmp/ccJG9I2H.s 			page 19
+ARM GAS  /tmp/ccuDjkvx.s 			page 19
 
 
  592 001a 2343     		orrs	r3, r3, r4
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccJG9I2H.s 			page 1
  632              		.loc 1 473 3 view .LVU172
  633              		.loc 1 473 41 is_stmt 0 view .LVU173
  634 0000 4FF0FF33 		mov	r3, #-1
-ARM GAS  /tmp/ccJG9I2H.s 			page 20
+ARM GAS  /tmp/ccuDjkvx.s 			page 20
 
 
  635 0004 0360     		str	r3, [r0]
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccJG9I2H.s 			page 1
  675              		.loc 1 489 1 view .LVU188
  676 0004 7047     		bx	lr
  677              	.L45:
-ARM GAS  /tmp/ccJG9I2H.s 			page 21
+ARM GAS  /tmp/ccuDjkvx.s 			page 21
 
 
  678 0006 00BF     		.align	2
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccJG9I2H.s 			page 1
  505:./Drivers/src/stm32f10x_sdio.c ****   */
  506:./Drivers/src/stm32f10x_sdio.c **** void SDIO_WriteData(uint32_t Data)
  507:./Drivers/src/stm32f10x_sdio.c **** { 
-ARM GAS  /tmp/ccJG9I2H.s 			page 22
+ARM GAS  /tmp/ccuDjkvx.s 			page 22
 
 
  721              		.loc 1 507 1 is_stmt 1 view -0
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccJG9I2H.s 			page 1
  766              		.section	.text.SDIO_StartSDIOReadWait,"ax",%progbits
  767              		.align	1
  768              		.global	SDIO_StartSDIOReadWait
-ARM GAS  /tmp/ccJG9I2H.s 			page 23
+ARM GAS  /tmp/ccuDjkvx.s 			page 23
 
 
  769              		.syntax unified
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/ccJG9I2H.s 			page 1
  541:./Drivers/src/stm32f10x_sdio.c **** void SDIO_StopSDIOReadWait(FunctionalState NewState)
  542:./Drivers/src/stm32f10x_sdio.c **** { 
  805              		.loc 1 542 1 is_stmt 1 view -0
-ARM GAS  /tmp/ccJG9I2H.s 			page 24
+ARM GAS  /tmp/ccuDjkvx.s 			page 24
 
 
  806              		.cfi_startproc
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/ccJG9I2H.s 			page 1
  842 0000 014B     		ldr	r3, .L62
  843 0002 C3F8A805 		str	r0, [r3, #1448]
  563:./Drivers/src/stm32f10x_sdio.c **** }
-ARM GAS  /tmp/ccJG9I2H.s 			page 25
+ARM GAS  /tmp/ccuDjkvx.s 			page 25
 
 
  844              		.loc 1 563 1 view .LVU215
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/ccJG9I2H.s 			page 1
  887              		.thumb_func
  889              	SDIO_SendSDIOSuspendCmd:
  890              	.LVL34:
-ARM GAS  /tmp/ccJG9I2H.s 			page 26
+ARM GAS  /tmp/ccuDjkvx.s 			page 26
 
 
  891              	.LFB51:
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/ccJG9I2H.s 			page 1
  924              		@ frame_needed = 0, uses_anonymous_args = 0
  925              		@ link register save eliminated.
  601:./Drivers/src/stm32f10x_sdio.c ****   /* Check the parameters */
-ARM GAS  /tmp/ccJG9I2H.s 			page 27
+ARM GAS  /tmp/ccuDjkvx.s 			page 27
 
 
  602:./Drivers/src/stm32f10x_sdio.c ****   assert_param(IS_FUNCTIONAL_STATE(NewState));
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/ccJG9I2H.s 			page 1
  965              		.loc 1 618 1 view .LVU237
  966 000e 7047     		bx	lr
  967              	.L75:
-ARM GAS  /tmp/ccJG9I2H.s 			page 28
+ARM GAS  /tmp/ccuDjkvx.s 			page 28
 
 
  968              		.align	2
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/ccJG9I2H.s 			page 1
  632:./Drivers/src/stm32f10x_sdio.c **** 
  633:./Drivers/src/stm32f10x_sdio.c **** /**
  634:./Drivers/src/stm32f10x_sdio.c ****   * @brief  Checks whether the specified SDIO flag is set or not.
-ARM GAS  /tmp/ccJG9I2H.s 			page 29
+ARM GAS  /tmp/ccuDjkvx.s 			page 29
 
 
  635:./Drivers/src/stm32f10x_sdio.c ****   * @param  SDIO_FLAG: specifies the flag to check. 
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/ccJG9I2H.s 			page 1
  1028 0008 0120     		movs	r0, #1
  1029              	.LVL40:
  1030              		.loc 1 673 15 view .LVU250
-ARM GAS  /tmp/ccJG9I2H.s 			page 30
+ARM GAS  /tmp/ccuDjkvx.s 			page 30
 
 
  1031 000a 7047     		bx	lr
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/ccJG9I2H.s 			page 1
  1057              		.loc 1 703 1 is_stmt 1 view -0
  1058              		.cfi_startproc
  1059              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /tmp/ccJG9I2H.s 			page 31
+ARM GAS  /tmp/ccuDjkvx.s 			page 31
 
 
  1060              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/ccJG9I2H.s 			page 1
  734:./Drivers/src/stm32f10x_sdio.c ****   *     @arg SDIO_IT_RXFIFOE:  Receive FIFO empty interrupt
  735:./Drivers/src/stm32f10x_sdio.c ****   *     @arg SDIO_IT_TXDAVL:   Data available in transmit FIFO interrupt
  736:./Drivers/src/stm32f10x_sdio.c ****   *     @arg SDIO_IT_RXDAVL:   Data available in receive FIFO interrupt
-ARM GAS  /tmp/ccJG9I2H.s 			page 32
+ARM GAS  /tmp/ccuDjkvx.s 			page 32
 
 
  737:./Drivers/src/stm32f10x_sdio.c ****   *     @arg SDIO_IT_SDIOIT:   SD I/O interrupt received interrupt
@@ -1918,7 +1918,7 @@ ARM GAS  /tmp/ccJG9I2H.s 			page 1
  1121              		.align	1
  1122              		.global	SDIO_ClearITPendingBit
  1123              		.syntax unified
-ARM GAS  /tmp/ccJG9I2H.s 			page 33
+ARM GAS  /tmp/ccuDjkvx.s 			page 33
 
 
  1124              		.thumb
@@ -1976,100 +1976,100 @@ ARM GAS  /tmp/ccJG9I2H.s 			page 1
  1151              		.file 2 "/usr/lib/gcc/arm-none-eabi/12.2.1/include/stdint.h"
  1152              		.file 3 "cmsis/stm32f10x.h"
  1153              		.file 4 "Drivers/inc/stm32f10x_sdio.h"
-ARM GAS  /tmp/ccJG9I2H.s 			page 34
+ARM GAS  /tmp/ccuDjkvx.s 			page 34
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f10x_sdio.c
-     /tmp/ccJG9I2H.s:19     .text.SDIO_DeInit:00000000 $t
-     /tmp/ccJG9I2H.s:25     .text.SDIO_DeInit:00000000 SDIO_DeInit
-     /tmp/ccJG9I2H.s:67     .text.SDIO_DeInit:0000001c $d
-     /tmp/ccJG9I2H.s:73     .text.SDIO_Init:00000000 $t
-     /tmp/ccJG9I2H.s:79     .text.SDIO_Init:00000000 SDIO_Init
-     /tmp/ccJG9I2H.s:146    .text.SDIO_Init:0000002c $d
-     /tmp/ccJG9I2H.s:151    .text.SDIO_StructInit:00000000 $t
-     /tmp/ccJG9I2H.s:157    .text.SDIO_StructInit:00000000 SDIO_StructInit
-     /tmp/ccJG9I2H.s:190    .text.SDIO_ClockCmd:00000000 $t
-     /tmp/ccJG9I2H.s:196    .text.SDIO_ClockCmd:00000000 SDIO_ClockCmd
-     /tmp/ccJG9I2H.s:214    .text.SDIO_ClockCmd:00000008 $d
-     /tmp/ccJG9I2H.s:219    .text.SDIO_SetPowerState:00000000 $t
-     /tmp/ccJG9I2H.s:225    .text.SDIO_SetPowerState:00000000 SDIO_SetPowerState
-     /tmp/ccJG9I2H.s:243    .text.SDIO_SetPowerState:00000008 $d
-     /tmp/ccJG9I2H.s:248    .text.SDIO_GetPowerState:00000000 $t
-     /tmp/ccJG9I2H.s:254    .text.SDIO_GetPowerState:00000000 SDIO_GetPowerState
-     /tmp/ccJG9I2H.s:271    .text.SDIO_GetPowerState:0000000c $d
-     /tmp/ccJG9I2H.s:276    .text.SDIO_ITConfig:00000000 $t
-     /tmp/ccJG9I2H.s:282    .text.SDIO_ITConfig:00000000 SDIO_ITConfig
-     /tmp/ccJG9I2H.s:316    .text.SDIO_ITConfig:00000018 $d
-     /tmp/ccJG9I2H.s:321    .text.SDIO_DMACmd:00000000 $t
-     /tmp/ccJG9I2H.s:327    .text.SDIO_DMACmd:00000000 SDIO_DMACmd
-     /tmp/ccJG9I2H.s:345    .text.SDIO_DMACmd:00000008 $d
-     /tmp/ccJG9I2H.s:350    .text.SDIO_SendCommand:00000000 $t
-     /tmp/ccJG9I2H.s:356    .text.SDIO_SendCommand:00000000 SDIO_SendCommand
-     /tmp/ccJG9I2H.s:421    .text.SDIO_SendCommand:00000028 $d
-     /tmp/ccJG9I2H.s:426    .text.SDIO_CmdStructInit:00000000 $t
-     /tmp/ccJG9I2H.s:432    .text.SDIO_CmdStructInit:00000000 SDIO_CmdStructInit
-     /tmp/ccJG9I2H.s:462    .text.SDIO_GetCommandResponse:00000000 $t
-     /tmp/ccJG9I2H.s:468    .text.SDIO_GetCommandResponse:00000000 SDIO_GetCommandResponse
-     /tmp/ccJG9I2H.s:485    .text.SDIO_GetCommandResponse:00000008 $d
-     /tmp/ccJG9I2H.s:490    .text.SDIO_GetResponse:00000000 $t
-     /tmp/ccJG9I2H.s:496    .text.SDIO_GetResponse:00000000 SDIO_GetResponse
-     /tmp/ccJG9I2H.s:534    .text.SDIO_GetResponse:00000014 $d
-     /tmp/ccJG9I2H.s:539    .text.SDIO_DataConfig:00000000 $t
-     /tmp/ccJG9I2H.s:545    .text.SDIO_DataConfig:00000000 SDIO_DataConfig
-     /tmp/ccJG9I2H.s:613    .text.SDIO_DataConfig:00000028 $d
-     /tmp/ccJG9I2H.s:618    .text.SDIO_DataStructInit:00000000 $t
-     /tmp/ccJG9I2H.s:624    .text.SDIO_DataStructInit:00000000 SDIO_DataStructInit
-     /tmp/ccJG9I2H.s:658    .text.SDIO_GetDataCounter:00000000 $t
-     /tmp/ccJG9I2H.s:664    .text.SDIO_GetDataCounter:00000000 SDIO_GetDataCounter
-     /tmp/ccJG9I2H.s:680    .text.SDIO_GetDataCounter:00000008 $d
-     /tmp/ccJG9I2H.s:685    .text.SDIO_ReadData:00000000 $t
-     /tmp/ccJG9I2H.s:691    .text.SDIO_ReadData:00000000 SDIO_ReadData
-     /tmp/ccJG9I2H.s:707    .text.SDIO_ReadData:00000008 $d
-     /tmp/ccJG9I2H.s:712    .text.SDIO_WriteData:00000000 $t
-     /tmp/ccJG9I2H.s:718    .text.SDIO_WriteData:00000000 SDIO_WriteData
-     /tmp/ccJG9I2H.s:735    .text.SDIO_WriteData:00000008 $d
-     /tmp/ccJG9I2H.s:740    .text.SDIO_GetFIFOCount:00000000 $t
-     /tmp/ccJG9I2H.s:746    .text.SDIO_GetFIFOCount:00000000 SDIO_GetFIFOCount
-     /tmp/ccJG9I2H.s:762    .text.SDIO_GetFIFOCount:00000008 $d
-     /tmp/ccJG9I2H.s:767    .text.SDIO_StartSDIOReadWait:00000000 $t
-     /tmp/ccJG9I2H.s:773    .text.SDIO_StartSDIOReadWait:00000000 SDIO_StartSDIOReadWait
-     /tmp/ccJG9I2H.s:791    .text.SDIO_StartSDIOReadWait:00000008 $d
-     /tmp/ccJG9I2H.s:796    .text.SDIO_StopSDIOReadWait:00000000 $t
-ARM GAS  /tmp/ccJG9I2H.s 			page 35
+     /tmp/ccuDjkvx.s:19     .text.SDIO_DeInit:00000000 $t
+     /tmp/ccuDjkvx.s:25     .text.SDIO_DeInit:00000000 SDIO_DeInit
+     /tmp/ccuDjkvx.s:67     .text.SDIO_DeInit:0000001c $d
+     /tmp/ccuDjkvx.s:73     .text.SDIO_Init:00000000 $t
+     /tmp/ccuDjkvx.s:79     .text.SDIO_Init:00000000 SDIO_Init
+     /tmp/ccuDjkvx.s:146    .text.SDIO_Init:0000002c $d
+     /tmp/ccuDjkvx.s:151    .text.SDIO_StructInit:00000000 $t
+     /tmp/ccuDjkvx.s:157    .text.SDIO_StructInit:00000000 SDIO_StructInit
+     /tmp/ccuDjkvx.s:190    .text.SDIO_ClockCmd:00000000 $t
+     /tmp/ccuDjkvx.s:196    .text.SDIO_ClockCmd:00000000 SDIO_ClockCmd
+     /tmp/ccuDjkvx.s:214    .text.SDIO_ClockCmd:00000008 $d
+     /tmp/ccuDjkvx.s:219    .text.SDIO_SetPowerState:00000000 $t
+     /tmp/ccuDjkvx.s:225    .text.SDIO_SetPowerState:00000000 SDIO_SetPowerState
+     /tmp/ccuDjkvx.s:243    .text.SDIO_SetPowerState:00000008 $d
+     /tmp/ccuDjkvx.s:248    .text.SDIO_GetPowerState:00000000 $t
+     /tmp/ccuDjkvx.s:254    .text.SDIO_GetPowerState:00000000 SDIO_GetPowerState
+     /tmp/ccuDjkvx.s:271    .text.SDIO_GetPowerState:0000000c $d
+     /tmp/ccuDjkvx.s:276    .text.SDIO_ITConfig:00000000 $t
+     /tmp/ccuDjkvx.s:282    .text.SDIO_ITConfig:00000000 SDIO_ITConfig
+     /tmp/ccuDjkvx.s:316    .text.SDIO_ITConfig:00000018 $d
+     /tmp/ccuDjkvx.s:321    .text.SDIO_DMACmd:00000000 $t
+     /tmp/ccuDjkvx.s:327    .text.SDIO_DMACmd:00000000 SDIO_DMACmd
+     /tmp/ccuDjkvx.s:345    .text.SDIO_DMACmd:00000008 $d
+     /tmp/ccuDjkvx.s:350    .text.SDIO_SendCommand:00000000 $t
+     /tmp/ccuDjkvx.s:356    .text.SDIO_SendCommand:00000000 SDIO_SendCommand
+     /tmp/ccuDjkvx.s:421    .text.SDIO_SendCommand:00000028 $d
+     /tmp/ccuDjkvx.s:426    .text.SDIO_CmdStructInit:00000000 $t
+     /tmp/ccuDjkvx.s:432    .text.SDIO_CmdStructInit:00000000 SDIO_CmdStructInit
+     /tmp/ccuDjkvx.s:462    .text.SDIO_GetCommandResponse:00000000 $t
+     /tmp/ccuDjkvx.s:468    .text.SDIO_GetCommandResponse:00000000 SDIO_GetCommandResponse
+     /tmp/ccuDjkvx.s:485    .text.SDIO_GetCommandResponse:00000008 $d
+     /tmp/ccuDjkvx.s:490    .text.SDIO_GetResponse:00000000 $t
+     /tmp/ccuDjkvx.s:496    .text.SDIO_GetResponse:00000000 SDIO_GetResponse
+     /tmp/ccuDjkvx.s:534    .text.SDIO_GetResponse:00000014 $d
+     /tmp/ccuDjkvx.s:539    .text.SDIO_DataConfig:00000000 $t
+     /tmp/ccuDjkvx.s:545    .text.SDIO_DataConfig:00000000 SDIO_DataConfig
+     /tmp/ccuDjkvx.s:613    .text.SDIO_DataConfig:00000028 $d
+     /tmp/ccuDjkvx.s:618    .text.SDIO_DataStructInit:00000000 $t
+     /tmp/ccuDjkvx.s:624    .text.SDIO_DataStructInit:00000000 SDIO_DataStructInit
+     /tmp/ccuDjkvx.s:658    .text.SDIO_GetDataCounter:00000000 $t
+     /tmp/ccuDjkvx.s:664    .text.SDIO_GetDataCounter:00000000 SDIO_GetDataCounter
+     /tmp/ccuDjkvx.s:680    .text.SDIO_GetDataCounter:00000008 $d
+     /tmp/ccuDjkvx.s:685    .text.SDIO_ReadData:00000000 $t
+     /tmp/ccuDjkvx.s:691    .text.SDIO_ReadData:00000000 SDIO_ReadData
+     /tmp/ccuDjkvx.s:707    .text.SDIO_ReadData:00000008 $d
+     /tmp/ccuDjkvx.s:712    .text.SDIO_WriteData:00000000 $t
+     /tmp/ccuDjkvx.s:718    .text.SDIO_WriteData:00000000 SDIO_WriteData
+     /tmp/ccuDjkvx.s:735    .text.SDIO_WriteData:00000008 $d
+     /tmp/ccuDjkvx.s:740    .text.SDIO_GetFIFOCount:00000000 $t
+     /tmp/ccuDjkvx.s:746    .text.SDIO_GetFIFOCount:00000000 SDIO_GetFIFOCount
+     /tmp/ccuDjkvx.s:762    .text.SDIO_GetFIFOCount:00000008 $d
+     /tmp/ccuDjkvx.s:767    .text.SDIO_StartSDIOReadWait:00000000 $t
+     /tmp/ccuDjkvx.s:773    .text.SDIO_StartSDIOReadWait:00000000 SDIO_StartSDIOReadWait
+     /tmp/ccuDjkvx.s:791    .text.SDIO_StartSDIOReadWait:00000008 $d
+     /tmp/ccuDjkvx.s:796    .text.SDIO_StopSDIOReadWait:00000000 $t
+ARM GAS  /tmp/ccuDjkvx.s 			page 35
 
 
-     /tmp/ccJG9I2H.s:802    .text.SDIO_StopSDIOReadWait:00000000 SDIO_StopSDIOReadWait
-     /tmp/ccJG9I2H.s:820    .text.SDIO_StopSDIOReadWait:00000008 $d
-     /tmp/ccJG9I2H.s:825    .text.SDIO_SetSDIOReadWaitMode:00000000 $t
-     /tmp/ccJG9I2H.s:831    .text.SDIO_SetSDIOReadWaitMode:00000000 SDIO_SetSDIOReadWaitMode
-     /tmp/ccJG9I2H.s:849    .text.SDIO_SetSDIOReadWaitMode:00000008 $d
-     /tmp/ccJG9I2H.s:854    .text.SDIO_SetSDIOOperation:00000000 $t
-     /tmp/ccJG9I2H.s:860    .text.SDIO_SetSDIOOperation:00000000 SDIO_SetSDIOOperation
-     /tmp/ccJG9I2H.s:878    .text.SDIO_SetSDIOOperation:00000008 $d
-     /tmp/ccJG9I2H.s:883    .text.SDIO_SendSDIOSuspendCmd:00000000 $t
-     /tmp/ccJG9I2H.s:889    .text.SDIO_SendSDIOSuspendCmd:00000000 SDIO_SendSDIOSuspendCmd
-     /tmp/ccJG9I2H.s:907    .text.SDIO_SendSDIOSuspendCmd:00000008 $d
-     /tmp/ccJG9I2H.s:912    .text.SDIO_CommandCompletionCmd:00000000 $t
-     /tmp/ccJG9I2H.s:918    .text.SDIO_CommandCompletionCmd:00000000 SDIO_CommandCompletionCmd
-     /tmp/ccJG9I2H.s:936    .text.SDIO_CommandCompletionCmd:00000008 $d
-     /tmp/ccJG9I2H.s:941    .text.SDIO_CEATAITCmd:00000000 $t
-     /tmp/ccJG9I2H.s:947    .text.SDIO_CEATAITCmd:00000000 SDIO_CEATAITCmd
-     /tmp/ccJG9I2H.s:970    .text.SDIO_CEATAITCmd:00000010 $d
-     /tmp/ccJG9I2H.s:975    .text.SDIO_SendCEATACmd:00000000 $t
-     /tmp/ccJG9I2H.s:981    .text.SDIO_SendCEATACmd:00000000 SDIO_SendCEATACmd
-     /tmp/ccJG9I2H.s:999    .text.SDIO_SendCEATACmd:00000008 $d
-     /tmp/ccJG9I2H.s:1004   .text.SDIO_GetFlagStatus:00000000 $t
-     /tmp/ccJG9I2H.s:1010   .text.SDIO_GetFlagStatus:00000000 SDIO_GetFlagStatus
-     /tmp/ccJG9I2H.s:1043   .text.SDIO_GetFlagStatus:00000010 $d
-     /tmp/ccJG9I2H.s:1048   .text.SDIO_ClearFlag:00000000 $t
-     /tmp/ccJG9I2H.s:1054   .text.SDIO_ClearFlag:00000000 SDIO_ClearFlag
-     /tmp/ccJG9I2H.s:1072   .text.SDIO_ClearFlag:00000008 $d
-     /tmp/ccJG9I2H.s:1077   .text.SDIO_GetITStatus:00000000 $t
-     /tmp/ccJG9I2H.s:1083   .text.SDIO_GetITStatus:00000000 SDIO_GetITStatus
-     /tmp/ccJG9I2H.s:1116   .text.SDIO_GetITStatus:00000010 $d
-     /tmp/ccJG9I2H.s:1121   .text.SDIO_ClearITPendingBit:00000000 $t
-     /tmp/ccJG9I2H.s:1127   .text.SDIO_ClearITPendingBit:00000000 SDIO_ClearITPendingBit
-     /tmp/ccJG9I2H.s:1145   .text.SDIO_ClearITPendingBit:00000008 $d
+     /tmp/ccuDjkvx.s:802    .text.SDIO_StopSDIOReadWait:00000000 SDIO_StopSDIOReadWait
+     /tmp/ccuDjkvx.s:820    .text.SDIO_StopSDIOReadWait:00000008 $d
+     /tmp/ccuDjkvx.s:825    .text.SDIO_SetSDIOReadWaitMode:00000000 $t
+     /tmp/ccuDjkvx.s:831    .text.SDIO_SetSDIOReadWaitMode:00000000 SDIO_SetSDIOReadWaitMode
+     /tmp/ccuDjkvx.s:849    .text.SDIO_SetSDIOReadWaitMode:00000008 $d
+     /tmp/ccuDjkvx.s:854    .text.SDIO_SetSDIOOperation:00000000 $t
+     /tmp/ccuDjkvx.s:860    .text.SDIO_SetSDIOOperation:00000000 SDIO_SetSDIOOperation
+     /tmp/ccuDjkvx.s:878    .text.SDIO_SetSDIOOperation:00000008 $d
+     /tmp/ccuDjkvx.s:883    .text.SDIO_SendSDIOSuspendCmd:00000000 $t
+     /tmp/ccuDjkvx.s:889    .text.SDIO_SendSDIOSuspendCmd:00000000 SDIO_SendSDIOSuspendCmd
+     /tmp/ccuDjkvx.s:907    .text.SDIO_SendSDIOSuspendCmd:00000008 $d
+     /tmp/ccuDjkvx.s:912    .text.SDIO_CommandCompletionCmd:00000000 $t
+     /tmp/ccuDjkvx.s:918    .text.SDIO_CommandCompletionCmd:00000000 SDIO_CommandCompletionCmd
+     /tmp/ccuDjkvx.s:936    .text.SDIO_CommandCompletionCmd:00000008 $d
+     /tmp/ccuDjkvx.s:941    .text.SDIO_CEATAITCmd:00000000 $t
+     /tmp/ccuDjkvx.s:947    .text.SDIO_CEATAITCmd:00000000 SDIO_CEATAITCmd
+     /tmp/ccuDjkvx.s:970    .text.SDIO_CEATAITCmd:00000010 $d
+     /tmp/ccuDjkvx.s:975    .text.SDIO_SendCEATACmd:00000000 $t
+     /tmp/ccuDjkvx.s:981    .text.SDIO_SendCEATACmd:00000000 SDIO_SendCEATACmd
+     /tmp/ccuDjkvx.s:999    .text.SDIO_SendCEATACmd:00000008 $d
+     /tmp/ccuDjkvx.s:1004   .text.SDIO_GetFlagStatus:00000000 $t
+     /tmp/ccuDjkvx.s:1010   .text.SDIO_GetFlagStatus:00000000 SDIO_GetFlagStatus
+     /tmp/ccuDjkvx.s:1043   .text.SDIO_GetFlagStatus:00000010 $d
+     /tmp/ccuDjkvx.s:1048   .text.SDIO_ClearFlag:00000000 $t
+     /tmp/ccuDjkvx.s:1054   .text.SDIO_ClearFlag:00000000 SDIO_ClearFlag
+     /tmp/ccuDjkvx.s:1072   .text.SDIO_ClearFlag:00000008 $d
+     /tmp/ccuDjkvx.s:1077   .text.SDIO_GetITStatus:00000000 $t
+     /tmp/ccuDjkvx.s:1083   .text.SDIO_GetITStatus:00000000 SDIO_GetITStatus
+     /tmp/ccuDjkvx.s:1116   .text.SDIO_GetITStatus:00000010 $d
+     /tmp/ccuDjkvx.s:1121   .text.SDIO_ClearITPendingBit:00000000 $t
+     /tmp/ccuDjkvx.s:1127   .text.SDIO_ClearITPendingBit:00000000 SDIO_ClearITPendingBit
+     /tmp/ccuDjkvx.s:1145   .text.SDIO_ClearITPendingBit:00000008 $d
 
 NO UNDEFINED SYMBOLS
