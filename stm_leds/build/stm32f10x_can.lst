@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc0O35Mf.s 			page 1
+ARM GAS  /tmp/ccd9XCsQ.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
   30:./Drivers/src/stm32f10x_can.c ****   * @brief CAN driver modules
   31:./Drivers/src/stm32f10x_can.c ****   * @{
   32:./Drivers/src/stm32f10x_can.c ****   */ 
-ARM GAS  /tmp/cc0O35Mf.s 			page 2
+ARM GAS  /tmp/ccd9XCsQ.s 			page 2
 
 
   33:./Drivers/src/stm32f10x_can.c **** 
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
   87:./Drivers/src/stm32f10x_can.c ****   * @{
   88:./Drivers/src/stm32f10x_can.c ****   */
   89:./Drivers/src/stm32f10x_can.c **** 
-ARM GAS  /tmp/cc0O35Mf.s 			page 3
+ARM GAS  /tmp/ccd9XCsQ.s 			page 3
 
 
   90:./Drivers/src/stm32f10x_can.c **** /**
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  144:./Drivers/src/stm32f10x_can.c ****   *         parameters in the CAN_InitStruct.
  145:./Drivers/src/stm32f10x_can.c ****   * @param  CANx:           where x can be 1 or 2 to to select the CAN 
  146:./Drivers/src/stm32f10x_can.c ****   *                         peripheral.
-ARM GAS  /tmp/cc0O35Mf.s 			page 4
+ARM GAS  /tmp/ccd9XCsQ.s 			page 4
 
 
  147:./Drivers/src/stm32f10x_can.c ****   * @param  CAN_InitStruct: pointer to a CAN_InitTypeDef structure that
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  201:./Drivers/src/stm32f10x_can.c ****     if (CAN_InitStruct->CAN_ABOM == ENABLE)
  202:./Drivers/src/stm32f10x_can.c ****     {
  203:./Drivers/src/stm32f10x_can.c ****       CANx->MCR |= CAN_MCR_ABOM;
-ARM GAS  /tmp/cc0O35Mf.s 			page 5
+ARM GAS  /tmp/ccd9XCsQ.s 			page 5
 
 
  204:./Drivers/src/stm32f10x_can.c ****     }
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  258:./Drivers/src/stm32f10x_can.c ****     CANx->MCR &= ~(uint32_t)CAN_MCR_INRQ;
  259:./Drivers/src/stm32f10x_can.c **** 
  260:./Drivers/src/stm32f10x_can.c ****    /* Wait the acknowledge */
-ARM GAS  /tmp/cc0O35Mf.s 			page 6
+ARM GAS  /tmp/ccd9XCsQ.s 			page 6
 
 
  261:./Drivers/src/stm32f10x_can.c ****    wait_ack = 0;
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  315:./Drivers/src/stm32f10x_can.c ****     /* First 16-bit identifier and First 16-bit mask */
  316:./Drivers/src/stm32f10x_can.c ****     /* Or First 16-bit identifier and Second 16-bit identifier */
  317:./Drivers/src/stm32f10x_can.c ****     CAN1->sFilterRegister[CAN_FilterInitStruct->CAN_FilterNumber].FR1 = 
-ARM GAS  /tmp/cc0O35Mf.s 			page 7
+ARM GAS  /tmp/ccd9XCsQ.s 			page 7
 
 
  318:./Drivers/src/stm32f10x_can.c ****     ((0x0000FFFF & (uint32_t)CAN_FilterInitStruct->CAN_FilterMaskIdLow) << 16) |
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  372:./Drivers/src/stm32f10x_can.c **** 
  373:./Drivers/src/stm32f10x_can.c ****   /* Leave the initialisation mode for the filter */
  374:./Drivers/src/stm32f10x_can.c ****   CAN1->FMR &= ~FMR_FINIT;
-ARM GAS  /tmp/cc0O35Mf.s 			page 8
+ARM GAS  /tmp/ccd9XCsQ.s 			page 8
 
 
  375:./Drivers/src/stm32f10x_can.c **** }
@@ -478,7 +478,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  429:./Drivers/src/stm32f10x_can.c ****   /* Check the parameters */
  430:./Drivers/src/stm32f10x_can.c ****   assert_param(IS_CAN_BANKNUMBER(CAN_BankNumber));
  431:./Drivers/src/stm32f10x_can.c ****   
-ARM GAS  /tmp/cc0O35Mf.s 			page 9
+ARM GAS  /tmp/ccd9XCsQ.s 			page 9
 
 
  432:./Drivers/src/stm32f10x_can.c ****   /* Enter Initialisation mode for the filter */
@@ -538,7 +538,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  486:./Drivers/src/stm32f10x_can.c ****   {
  487:./Drivers/src/stm32f10x_can.c ****     /* Enable the TTCM mode */
  488:./Drivers/src/stm32f10x_can.c ****     CANx->MCR |= CAN_MCR_TTCM;
-ARM GAS  /tmp/cc0O35Mf.s 			page 10
+ARM GAS  /tmp/ccd9XCsQ.s 			page 10
 
 
  489:./Drivers/src/stm32f10x_can.c **** 
@@ -598,7 +598,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  543:./Drivers/src/stm32f10x_can.c ****     /* Set up the Id */
  544:./Drivers/src/stm32f10x_can.c ****     CANx->sTxMailBox[transmit_mailbox].TIR &= TMIDxR_TXRQ;
  545:./Drivers/src/stm32f10x_can.c ****     if (TxMessage->IDE == CAN_Id_Standard)
-ARM GAS  /tmp/cc0O35Mf.s 			page 11
+ARM GAS  /tmp/ccd9XCsQ.s 			page 11
 
 
  546:./Drivers/src/stm32f10x_can.c ****     {
@@ -658,7 +658,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  600:./Drivers/src/stm32f10x_can.c ****       break;
  601:./Drivers/src/stm32f10x_can.c ****     case (CAN_TXMAILBOX_1): 
  602:./Drivers/src/stm32f10x_can.c ****       state =   CANx->TSR &  (CAN_TSR_RQCP1 | CAN_TSR_TXOK1 | CAN_TSR_TME1);
-ARM GAS  /tmp/cc0O35Mf.s 			page 12
+ARM GAS  /tmp/ccd9XCsQ.s 			page 12
 
 
  603:./Drivers/src/stm32f10x_can.c ****       break;
@@ -718,7 +718,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  657:./Drivers/src/stm32f10x_can.c ****       break;
  658:./Drivers/src/stm32f10x_can.c ****   }
  659:./Drivers/src/stm32f10x_can.c **** }
-ARM GAS  /tmp/cc0O35Mf.s 			page 13
+ARM GAS  /tmp/ccd9XCsQ.s 			page 13
 
 
  660:./Drivers/src/stm32f10x_can.c **** 
@@ -778,7 +778,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  714:./Drivers/src/stm32f10x_can.c ****   * @brief  Releases the specified FIFO.
  715:./Drivers/src/stm32f10x_can.c ****   * @param  CANx:       where x can be 1 or 2 to to select the CAN peripheral. 
  716:./Drivers/src/stm32f10x_can.c ****   * @param  FIFONumber: FIFO to release, CAN_FIFO0 or CAN_FIFO1.
-ARM GAS  /tmp/cc0O35Mf.s 			page 14
+ARM GAS  /tmp/ccd9XCsQ.s 			page 14
 
 
  717:./Drivers/src/stm32f10x_can.c ****   * @retval None.
@@ -838,7 +838,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  771:./Drivers/src/stm32f10x_can.c **** 
  772:./Drivers/src/stm32f10x_can.c ****   */
  773:./Drivers/src/stm32f10x_can.c **** uint8_t CAN_OperatingModeRequest(CAN_TypeDef* CANx, uint8_t CAN_OperatingMode)
-ARM GAS  /tmp/cc0O35Mf.s 			page 15
+ARM GAS  /tmp/ccd9XCsQ.s 			page 15
 
 
  774:./Drivers/src/stm32f10x_can.c **** {
@@ -898,7 +898,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  828:./Drivers/src/stm32f10x_can.c ****     while (((CANx->MSR & CAN_MODE_MASK) != CAN_MSR_SLAK) && (timeout!=0))
  829:./Drivers/src/stm32f10x_can.c ****     {
  830:./Drivers/src/stm32f10x_can.c ****       timeout--;
-ARM GAS  /tmp/cc0O35Mf.s 			page 16
+ARM GAS  /tmp/ccd9XCsQ.s 			page 16
 
 
  831:./Drivers/src/stm32f10x_can.c ****     }
@@ -958,7 +958,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  885:./Drivers/src/stm32f10x_can.c ****   
  886:./Drivers/src/stm32f10x_can.c ****   /* Check the parameters */
  887:./Drivers/src/stm32f10x_can.c ****   assert_param(IS_CAN_ALL_PERIPH(CANx));
-ARM GAS  /tmp/cc0O35Mf.s 			page 17
+ARM GAS  /tmp/ccd9XCsQ.s 			page 17
 
 
  888:./Drivers/src/stm32f10x_can.c ****     
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  942:./Drivers/src/stm32f10x_can.c ****   * @param  CANx: where x can be 1 or 2 to to select the CAN peripheral.  
  943:./Drivers/src/stm32f10x_can.c ****   * @retval CAN Receive Error Counter. 
  944:./Drivers/src/stm32f10x_can.c ****   */
-ARM GAS  /tmp/cc0O35Mf.s 			page 18
+ARM GAS  /tmp/ccd9XCsQ.s 			page 18
 
 
  945:./Drivers/src/stm32f10x_can.c **** uint8_t CAN_GetReceiveErrorCounter(CAN_TypeDef* CANx)
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  999:./Drivers/src/stm32f10x_can.c ****   *                   This parameter can be: ENABLE or DISABLE.
 1000:./Drivers/src/stm32f10x_can.c ****   * @retval None.
 1001:./Drivers/src/stm32f10x_can.c ****   */
-ARM GAS  /tmp/cc0O35Mf.s 			page 19
+ARM GAS  /tmp/ccd9XCsQ.s 			page 19
 
 
 1002:./Drivers/src/stm32f10x_can.c **** void CAN_ITConfig(CAN_TypeDef* CANx, uint32_t CAN_IT, FunctionalState NewState)
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
 1056:./Drivers/src/stm32f10x_can.c ****       /* CAN_FLAG is set */
 1057:./Drivers/src/stm32f10x_can.c ****       bitstatus = SET;
 1058:./Drivers/src/stm32f10x_can.c ****     }
-ARM GAS  /tmp/cc0O35Mf.s 			page 20
+ARM GAS  /tmp/ccd9XCsQ.s 			page 20
 
 
 1059:./Drivers/src/stm32f10x_can.c ****     else
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
 1113:./Drivers/src/stm32f10x_can.c ****       bitstatus = SET;
 1114:./Drivers/src/stm32f10x_can.c ****     }
 1115:./Drivers/src/stm32f10x_can.c ****     else
-ARM GAS  /tmp/cc0O35Mf.s 			page 21
+ARM GAS  /tmp/ccd9XCsQ.s 			page 21
 
 
 1116:./Drivers/src/stm32f10x_can.c ****     { 
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
 1170:./Drivers/src/stm32f10x_can.c ****       /* Transmit Flags */
 1171:./Drivers/src/stm32f10x_can.c ****       CANx->TSR = (uint32_t)(flagtmp);
 1172:./Drivers/src/stm32f10x_can.c ****     }
-ARM GAS  /tmp/cc0O35Mf.s 			page 22
+ARM GAS  /tmp/ccd9XCsQ.s 			page 22
 
 
 1173:./Drivers/src/stm32f10x_can.c ****     else /* If((CAN_FLAG & CAN_FLAGS_MSR)!=(uint32_t)RESET) */
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
 1227:./Drivers/src/stm32f10x_can.c ****       case CAN_IT_FOV0:
 1228:./Drivers/src/stm32f10x_can.c ****                /* Check CAN_RF0R_FOVR0 bit */
 1229:./Drivers/src/stm32f10x_can.c ****                itstatus = CheckITStatus(CANx->RF0R, CAN_RF0R_FOVR0);  
-ARM GAS  /tmp/cc0O35Mf.s 			page 23
+ARM GAS  /tmp/ccd9XCsQ.s 			page 23
 
 
 1230:./Drivers/src/stm32f10x_can.c **** 	      break;
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
 1284:./Drivers/src/stm32f10x_can.c ****   return  itstatus;
 1285:./Drivers/src/stm32f10x_can.c **** }
 1286:./Drivers/src/stm32f10x_can.c **** 
-ARM GAS  /tmp/cc0O35Mf.s 			page 24
+ARM GAS  /tmp/ccd9XCsQ.s 			page 24
 
 
 1287:./Drivers/src/stm32f10x_can.c **** /**
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
 1341:./Drivers/src/stm32f10x_can.c ****       case CAN_IT_EWG:
 1342:./Drivers/src/stm32f10x_can.c ****               /* Clear CAN_MSR_ERRI (rc_w1) */
 1343:./Drivers/src/stm32f10x_can.c **** 	      CANx->MSR = CAN_MSR_ERRI;
-ARM GAS  /tmp/cc0O35Mf.s 			page 25
+ARM GAS  /tmp/ccd9XCsQ.s 			page 25
 
 
 1344:./Drivers/src/stm32f10x_can.c ****               /* Note : the corresponding Flag is cleared by hardware depending 
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
   36 0002 01D0     		beq	.L3
 1389:./Drivers/src/stm32f10x_can.c ****   {
 1390:./Drivers/src/stm32f10x_can.c ****     /* CAN_IT is set */
-ARM GAS  /tmp/cc0O35Mf.s 			page 26
+ARM GAS  /tmp/ccd9XCsQ.s 			page 26
 
 
 1391:./Drivers/src/stm32f10x_can.c ****     pendingbitstatus = SET;
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  136:./Drivers/src/stm32f10x_can.c ****     /* Release CAN2 from reset state */
   79              		.loc 1 136 5 is_stmt 1 view .LVU14
   80 0008 0121     		movs	r1, #1
-ARM GAS  /tmp/cc0O35Mf.s 			page 27
+ARM GAS  /tmp/ccd9XCsQ.s 			page 27
 
 
   81 000a 4FF08060 		mov	r0, #67108864
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  130              		@ link register save eliminated.
  155:./Drivers/src/stm32f10x_can.c ****   uint32_t wait_ack = 0x00000000;
  131              		.loc 1 155 3 view .LVU22
-ARM GAS  /tmp/cc0O35Mf.s 			page 28
+ARM GAS  /tmp/ccd9XCsQ.s 			page 28
 
 
  156:./Drivers/src/stm32f10x_can.c ****   /* Check the parameters */
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  163              		.loc 1 178 16 is_stmt 0 view .LVU45
  164 0012 4268     		ldr	r2, [r0, #4]
  178:./Drivers/src/stm32f10x_can.c ****   {
-ARM GAS  /tmp/cc0O35Mf.s 			page 29
+ARM GAS  /tmp/ccd9XCsQ.s 			page 29
 
 
  165              		.loc 1 178 55 view .LVU46
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  203 003e 012B     		cmp	r3, #1
  204 0040 39D0     		beq	.L34
  207:./Drivers/src/stm32f10x_can.c ****     }
-ARM GAS  /tmp/cc0O35Mf.s 			page 30
+ARM GAS  /tmp/ccd9XCsQ.s 			page 30
 
 
  205              		.loc 1 207 7 is_stmt 1 view .LVU63
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  242 0068 012B     		cmp	r3, #1
  243 006a 33D0     		beq	.L37
  237:./Drivers/src/stm32f10x_can.c ****     }
-ARM GAS  /tmp/cc0O35Mf.s 			page 31
+ARM GAS  /tmp/ccd9XCsQ.s 			page 31
 
 
  244              		.loc 1 237 7 is_stmt 1 view .LVU81
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  255:./Drivers/src/stm32f10x_can.c **** 
  281              		.loc 1 255 41 view .LVU99
  282 0098 0A88     		ldrh	r2, [r1]
-ARM GAS  /tmp/cc0O35Mf.s 			page 32
+ARM GAS  /tmp/ccd9XCsQ.s 			page 32
 
 
  255:./Drivers/src/stm32f10x_can.c **** 
@@ -1918,7 +1918,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  320              		.loc 1 213 7 is_stmt 1 view .LVU116
  213:./Drivers/src/stm32f10x_can.c ****     }
  321              		.loc 1 213 11 is_stmt 0 view .LVU117
-ARM GAS  /tmp/cc0O35Mf.s 			page 33
+ARM GAS  /tmp/ccd9XCsQ.s 			page 33
 
 
  322 00c0 0368     		ldr	r3, [r0]
@@ -1978,7 +1978,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  361              		.loc 1 263 56 view .LVU132
  362 00ec 12F0010F 		tst	r2, #1
  363 00f0 03D0     		beq	.L29
-ARM GAS  /tmp/cc0O35Mf.s 			page 34
+ARM GAS  /tmp/ccd9XCsQ.s 			page 34
 
 
  263:./Drivers/src/stm32f10x_can.c ****    {
@@ -2038,7 +2038,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  292:./Drivers/src/stm32f10x_can.c ****   uint32_t filter_number_bit_pos = 0;
  409              		.loc 1 292 1 is_stmt 1 view -0
  410              		.cfi_startproc
-ARM GAS  /tmp/cc0O35Mf.s 			page 35
+ARM GAS  /tmp/ccd9XCsQ.s 			page 35
 
 
  411              		@ args = 0, pretend = 0, frame = 0
@@ -2098,7 +2098,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  310:./Drivers/src/stm32f10x_can.c ****   {
  448              		.loc 1 310 3 is_stmt 1 view .LVU162
  310:./Drivers/src/stm32f10x_can.c ****   {
-ARM GAS  /tmp/cc0O35Mf.s 			page 36
+ARM GAS  /tmp/ccd9XCsQ.s 			page 36
 
 
  449              		.loc 1 310 27 is_stmt 0 view .LVU163
@@ -2158,7 +2158,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  486              		.loc 1 328 3 is_stmt 1 view .LVU180
  328:./Drivers/src/stm32f10x_can.c ****   {
  487              		.loc 1 328 27 is_stmt 0 view .LVU181
-ARM GAS  /tmp/cc0O35Mf.s 			page 37
+ARM GAS  /tmp/ccd9XCsQ.s 			page 37
 
 
  488 0060 027B     		ldrb	r2, [r0, #12]	@ zero_extendqisi2
@@ -2218,7 +2218,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  526              	.L45:
  368:./Drivers/src/stm32f10x_can.c ****   {
  527              		.loc 1 368 3 is_stmt 1 view .LVU198
-ARM GAS  /tmp/cc0O35Mf.s 			page 38
+ARM GAS  /tmp/ccd9XCsQ.s 			page 38
 
 
  368:./Drivers/src/stm32f10x_can.c ****   {
@@ -2278,7 +2278,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  338:./Drivers/src/stm32f10x_can.c ****         (0x0000FFFF & (uint32_t)CAN_FilterInitStruct->CAN_FilterMaskIdLow);
  566              		.loc 1 338 50 is_stmt 0 view .LVU215
  567 00c6 B0F804E0 		ldrh	lr, [r0, #4]
-ARM GAS  /tmp/cc0O35Mf.s 			page 39
+ARM GAS  /tmp/ccd9XCsQ.s 			page 39
 
 
  339:./Drivers/src/stm32f10x_can.c ****   }
@@ -2338,7 +2338,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  608              	.L52:
  609 0106 00BF     		.align	2
  610              	.L51:
-ARM GAS  /tmp/cc0O35Mf.s 			page 40
+ARM GAS  /tmp/ccd9XCsQ.s 			page 40
 
 
  611 0108 00640040 		.word	1073767424
@@ -2398,7 +2398,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  409:./Drivers/src/stm32f10x_can.c ****   
  652              		.loc 1 409 3 is_stmt 1 view .LVU245
  409:./Drivers/src/stm32f10x_can.c ****   
-ARM GAS  /tmp/cc0O35Mf.s 			page 41
+ARM GAS  /tmp/ccd9XCsQ.s 			page 41
 
 
  653              		.loc 1 409 27 is_stmt 0 view .LVU246
@@ -2458,7 +2458,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  436:./Drivers/src/stm32f10x_can.c ****   CAN1->FMR |= (uint32_t)(CAN_BankNumber)<<8;
  696              		.loc 1 436 7 is_stmt 0 view .LVU260
  697 000e D3F80022 		ldr	r2, [r3, #512]
-ARM GAS  /tmp/cc0O35Mf.s 			page 42
+ARM GAS  /tmp/ccd9XCsQ.s 			page 42
 
 
  436:./Drivers/src/stm32f10x_can.c ****   CAN1->FMR |= (uint32_t)(CAN_BankNumber)<<8;
@@ -2518,7 +2518,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  741              		.loc 1 456 6 is_stmt 0 view .LVU273
  742 0000 21B1     		cbz	r1, .L58
  459:./Drivers/src/stm32f10x_can.c ****   }
-ARM GAS  /tmp/cc0O35Mf.s 			page 43
+ARM GAS  /tmp/ccd9XCsQ.s 			page 43
 
 
  743              		.loc 1 459 5 is_stmt 1 view .LVU274
@@ -2578,7 +2578,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  785              		.loc 1 488 15 view .LVU288
  786 0004 43F08003 		orr	r3, r3, #128
  787 0008 0360     		str	r3, [r0]
-ARM GAS  /tmp/cc0O35Mf.s 			page 44
+ARM GAS  /tmp/ccd9XCsQ.s 			page 44
 
 
  491:./Drivers/src/stm32f10x_can.c ****     CANx->sTxMailBox[1].TDTR |= ((uint32_t)CAN_TDT1R_TGT);
@@ -2638,7 +2638,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  824 0048 23F48073 		bic	r3, r3, #256
  825 004c C0F89431 		str	r3, [r0, #404]
  503:./Drivers/src/stm32f10x_can.c ****   }
-ARM GAS  /tmp/cc0O35Mf.s 			page 45
+ARM GAS  /tmp/ccd9XCsQ.s 			page 45
 
 
  826              		.loc 1 503 5 is_stmt 1 view .LVU307
@@ -2698,7 +2698,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  867 000a 8268     		ldr	r2, [r0, #8]
  528:./Drivers/src/stm32f10x_can.c ****   {
  868              		.loc 1 528 11 view .LVU323
-ARM GAS  /tmp/cc0O35Mf.s 			page 46
+ARM GAS  /tmp/ccd9XCsQ.s 			page 46
 
 
  869 000c 12F0006F 		tst	r2, #134217728
@@ -2758,7 +2758,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  910 0036 3FD1     		bne	.L66
  547:./Drivers/src/stm32f10x_can.c ****       CANx->sTxMailBox[transmit_mailbox].TIR |= ((TxMessage->StdId << 21) | \
  911              		.loc 1 547 7 is_stmt 1 view .LVU337
-ARM GAS  /tmp/cc0O35Mf.s 			page 47
+ARM GAS  /tmp/ccd9XCsQ.s 			page 47
 
 
  548:./Drivers/src/stm32f10x_can.c ****                                                   TxMessage->RTR);
@@ -2818,7 +2818,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  565:./Drivers/src/stm32f10x_can.c ****                                              ((uint32_t)TxMessage->Data[2] << 16) |
  950              		.loc 1 565 74 is_stmt 0 view .LVU354
  951 0072 8C7B     		ldrb	r4, [r1, #14]	@ zero_extendqisi2
-ARM GAS  /tmp/cc0O35Mf.s 			page 48
+ARM GAS  /tmp/ccd9XCsQ.s 			page 48
 
 
  566:./Drivers/src/stm32f10x_can.c ****                                              ((uint32_t)TxMessage->Data[1] << 8) | 
@@ -2878,7 +2878,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  988 00a2 CEF88C21 		str	r2, [lr, #396]
  574:./Drivers/src/stm32f10x_can.c ****   }
  989              		.loc 1 574 5 is_stmt 1 view .LVU373
-ARM GAS  /tmp/cc0O35Mf.s 			page 49
+ARM GAS  /tmp/ccd9XCsQ.s 			page 49
 
 
  574:./Drivers/src/stm32f10x_can.c ****   }
@@ -2938,7 +2938,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  1031 00d0 2A43     		orrs	r2, r2, r5
  1032 00d2 1A51     		str	r2, [r3, r4]
  1033 00d4 BBE7     		b	.L67
-ARM GAS  /tmp/cc0O35Mf.s 			page 50
+ARM GAS  /tmp/ccd9XCsQ.s 			page 50
 
 
  1034              	.LVL46:
@@ -2998,7 +2998,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  1080              		.loc 1 599 7 is_stmt 1 view .LVU396
  599:./Drivers/src/stm32f10x_can.c ****       break;
  1081              		.loc 1 599 21 is_stmt 0 view .LVU397
-ARM GAS  /tmp/cc0O35Mf.s 			page 51
+ARM GAS  /tmp/ccd9XCsQ.s 			page 51
 
 
  1082 000e 8368     		ldr	r3, [r0, #8]
@@ -3058,7 +3058,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  605:./Drivers/src/stm32f10x_can.c ****       break;
  1124              		.loc 1 605 13 view .LVU410
  1125 0042 23F06F43 		bic	r3, r3, #-285212672
-ARM GAS  /tmp/cc0O35Mf.s 			page 52
+ARM GAS  /tmp/ccd9XCsQ.s 			page 52
 
 
  1126 0046 23F47C03 		bic	r3, r3, #16515072
@@ -3118,7 +3118,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  1169              		.loc 1 619 49 view .LVU421
  1170 0074 7047     		bx	lr
  1171              	.LVL64:
-ARM GAS  /tmp/cc0O35Mf.s 			page 53
+ARM GAS  /tmp/ccd9XCsQ.s 			page 53
 
 
  1172              	.L82:
@@ -3178,7 +3178,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  1219              	.LFB38:
  643:./Drivers/src/stm32f10x_can.c ****   /* Check the parameters */
  1220              		.loc 1 643 1 is_stmt 1 view -0
-ARM GAS  /tmp/cc0O35Mf.s 			page 54
+ARM GAS  /tmp/ccd9XCsQ.s 			page 54
 
 
  1221              		.cfi_startproc
@@ -3238,7 +3238,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  1260 0026 8360     		str	r3, [r0, #8]
  655:./Drivers/src/stm32f10x_can.c ****     default:
  1261              		.loc 1 655 7 is_stmt 1 view .LVU447
-ARM GAS  /tmp/cc0O35Mf.s 			page 55
+ARM GAS  /tmp/ccd9XCsQ.s 			page 55
 
 
  659:./Drivers/src/stm32f10x_can.c **** 
@@ -3298,7 +3298,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  1305 0018 1B01     		lsls	r3, r3, #4
  1306 001a C358     		ldr	r3, [r0, r3]
  679:./Drivers/src/stm32f10x_can.c ****   }
-ARM GAS  /tmp/cc0O35Mf.s 			page 56
+ARM GAS  /tmp/ccd9XCsQ.s 			page 56
 
 
  1307              		.loc 1 679 83 view .LVU461
@@ -3358,7 +3358,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  1343              		.loc 1 693 71 is_stmt 0 view .LVU479
  1344 004a D3F8B841 		ldr	r4, [r3, #440]
  693:./Drivers/src/stm32f10x_can.c ****   RxMessage->Data[2] = (uint8_t)0xFF & (CANx->sFIFOMailBox[FIFONumber].RDLR >> 16);
-ARM GAS  /tmp/cc0O35Mf.s 			page 57
+ARM GAS  /tmp/ccd9XCsQ.s 			page 57
 
 
  1345              		.loc 1 693 77 view .LVU480
@@ -3418,7 +3418,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  698:./Drivers/src/stm32f10x_can.c ****   RxMessage->Data[7] = (uint8_t)0xFF & (CANx->sFIFOMailBox[FIFONumber].RDHR >> 24);
  1380              		.loc 1 698 22 view .LVU500
  1381 0078 82F811C0 		strb	ip, [r2, #17]
-ARM GAS  /tmp/cc0O35Mf.s 			page 58
+ARM GAS  /tmp/ccd9XCsQ.s 			page 58
 
 
  699:./Drivers/src/stm32f10x_can.c ****   /* Release the FIFO */
@@ -3478,7 +3478,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  709:./Drivers/src/stm32f10x_can.c ****   }
  1421              		.loc 1 709 9 is_stmt 0 view .LVU516
  1422 00a0 0369     		ldr	r3, [r0, #16]
-ARM GAS  /tmp/cc0O35Mf.s 			page 59
+ARM GAS  /tmp/ccd9XCsQ.s 			page 59
 
 
  709:./Drivers/src/stm32f10x_can.c ****   }
@@ -3538,7 +3538,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  1465              		.loc 1 734 1 view .LVU530
  1466 0014 7047     		bx	lr
  1467              		.cfi_endproc
-ARM GAS  /tmp/cc0O35Mf.s 			page 60
+ARM GAS  /tmp/ccd9XCsQ.s 			page 60
 
 
  1468              	.LFE40:
@@ -3598,7 +3598,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  761:./Drivers/src/stm32f10x_can.c **** 
  1510              		.loc 1 761 1 is_stmt 0 view .LVU545
  1511 0010 7047     		bx	lr
-ARM GAS  /tmp/cc0O35Mf.s 			page 61
+ARM GAS  /tmp/ccd9XCsQ.s 			page 61
 
 
  1512              	.LVL80:
@@ -3658,7 +3658,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  1554 000a 43F00103 		orr	r3, r3, #1
  787:./Drivers/src/stm32f10x_can.c **** 
  1555              		.loc 1 787 15 view .LVU560
-ARM GAS  /tmp/cc0O35Mf.s 			page 62
+ARM GAS  /tmp/ccd9XCsQ.s 			page 62
 
 
  1556 000e 0360     		str	r3, [r0]
@@ -3718,7 +3718,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  803:./Drivers/src/stm32f10x_can.c ****   {
  1594              		.loc 1 803 9 is_stmt 1 view .LVU577
  803:./Drivers/src/stm32f10x_can.c ****   {
-ARM GAS  /tmp/cc0O35Mf.s 			page 63
+ARM GAS  /tmp/ccd9XCsQ.s 			page 63
 
 
  1595              		.loc 1 803 12 is_stmt 0 view .LVU578
@@ -3778,7 +3778,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  1633              		.loc 1 809 47 discriminator 1 view .LVU594
  1634 0056 002B     		cmp	r3, #0
  1635 0058 F8D1     		bne	.L121
-ARM GAS  /tmp/cc0O35Mf.s 			page 64
+ARM GAS  /tmp/ccd9XCsQ.s 			page 64
 
 
  1636              	.L120:
@@ -3838,7 +3838,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  828:./Drivers/src/stm32f10x_can.c ****     {
  1674              		.loc 1 828 24 view .LVU611
  1675 007c 03F00303 		and	r3, r3, #3
-ARM GAS  /tmp/cc0O35Mf.s 			page 65
+ARM GAS  /tmp/ccd9XCsQ.s 			page 65
 
 
  828:./Drivers/src/stm32f10x_can.c ****     {
@@ -3898,7 +3898,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  847:./Drivers/src/stm32f10x_can.c **** 
  1716              		.loc 1 847 1 is_stmt 0 view .LVU626
  1717 00a0 7047     		bx	lr
-ARM GAS  /tmp/cc0O35Mf.s 			page 66
+ARM GAS  /tmp/ccd9XCsQ.s 			page 66
 
 
  1718              		.cfi_endproc
@@ -3958,7 +3958,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  869:./Drivers/src/stm32f10x_can.c ****   }
  1761              		.loc 1 869 17 view .LVU640
  1762 001a 0120     		movs	r0, #1
-ARM GAS  /tmp/cc0O35Mf.s 			page 67
+ARM GAS  /tmp/ccd9XCsQ.s 			page 67
 
 
  1763              	.LVL107:
@@ -4018,7 +4018,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  893:./Drivers/src/stm32f10x_can.c ****   {
  1805              		.loc 1 893 53 discriminator 1 view .LVU655
  1806 0014 0BB1     		cbz	r3, .L136
-ARM GAS  /tmp/cc0O35Mf.s 			page 68
+ARM GAS  /tmp/ccd9XCsQ.s 			page 68
 
 
  895:./Drivers/src/stm32f10x_can.c ****   }
@@ -4078,7 +4078,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  1851              		@ link register save eliminated.
  923:./Drivers/src/stm32f10x_can.c ****   
  1852              		.loc 1 923 3 view .LVU668
-ARM GAS  /tmp/cc0O35Mf.s 			page 69
+ARM GAS  /tmp/ccd9XCsQ.s 			page 69
 
 
  926:./Drivers/src/stm32f10x_can.c ****   
@@ -4138,7 +4138,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  1895              	.LFE46:
  1897              		.section	.text.CAN_GetLSBTransmitErrorCounter,"ax",%progbits
  1898              		.align	1
-ARM GAS  /tmp/cc0O35Mf.s 			page 70
+ARM GAS  /tmp/ccd9XCsQ.s 			page 70
 
 
  1899              		.global	CAN_GetLSBTransmitErrorCounter
@@ -4198,7 +4198,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  1944              		.loc 1 1007 3 view .LVU694
 1009:./Drivers/src/stm32f10x_can.c ****   {
  1945              		.loc 1 1009 3 view .LVU695
-ARM GAS  /tmp/cc0O35Mf.s 			page 71
+ARM GAS  /tmp/ccd9XCsQ.s 			page 71
 
 
 1009:./Drivers/src/stm32f10x_can.c ****   {
@@ -4258,7 +4258,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  1988 0004 06D0     		beq	.L147
 1054:./Drivers/src/stm32f10x_can.c ****     { 
  1989              		.loc 1 1054 5 is_stmt 1 view .LVU710
-ARM GAS  /tmp/cc0O35Mf.s 			page 72
+ARM GAS  /tmp/ccd9XCsQ.s 			page 72
 
 
 1054:./Drivers/src/stm32f10x_can.c ****     { 
@@ -4318,7 +4318,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
 1082:./Drivers/src/stm32f10x_can.c ****     { 
  2028              		.loc 1 1082 14 is_stmt 0 view .LVU727
  2029 002e 8368     		ldr	r3, [r0, #8]
-ARM GAS  /tmp/cc0O35Mf.s 			page 73
+ARM GAS  /tmp/ccd9XCsQ.s 			page 73
 
 
 1082:./Drivers/src/stm32f10x_can.c ****     { 
@@ -4378,7 +4378,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  2068 0058 4BB1     		cbz	r3, .L156
 1113:./Drivers/src/stm32f10x_can.c ****     }
  2069              		.loc 1 1113 17 view .LVU744
-ARM GAS  /tmp/cc0O35Mf.s 			page 74
+ARM GAS  /tmp/ccd9XCsQ.s 			page 74
 
 
  2070 005a 0120     		movs	r0, #1
@@ -4438,7 +4438,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  2113              		.section	.text.CAN_ClearFlag,"ax",%progbits
  2114              		.align	1
  2115              		.global	CAN_ClearFlag
-ARM GAS  /tmp/cc0O35Mf.s 			page 75
+ARM GAS  /tmp/ccd9XCsQ.s 			page 75
 
 
  2116              		.syntax unified
@@ -4498,7 +4498,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
 1163:./Drivers/src/stm32f10x_can.c ****     {
  2157              		.loc 1 1163 10 is_stmt 1 view .LVU771
 1163:./Drivers/src/stm32f10x_can.c ****     {
-ARM GAS  /tmp/cc0O35Mf.s 			page 76
+ARM GAS  /tmp/ccd9XCsQ.s 			page 76
 
 
  2158              		.loc 1 1163 13 is_stmt 0 view .LVU772
@@ -4558,7 +4558,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  2203              	.LCFI9:
  2204              		.cfi_def_cfa_offset 8
  2205              		.cfi_offset 3, -8
-ARM GAS  /tmp/cc0O35Mf.s 			page 77
+ARM GAS  /tmp/ccd9XCsQ.s 			page 77
 
 
  2206              		.cfi_offset 14, -4
@@ -4618,7 +4618,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  2252 0036 75       		.byte	(.L188-.L172)/2
  2253 0037 75       		.byte	(.L188-.L172)/2
  2254 0038 75       		.byte	(.L188-.L172)/2
-ARM GAS  /tmp/cc0O35Mf.s 			page 78
+ARM GAS  /tmp/ccd9XCsQ.s 			page 78
 
 
  2255 0039 75       		.byte	(.L188-.L172)/2
@@ -4678,7 +4678,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  2299              		.loc 1 1249 15 is_stmt 1 view .LVU801
 1249:./Drivers/src/stm32f10x_can.c **** 	      break;
  2300              		.loc 1 1249 44 is_stmt 0 view .LVU802
-ARM GAS  /tmp/cc0O35Mf.s 			page 79
+ARM GAS  /tmp/ccd9XCsQ.s 			page 79
 
 
  2301 0068 4068     		ldr	r0, [r0, #4]
@@ -4738,7 +4738,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
 1257:./Drivers/src/stm32f10x_can.c **** 	      break;
  2342              		.loc 1 1257 26 view .LVU816
  2343 0092 FFF7FEFF 		bl	CheckITStatus
-ARM GAS  /tmp/cc0O35Mf.s 			page 80
+ARM GAS  /tmp/ccd9XCsQ.s 			page 80
 
 
  2344              	.LVL169:
@@ -4798,7 +4798,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
 1222:./Drivers/src/stm32f10x_can.c ****       case CAN_IT_FF0:
  2385              		.loc 1 1222 8 is_stmt 1 view .LVU830
  2386 00b2 28E0     		b	.L167
-ARM GAS  /tmp/cc0O35Mf.s 			page 81
+ARM GAS  /tmp/ccd9XCsQ.s 			page 81
 
 
  2387              	.LVL181:
@@ -4858,7 +4858,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  2427 00d2 0069     		ldr	r0, [r0, #16]
  2428              	.LVL191:
 1237:./Drivers/src/stm32f10x_can.c **** 	      break;
-ARM GAS  /tmp/cc0O35Mf.s 			page 82
+ARM GAS  /tmp/ccd9XCsQ.s 			page 82
 
 
  2429              		.loc 1 1237 26 view .LVU845
@@ -4918,7 +4918,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  2469              		.loc 1 1261 26 view .LVU859
  2470 00f2 0421     		movs	r1, #4
  2471              	.LVL203:
-ARM GAS  /tmp/cc0O35Mf.s 			page 83
+ARM GAS  /tmp/ccd9XCsQ.s 			page 83
 
 
 1261:./Drivers/src/stm32f10x_can.c **** 	      break;
@@ -4978,7 +4978,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  2512              		.loc 1 1213 5 view .LVU873
  2513 010e FAE7     		b	.L167
  2514              	.L196:
-ARM GAS  /tmp/cc0O35Mf.s 			page 84
+ARM GAS  /tmp/ccd9XCsQ.s 			page 84
 
 
  2515              		.align	2
@@ -5038,7 +5038,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  2566 0027 4F       		.byte	(.L197-.L203)/2
  2567 0028 4F       		.byte	(.L197-.L203)/2
  2568 0029 4F       		.byte	(.L197-.L203)/2
-ARM GAS  /tmp/cc0O35Mf.s 			page 85
+ARM GAS  /tmp/ccd9XCsQ.s 			page 85
 
 
  2569 002a 4F       		.byte	(.L197-.L203)/2
@@ -5098,7 +5098,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
 1340:./Drivers/src/stm32f10x_can.c ****       case CAN_IT_EWG:
  2615              		.loc 1 1340 8 is_stmt 1 view .LVU887
  2616 0064 7047     		bx	lr
-ARM GAS  /tmp/cc0O35Mf.s 			page 86
+ARM GAS  /tmp/ccd9XCsQ.s 			page 86
 
 
  2617              	.L217:
@@ -5158,7 +5158,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
 1323:./Drivers/src/stm32f10x_can.c **** 	      break;
  2656              		.loc 1 1323 19 is_stmt 0 view .LVU903
  2657 008c 1023     		movs	r3, #16
-ARM GAS  /tmp/cc0O35Mf.s 			page 87
+ARM GAS  /tmp/ccd9XCsQ.s 			page 87
 
 
  2658 008e C360     		str	r3, [r0, #12]
@@ -5218,7 +5218,7 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  2696 00ae 7047     		bx	lr
  2697              	.L209:
 1367:./Drivers/src/stm32f10x_can.c ****               /* Clear CAN_MSR_ERRI (rc_w1) */
-ARM GAS  /tmp/cc0O35Mf.s 			page 88
+ARM GAS  /tmp/ccd9XCsQ.s 			page 88
 
 
  2698              		.loc 1 1367 8 view .LVU920
@@ -5251,75 +5251,75 @@ ARM GAS  /tmp/cc0O35Mf.s 			page 1
  2721              		.file 3 "cmsis/stm32f10x.h"
  2722              		.file 4 "Drivers/inc/stm32f10x_can.h"
  2723              		.file 5 "Drivers/inc/stm32f10x_rcc.h"
-ARM GAS  /tmp/cc0O35Mf.s 			page 89
+ARM GAS  /tmp/ccd9XCsQ.s 			page 89
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f10x_can.c
-     /tmp/cc0O35Mf.s:19     .text.CheckITStatus:00000000 $t
-     /tmp/cc0O35Mf.s:24     .text.CheckITStatus:00000000 CheckITStatus
-     /tmp/cc0O35Mf.s:54     .text.CAN_DeInit:00000000 $t
-     /tmp/cc0O35Mf.s:60     .text.CAN_DeInit:00000000 CAN_DeInit
-     /tmp/cc0O35Mf.s:112    .text.CAN_DeInit:00000034 $d
-     /tmp/cc0O35Mf.s:117    .text.CAN_Init:00000000 $t
-     /tmp/cc0O35Mf.s:123    .text.CAN_Init:00000000 CAN_Init
-     /tmp/cc0O35Mf.s:400    .text.CAN_FilterInit:00000000 $t
-     /tmp/cc0O35Mf.s:406    .text.CAN_FilterInit:00000000 CAN_FilterInit
-     /tmp/cc0O35Mf.s:611    .text.CAN_FilterInit:00000108 $d
-     /tmp/cc0O35Mf.s:616    .text.CAN_StructInit:00000000 $t
-     /tmp/cc0O35Mf.s:622    .text.CAN_StructInit:00000000 CAN_StructInit
-     /tmp/cc0O35Mf.s:673    .text.CAN_SlaveStartBank:00000000 $t
-     /tmp/cc0O35Mf.s:679    .text.CAN_SlaveStartBank:00000000 CAN_SlaveStartBank
-     /tmp/cc0O35Mf.s:719    .text.CAN_SlaveStartBank:00000038 $d
-     /tmp/cc0O35Mf.s:724    .text.CAN_DBGFreeze:00000000 $t
-     /tmp/cc0O35Mf.s:730    .text.CAN_DBGFreeze:00000000 CAN_DBGFreeze
-     /tmp/cc0O35Mf.s:763    .text.CAN_TTComModeCmd:00000000 $t
-     /tmp/cc0O35Mf.s:769    .text.CAN_TTComModeCmd:00000000 CAN_TTComModeCmd
-     /tmp/cc0O35Mf.s:838    .text.CAN_Transmit:00000000 $t
-     /tmp/cc0O35Mf.s:844    .text.CAN_Transmit:00000000 CAN_Transmit
-     /tmp/cc0O35Mf.s:1051   .text.CAN_TransmitStatus:00000000 $t
-     /tmp/cc0O35Mf.s:1057   .text.CAN_TransmitStatus:00000000 CAN_TransmitStatus
-     /tmp/cc0O35Mf.s:1203   .text.CAN_TransmitStatus:00000088 $d
-     /tmp/cc0O35Mf.s:1211   .text.CAN_CancelTransmit:00000000 $t
-     /tmp/cc0O35Mf.s:1217   .text.CAN_CancelTransmit:00000000 CAN_CancelTransmit
-     /tmp/cc0O35Mf.s:1268   .text.CAN_Receive:00000000 $t
-     /tmp/cc0O35Mf.s:1274   .text.CAN_Receive:00000000 CAN_Receive
-     /tmp/cc0O35Mf.s:1432   .text.CAN_FIFORelease:00000000 $t
-     /tmp/cc0O35Mf.s:1438   .text.CAN_FIFORelease:00000000 CAN_FIFORelease
-     /tmp/cc0O35Mf.s:1471   .text.CAN_MessagePending:00000000 $t
-     /tmp/cc0O35Mf.s:1477   .text.CAN_MessagePending:00000000 CAN_MessagePending
-     /tmp/cc0O35Mf.s:1527   .text.CAN_OperatingModeRequest:00000000 $t
-     /tmp/cc0O35Mf.s:1533   .text.CAN_OperatingModeRequest:00000000 CAN_OperatingModeRequest
-     /tmp/cc0O35Mf.s:1722   .text.CAN_Sleep:00000000 $t
-     /tmp/cc0O35Mf.s:1728   .text.CAN_Sleep:00000000 CAN_Sleep
-     /tmp/cc0O35Mf.s:1771   .text.CAN_WakeUp:00000000 $t
-     /tmp/cc0O35Mf.s:1777   .text.CAN_WakeUp:00000000 CAN_WakeUp
-     /tmp/cc0O35Mf.s:1838   .text.CAN_GetLastErrorCode:00000000 $t
-     /tmp/cc0O35Mf.s:1844   .text.CAN_GetLastErrorCode:00000000 CAN_GetLastErrorCode
-     /tmp/cc0O35Mf.s:1868   .text.CAN_GetReceiveErrorCounter:00000000 $t
-     /tmp/cc0O35Mf.s:1874   .text.CAN_GetReceiveErrorCounter:00000000 CAN_GetReceiveErrorCounter
-     /tmp/cc0O35Mf.s:1898   .text.CAN_GetLSBTransmitErrorCounter:00000000 $t
-     /tmp/cc0O35Mf.s:1904   .text.CAN_GetLSBTransmitErrorCounter:00000000 CAN_GetLSBTransmitErrorCounter
-     /tmp/cc0O35Mf.s:1928   .text.CAN_ITConfig:00000000 $t
-     /tmp/cc0O35Mf.s:1934   .text.CAN_ITConfig:00000000 CAN_ITConfig
-     /tmp/cc0O35Mf.s:1968   .text.CAN_GetFlagStatus:00000000 $t
-     /tmp/cc0O35Mf.s:1974   .text.CAN_GetFlagStatus:00000000 CAN_GetFlagStatus
-     /tmp/cc0O35Mf.s:2114   .text.CAN_ClearFlag:00000000 $t
-     /tmp/cc0O35Mf.s:2120   .text.CAN_ClearFlag:00000000 CAN_ClearFlag
-     /tmp/cc0O35Mf.s:2183   .text.CAN_ClearFlag:00000034 $d
-     /tmp/cc0O35Mf.s:2188   .text.CAN_GetITStatus:00000000 $t
-     /tmp/cc0O35Mf.s:2194   .text.CAN_GetITStatus:00000000 CAN_GetITStatus
-     /tmp/cc0O35Mf.s:2232   .text.CAN_GetITStatus:00000022 $d
-     /tmp/cc0O35Mf.s:2265   .text.CAN_GetITStatus:00000042 $t
-ARM GAS  /tmp/cc0O35Mf.s 			page 90
+     /tmp/ccd9XCsQ.s:19     .text.CheckITStatus:00000000 $t
+     /tmp/ccd9XCsQ.s:24     .text.CheckITStatus:00000000 CheckITStatus
+     /tmp/ccd9XCsQ.s:54     .text.CAN_DeInit:00000000 $t
+     /tmp/ccd9XCsQ.s:60     .text.CAN_DeInit:00000000 CAN_DeInit
+     /tmp/ccd9XCsQ.s:112    .text.CAN_DeInit:00000034 $d
+     /tmp/ccd9XCsQ.s:117    .text.CAN_Init:00000000 $t
+     /tmp/ccd9XCsQ.s:123    .text.CAN_Init:00000000 CAN_Init
+     /tmp/ccd9XCsQ.s:400    .text.CAN_FilterInit:00000000 $t
+     /tmp/ccd9XCsQ.s:406    .text.CAN_FilterInit:00000000 CAN_FilterInit
+     /tmp/ccd9XCsQ.s:611    .text.CAN_FilterInit:00000108 $d
+     /tmp/ccd9XCsQ.s:616    .text.CAN_StructInit:00000000 $t
+     /tmp/ccd9XCsQ.s:622    .text.CAN_StructInit:00000000 CAN_StructInit
+     /tmp/ccd9XCsQ.s:673    .text.CAN_SlaveStartBank:00000000 $t
+     /tmp/ccd9XCsQ.s:679    .text.CAN_SlaveStartBank:00000000 CAN_SlaveStartBank
+     /tmp/ccd9XCsQ.s:719    .text.CAN_SlaveStartBank:00000038 $d
+     /tmp/ccd9XCsQ.s:724    .text.CAN_DBGFreeze:00000000 $t
+     /tmp/ccd9XCsQ.s:730    .text.CAN_DBGFreeze:00000000 CAN_DBGFreeze
+     /tmp/ccd9XCsQ.s:763    .text.CAN_TTComModeCmd:00000000 $t
+     /tmp/ccd9XCsQ.s:769    .text.CAN_TTComModeCmd:00000000 CAN_TTComModeCmd
+     /tmp/ccd9XCsQ.s:838    .text.CAN_Transmit:00000000 $t
+     /tmp/ccd9XCsQ.s:844    .text.CAN_Transmit:00000000 CAN_Transmit
+     /tmp/ccd9XCsQ.s:1051   .text.CAN_TransmitStatus:00000000 $t
+     /tmp/ccd9XCsQ.s:1057   .text.CAN_TransmitStatus:00000000 CAN_TransmitStatus
+     /tmp/ccd9XCsQ.s:1203   .text.CAN_TransmitStatus:00000088 $d
+     /tmp/ccd9XCsQ.s:1211   .text.CAN_CancelTransmit:00000000 $t
+     /tmp/ccd9XCsQ.s:1217   .text.CAN_CancelTransmit:00000000 CAN_CancelTransmit
+     /tmp/ccd9XCsQ.s:1268   .text.CAN_Receive:00000000 $t
+     /tmp/ccd9XCsQ.s:1274   .text.CAN_Receive:00000000 CAN_Receive
+     /tmp/ccd9XCsQ.s:1432   .text.CAN_FIFORelease:00000000 $t
+     /tmp/ccd9XCsQ.s:1438   .text.CAN_FIFORelease:00000000 CAN_FIFORelease
+     /tmp/ccd9XCsQ.s:1471   .text.CAN_MessagePending:00000000 $t
+     /tmp/ccd9XCsQ.s:1477   .text.CAN_MessagePending:00000000 CAN_MessagePending
+     /tmp/ccd9XCsQ.s:1527   .text.CAN_OperatingModeRequest:00000000 $t
+     /tmp/ccd9XCsQ.s:1533   .text.CAN_OperatingModeRequest:00000000 CAN_OperatingModeRequest
+     /tmp/ccd9XCsQ.s:1722   .text.CAN_Sleep:00000000 $t
+     /tmp/ccd9XCsQ.s:1728   .text.CAN_Sleep:00000000 CAN_Sleep
+     /tmp/ccd9XCsQ.s:1771   .text.CAN_WakeUp:00000000 $t
+     /tmp/ccd9XCsQ.s:1777   .text.CAN_WakeUp:00000000 CAN_WakeUp
+     /tmp/ccd9XCsQ.s:1838   .text.CAN_GetLastErrorCode:00000000 $t
+     /tmp/ccd9XCsQ.s:1844   .text.CAN_GetLastErrorCode:00000000 CAN_GetLastErrorCode
+     /tmp/ccd9XCsQ.s:1868   .text.CAN_GetReceiveErrorCounter:00000000 $t
+     /tmp/ccd9XCsQ.s:1874   .text.CAN_GetReceiveErrorCounter:00000000 CAN_GetReceiveErrorCounter
+     /tmp/ccd9XCsQ.s:1898   .text.CAN_GetLSBTransmitErrorCounter:00000000 $t
+     /tmp/ccd9XCsQ.s:1904   .text.CAN_GetLSBTransmitErrorCounter:00000000 CAN_GetLSBTransmitErrorCounter
+     /tmp/ccd9XCsQ.s:1928   .text.CAN_ITConfig:00000000 $t
+     /tmp/ccd9XCsQ.s:1934   .text.CAN_ITConfig:00000000 CAN_ITConfig
+     /tmp/ccd9XCsQ.s:1968   .text.CAN_GetFlagStatus:00000000 $t
+     /tmp/ccd9XCsQ.s:1974   .text.CAN_GetFlagStatus:00000000 CAN_GetFlagStatus
+     /tmp/ccd9XCsQ.s:2114   .text.CAN_ClearFlag:00000000 $t
+     /tmp/ccd9XCsQ.s:2120   .text.CAN_ClearFlag:00000000 CAN_ClearFlag
+     /tmp/ccd9XCsQ.s:2183   .text.CAN_ClearFlag:00000034 $d
+     /tmp/ccd9XCsQ.s:2188   .text.CAN_GetITStatus:00000000 $t
+     /tmp/ccd9XCsQ.s:2194   .text.CAN_GetITStatus:00000000 CAN_GetITStatus
+     /tmp/ccd9XCsQ.s:2232   .text.CAN_GetITStatus:00000022 $d
+     /tmp/ccd9XCsQ.s:2265   .text.CAN_GetITStatus:00000042 $t
+ARM GAS  /tmp/ccd9XCsQ.s 			page 90
 
 
-     /tmp/cc0O35Mf.s:2517   .text.CAN_GetITStatus:00000110 $d
-     /tmp/cc0O35Mf.s:2522   .text.CAN_ClearITPendingBit:00000000 $t
-     /tmp/cc0O35Mf.s:2528   .text.CAN_ClearITPendingBit:00000000 CAN_ClearITPendingBit
-     /tmp/cc0O35Mf.s:2553   .text.CAN_ClearITPendingBit:0000001a $d
-     /tmp/cc0O35Mf.s:2586   .text.CAN_ClearITPendingBit:0000003a $t
-     /tmp/cc0O35Mf.s:2714   .text.CAN_ClearITPendingBit:000000bc $d
+     /tmp/ccd9XCsQ.s:2517   .text.CAN_GetITStatus:00000110 $d
+     /tmp/ccd9XCsQ.s:2522   .text.CAN_ClearITPendingBit:00000000 $t
+     /tmp/ccd9XCsQ.s:2528   .text.CAN_ClearITPendingBit:00000000 CAN_ClearITPendingBit
+     /tmp/ccd9XCsQ.s:2553   .text.CAN_ClearITPendingBit:0000001a $d
+     /tmp/ccd9XCsQ.s:2586   .text.CAN_ClearITPendingBit:0000003a $t
+     /tmp/ccd9XCsQ.s:2714   .text.CAN_ClearITPendingBit:000000bc $d
 
 UNDEFINED SYMBOLS
 RCC_APB1PeriphResetCmd
