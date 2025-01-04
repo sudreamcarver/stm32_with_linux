@@ -1,32 +1,32 @@
-ARM GAS  /tmp/ccVrVgNB.s 			page 1
+ARM GAS  /tmp/cc38yPxf.s 			page 1
 
 
    1              		.cpu cortex-m3
-   2              		.arch armv7-m
-   3              		.fpu softvfp
-   4              		.eabi_attribute 20, 1
-   5              		.eabi_attribute 21, 1
-   6              		.eabi_attribute 23, 3
-   7              		.eabi_attribute 24, 1
-   8              		.eabi_attribute 25, 1
-   9              		.eabi_attribute 26, 1
-  10              		.eabi_attribute 30, 1
-  11              		.eabi_attribute 34, 1
-  12              		.eabi_attribute 18, 4
-  13              		.file	"misc.c"
-  14              		.text
-  15              	.Ltext0:
-  16              		.cfi_sections	.debug_frame
-  17              		.file 1 "./Drivers/src/misc.c"
-  18              		.section	.text.NVIC_PriorityGroupConfig,"ax",%progbits
-  19              		.align	1
-  20              		.global	NVIC_PriorityGroupConfig
-  21              		.syntax unified
-  22              		.thumb
-  23              		.thumb_func
-  25              	NVIC_PriorityGroupConfig:
-  26              	.LVL0:
-  27              	.LFB29:
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"misc.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.NVIC_PriorityGroupConfig,"ax",%progbits
+  16              		.align	1
+  17              		.global	NVIC_PriorityGroupConfig
+  18              		.arch armv7-m
+  19              		.syntax unified
+  20              		.thumb
+  21              		.thumb_func
+  22              		.fpu softvfp
+  24              	NVIC_PriorityGroupConfig:
+  25              	.LVL0:
+  26              	.LFB29:
+  27              		.file 1 "./Drivers/src/misc.c"
    1:./Drivers/src/misc.c **** /**
    2:./Drivers/src/misc.c ****   ******************************************************************************
    3:./Drivers/src/misc.c ****   * @file    misc.c
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccVrVgNB.s 			page 1
   29:./Drivers/src/misc.c **** /** @defgroup MISC 
   30:./Drivers/src/misc.c ****   * @brief MISC driver modules
   31:./Drivers/src/misc.c ****   * @{
-ARM GAS  /tmp/ccVrVgNB.s 			page 2
+ARM GAS  /tmp/cc38yPxf.s 			page 2
 
 
   32:./Drivers/src/misc.c ****   */
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccVrVgNB.s 			page 1
   86:./Drivers/src/misc.c ****   *                                3 bits for subpriority
   87:./Drivers/src/misc.c ****   *     @arg NVIC_PriorityGroup_2: 2 bits for pre-emption priority
   88:./Drivers/src/misc.c ****   *                                2 bits for subpriority
-ARM GAS  /tmp/ccVrVgNB.s 			page 3
+ARM GAS  /tmp/cc38yPxf.s 			page 3
 
 
   89:./Drivers/src/misc.c ****   *     @arg NVIC_PriorityGroup_3: 3 bits for pre-emption priority
@@ -164,9 +164,10 @@ ARM GAS  /tmp/ccVrVgNB.s 			page 1
   55              		.syntax unified
   56              		.thumb
   57              		.thumb_func
-  59              	NVIC_Init:
-  60              	.LVL2:
-  61              	.LFB30:
+  58              		.fpu softvfp
+  60              	NVIC_Init:
+  61              	.LVL2:
+  62              	.LFB30:
  103:./Drivers/src/misc.c **** 
  104:./Drivers/src/misc.c **** /**
  105:./Drivers/src/misc.c ****   * @brief  Initializes the NVIC peripheral according to the specified
@@ -177,160 +178,176 @@ ARM GAS  /tmp/ccVrVgNB.s 			page 1
  110:./Drivers/src/misc.c ****   */
  111:./Drivers/src/misc.c **** void NVIC_Init(NVIC_InitTypeDef* NVIC_InitStruct)
  112:./Drivers/src/misc.c **** {
-  62              		.loc 1 112 1 is_stmt 1 view -0
-ARM GAS  /tmp/ccVrVgNB.s 			page 4
+ARM GAS  /tmp/cc38yPxf.s 			page 4
 
 
-  63              		.cfi_startproc
-  64              		@ args = 0, pretend = 0, frame = 0
-  65              		@ frame_needed = 0, uses_anonymous_args = 0
-  66              		@ link register save eliminated.
+  63              		.loc 1 112 1 is_stmt 1 view -0
+  64              		.cfi_startproc
+  65              		@ args = 0, pretend = 0, frame = 0
+  66              		@ frame_needed = 0, uses_anonymous_args = 0
+  67              		@ link register save eliminated.
  113:./Drivers/src/misc.c ****   uint32_t tmppriority = 0x00, tmppre = 0x00, tmpsub = 0x0F;
-  67              		.loc 1 113 3 view .LVU8
+  68              		.loc 1 113 3 view .LVU8
  114:./Drivers/src/misc.c ****   
  115:./Drivers/src/misc.c ****   /* Check the parameters */
  116:./Drivers/src/misc.c ****   assert_param(IS_FUNCTIONAL_STATE(NVIC_InitStruct->NVIC_IRQChannelCmd));
-  68              		.loc 1 116 3 view .LVU9
+  69              		.loc 1 116 3 view .LVU9
  117:./Drivers/src/misc.c ****   assert_param(IS_NVIC_PREEMPTION_PRIORITY(NVIC_InitStruct->NVIC_IRQChannelPreemptionPriority));  
-  69              		.loc 1 117 3 view .LVU10
+  70              		.loc 1 117 3 view .LVU10
  118:./Drivers/src/misc.c ****   assert_param(IS_NVIC_SUB_PRIORITY(NVIC_InitStruct->NVIC_IRQChannelSubPriority));
-  70              		.loc 1 118 3 view .LVU11
+  71              		.loc 1 118 3 view .LVU11
  119:./Drivers/src/misc.c ****     
  120:./Drivers/src/misc.c ****   if (NVIC_InitStruct->NVIC_IRQChannelCmd != DISABLE)
-  71              		.loc 1 120 3 view .LVU12
-  72              		.loc 1 120 22 is_stmt 0 view .LVU13
-  73 0000 C378     		ldrb	r3, [r0, #3]	@ zero_extendqisi2
-  74              		.loc 1 120 6 view .LVU14
-  75 0002 F3B1     		cbz	r3, .L5
+  72              		.loc 1 120 3 view .LVU12
+  73              		.loc 1 120 22 is_stmt 0 view .LVU13
+  74 0000 C378     		ldrb	r3, [r0, #3]	@ zero_extendqisi2
+  75              		.loc 1 120 6 view .LVU14
+  76 0002 03B3     		cbz	r3, .L5
+ 112:./Drivers/src/misc.c ****   uint32_t tmppriority = 0x00, tmppre = 0x00, tmpsub = 0x0F;
+  77              		.loc 1 112 1 view .LVU15
+  78 0004 10B4     		push	{r4}
+  79              	.LCFI0:
+  80              		.cfi_def_cfa_offset 4
+  81              		.cfi_offset 4, -4
  121:./Drivers/src/misc.c ****   {
  122:./Drivers/src/misc.c ****     /* Compute the Corresponding IRQ Priority --------------------------------*/    
  123:./Drivers/src/misc.c ****     tmppriority = (0x700 - ((SCB->AIRCR) & (uint32_t)0x700))>> 0x08;
-  76              		.loc 1 123 5 is_stmt 1 view .LVU15
-  77              		.loc 1 123 33 is_stmt 0 view .LVU16
-  78 0004 144B     		ldr	r3, .L7
-  79 0006 DB68     		ldr	r3, [r3, #12]
-  80              		.loc 1 123 26 view .LVU17
-  81 0008 DB43     		mvns	r3, r3
-  82              		.loc 1 123 17 view .LVU18
-  83 000a C3F30223 		ubfx	r3, r3, #8, #3
-  84              	.LVL3:
+  82              		.loc 1 123 5 is_stmt 1 view .LVU16
+  83              		.loc 1 123 33 is_stmt 0 view .LVU17
+  84 0006 154B     		ldr	r3, .L11
+  85 0008 DA68     		ldr	r2, [r3, #12]
+  86              		.loc 1 123 26 view .LVU18
+  87 000a D243     		mvns	r2, r2
+  88              		.loc 1 123 17 view .LVU19
+  89 000c C2F30222 		ubfx	r2, r2, #8, #3
+  90              	.LVL3:
  124:./Drivers/src/misc.c ****     tmppre = (0x4 - tmppriority);
-  85              		.loc 1 124 5 is_stmt 1 view .LVU19
-  86              		.loc 1 124 12 is_stmt 0 view .LVU20
-  87 000e C3F1040C 		rsb	ip, r3, #4
-  88              	.LVL4:
+  91              		.loc 1 124 5 is_stmt 1 view .LVU20
+  92              		.loc 1 124 12 is_stmt 0 view .LVU21
+  93 0010 C2F10404 		rsb	r4, r2, #4
+  94              	.LVL4:
  125:./Drivers/src/misc.c ****     tmpsub = tmpsub >> tmppriority;
-  89              		.loc 1 125 5 is_stmt 1 view .LVU21
-  90              		.loc 1 125 12 is_stmt 0 view .LVU22
-  91 0012 0F21     		movs	r1, #15
-  92 0014 D940     		lsrs	r1, r1, r3
-  93              	.LVL5:
+  95              		.loc 1 125 5 is_stmt 1 view .LVU22
+  96              		.loc 1 125 12 is_stmt 0 view .LVU23
+  97 0014 0F23     		movs	r3, #15
+  98 0016 23FA02F2 		lsr	r2, r3, r2
+  99              	.LVL5:
  126:./Drivers/src/misc.c **** 
  127:./Drivers/src/misc.c ****     tmppriority = (uint32_t)NVIC_InitStruct->NVIC_IRQChannelPreemptionPriority << tmppre;
-  94              		.loc 1 127 5 is_stmt 1 view .LVU23
-  95              		.loc 1 127 44 is_stmt 0 view .LVU24
-  96 0016 4278     		ldrb	r2, [r0, #1]	@ zero_extendqisi2
-  97              		.loc 1 127 17 view .LVU25
-  98 0018 02FA0CF2 		lsl	r2, r2, ip
-  99              	.LVL6:
+ 100              		.loc 1 127 5 is_stmt 1 view .LVU24
+ 101              		.loc 1 127 44 is_stmt 0 view .LVU25
+ 102 001a 4178     		ldrb	r1, [r0, #1]	@ zero_extendqisi2
+ 103              		.loc 1 127 17 view .LVU26
+ARM GAS  /tmp/cc38yPxf.s 			page 5
+
+
+ 104 001c A140     		lsls	r1, r1, r4
+ 105              	.LVL6:
  128:./Drivers/src/misc.c ****     tmppriority |=  NVIC_InitStruct->NVIC_IRQChannelSubPriority & tmpsub;
- 100              		.loc 1 128 5 is_stmt 1 view .LVU26
- 101              		.loc 1 128 36 is_stmt 0 view .LVU27
- 102 001c 8378     		ldrb	r3, [r0, #2]	@ zero_extendqisi2
- 103              		.loc 1 128 65 view .LVU28
-ARM GAS  /tmp/ccVrVgNB.s 			page 5
-
-
- 104 001e 0B40     		ands	r3, r3, r1
- 105              		.loc 1 128 17 view .LVU29
- 106 0020 1343     		orrs	r3, r3, r2
- 107              	.LVL7:
+ 106              		.loc 1 128 5 is_stmt 1 view .LVU27
+ 107              		.loc 1 128 36 is_stmt 0 view .LVU28
+ 108 001e 8378     		ldrb	r3, [r0, #2]	@ zero_extendqisi2
+ 109              		.loc 1 128 65 view .LVU29
+ 110 0020 1340     		ands	r3, r3, r2
+ 111              		.loc 1 128 17 view .LVU30
+ 112 0022 0B43     		orrs	r3, r3, r1
+ 113              	.LVL7:
  129:./Drivers/src/misc.c ****     tmppriority = tmppriority << 0x04;
- 108              		.loc 1 129 5 is_stmt 1 view .LVU30
- 109              		.loc 1 129 17 is_stmt 0 view .LVU31
- 110 0022 1B01     		lsls	r3, r3, #4
- 111              	.LVL8:
+ 114              		.loc 1 129 5 is_stmt 1 view .LVU31
+ 115              		.loc 1 129 17 is_stmt 0 view .LVU32
+ 116 0024 1B01     		lsls	r3, r3, #4
+ 117              	.LVL8:
  130:./Drivers/src/misc.c ****         
  131:./Drivers/src/misc.c ****     NVIC->IP[NVIC_InitStruct->NVIC_IRQChannel] = tmppriority;
- 112              		.loc 1 131 5 is_stmt 1 view .LVU32
- 113              		.loc 1 131 29 is_stmt 0 view .LVU33
- 114 0024 0278     		ldrb	r2, [r0]	@ zero_extendqisi2
- 115              		.loc 1 131 48 view .LVU34
- 116 0026 DBB2     		uxtb	r3, r3
- 117              	.LVL9:
- 118              		.loc 1 131 48 view .LVU35
- 119 0028 0C49     		ldr	r1, .L7+4
- 120              	.LVL10:
- 121              		.loc 1 131 48 view .LVU36
- 122 002a 0A44     		add	r2, r2, r1
- 123 002c 82F80033 		strb	r3, [r2, #768]
+ 118              		.loc 1 131 5 is_stmt 1 view .LVU33
+ 119              		.loc 1 131 29 is_stmt 0 view .LVU34
+ 120 0026 0278     		ldrb	r2, [r0]	@ zero_extendqisi2
+ 121              	.LVL9:
+ 122              		.loc 1 131 48 view .LVU35
+ 123 0028 DBB2     		uxtb	r3, r3
+ 124              	.LVL10:
+ 125              		.loc 1 131 48 view .LVU36
+ 126 002a 0D49     		ldr	r1, .L11+4
+ 127 002c 0A44     		add	r2, r2, r1
+ 128 002e 82F80033 		strb	r3, [r2, #768]
  132:./Drivers/src/misc.c ****     
  133:./Drivers/src/misc.c ****     /* Enable the Selected IRQ Channels --------------------------------------*/
  134:./Drivers/src/misc.c ****     NVIC->ISER[NVIC_InitStruct->NVIC_IRQChannel >> 0x05] =
- 124              		.loc 1 134 5 is_stmt 1 view .LVU37
+ 129              		.loc 1 134 5 is_stmt 1 view .LVU37
  135:./Drivers/src/misc.c ****       (uint32_t)0x01 << (NVIC_InitStruct->NVIC_IRQChannel & (uint8_t)0x1F);
- 125              		.loc 1 135 41 is_stmt 0 view .LVU38
- 126 0030 0378     		ldrb	r3, [r0]	@ zero_extendqisi2
- 127              		.loc 1 135 59 view .LVU39
- 128 0032 03F01F00 		and	r0, r3, #31
- 129              	.LVL11:
+ 130              		.loc 1 135 41 is_stmt 0 view .LVU38
+ 131 0032 0378     		ldrb	r3, [r0]	@ zero_extendqisi2
+ 132              		.loc 1 135 59 view .LVU39
+ 133 0034 03F01F00 		and	r0, r3, #31
+ 134              	.LVL11:
  134:./Drivers/src/misc.c ****       (uint32_t)0x01 << (NVIC_InitStruct->NVIC_IRQChannel & (uint8_t)0x1F);
- 130              		.loc 1 134 49 view .LVU40
- 131 0036 5B09     		lsrs	r3, r3, #5
- 132              		.loc 1 135 22 view .LVU41
- 133 0038 0122     		movs	r2, #1
- 134 003a 8240     		lsls	r2, r2, r0
+ 135              		.loc 1 134 49 view .LVU40
+ 136 0038 5B09     		lsrs	r3, r3, #5
+ 137              		.loc 1 135 22 view .LVU41
+ 138 003a 0122     		movs	r2, #1
+ 139 003c 8240     		lsls	r2, r2, r0
  134:./Drivers/src/misc.c ****       (uint32_t)0x01 << (NVIC_InitStruct->NVIC_IRQChannel & (uint8_t)0x1F);
- 135              		.loc 1 134 58 view .LVU42
- 136 003c 41F82320 		str	r2, [r1, r3, lsl #2]
- 137 0040 7047     		bx	lr
- 138              	.LVL12:
- 139              	.L5:
+ 140              		.loc 1 134 58 view .LVU42
+ 141 003e 41F82320 		str	r2, [r1, r3, lsl #2]
  136:./Drivers/src/misc.c ****   }
  137:./Drivers/src/misc.c ****   else
  138:./Drivers/src/misc.c ****   {
  139:./Drivers/src/misc.c ****     /* Disable the Selected IRQ Channels -------------------------------------*/
  140:./Drivers/src/misc.c ****     NVIC->ICER[NVIC_InitStruct->NVIC_IRQChannel >> 0x05] =
- 140              		.loc 1 140 5 is_stmt 1 view .LVU43
  141:./Drivers/src/misc.c ****       (uint32_t)0x01 << (NVIC_InitStruct->NVIC_IRQChannel & (uint8_t)0x1F);
- 141              		.loc 1 141 41 is_stmt 0 view .LVU44
- 142 0042 0378     		ldrb	r3, [r0]	@ zero_extendqisi2
- 143              		.loc 1 141 59 view .LVU45
- 144 0044 03F01F01 		and	r1, r3, #31
- 140:./Drivers/src/misc.c ****       (uint32_t)0x01 << (NVIC_InitStruct->NVIC_IRQChannel & (uint8_t)0x1F);
-ARM GAS  /tmp/ccVrVgNB.s 			page 6
-
-
- 145              		.loc 1 140 49 view .LVU46
- 146 0048 5B09     		lsrs	r3, r3, #5
- 147              		.loc 1 141 22 view .LVU47
- 148 004a 0122     		movs	r2, #1
- 149 004c 8A40     		lsls	r2, r2, r1
- 140:./Drivers/src/misc.c ****       (uint32_t)0x01 << (NVIC_InitStruct->NVIC_IRQChannel & (uint8_t)0x1F);
- 150              		.loc 1 140 58 view .LVU48
- 151 004e 2033     		adds	r3, r3, #32
- 152 0050 0249     		ldr	r1, .L7+4
- 153 0052 41F82320 		str	r2, [r1, r3, lsl #2]
  142:./Drivers/src/misc.c ****   }
  143:./Drivers/src/misc.c **** }
- 154              		.loc 1 143 1 view .LVU49
- 155 0056 7047     		bx	lr
- 156              	.L8:
- 157              		.align	2
- 158              	.L7:
- 159 0058 00ED00E0 		.word	-536810240
- 160 005c 00E100E0 		.word	-536813312
- 161              		.cfi_endproc
- 162              	.LFE30:
- 164              		.section	.text.NVIC_SetVectorTable,"ax",%progbits
- 165              		.align	1
- 166              		.global	NVIC_SetVectorTable
- 167              		.syntax unified
- 168              		.thumb
- 169              		.thumb_func
- 171              	NVIC_SetVectorTable:
- 172              	.LVL13:
- 173              	.LFB31:
+ 142              		.loc 1 143 1 view .LVU43
+ARM GAS  /tmp/cc38yPxf.s 			page 6
+
+
+ 143 0042 10BC     		pop	{r4}
+ 144              	.LCFI1:
+ 145              		.cfi_restore 4
+ 146              		.cfi_def_cfa_offset 0
+ 147              	.LVL12:
+ 148              		.loc 1 143 1 view .LVU44
+ 149 0044 7047     		bx	lr
+ 150              	.LVL13:
+ 151              	.L5:
+ 140:./Drivers/src/misc.c ****       (uint32_t)0x01 << (NVIC_InitStruct->NVIC_IRQChannel & (uint8_t)0x1F);
+ 152              		.loc 1 140 5 is_stmt 1 view .LVU45
+ 141:./Drivers/src/misc.c ****   }
+ 153              		.loc 1 141 41 is_stmt 0 view .LVU46
+ 154 0046 0378     		ldrb	r3, [r0]	@ zero_extendqisi2
+ 141:./Drivers/src/misc.c ****   }
+ 155              		.loc 1 141 59 view .LVU47
+ 156 0048 03F01F01 		and	r1, r3, #31
+ 140:./Drivers/src/misc.c ****       (uint32_t)0x01 << (NVIC_InitStruct->NVIC_IRQChannel & (uint8_t)0x1F);
+ 157              		.loc 1 140 49 view .LVU48
+ 158 004c 5B09     		lsrs	r3, r3, #5
+ 141:./Drivers/src/misc.c ****   }
+ 159              		.loc 1 141 22 view .LVU49
+ 160 004e 0122     		movs	r2, #1
+ 161 0050 8A40     		lsls	r2, r2, r1
+ 140:./Drivers/src/misc.c ****       (uint32_t)0x01 << (NVIC_InitStruct->NVIC_IRQChannel & (uint8_t)0x1F);
+ 162              		.loc 1 140 58 view .LVU50
+ 163 0052 2033     		adds	r3, r3, #32
+ 164 0054 0249     		ldr	r1, .L11+4
+ 165 0056 41F82320 		str	r2, [r1, r3, lsl #2]
+ 166 005a 7047     		bx	lr
+ 167              	.L12:
+ 168              		.align	2
+ 169              	.L11:
+ 170 005c 00ED00E0 		.word	-536810240
+ 171 0060 00E100E0 		.word	-536813312
+ 172              		.cfi_endproc
+ 173              	.LFE30:
+ 175              		.section	.text.NVIC_SetVectorTable,"ax",%progbits
+ 176              		.align	1
+ 177              		.global	NVIC_SetVectorTable
+ 178              		.syntax unified
+ 179              		.thumb
+ 180              		.thumb_func
+ 181              		.fpu softvfp
+ 183              	NVIC_SetVectorTable:
+ 184              	.LVL14:
+ 185              	.LFB31:
  144:./Drivers/src/misc.c **** 
  145:./Drivers/src/misc.c **** /**
  146:./Drivers/src/misc.c ****   * @brief  Sets the vector table location and Offset.
@@ -341,53 +358,54 @@ ARM GAS  /tmp/ccVrVgNB.s 			page 1
  151:./Drivers/src/misc.c ****   * @param  Offset: Vector Table base offset field. This value must be a multiple 
  152:./Drivers/src/misc.c ****   *         of 0x200.
  153:./Drivers/src/misc.c ****   * @retval None
+ARM GAS  /tmp/cc38yPxf.s 			page 7
+
+
  154:./Drivers/src/misc.c ****   */
  155:./Drivers/src/misc.c **** void NVIC_SetVectorTable(uint32_t NVIC_VectTab, uint32_t Offset)
  156:./Drivers/src/misc.c **** { 
- 174              		.loc 1 156 1 is_stmt 1 view -0
- 175              		.cfi_startproc
- 176              		@ args = 0, pretend = 0, frame = 0
- 177              		@ frame_needed = 0, uses_anonymous_args = 0
- 178              		@ link register save eliminated.
+ 186              		.loc 1 156 1 is_stmt 1 view -0
+ 187              		.cfi_startproc
+ 188              		@ args = 0, pretend = 0, frame = 0
+ 189              		@ frame_needed = 0, uses_anonymous_args = 0
+ 190              		@ link register save eliminated.
  157:./Drivers/src/misc.c ****   /* Check the parameters */
  158:./Drivers/src/misc.c ****   assert_param(IS_NVIC_VECTTAB(NVIC_VectTab));
- 179              		.loc 1 158 3 view .LVU51
+ 191              		.loc 1 158 3 view .LVU52
  159:./Drivers/src/misc.c ****   assert_param(IS_NVIC_OFFSET(Offset));  
- 180              		.loc 1 159 3 view .LVU52
+ 192              		.loc 1 159 3 view .LVU53
  160:./Drivers/src/misc.c ****    
  161:./Drivers/src/misc.c ****   SCB->VTOR = NVIC_VectTab | (Offset & (uint32_t)0x1FFFFF80);
- 181              		.loc 1 161 3 view .LVU53
- 182              		.loc 1 161 38 is_stmt 0 view .LVU54
-ARM GAS  /tmp/ccVrVgNB.s 			page 7
-
-
- 183 0000 21F06041 		bic	r1, r1, #-536870912
- 184              	.LVL14:
- 185              		.loc 1 161 38 view .LVU55
- 186 0004 21F07F01 		bic	r1, r1, #127
- 187              		.loc 1 161 28 view .LVU56
- 188 0008 0143     		orrs	r1, r1, r0
- 189              		.loc 1 161 13 view .LVU57
- 190 000a 014B     		ldr	r3, .L10
- 191 000c 9960     		str	r1, [r3, #8]
+ 193              		.loc 1 161 3 view .LVU54
+ 194              		.loc 1 161 38 is_stmt 0 view .LVU55
+ 195 0000 21F06041 		bic	r1, r1, #-536870912
+ 196              	.LVL15:
+ 197              		.loc 1 161 38 view .LVU56
+ 198 0004 21F07F01 		bic	r1, r1, #127
+ 199              		.loc 1 161 28 view .LVU57
+ 200 0008 0143     		orrs	r1, r1, r0
+ 201              		.loc 1 161 13 view .LVU58
+ 202 000a 014B     		ldr	r3, .L14
+ 203 000c 9960     		str	r1, [r3, #8]
  162:./Drivers/src/misc.c **** }
- 192              		.loc 1 162 1 view .LVU58
- 193 000e 7047     		bx	lr
- 194              	.L11:
- 195              		.align	2
- 196              	.L10:
- 197 0010 00ED00E0 		.word	-536810240
- 198              		.cfi_endproc
- 199              	.LFE31:
- 201              		.section	.text.NVIC_SystemLPConfig,"ax",%progbits
- 202              		.align	1
- 203              		.global	NVIC_SystemLPConfig
- 204              		.syntax unified
- 205              		.thumb
- 206              		.thumb_func
- 208              	NVIC_SystemLPConfig:
- 209              	.LVL15:
- 210              	.LFB32:
+ 204              		.loc 1 162 1 view .LVU59
+ 205 000e 7047     		bx	lr
+ 206              	.L15:
+ 207              		.align	2
+ 208              	.L14:
+ 209 0010 00ED00E0 		.word	-536810240
+ 210              		.cfi_endproc
+ 211              	.LFE31:
+ 213              		.section	.text.NVIC_SystemLPConfig,"ax",%progbits
+ 214              		.align	1
+ 215              		.global	NVIC_SystemLPConfig
+ 216              		.syntax unified
+ 217              		.thumb
+ 218              		.thumb_func
+ 219              		.fpu softvfp
+ 221              	NVIC_SystemLPConfig:
+ 222              	.LVL16:
+ 223              	.LFB32:
  163:./Drivers/src/misc.c **** 
  164:./Drivers/src/misc.c **** /**
  165:./Drivers/src/misc.c ****   * @brief  Selects the condition for the system to enter low power mode.
@@ -400,69 +418,73 @@ ARM GAS  /tmp/ccVrVgNB.s 			page 1
  172:./Drivers/src/misc.c ****   * @retval None
  173:./Drivers/src/misc.c ****   */
  174:./Drivers/src/misc.c **** void NVIC_SystemLPConfig(uint8_t LowPowerMode, FunctionalState NewState)
+ARM GAS  /tmp/cc38yPxf.s 			page 8
+
+
  175:./Drivers/src/misc.c **** {
- 211              		.loc 1 175 1 is_stmt 1 view -0
- 212              		.cfi_startproc
- 213              		@ args = 0, pretend = 0, frame = 0
- 214              		@ frame_needed = 0, uses_anonymous_args = 0
- 215              		@ link register save eliminated.
+ 224              		.loc 1 175 1 is_stmt 1 view -0
+ 225              		.cfi_startproc
+ 226              		@ args = 0, pretend = 0, frame = 0
+ 227              		@ frame_needed = 0, uses_anonymous_args = 0
+ 228              		@ link register save eliminated.
  176:./Drivers/src/misc.c ****   /* Check the parameters */
  177:./Drivers/src/misc.c ****   assert_param(IS_NVIC_LP(LowPowerMode));
- 216              		.loc 1 177 3 view .LVU60
+ 229              		.loc 1 177 3 view .LVU61
  178:./Drivers/src/misc.c ****   assert_param(IS_FUNCTIONAL_STATE(NewState));  
- 217              		.loc 1 178 3 view .LVU61
+ 230              		.loc 1 178 3 view .LVU62
  179:./Drivers/src/misc.c ****   
  180:./Drivers/src/misc.c ****   if (NewState != DISABLE)
- 218              		.loc 1 180 3 view .LVU62
- 219              		.loc 1 180 6 is_stmt 0 view .LVU63
- 220 0000 21B1     		cbz	r1, .L13
+ 231              		.loc 1 180 3 view .LVU63
+ 232              		.loc 1 180 6 is_stmt 0 view .LVU64
+ 233 0000 21B1     		cbz	r1, .L17
  181:./Drivers/src/misc.c ****   {
  182:./Drivers/src/misc.c ****     SCB->SCR |= LowPowerMode;
-ARM GAS  /tmp/ccVrVgNB.s 			page 8
-
-
- 221              		.loc 1 182 5 is_stmt 1 view .LVU64
- 222              		.loc 1 182 8 is_stmt 0 view .LVU65
- 223 0002 054B     		ldr	r3, .L15
- 224 0004 1A69     		ldr	r2, [r3, #16]
- 225              		.loc 1 182 14 view .LVU66
- 226 0006 1043     		orrs	r0, r0, r2
- 227              	.LVL16:
- 228              		.loc 1 182 14 view .LVU67
- 229 0008 1861     		str	r0, [r3, #16]
- 230 000a 7047     		bx	lr
- 231              	.LVL17:
- 232              	.L13:
+ 234              		.loc 1 182 5 is_stmt 1 view .LVU65
+ 235              		.loc 1 182 14 is_stmt 0 view .LVU66
+ 236 0002 054B     		ldr	r3, .L19
+ 237 0004 1A69     		ldr	r2, [r3, #16]
+ 238 0006 1043     		orrs	r0, r0, r2
+ 239              	.LVL17:
+ 240              		.loc 1 182 14 view .LVU67
+ 241 0008 1861     		str	r0, [r3, #16]
+ 242 000a 7047     		bx	lr
+ 243              	.LVL18:
+ 244              	.L17:
  183:./Drivers/src/misc.c ****   }
  184:./Drivers/src/misc.c ****   else
  185:./Drivers/src/misc.c ****   {
  186:./Drivers/src/misc.c ****     SCB->SCR &= (uint32_t)(~(uint32_t)LowPowerMode);
- 233              		.loc 1 186 5 is_stmt 1 view .LVU68
- 234              		.loc 1 186 8 is_stmt 0 view .LVU69
- 235 000c 024A     		ldr	r2, .L15
- 236 000e 1369     		ldr	r3, [r2, #16]
- 237              		.loc 1 186 14 view .LVU70
- 238 0010 23EA0003 		bic	r3, r3, r0
- 239 0014 1361     		str	r3, [r2, #16]
+ 245              		.loc 1 186 5 is_stmt 1 view .LVU68
+ 246              		.loc 1 186 14 is_stmt 0 view .LVU69
+ 247 000c 024A     		ldr	r2, .L19
+ 248 000e 1369     		ldr	r3, [r2, #16]
+ 249 0010 23EA0000 		bic	r0, r3, r0
+ 250              	.LVL19:
+ 251              		.loc 1 186 14 view .LVU70
+ 252 0014 1061     		str	r0, [r2, #16]
  187:./Drivers/src/misc.c ****   }
  188:./Drivers/src/misc.c **** }
- 240              		.loc 1 188 1 view .LVU71
- 241 0016 7047     		bx	lr
- 242              	.L16:
- 243              		.align	2
- 244              	.L15:
- 245 0018 00ED00E0 		.word	-536810240
- 246              		.cfi_endproc
- 247              	.LFE32:
- 249              		.section	.text.SysTick_CLKSourceConfig,"ax",%progbits
- 250              		.align	1
- 251              		.global	SysTick_CLKSourceConfig
- 252              		.syntax unified
- 253              		.thumb
- 254              		.thumb_func
- 256              	SysTick_CLKSourceConfig:
- 257              	.LVL18:
- 258              	.LFB33:
+ 253              		.loc 1 188 1 view .LVU71
+ 254 0016 7047     		bx	lr
+ 255              	.L20:
+ 256              		.align	2
+ 257              	.L19:
+ 258 0018 00ED00E0 		.word	-536810240
+ 259              		.cfi_endproc
+ 260              	.LFE32:
+ 262              		.section	.text.SysTick_CLKSourceConfig,"ax",%progbits
+ 263              		.align	1
+ 264              		.global	SysTick_CLKSourceConfig
+ 265              		.syntax unified
+ 266              		.thumb
+ 267              		.thumb_func
+ARM GAS  /tmp/cc38yPxf.s 			page 9
+
+
+ 268              		.fpu softvfp
+ 270              	SysTick_CLKSourceConfig:
+ 271              	.LVL20:
+ 272              	.LFB33:
  189:./Drivers/src/misc.c **** 
  190:./Drivers/src/misc.c **** /**
  191:./Drivers/src/misc.c ****   * @brief  Configures the SysTick clock source.
@@ -474,77 +496,80 @@ ARM GAS  /tmp/ccVrVgNB.s 			page 1
  197:./Drivers/src/misc.c ****   */
  198:./Drivers/src/misc.c **** void SysTick_CLKSourceConfig(uint32_t SysTick_CLKSource)
  199:./Drivers/src/misc.c **** {
- 259              		.loc 1 199 1 is_stmt 1 view -0
- 260              		.cfi_startproc
- 261              		@ args = 0, pretend = 0, frame = 0
- 262              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/ccVrVgNB.s 			page 9
-
-
- 263              		@ link register save eliminated.
+ 273              		.loc 1 199 1 is_stmt 1 view -0
+ 274              		.cfi_startproc
+ 275              		@ args = 0, pretend = 0, frame = 0
+ 276              		@ frame_needed = 0, uses_anonymous_args = 0
+ 277              		@ link register save eliminated.
  200:./Drivers/src/misc.c ****   /* Check the parameters */
  201:./Drivers/src/misc.c ****   assert_param(IS_SYSTICK_CLK_SOURCE(SysTick_CLKSource));
- 264              		.loc 1 201 3 view .LVU73
+ 278              		.loc 1 201 3 view .LVU73
  202:./Drivers/src/misc.c ****   if (SysTick_CLKSource == SysTick_CLKSource_HCLK)
- 265              		.loc 1 202 3 view .LVU74
- 266              		.loc 1 202 6 is_stmt 0 view .LVU75
- 267 0000 0428     		cmp	r0, #4
- 268 0002 06D0     		beq	.L20
+ 279              		.loc 1 202 3 view .LVU74
+ 280              		.loc 1 202 6 is_stmt 0 view .LVU75
+ 281 0000 0428     		cmp	r0, #4
+ 282 0002 05D0     		beq	.L24
  203:./Drivers/src/misc.c ****   {
  204:./Drivers/src/misc.c ****     SysTick->CTRL |= SysTick_CLKSource_HCLK;
  205:./Drivers/src/misc.c ****   }
  206:./Drivers/src/misc.c ****   else
  207:./Drivers/src/misc.c ****   {
  208:./Drivers/src/misc.c ****     SysTick->CTRL &= SysTick_CLKSource_HCLK_Div8;
- 269              		.loc 1 208 5 is_stmt 1 view .LVU76
- 270              		.loc 1 208 12 is_stmt 0 view .LVU77
- 271 0004 4FF0E022 		mov	r2, #-536813568
- 272 0008 1369     		ldr	r3, [r2, #16]
- 273              		.loc 1 208 19 view .LVU78
- 274 000a 23F00403 		bic	r3, r3, #4
- 275 000e 1361     		str	r3, [r2, #16]
+ 283              		.loc 1 208 5 is_stmt 1 view .LVU76
+ 284              		.loc 1 208 19 is_stmt 0 view .LVU77
+ 285 0004 054A     		ldr	r2, .L25
+ 286 0006 1368     		ldr	r3, [r2]
+ 287 0008 23F00403 		bic	r3, r3, #4
+ 288 000c 1360     		str	r3, [r2]
  209:./Drivers/src/misc.c ****   }
  210:./Drivers/src/misc.c **** }
- 276              		.loc 1 210 1 view .LVU79
- 277 0010 7047     		bx	lr
- 278              	.L20:
+ 289              		.loc 1 210 1 view .LVU78
+ 290 000e 7047     		bx	lr
+ 291              	.L24:
  204:./Drivers/src/misc.c ****   }
- 279              		.loc 1 204 5 is_stmt 1 view .LVU80
+ 292              		.loc 1 204 5 is_stmt 1 view .LVU79
  204:./Drivers/src/misc.c ****   }
- 280              		.loc 1 204 12 is_stmt 0 view .LVU81
- 281 0012 4FF0E022 		mov	r2, #-536813568
- 282 0016 1369     		ldr	r3, [r2, #16]
- 204:./Drivers/src/misc.c ****   }
- 283              		.loc 1 204 19 view .LVU82
- 284 0018 43F00403 		orr	r3, r3, #4
- 285 001c 1361     		str	r3, [r2, #16]
- 286 001e 7047     		bx	lr
- 287              		.cfi_endproc
- 288              	.LFE33:
- 290              		.text
- 291              	.Letext0:
- 292              		.file 2 "/usr/lib/gcc/arm-none-eabi/12.2.1/include/stdint.h"
- 293              		.file 3 "cmsis/core_cm3.h"
- 294              		.file 4 "cmsis/stm32f10x.h"
- 295              		.file 5 "Drivers/inc/misc.h"
-ARM GAS  /tmp/ccVrVgNB.s 			page 10
+ 293              		.loc 1 204 19 is_stmt 0 view .LVU80
+ 294 0010 024A     		ldr	r2, .L25
+ 295 0012 1368     		ldr	r3, [r2]
+ 296 0014 43F00403 		orr	r3, r3, #4
+ 297 0018 1360     		str	r3, [r2]
+ 298 001a 7047     		bx	lr
+ 299              	.L26:
+ 300              		.align	2
+ 301              	.L25:
+ARM GAS  /tmp/cc38yPxf.s 			page 10
+
+
+ 302 001c 10E000E0 		.word	-536813552
+ 303              		.cfi_endproc
+ 304              	.LFE33:
+ 306              		.text
+ 307              	.Letext0:
+ 308              		.file 2 "/usr/lib/gcc/arm-none-eabi/9.2.1/include/stdint.h"
+ 309              		.file 3 "cmsis/core_cm3.h"
+ 310              		.file 4 "cmsis/system_stm32f10x.h"
+ 311              		.file 5 "cmsis/stm32f10x.h"
+ 312              		.file 6 "Drivers/inc/misc.h"
+ARM GAS  /tmp/cc38yPxf.s 			page 11
 
 
 DEFINED SYMBOLS
-                            *ABS*:00000000 misc.c
-     /tmp/ccVrVgNB.s:19     .text.NVIC_PriorityGroupConfig:00000000 $t
-     /tmp/ccVrVgNB.s:25     .text.NVIC_PriorityGroupConfig:00000000 NVIC_PriorityGroupConfig
-     /tmp/ccVrVgNB.s:48     .text.NVIC_PriorityGroupConfig:00000010 $d
-     /tmp/ccVrVgNB.s:53     .text.NVIC_Init:00000000 $t
-     /tmp/ccVrVgNB.s:59     .text.NVIC_Init:00000000 NVIC_Init
-     /tmp/ccVrVgNB.s:159    .text.NVIC_Init:00000058 $d
-     /tmp/ccVrVgNB.s:165    .text.NVIC_SetVectorTable:00000000 $t
-     /tmp/ccVrVgNB.s:171    .text.NVIC_SetVectorTable:00000000 NVIC_SetVectorTable
-     /tmp/ccVrVgNB.s:197    .text.NVIC_SetVectorTable:00000010 $d
-     /tmp/ccVrVgNB.s:202    .text.NVIC_SystemLPConfig:00000000 $t
-     /tmp/ccVrVgNB.s:208    .text.NVIC_SystemLPConfig:00000000 NVIC_SystemLPConfig
-     /tmp/ccVrVgNB.s:245    .text.NVIC_SystemLPConfig:00000018 $d
-     /tmp/ccVrVgNB.s:250    .text.SysTick_CLKSourceConfig:00000000 $t
-     /tmp/ccVrVgNB.s:256    .text.SysTick_CLKSourceConfig:00000000 SysTick_CLKSourceConfig
+                            *ABS*:0000000000000000 misc.c
+     /tmp/cc38yPxf.s:16     .text.NVIC_PriorityGroupConfig:0000000000000000 $t
+     /tmp/cc38yPxf.s:24     .text.NVIC_PriorityGroupConfig:0000000000000000 NVIC_PriorityGroupConfig
+     /tmp/cc38yPxf.s:48     .text.NVIC_PriorityGroupConfig:0000000000000010 $d
+     /tmp/cc38yPxf.s:53     .text.NVIC_Init:0000000000000000 $t
+     /tmp/cc38yPxf.s:60     .text.NVIC_Init:0000000000000000 NVIC_Init
+     /tmp/cc38yPxf.s:170    .text.NVIC_Init:000000000000005c $d
+     /tmp/cc38yPxf.s:176    .text.NVIC_SetVectorTable:0000000000000000 $t
+     /tmp/cc38yPxf.s:183    .text.NVIC_SetVectorTable:0000000000000000 NVIC_SetVectorTable
+     /tmp/cc38yPxf.s:209    .text.NVIC_SetVectorTable:0000000000000010 $d
+     /tmp/cc38yPxf.s:214    .text.NVIC_SystemLPConfig:0000000000000000 $t
+     /tmp/cc38yPxf.s:221    .text.NVIC_SystemLPConfig:0000000000000000 NVIC_SystemLPConfig
+     /tmp/cc38yPxf.s:258    .text.NVIC_SystemLPConfig:0000000000000018 $d
+     /tmp/cc38yPxf.s:263    .text.SysTick_CLKSourceConfig:0000000000000000 $t
+     /tmp/cc38yPxf.s:270    .text.SysTick_CLKSourceConfig:0000000000000000 SysTick_CLKSourceConfig
+     /tmp/cc38yPxf.s:302    .text.SysTick_CLKSourceConfig:000000000000001c $d
 
 NO UNDEFINED SYMBOLS
