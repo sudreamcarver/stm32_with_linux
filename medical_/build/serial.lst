@@ -1,0 +1,564 @@
+ARM GAS  /tmp/cccsfQ8U.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.arch armv7-m
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"serial.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.file 1 "./Libraries/src/serial.c"
+  18              		.section	.text.serial_init,"ax",%progbits
+  19              		.align	1
+  20              		.global	serial_init
+  21              		.syntax unified
+  22              		.thumb
+  23              		.thumb_func
+  25              	serial_init:
+  26              	.LFB32:
+   1:./Libraries/src/serial.c **** #include "stm32f10x.h"
+   2:./Libraries/src/serial.c **** #include "sys/_intsup.h"
+   3:./Libraries/src/serial.c **** #include <stdint.h>
+   4:./Libraries/src/serial.c **** #include <stdio.h>
+   5:./Libraries/src/serial.c **** 
+   6:./Libraries/src/serial.c **** void serial_init(void) {
+  27              		.loc 1 6 24 view -0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 24
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31 0000 10B5     		push	{r4, lr}
+  32              	.LCFI0:
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 4, -8
+  35              		.cfi_offset 14, -4
+  36 0002 86B0     		sub	sp, sp, #24
+  37              	.LCFI1:
+  38              		.cfi_def_cfa_offset 32
+   7:./Libraries/src/serial.c ****   RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1, ENABLE);
+  39              		.loc 1 7 3 view .LVU1
+  40 0004 0121     		movs	r1, #1
+  41 0006 4FF48040 		mov	r0, #16384
+  42 000a FFF7FEFF 		bl	RCC_APB2PeriphClockCmd
+  43              	.LVL0:
+   8:./Libraries/src/serial.c ****   RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
+  44              		.loc 1 8 3 view .LVU2
+  45 000e 0121     		movs	r1, #1
+  46 0010 0420     		movs	r0, #4
+  47 0012 FFF7FEFF 		bl	RCC_APB2PeriphClockCmd
+  48              	.LVL1:
+   9:./Libraries/src/serial.c **** 
+  10:./Libraries/src/serial.c ****   GPIO_InitTypeDef GPIO_InitStructure;
+ARM GAS  /tmp/cccsfQ8U.s 			page 2
+
+
+  49              		.loc 1 10 3 view .LVU3
+  11:./Libraries/src/serial.c ****   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
+  50              		.loc 1 11 3 view .LVU4
+  51              		.loc 1 11 32 is_stmt 0 view .LVU5
+  52 0016 1823     		movs	r3, #24
+  53 0018 8DF81730 		strb	r3, [sp, #23]
+  12:./Libraries/src/serial.c ****   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_9;
+  54              		.loc 1 12 3 is_stmt 1 view .LVU6
+  55              		.loc 1 12 31 is_stmt 0 view .LVU7
+  56 001c 4FF40073 		mov	r3, #512
+  57 0020 ADF81430 		strh	r3, [sp, #20]	@ movhi
+  13:./Libraries/src/serial.c ****   GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+  58              		.loc 1 13 3 is_stmt 1 view .LVU8
+  59              		.loc 1 13 33 is_stmt 0 view .LVU9
+  60 0024 0323     		movs	r3, #3
+  61 0026 8DF81630 		strb	r3, [sp, #22]
+  14:./Libraries/src/serial.c ****   GPIO_Init(GPIOA, &GPIO_InitStructure);
+  62              		.loc 1 14 3 is_stmt 1 view .LVU10
+  63 002a 05A9     		add	r1, sp, #20
+  64 002c 0E48     		ldr	r0, .L3
+  65 002e FFF7FEFF 		bl	GPIO_Init
+  66              	.LVL2:
+  15:./Libraries/src/serial.c **** 
+  16:./Libraries/src/serial.c ****   USART_InitTypeDef USART_InitStructure;
+  67              		.loc 1 16 3 view .LVU11
+  17:./Libraries/src/serial.c ****   USART_InitStructure.USART_BaudRate = 9600;
+  68              		.loc 1 17 3 view .LVU12
+  69              		.loc 1 17 38 is_stmt 0 view .LVU13
+  70 0032 4FF41653 		mov	r3, #9600
+  71 0036 0193     		str	r3, [sp, #4]
+  18:./Libraries/src/serial.c ****   USART_InitStructure.USART_HardwareFlowControl =
+  72              		.loc 1 18 3 is_stmt 1 view .LVU14
+  73              		.loc 1 18 49 is_stmt 0 view .LVU15
+  74 0038 0023     		movs	r3, #0
+  75 003a ADF81030 		strh	r3, [sp, #16]	@ movhi
+  19:./Libraries/src/serial.c ****       USART_HardwareFlowControl_None;
+  20:./Libraries/src/serial.c ****   USART_InitStructure.USART_Mode = USART_Mode_Tx;
+  76              		.loc 1 20 3 is_stmt 1 view .LVU16
+  77              		.loc 1 20 34 is_stmt 0 view .LVU17
+  78 003e 0822     		movs	r2, #8
+  79 0040 ADF80E20 		strh	r2, [sp, #14]	@ movhi
+  21:./Libraries/src/serial.c ****   USART_InitStructure.USART_Parity = USART_Parity_No;
+  80              		.loc 1 21 3 is_stmt 1 view .LVU18
+  81              		.loc 1 21 36 is_stmt 0 view .LVU19
+  82 0044 ADF80C30 		strh	r3, [sp, #12]	@ movhi
+  22:./Libraries/src/serial.c ****   USART_InitStructure.USART_StopBits = USART_StopBits_1;
+  83              		.loc 1 22 3 is_stmt 1 view .LVU20
+  84              		.loc 1 22 38 is_stmt 0 view .LVU21
+  85 0048 ADF80A30 		strh	r3, [sp, #10]	@ movhi
+  23:./Libraries/src/serial.c ****   USART_InitStructure.USART_WordLength = USART_WordLength_8b;
+  86              		.loc 1 23 3 is_stmt 1 view .LVU22
+  87              		.loc 1 23 40 is_stmt 0 view .LVU23
+  88 004c ADF80830 		strh	r3, [sp, #8]	@ movhi
+  24:./Libraries/src/serial.c ****   USART_Init(USART1, &USART_InitStructure);
+  89              		.loc 1 24 3 is_stmt 1 view .LVU24
+  90 0050 064C     		ldr	r4, .L3+4
+  91 0052 01A9     		add	r1, sp, #4
+ARM GAS  /tmp/cccsfQ8U.s 			page 3
+
+
+  92 0054 2046     		mov	r0, r4
+  93 0056 FFF7FEFF 		bl	USART_Init
+  94              	.LVL3:
+  25:./Libraries/src/serial.c **** 
+  26:./Libraries/src/serial.c ****   USART_Cmd(USART1, ENABLE);
+  95              		.loc 1 26 3 view .LVU25
+  96 005a 0121     		movs	r1, #1
+  97 005c 2046     		mov	r0, r4
+  98 005e FFF7FEFF 		bl	USART_Cmd
+  99              	.LVL4:
+  27:./Libraries/src/serial.c **** }
+ 100              		.loc 1 27 1 is_stmt 0 view .LVU26
+ 101 0062 06B0     		add	sp, sp, #24
+ 102              	.LCFI2:
+ 103              		.cfi_def_cfa_offset 8
+ 104              		@ sp needed
+ 105 0064 10BD     		pop	{r4, pc}
+ 106              	.L4:
+ 107 0066 00BF     		.align	2
+ 108              	.L3:
+ 109 0068 00080140 		.word	1073809408
+ 110 006c 00380140 		.word	1073821696
+ 111              		.cfi_endproc
+ 112              	.LFE32:
+ 114              		.section	.text.serial_sendbyte,"ax",%progbits
+ 115              		.align	1
+ 116              		.global	serial_sendbyte
+ 117              		.syntax unified
+ 118              		.thumb
+ 119              		.thumb_func
+ 121              	serial_sendbyte:
+ 122              	.LVL5:
+ 123              	.LFB33:
+  28:./Libraries/src/serial.c **** 
+  29:./Libraries/src/serial.c **** void serial_sendbyte(uint8_t Byte) {
+ 124              		.loc 1 29 36 is_stmt 1 view -0
+ 125              		.cfi_startproc
+ 126              		@ args = 0, pretend = 0, frame = 0
+ 127              		@ frame_needed = 0, uses_anonymous_args = 0
+ 128              		.loc 1 29 36 is_stmt 0 view .LVU28
+ 129 0000 08B5     		push	{r3, lr}
+ 130              	.LCFI3:
+ 131              		.cfi_def_cfa_offset 8
+ 132              		.cfi_offset 3, -8
+ 133              		.cfi_offset 14, -4
+ 134 0002 0146     		mov	r1, r0
+  30:./Libraries/src/serial.c ****   USART_SendData(USART1, Byte);
+ 135              		.loc 1 30 3 is_stmt 1 view .LVU29
+ 136 0004 0448     		ldr	r0, .L8
+ 137              	.LVL6:
+ 138              		.loc 1 30 3 is_stmt 0 view .LVU30
+ 139 0006 FFF7FEFF 		bl	USART_SendData
+ 140              	.LVL7:
+  31:./Libraries/src/serial.c ****   while (USART_GetFlagStatus(USART1, USART_FLAG_TXE) == RESET)
+ 141              		.loc 1 31 3 is_stmt 1 view .LVU31
+ 142              	.L6:
+ 143              		.loc 1 31 54 discriminator 1 view .LVU32
+ARM GAS  /tmp/cccsfQ8U.s 			page 4
+
+
+ 144              		.loc 1 31 10 is_stmt 0 discriminator 1 view .LVU33
+ 145 000a 8021     		movs	r1, #128
+ 146 000c 0248     		ldr	r0, .L8
+ 147 000e FFF7FEFF 		bl	USART_GetFlagStatus
+ 148              	.LVL8:
+ 149              		.loc 1 31 54 discriminator 1 view .LVU34
+ 150 0012 0028     		cmp	r0, #0
+ 151 0014 F9D0     		beq	.L6
+  32:./Libraries/src/serial.c ****     ;
+  33:./Libraries/src/serial.c **** }
+ 152              		.loc 1 33 1 view .LVU35
+ 153 0016 08BD     		pop	{r3, pc}
+ 154              	.L9:
+ 155              		.align	2
+ 156              	.L8:
+ 157 0018 00380140 		.word	1073821696
+ 158              		.cfi_endproc
+ 159              	.LFE33:
+ 161              		.section	.text.serial_sendarray,"ax",%progbits
+ 162              		.align	1
+ 163              		.global	serial_sendarray
+ 164              		.syntax unified
+ 165              		.thumb
+ 166              		.thumb_func
+ 168              	serial_sendarray:
+ 169              	.LVL9:
+ 170              	.LFB34:
+  34:./Libraries/src/serial.c **** 
+  35:./Libraries/src/serial.c **** void serial_sendarray(uint8_t *Array, uint16_t Length) {
+ 171              		.loc 1 35 56 is_stmt 1 view -0
+ 172              		.cfi_startproc
+ 173              		@ args = 0, pretend = 0, frame = 0
+ 174              		@ frame_needed = 0, uses_anonymous_args = 0
+ 175              		.loc 1 35 56 is_stmt 0 view .LVU37
+ 176 0000 70B5     		push	{r4, r5, r6, lr}
+ 177              	.LCFI4:
+ 178              		.cfi_def_cfa_offset 16
+ 179              		.cfi_offset 4, -16
+ 180              		.cfi_offset 5, -12
+ 181              		.cfi_offset 6, -8
+ 182              		.cfi_offset 14, -4
+ 183 0002 0646     		mov	r6, r0
+ 184 0004 0D46     		mov	r5, r1
+  36:./Libraries/src/serial.c ****   uint16_t i;
+ 185              		.loc 1 36 3 is_stmt 1 view .LVU38
+  37:./Libraries/src/serial.c ****   for (i = 0; i < Length; i++) {
+ 186              		.loc 1 37 3 view .LVU39
+ 187              	.LVL10:
+ 188              		.loc 1 37 10 is_stmt 0 view .LVU40
+ 189 0006 0024     		movs	r4, #0
+ 190              		.loc 1 37 3 view .LVU41
+ 191 0008 04E0     		b	.L11
+ 192              	.LVL11:
+ 193              	.L12:
+  38:./Libraries/src/serial.c ****     serial_sendbyte(Array[i]);
+ 194              		.loc 1 38 5 is_stmt 1 view .LVU42
+ 195 000a 305D     		ldrb	r0, [r6, r4]	@ zero_extendqisi2
+ARM GAS  /tmp/cccsfQ8U.s 			page 5
+
+
+ 196 000c FFF7FEFF 		bl	serial_sendbyte
+ 197              	.LVL12:
+  37:./Libraries/src/serial.c ****   for (i = 0; i < Length; i++) {
+ 198              		.loc 1 37 28 discriminator 3 view .LVU43
+ 199 0010 0134     		adds	r4, r4, #1
+ 200              	.LVL13:
+  37:./Libraries/src/serial.c ****   for (i = 0; i < Length; i++) {
+ 201              		.loc 1 37 28 is_stmt 0 discriminator 3 view .LVU44
+ 202 0012 A4B2     		uxth	r4, r4
+ 203              	.LVL14:
+ 204              	.L11:
+  37:./Libraries/src/serial.c ****   for (i = 0; i < Length; i++) {
+ 205              		.loc 1 37 17 is_stmt 1 discriminator 1 view .LVU45
+ 206 0014 AC42     		cmp	r4, r5
+ 207 0016 F8D3     		bcc	.L12
+  39:./Libraries/src/serial.c ****   }
+  40:./Libraries/src/serial.c **** }
+ 208              		.loc 1 40 1 is_stmt 0 view .LVU46
+ 209 0018 70BD     		pop	{r4, r5, r6, pc}
+ 210              		.loc 1 40 1 view .LVU47
+ 211              		.cfi_endproc
+ 212              	.LFE34:
+ 214              		.section	.text.serial_sendstring,"ax",%progbits
+ 215              		.align	1
+ 216              		.global	serial_sendstring
+ 217              		.syntax unified
+ 218              		.thumb
+ 219              		.thumb_func
+ 221              	serial_sendstring:
+ 222              	.LVL15:
+ 223              	.LFB35:
+  41:./Libraries/src/serial.c **** 
+  42:./Libraries/src/serial.c **** void serial_sendstring(char *string) {
+ 224              		.loc 1 42 38 is_stmt 1 view -0
+ 225              		.cfi_startproc
+ 226              		@ args = 0, pretend = 0, frame = 0
+ 227              		@ frame_needed = 0, uses_anonymous_args = 0
+ 228              		.loc 1 42 38 is_stmt 0 view .LVU49
+ 229 0000 38B5     		push	{r3, r4, r5, lr}
+ 230              	.LCFI5:
+ 231              		.cfi_def_cfa_offset 16
+ 232              		.cfi_offset 3, -16
+ 233              		.cfi_offset 4, -12
+ 234              		.cfi_offset 5, -8
+ 235              		.cfi_offset 14, -4
+ 236 0002 0546     		mov	r5, r0
+  43:./Libraries/src/serial.c ****   uint8_t i;
+ 237              		.loc 1 43 3 is_stmt 1 view .LVU50
+  44:./Libraries/src/serial.c ****   for (i = 0; string[i] != '\0'; i++) {
+ 238              		.loc 1 44 3 view .LVU51
+ 239              	.LVL16:
+ 240              		.loc 1 44 10 is_stmt 0 view .LVU52
+ 241 0004 0024     		movs	r4, #0
+ 242              		.loc 1 44 3 view .LVU53
+ 243 0006 03E0     		b	.L15
+ 244              	.LVL17:
+ 245              	.L16:
+ARM GAS  /tmp/cccsfQ8U.s 			page 6
+
+
+  45:./Libraries/src/serial.c ****     serial_sendbyte(string[i]);
+ 246              		.loc 1 45 5 is_stmt 1 view .LVU54
+ 247 0008 FFF7FEFF 		bl	serial_sendbyte
+ 248              	.LVL18:
+  44:./Libraries/src/serial.c ****   for (i = 0; string[i] != '\0'; i++) {
+ 249              		.loc 1 44 35 discriminator 3 view .LVU55
+ 250 000c 0134     		adds	r4, r4, #1
+ 251              	.LVL19:
+  44:./Libraries/src/serial.c ****   for (i = 0; string[i] != '\0'; i++) {
+ 252              		.loc 1 44 35 is_stmt 0 discriminator 3 view .LVU56
+ 253 000e E4B2     		uxtb	r4, r4
+ 254              	.LVL20:
+ 255              	.L15:
+  44:./Libraries/src/serial.c ****   for (i = 0; string[i] != '\0'; i++) {
+ 256              		.loc 1 44 25 is_stmt 1 discriminator 1 view .LVU57
+  44:./Libraries/src/serial.c ****   for (i = 0; string[i] != '\0'; i++) {
+ 257              		.loc 1 44 21 is_stmt 0 discriminator 1 view .LVU58
+ 258 0010 285D     		ldrb	r0, [r5, r4]	@ zero_extendqisi2
+  44:./Libraries/src/serial.c ****   for (i = 0; string[i] != '\0'; i++) {
+ 259              		.loc 1 44 25 discriminator 1 view .LVU59
+ 260 0012 0028     		cmp	r0, #0
+ 261 0014 F8D1     		bne	.L16
+  46:./Libraries/src/serial.c ****   }
+  47:./Libraries/src/serial.c **** }
+ 262              		.loc 1 47 1 view .LVU60
+ 263 0016 38BD     		pop	{r3, r4, r5, pc}
+ 264              		.loc 1 47 1 view .LVU61
+ 265              		.cfi_endproc
+ 266              	.LFE35:
+ 268              		.section	.text.serial_pow,"ax",%progbits
+ 269              		.align	1
+ 270              		.global	serial_pow
+ 271              		.syntax unified
+ 272              		.thumb
+ 273              		.thumb_func
+ 275              	serial_pow:
+ 276              	.LVL21:
+ 277              	.LFB36:
+  48:./Libraries/src/serial.c **** 
+  49:./Libraries/src/serial.c **** uint32_t serial_pow(uint32_t X, uint32_t Y) {
+ 278              		.loc 1 49 45 is_stmt 1 view -0
+ 279              		.cfi_startproc
+ 280              		@ args = 0, pretend = 0, frame = 0
+ 281              		@ frame_needed = 0, uses_anonymous_args = 0
+ 282              		@ link register save eliminated.
+ 283              		.loc 1 49 45 is_stmt 0 view .LVU63
+ 284 0000 0246     		mov	r2, r0
+  50:./Libraries/src/serial.c ****   uint32_t Result = 1;
+ 285              		.loc 1 50 3 is_stmt 1 view .LVU64
+ 286              	.LVL22:
+  51:./Libraries/src/serial.c ****   while (Y--) {
+ 287              		.loc 1 51 3 view .LVU65
+  50:./Libraries/src/serial.c ****   uint32_t Result = 1;
+ 288              		.loc 1 50 12 is_stmt 0 view .LVU66
+ 289 0002 0120     		movs	r0, #1
+ 290              	.LVL23:
+ 291              		.loc 1 51 9 view .LVU67
+ARM GAS  /tmp/cccsfQ8U.s 			page 7
+
+
+ 292 0004 02E0     		b	.L19
+ 293              	.LVL24:
+ 294              	.L20:
+  52:./Libraries/src/serial.c ****     Result *= X;
+ 295              		.loc 1 52 5 is_stmt 1 view .LVU68
+ 296              		.loc 1 52 12 is_stmt 0 view .LVU69
+ 297 0006 02FB00F0 		mul	r0, r2, r0
+ 298              	.LVL25:
+  51:./Libraries/src/serial.c ****   while (Y--) {
+ 299              		.loc 1 51 11 view .LVU70
+ 300 000a 1946     		mov	r1, r3
+ 301              	.LVL26:
+ 302              	.L19:
+  51:./Libraries/src/serial.c ****   while (Y--) {
+ 303              		.loc 1 51 10 is_stmt 1 view .LVU71
+  51:./Libraries/src/serial.c ****   while (Y--) {
+ 304              		.loc 1 51 11 is_stmt 0 view .LVU72
+ 305 000c 4B1E     		subs	r3, r1, #1
+ 306              	.LVL27:
+  51:./Libraries/src/serial.c ****   while (Y--) {
+ 307              		.loc 1 51 10 view .LVU73
+ 308 000e 0029     		cmp	r1, #0
+ 309 0010 F9D1     		bne	.L20
+  53:./Libraries/src/serial.c ****   }
+  54:./Libraries/src/serial.c ****   return Result;
+ 310              		.loc 1 54 3 is_stmt 1 view .LVU74
+  55:./Libraries/src/serial.c **** }
+ 311              		.loc 1 55 1 is_stmt 0 view .LVU75
+ 312 0012 7047     		bx	lr
+ 313              		.cfi_endproc
+ 314              	.LFE36:
+ 316              		.section	.text.serial_sendnumber,"ax",%progbits
+ 317              		.align	1
+ 318              		.global	serial_sendnumber
+ 319              		.syntax unified
+ 320              		.thumb
+ 321              		.thumb_func
+ 323              	serial_sendnumber:
+ 324              	.LVL28:
+ 325              	.LFB37:
+  56:./Libraries/src/serial.c **** 
+  57:./Libraries/src/serial.c **** void serial_sendnumber(uint32_t Number, uint8_t Length) {
+ 326              		.loc 1 57 57 is_stmt 1 view -0
+ 327              		.cfi_startproc
+ 328              		@ args = 0, pretend = 0, frame = 0
+ 329              		@ frame_needed = 0, uses_anonymous_args = 0
+ 330              		.loc 1 57 57 is_stmt 0 view .LVU77
+ 331 0000 70B5     		push	{r4, r5, r6, lr}
+ 332              	.LCFI6:
+ 333              		.cfi_def_cfa_offset 16
+ 334              		.cfi_offset 4, -16
+ 335              		.cfi_offset 5, -12
+ 336              		.cfi_offset 6, -8
+ 337              		.cfi_offset 14, -4
+ 338 0002 0646     		mov	r6, r0
+ 339 0004 0D46     		mov	r5, r1
+  58:./Libraries/src/serial.c ****   uint8_t i;
+ARM GAS  /tmp/cccsfQ8U.s 			page 8
+
+
+ 340              		.loc 1 58 3 is_stmt 1 view .LVU78
+  59:./Libraries/src/serial.c ****   for (i = 0; i < Length; i++) {
+ 341              		.loc 1 59 3 view .LVU79
+ 342              	.LVL29:
+ 343              		.loc 1 59 10 is_stmt 0 view .LVU80
+ 344 0006 0024     		movs	r4, #0
+ 345              		.loc 1 59 3 view .LVU81
+ 346 0008 14E0     		b	.L22
+ 347              	.LVL30:
+ 348              	.L23:
+  60:./Libraries/src/serial.c ****     serial_sendbyte(Number / serial_pow(10, Length - i - 1) % 10 + '0');
+ 349              		.loc 1 60 5 is_stmt 1 view .LVU82
+ 350              		.loc 1 60 52 is_stmt 0 view .LVU83
+ 351 000a 291B     		subs	r1, r5, r4
+ 352              		.loc 1 60 30 view .LVU84
+ 353 000c 0139     		subs	r1, r1, #1
+ 354 000e 0A20     		movs	r0, #10
+ 355 0010 FFF7FEFF 		bl	serial_pow
+ 356              	.LVL31:
+ 357              		.loc 1 60 28 discriminator 1 view .LVU85
+ 358 0014 B6FBF0F0 		udiv	r0, r6, r0
+ 359              		.loc 1 60 61 discriminator 1 view .LVU86
+ 360 0018 084B     		ldr	r3, .L25
+ 361 001a A3FB0023 		umull	r2, r3, r3, r0
+ 362 001e DB08     		lsrs	r3, r3, #3
+ 363 0020 03EB8303 		add	r3, r3, r3, lsl #2
+ 364 0024 A0EB4303 		sub	r3, r0, r3, lsl #1
+ 365              		.loc 1 60 5 discriminator 1 view .LVU87
+ 366 0028 3033     		adds	r3, r3, #48
+ 367 002a D8B2     		uxtb	r0, r3
+ 368 002c FFF7FEFF 		bl	serial_sendbyte
+ 369              	.LVL32:
+  59:./Libraries/src/serial.c ****   for (i = 0; i < Length; i++) {
+ 370              		.loc 1 59 28 is_stmt 1 discriminator 3 view .LVU88
+ 371 0030 0134     		adds	r4, r4, #1
+ 372              	.LVL33:
+  59:./Libraries/src/serial.c ****   for (i = 0; i < Length; i++) {
+ 373              		.loc 1 59 28 is_stmt 0 discriminator 3 view .LVU89
+ 374 0032 E4B2     		uxtb	r4, r4
+ 375              	.LVL34:
+ 376              	.L22:
+  59:./Libraries/src/serial.c ****   for (i = 0; i < Length; i++) {
+ 377              		.loc 1 59 17 is_stmt 1 discriminator 1 view .LVU90
+ 378 0034 AC42     		cmp	r4, r5
+ 379 0036 E8D3     		bcc	.L23
+  61:./Libraries/src/serial.c ****   }
+  62:./Libraries/src/serial.c **** }
+ 380              		.loc 1 62 1 is_stmt 0 view .LVU91
+ 381 0038 70BD     		pop	{r4, r5, r6, pc}
+ 382              	.LVL35:
+ 383              	.L26:
+ 384              		.loc 1 62 1 view .LVU92
+ 385 003a 00BF     		.align	2
+ 386              	.L25:
+ 387 003c CDCCCCCC 		.word	-858993459
+ 388              		.cfi_endproc
+ 389              	.LFE37:
+ARM GAS  /tmp/cccsfQ8U.s 			page 9
+
+
+ 391              		.section	.text.fputc,"ax",%progbits
+ 392              		.align	1
+ 393              		.global	fputc
+ 394              		.syntax unified
+ 395              		.thumb
+ 396              		.thumb_func
+ 398              	fputc:
+ 399              	.LVL36:
+ 400              	.LFB38:
+  63:./Libraries/src/serial.c **** 
+  64:./Libraries/src/serial.c **** int fputc(int ch, FILE *f) {
+ 401              		.loc 1 64 28 is_stmt 1 view -0
+ 402              		.cfi_startproc
+ 403              		@ args = 0, pretend = 0, frame = 0
+ 404              		@ frame_needed = 0, uses_anonymous_args = 0
+ 405              		.loc 1 64 28 is_stmt 0 view .LVU94
+ 406 0000 10B5     		push	{r4, lr}
+ 407              	.LCFI7:
+ 408              		.cfi_def_cfa_offset 8
+ 409              		.cfi_offset 4, -8
+ 410              		.cfi_offset 14, -4
+ 411 0002 0446     		mov	r4, r0
+  65:./Libraries/src/serial.c ****   serial_sendbyte(ch);
+ 412              		.loc 1 65 3 is_stmt 1 view .LVU95
+ 413 0004 C0B2     		uxtb	r0, r0
+ 414              	.LVL37:
+ 415              		.loc 1 65 3 is_stmt 0 view .LVU96
+ 416 0006 FFF7FEFF 		bl	serial_sendbyte
+ 417              	.LVL38:
+  66:./Libraries/src/serial.c ****   return ch;
+ 418              		.loc 1 66 3 is_stmt 1 view .LVU97
+  67:./Libraries/src/serial.c **** }
+ 419              		.loc 1 67 1 is_stmt 0 view .LVU98
+ 420 000a 2046     		mov	r0, r4
+ 421 000c 10BD     		pop	{r4, pc}
+ 422              		.loc 1 67 1 view .LVU99
+ 423              		.cfi_endproc
+ 424              	.LFE38:
+ 426              		.text
+ 427              	.Letext0:
+ 428              		.file 2 "/usr/arm-none-eabi/include/machine/_default_types.h"
+ 429              		.file 3 "/usr/arm-none-eabi/include/sys/_stdint.h"
+ 430              		.file 4 "cmsis/stm32f10x.h"
+ 431              		.file 5 "Drivers/inc/stm32f10x_gpio.h"
+ 432              		.file 6 "Drivers/inc/stm32f10x_usart.h"
+ 433              		.file 7 "/usr/lib/gcc/arm-none-eabi/14.2.0/include/stddef.h"
+ 434              		.file 8 "/usr/arm-none-eabi/include/sys/_types.h"
+ 435              		.file 9 "/usr/arm-none-eabi/include/sys/reent.h"
+ 436              		.file 10 "/usr/arm-none-eabi/include/sys/lock.h"
+ 437              		.file 11 "/usr/arm-none-eabi/include/stdio.h"
+ 438              		.file 12 "Drivers/inc/stm32f10x_rcc.h"
+ARM GAS  /tmp/cccsfQ8U.s 			page 10
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 serial.c
+     /tmp/cccsfQ8U.s:19     .text.serial_init:00000000 $t
+     /tmp/cccsfQ8U.s:25     .text.serial_init:00000000 serial_init
+     /tmp/cccsfQ8U.s:109    .text.serial_init:00000068 $d
+     /tmp/cccsfQ8U.s:115    .text.serial_sendbyte:00000000 $t
+     /tmp/cccsfQ8U.s:121    .text.serial_sendbyte:00000000 serial_sendbyte
+     /tmp/cccsfQ8U.s:157    .text.serial_sendbyte:00000018 $d
+     /tmp/cccsfQ8U.s:162    .text.serial_sendarray:00000000 $t
+     /tmp/cccsfQ8U.s:168    .text.serial_sendarray:00000000 serial_sendarray
+     /tmp/cccsfQ8U.s:215    .text.serial_sendstring:00000000 $t
+     /tmp/cccsfQ8U.s:221    .text.serial_sendstring:00000000 serial_sendstring
+     /tmp/cccsfQ8U.s:269    .text.serial_pow:00000000 $t
+     /tmp/cccsfQ8U.s:275    .text.serial_pow:00000000 serial_pow
+     /tmp/cccsfQ8U.s:317    .text.serial_sendnumber:00000000 $t
+     /tmp/cccsfQ8U.s:323    .text.serial_sendnumber:00000000 serial_sendnumber
+     /tmp/cccsfQ8U.s:387    .text.serial_sendnumber:0000003c $d
+     /tmp/cccsfQ8U.s:392    .text.fputc:00000000 $t
+     /tmp/cccsfQ8U.s:398    .text.fputc:00000000 fputc
+
+UNDEFINED SYMBOLS
+RCC_APB2PeriphClockCmd
+GPIO_Init
+USART_Init
+USART_Cmd
+USART_SendData
+USART_GetFlagStatus

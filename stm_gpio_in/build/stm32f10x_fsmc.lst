@@ -1,0 +1,2714 @@
+ARM GAS  /tmp/ccfyTdtx.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.arch armv7-m
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"stm32f10x_fsmc.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.file 1 "./Drivers/src/stm32f10x_fsmc.c"
+  18              		.section	.text.FSMC_NORSRAMDeInit,"ax",%progbits
+  19              		.align	1
+  20              		.global	FSMC_NORSRAMDeInit
+  21              		.syntax unified
+  22              		.thumb
+  23              		.thumb_func
+  25              	FSMC_NORSRAMDeInit:
+  26              	.LVL0:
+  27              	.LFB29:
+   1:./Drivers/src/stm32f10x_fsmc.c **** /**
+   2:./Drivers/src/stm32f10x_fsmc.c ****   ******************************************************************************
+   3:./Drivers/src/stm32f10x_fsmc.c ****   * @file    stm32f10x_fsmc.c
+   4:./Drivers/src/stm32f10x_fsmc.c ****   * @author  MCD Application Team
+   5:./Drivers/src/stm32f10x_fsmc.c ****   * @version V3.6.2
+   6:./Drivers/src/stm32f10x_fsmc.c ****   * @date    17-September-2021
+   7:./Drivers/src/stm32f10x_fsmc.c ****   * @brief   This file provides all the FSMC firmware functions.
+   8:./Drivers/src/stm32f10x_fsmc.c ****   ******************************************************************************
+   9:./Drivers/src/stm32f10x_fsmc.c ****   * @attention
+  10:./Drivers/src/stm32f10x_fsmc.c ****   *
+  11:./Drivers/src/stm32f10x_fsmc.c ****   * Copyright (c) 2012 STMicroelectronics.
+  12:./Drivers/src/stm32f10x_fsmc.c ****   * All rights reserved.
+  13:./Drivers/src/stm32f10x_fsmc.c ****   *
+  14:./Drivers/src/stm32f10x_fsmc.c ****   * This software is licensed under terms that can be found in the LICENSE file
+  15:./Drivers/src/stm32f10x_fsmc.c ****   * in the root directory of this software component.
+  16:./Drivers/src/stm32f10x_fsmc.c ****   * If no LICENSE file comes with this software, it is provided AS-IS.
+  17:./Drivers/src/stm32f10x_fsmc.c ****   *
+  18:./Drivers/src/stm32f10x_fsmc.c ****   ******************************************************************************
+  19:./Drivers/src/stm32f10x_fsmc.c ****   */
+  20:./Drivers/src/stm32f10x_fsmc.c **** 
+  21:./Drivers/src/stm32f10x_fsmc.c **** /* Includes ------------------------------------------------------------------*/
+  22:./Drivers/src/stm32f10x_fsmc.c **** #include "stm32f10x_fsmc.h"
+  23:./Drivers/src/stm32f10x_fsmc.c **** #include "stm32f10x_rcc.h"
+  24:./Drivers/src/stm32f10x_fsmc.c **** 
+  25:./Drivers/src/stm32f10x_fsmc.c **** /** @addtogroup STM32F10x_StdPeriph_Driver
+  26:./Drivers/src/stm32f10x_fsmc.c ****   * @{
+  27:./Drivers/src/stm32f10x_fsmc.c ****   */
+  28:./Drivers/src/stm32f10x_fsmc.c **** 
+  29:./Drivers/src/stm32f10x_fsmc.c **** /** @defgroup FSMC 
+  30:./Drivers/src/stm32f10x_fsmc.c ****   * @brief FSMC driver modules
+  31:./Drivers/src/stm32f10x_fsmc.c ****   * @{
+ARM GAS  /tmp/ccfyTdtx.s 			page 2
+
+
+  32:./Drivers/src/stm32f10x_fsmc.c ****   */ 
+  33:./Drivers/src/stm32f10x_fsmc.c **** 
+  34:./Drivers/src/stm32f10x_fsmc.c **** /** @defgroup FSMC_Private_TypesDefinitions
+  35:./Drivers/src/stm32f10x_fsmc.c ****   * @{
+  36:./Drivers/src/stm32f10x_fsmc.c ****   */ 
+  37:./Drivers/src/stm32f10x_fsmc.c **** /**
+  38:./Drivers/src/stm32f10x_fsmc.c ****   * @}
+  39:./Drivers/src/stm32f10x_fsmc.c ****   */
+  40:./Drivers/src/stm32f10x_fsmc.c **** 
+  41:./Drivers/src/stm32f10x_fsmc.c **** /** @defgroup FSMC_Private_Defines
+  42:./Drivers/src/stm32f10x_fsmc.c ****   * @{
+  43:./Drivers/src/stm32f10x_fsmc.c ****   */
+  44:./Drivers/src/stm32f10x_fsmc.c **** 
+  45:./Drivers/src/stm32f10x_fsmc.c **** /* --------------------- FSMC registers bit mask ---------------------------- */
+  46:./Drivers/src/stm32f10x_fsmc.c **** 
+  47:./Drivers/src/stm32f10x_fsmc.c **** /* FSMC BCRx Mask */
+  48:./Drivers/src/stm32f10x_fsmc.c **** #define BCR_MBKEN_Set                       ((uint32_t)0x00000001)
+  49:./Drivers/src/stm32f10x_fsmc.c **** #define BCR_MBKEN_Reset                     ((uint32_t)0x000FFFFE)
+  50:./Drivers/src/stm32f10x_fsmc.c **** #define BCR_FACCEN_Set                      ((uint32_t)0x00000040)
+  51:./Drivers/src/stm32f10x_fsmc.c **** 
+  52:./Drivers/src/stm32f10x_fsmc.c **** /* FSMC PCRx Mask */
+  53:./Drivers/src/stm32f10x_fsmc.c **** #define PCR_PBKEN_Set                       ((uint32_t)0x00000004)
+  54:./Drivers/src/stm32f10x_fsmc.c **** #define PCR_PBKEN_Reset                     ((uint32_t)0x000FFFFB)
+  55:./Drivers/src/stm32f10x_fsmc.c **** #define PCR_ECCEN_Set                       ((uint32_t)0x00000040)
+  56:./Drivers/src/stm32f10x_fsmc.c **** #define PCR_ECCEN_Reset                     ((uint32_t)0x000FFFBF)
+  57:./Drivers/src/stm32f10x_fsmc.c **** #define PCR_MemoryType_NAND                 ((uint32_t)0x00000008)
+  58:./Drivers/src/stm32f10x_fsmc.c **** /**
+  59:./Drivers/src/stm32f10x_fsmc.c ****   * @}
+  60:./Drivers/src/stm32f10x_fsmc.c ****   */
+  61:./Drivers/src/stm32f10x_fsmc.c **** 
+  62:./Drivers/src/stm32f10x_fsmc.c **** /** @defgroup FSMC_Private_Macros
+  63:./Drivers/src/stm32f10x_fsmc.c ****   * @{
+  64:./Drivers/src/stm32f10x_fsmc.c ****   */
+  65:./Drivers/src/stm32f10x_fsmc.c **** 
+  66:./Drivers/src/stm32f10x_fsmc.c **** /**
+  67:./Drivers/src/stm32f10x_fsmc.c ****   * @}
+  68:./Drivers/src/stm32f10x_fsmc.c ****   */
+  69:./Drivers/src/stm32f10x_fsmc.c **** 
+  70:./Drivers/src/stm32f10x_fsmc.c **** /** @defgroup FSMC_Private_Variables
+  71:./Drivers/src/stm32f10x_fsmc.c ****   * @{
+  72:./Drivers/src/stm32f10x_fsmc.c ****   */
+  73:./Drivers/src/stm32f10x_fsmc.c **** 
+  74:./Drivers/src/stm32f10x_fsmc.c **** /**
+  75:./Drivers/src/stm32f10x_fsmc.c ****   * @}
+  76:./Drivers/src/stm32f10x_fsmc.c ****   */
+  77:./Drivers/src/stm32f10x_fsmc.c **** 
+  78:./Drivers/src/stm32f10x_fsmc.c **** /** @defgroup FSMC_Private_FunctionPrototypes
+  79:./Drivers/src/stm32f10x_fsmc.c ****   * @{
+  80:./Drivers/src/stm32f10x_fsmc.c ****   */
+  81:./Drivers/src/stm32f10x_fsmc.c **** 
+  82:./Drivers/src/stm32f10x_fsmc.c **** /**
+  83:./Drivers/src/stm32f10x_fsmc.c ****   * @}
+  84:./Drivers/src/stm32f10x_fsmc.c ****   */
+  85:./Drivers/src/stm32f10x_fsmc.c **** 
+  86:./Drivers/src/stm32f10x_fsmc.c **** /** @defgroup FSMC_Private_Functions
+  87:./Drivers/src/stm32f10x_fsmc.c ****   * @{
+  88:./Drivers/src/stm32f10x_fsmc.c ****   */
+ARM GAS  /tmp/ccfyTdtx.s 			page 3
+
+
+  89:./Drivers/src/stm32f10x_fsmc.c **** 
+  90:./Drivers/src/stm32f10x_fsmc.c **** /**
+  91:./Drivers/src/stm32f10x_fsmc.c ****   * @brief  Deinitializes the FSMC NOR/SRAM Banks registers to their default 
+  92:./Drivers/src/stm32f10x_fsmc.c ****   *         reset values.
+  93:./Drivers/src/stm32f10x_fsmc.c ****   * @param  FSMC_Bank: specifies the FSMC Bank to be used
+  94:./Drivers/src/stm32f10x_fsmc.c ****   *   This parameter can be one of the following values:
+  95:./Drivers/src/stm32f10x_fsmc.c ****   *     @arg FSMC_Bank1_NORSRAM1: FSMC Bank1 NOR/SRAM1  
+  96:./Drivers/src/stm32f10x_fsmc.c ****   *     @arg FSMC_Bank1_NORSRAM2: FSMC Bank1 NOR/SRAM2 
+  97:./Drivers/src/stm32f10x_fsmc.c ****   *     @arg FSMC_Bank1_NORSRAM3: FSMC Bank1 NOR/SRAM3 
+  98:./Drivers/src/stm32f10x_fsmc.c ****   *     @arg FSMC_Bank1_NORSRAM4: FSMC Bank1 NOR/SRAM4 
+  99:./Drivers/src/stm32f10x_fsmc.c ****   * @retval None
+ 100:./Drivers/src/stm32f10x_fsmc.c ****   */
+ 101:./Drivers/src/stm32f10x_fsmc.c **** void FSMC_NORSRAMDeInit(uint32_t FSMC_Bank)
+ 102:./Drivers/src/stm32f10x_fsmc.c **** {
+  28              		.loc 1 102 1 view -0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		@ link register save eliminated.
+ 103:./Drivers/src/stm32f10x_fsmc.c ****   /* Check the parameter */
+ 104:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_NORSRAM_BANK(FSMC_Bank));
+  33              		.loc 1 104 3 view .LVU1
+ 105:./Drivers/src/stm32f10x_fsmc.c ****   
+ 106:./Drivers/src/stm32f10x_fsmc.c ****   /* FSMC_Bank1_NORSRAM1 */
+ 107:./Drivers/src/stm32f10x_fsmc.c ****   if(FSMC_Bank == FSMC_Bank1_NORSRAM1)
+  34              		.loc 1 107 3 view .LVU2
+  35              		.loc 1 107 5 is_stmt 0 view .LVU3
+  36 0000 0346     		mov	r3, r0
+  37 0002 88B9     		cbnz	r0, .L2
+ 108:./Drivers/src/stm32f10x_fsmc.c ****   {
+ 109:./Drivers/src/stm32f10x_fsmc.c ****     FSMC_Bank1->BTCR[FSMC_Bank] = 0x000030DB;    
+  38              		.loc 1 109 5 is_stmt 1 view .LVU4
+  39              		.loc 1 109 33 is_stmt 0 view .LVU5
+  40 0004 4FF02042 		mov	r2, #-1610612736
+  41 0008 43F2DB01 		movw	r1, #12507
+  42 000c 42F82010 		str	r1, [r2, r0, lsl #2]
+  43              	.L3:
+ 110:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 111:./Drivers/src/stm32f10x_fsmc.c ****   /* FSMC_Bank1_NORSRAM2,  FSMC_Bank1_NORSRAM3 or FSMC_Bank1_NORSRAM4 */
+ 112:./Drivers/src/stm32f10x_fsmc.c ****   else
+ 113:./Drivers/src/stm32f10x_fsmc.c ****   {   
+ 114:./Drivers/src/stm32f10x_fsmc.c ****     FSMC_Bank1->BTCR[FSMC_Bank] = 0x000030D2; 
+ 115:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 116:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_Bank1->BTCR[FSMC_Bank + 1] = 0x0FFFFFFF;
+  44              		.loc 1 116 3 is_stmt 1 view .LVU6
+  45              		.loc 1 116 30 is_stmt 0 view .LVU7
+  46 0010 581C     		adds	r0, r3, #1
+  47              	.LVL1:
+  48              		.loc 1 116 35 view .LVU8
+  49 0012 6FF07042 		mvn	r2, #-268435456
+  50 0016 4FF02041 		mov	r1, #-1610612736
+  51 001a 41F82020 		str	r2, [r1, r0, lsl #2]
+ 117:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_Bank1E->BWTR[FSMC_Bank] = 0x0FFFFFFF;  
+  52              		.loc 1 117 3 is_stmt 1 view .LVU9
+  53              		.loc 1 117 32 is_stmt 0 view .LVU10
+  54 001e 9B00     		lsls	r3, r3, #2
+  55              	.LVL2:
+ARM GAS  /tmp/ccfyTdtx.s 			page 4
+
+
+  56              		.loc 1 117 32 view .LVU11
+  57 0020 0B44     		add	r3, r3, r1
+  58 0022 C3F80421 		str	r2, [r3, #260]
+ 118:./Drivers/src/stm32f10x_fsmc.c **** }
+  59              		.loc 1 118 1 view .LVU12
+  60 0026 7047     		bx	lr
+  61              	.LVL3:
+  62              	.L2:
+ 114:./Drivers/src/stm32f10x_fsmc.c ****   }
+  63              		.loc 1 114 5 is_stmt 1 view .LVU13
+ 114:./Drivers/src/stm32f10x_fsmc.c ****   }
+  64              		.loc 1 114 33 is_stmt 0 view .LVU14
+  65 0028 4FF02042 		mov	r2, #-1610612736
+  66 002c 43F2D201 		movw	r1, #12498
+  67 0030 42F82010 		str	r1, [r2, r0, lsl #2]
+  68 0034 ECE7     		b	.L3
+  69              		.cfi_endproc
+  70              	.LFE29:
+  72              		.section	.text.FSMC_NANDDeInit,"ax",%progbits
+  73              		.align	1
+  74              		.global	FSMC_NANDDeInit
+  75              		.syntax unified
+  76              		.thumb
+  77              		.thumb_func
+  79              	FSMC_NANDDeInit:
+  80              	.LVL4:
+  81              	.LFB30:
+ 119:./Drivers/src/stm32f10x_fsmc.c **** 
+ 120:./Drivers/src/stm32f10x_fsmc.c **** /**
+ 121:./Drivers/src/stm32f10x_fsmc.c ****   * @brief  Deinitializes the FSMC NAND Banks registers to their default reset values.
+ 122:./Drivers/src/stm32f10x_fsmc.c ****   * @param  FSMC_Bank: specifies the FSMC Bank to be used
+ 123:./Drivers/src/stm32f10x_fsmc.c ****   *   This parameter can be one of the following values:
+ 124:./Drivers/src/stm32f10x_fsmc.c ****   *     @arg FSMC_Bank2_NAND: FSMC Bank2 NAND 
+ 125:./Drivers/src/stm32f10x_fsmc.c ****   *     @arg FSMC_Bank3_NAND: FSMC Bank3 NAND 
+ 126:./Drivers/src/stm32f10x_fsmc.c ****   * @retval None
+ 127:./Drivers/src/stm32f10x_fsmc.c ****   */
+ 128:./Drivers/src/stm32f10x_fsmc.c **** void FSMC_NANDDeInit(uint32_t FSMC_Bank)
+ 129:./Drivers/src/stm32f10x_fsmc.c **** {
+  82              		.loc 1 129 1 is_stmt 1 view -0
+  83              		.cfi_startproc
+  84              		@ args = 0, pretend = 0, frame = 0
+  85              		@ frame_needed = 0, uses_anonymous_args = 0
+  86              		@ link register save eliminated.
+ 130:./Drivers/src/stm32f10x_fsmc.c ****   /* Check the parameter */
+ 131:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_NAND_BANK(FSMC_Bank));
+  87              		.loc 1 131 3 view .LVU16
+ 132:./Drivers/src/stm32f10x_fsmc.c ****   
+ 133:./Drivers/src/stm32f10x_fsmc.c ****   if(FSMC_Bank == FSMC_Bank2_NAND)
+  88              		.loc 1 133 3 view .LVU17
+  89              		.loc 1 133 5 is_stmt 0 view .LVU18
+  90 0000 1028     		cmp	r0, #16
+  91 0002 0ED0     		beq	.L7
+ 134:./Drivers/src/stm32f10x_fsmc.c ****   {
+ 135:./Drivers/src/stm32f10x_fsmc.c ****     /* Set the FSMC_Bank2 registers to their reset values */
+ 136:./Drivers/src/stm32f10x_fsmc.c ****     FSMC_Bank2->PCR2 = 0x00000018;
+ 137:./Drivers/src/stm32f10x_fsmc.c ****     FSMC_Bank2->SR2 = 0x00000040;
+ 138:./Drivers/src/stm32f10x_fsmc.c ****     FSMC_Bank2->PMEM2 = 0xFCFCFCFC;
+ARM GAS  /tmp/ccfyTdtx.s 			page 5
+
+
+ 139:./Drivers/src/stm32f10x_fsmc.c ****     FSMC_Bank2->PATT2 = 0xFCFCFCFC;  
+ 140:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 141:./Drivers/src/stm32f10x_fsmc.c ****   /* FSMC_Bank3_NAND */  
+ 142:./Drivers/src/stm32f10x_fsmc.c ****   else
+ 143:./Drivers/src/stm32f10x_fsmc.c ****   {
+ 144:./Drivers/src/stm32f10x_fsmc.c ****     /* Set the FSMC_Bank3 registers to their reset values */
+ 145:./Drivers/src/stm32f10x_fsmc.c ****     FSMC_Bank3->PCR3 = 0x00000018;
+  92              		.loc 1 145 5 is_stmt 1 view .LVU19
+  93              		.loc 1 145 22 is_stmt 0 view .LVU20
+  94 0004 4FF02043 		mov	r3, #-1610612736
+  95 0008 1822     		movs	r2, #24
+  96 000a C3F88020 		str	r2, [r3, #128]
+ 146:./Drivers/src/stm32f10x_fsmc.c ****     FSMC_Bank3->SR3 = 0x00000040;
+  97              		.loc 1 146 5 is_stmt 1 view .LVU21
+  98              		.loc 1 146 21 is_stmt 0 view .LVU22
+  99 000e 4022     		movs	r2, #64
+ 100 0010 C3F88420 		str	r2, [r3, #132]
+ 147:./Drivers/src/stm32f10x_fsmc.c ****     FSMC_Bank3->PMEM3 = 0xFCFCFCFC;
+ 101              		.loc 1 147 5 is_stmt 1 view .LVU23
+ 102              		.loc 1 147 23 is_stmt 0 view .LVU24
+ 103 0014 4FF0FC32 		mov	r2, #-50529028
+ 104 0018 C3F88820 		str	r2, [r3, #136]
+ 148:./Drivers/src/stm32f10x_fsmc.c ****     FSMC_Bank3->PATT3 = 0xFCFCFCFC; 
+ 105              		.loc 1 148 5 is_stmt 1 view .LVU25
+ 106              		.loc 1 148 23 is_stmt 0 view .LVU26
+ 107 001c C3F88C20 		str	r2, [r3, #140]
+ 149:./Drivers/src/stm32f10x_fsmc.c ****   }  
+ 150:./Drivers/src/stm32f10x_fsmc.c **** }
+ 108              		.loc 1 150 1 view .LVU27
+ 109 0020 7047     		bx	lr
+ 110              	.L7:
+ 136:./Drivers/src/stm32f10x_fsmc.c ****     FSMC_Bank2->SR2 = 0x00000040;
+ 111              		.loc 1 136 5 is_stmt 1 view .LVU28
+ 136:./Drivers/src/stm32f10x_fsmc.c ****     FSMC_Bank2->SR2 = 0x00000040;
+ 112              		.loc 1 136 22 is_stmt 0 view .LVU29
+ 113 0022 4FF02043 		mov	r3, #-1610612736
+ 114 0026 1822     		movs	r2, #24
+ 115 0028 1A66     		str	r2, [r3, #96]
+ 137:./Drivers/src/stm32f10x_fsmc.c ****     FSMC_Bank2->PMEM2 = 0xFCFCFCFC;
+ 116              		.loc 1 137 5 is_stmt 1 view .LVU30
+ 137:./Drivers/src/stm32f10x_fsmc.c ****     FSMC_Bank2->PMEM2 = 0xFCFCFCFC;
+ 117              		.loc 1 137 21 is_stmt 0 view .LVU31
+ 118 002a 4022     		movs	r2, #64
+ 119 002c 5A66     		str	r2, [r3, #100]
+ 138:./Drivers/src/stm32f10x_fsmc.c ****     FSMC_Bank2->PATT2 = 0xFCFCFCFC;  
+ 120              		.loc 1 138 5 is_stmt 1 view .LVU32
+ 138:./Drivers/src/stm32f10x_fsmc.c ****     FSMC_Bank2->PATT2 = 0xFCFCFCFC;  
+ 121              		.loc 1 138 23 is_stmt 0 view .LVU33
+ 122 002e 4FF0FC32 		mov	r2, #-50529028
+ 123 0032 9A66     		str	r2, [r3, #104]
+ 139:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 124              		.loc 1 139 5 is_stmt 1 view .LVU34
+ 139:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 125              		.loc 1 139 23 is_stmt 0 view .LVU35
+ 126 0034 DA66     		str	r2, [r3, #108]
+ 127 0036 7047     		bx	lr
+ 128              		.cfi_endproc
+ARM GAS  /tmp/ccfyTdtx.s 			page 6
+
+
+ 129              	.LFE30:
+ 131              		.section	.text.FSMC_PCCARDDeInit,"ax",%progbits
+ 132              		.align	1
+ 133              		.global	FSMC_PCCARDDeInit
+ 134              		.syntax unified
+ 135              		.thumb
+ 136              		.thumb_func
+ 138              	FSMC_PCCARDDeInit:
+ 139              	.LFB31:
+ 151:./Drivers/src/stm32f10x_fsmc.c **** 
+ 152:./Drivers/src/stm32f10x_fsmc.c **** /**
+ 153:./Drivers/src/stm32f10x_fsmc.c ****   * @brief  Deinitializes the FSMC PCCARD Bank registers to their default reset values.
+ 154:./Drivers/src/stm32f10x_fsmc.c ****   * @param  None                       
+ 155:./Drivers/src/stm32f10x_fsmc.c ****   * @retval None
+ 156:./Drivers/src/stm32f10x_fsmc.c ****   */
+ 157:./Drivers/src/stm32f10x_fsmc.c **** void FSMC_PCCARDDeInit(void)
+ 158:./Drivers/src/stm32f10x_fsmc.c **** {
+ 140              		.loc 1 158 1 is_stmt 1 view -0
+ 141              		.cfi_startproc
+ 142              		@ args = 0, pretend = 0, frame = 0
+ 143              		@ frame_needed = 0, uses_anonymous_args = 0
+ 144              		@ link register save eliminated.
+ 159:./Drivers/src/stm32f10x_fsmc.c ****   /* Set the FSMC_Bank4 registers to their reset values */
+ 160:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_Bank4->PCR4 = 0x00000018; 
+ 145              		.loc 1 160 3 view .LVU37
+ 146              		.loc 1 160 20 is_stmt 0 view .LVU38
+ 147 0000 4FF02043 		mov	r3, #-1610612736
+ 148 0004 1822     		movs	r2, #24
+ 149 0006 C3F8A020 		str	r2, [r3, #160]
+ 161:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_Bank4->SR4 = 0x00000000;	
+ 150              		.loc 1 161 3 is_stmt 1 view .LVU39
+ 151              		.loc 1 161 19 is_stmt 0 view .LVU40
+ 152 000a 0022     		movs	r2, #0
+ 153 000c C3F8A420 		str	r2, [r3, #164]
+ 162:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_Bank4->PMEM4 = 0xFCFCFCFC;
+ 154              		.loc 1 162 3 is_stmt 1 view .LVU41
+ 155              		.loc 1 162 21 is_stmt 0 view .LVU42
+ 156 0010 4FF0FC32 		mov	r2, #-50529028
+ 157 0014 C3F8A820 		str	r2, [r3, #168]
+ 163:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_Bank4->PATT4 = 0xFCFCFCFC;
+ 158              		.loc 1 163 3 is_stmt 1 view .LVU43
+ 159              		.loc 1 163 21 is_stmt 0 view .LVU44
+ 160 0018 C3F8AC20 		str	r2, [r3, #172]
+ 164:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_Bank4->PIO4 = 0xFCFCFCFC;
+ 161              		.loc 1 164 3 is_stmt 1 view .LVU45
+ 162              		.loc 1 164 20 is_stmt 0 view .LVU46
+ 163 001c C3F8B020 		str	r2, [r3, #176]
+ 165:./Drivers/src/stm32f10x_fsmc.c **** }
+ 164              		.loc 1 165 1 view .LVU47
+ 165 0020 7047     		bx	lr
+ 166              		.cfi_endproc
+ 167              	.LFE31:
+ 169              		.section	.text.FSMC_NORSRAMInit,"ax",%progbits
+ 170              		.align	1
+ 171              		.global	FSMC_NORSRAMInit
+ 172              		.syntax unified
+ 173              		.thumb
+ARM GAS  /tmp/ccfyTdtx.s 			page 7
+
+
+ 174              		.thumb_func
+ 176              	FSMC_NORSRAMInit:
+ 177              	.LVL5:
+ 178              	.LFB32:
+ 166:./Drivers/src/stm32f10x_fsmc.c **** 
+ 167:./Drivers/src/stm32f10x_fsmc.c **** /**
+ 168:./Drivers/src/stm32f10x_fsmc.c ****   * @brief  Initializes the FSMC NOR/SRAM Banks according to the specified
+ 169:./Drivers/src/stm32f10x_fsmc.c ****   *         parameters in the FSMC_NORSRAMInitStruct.
+ 170:./Drivers/src/stm32f10x_fsmc.c ****   * @param  FSMC_NORSRAMInitStruct : pointer to a FSMC_NORSRAMInitTypeDef
+ 171:./Drivers/src/stm32f10x_fsmc.c ****   *         structure that contains the configuration information for 
+ 172:./Drivers/src/stm32f10x_fsmc.c ****   *        the FSMC NOR/SRAM specified Banks.                       
+ 173:./Drivers/src/stm32f10x_fsmc.c ****   * @retval None
+ 174:./Drivers/src/stm32f10x_fsmc.c ****   */
+ 175:./Drivers/src/stm32f10x_fsmc.c **** void FSMC_NORSRAMInit(FSMC_NORSRAMInitTypeDef* FSMC_NORSRAMInitStruct)
+ 176:./Drivers/src/stm32f10x_fsmc.c **** { 
+ 179              		.loc 1 176 1 is_stmt 1 view -0
+ 180              		.cfi_startproc
+ 181              		@ args = 0, pretend = 0, frame = 0
+ 182              		@ frame_needed = 0, uses_anonymous_args = 0
+ 183              		@ link register save eliminated.
+ 177:./Drivers/src/stm32f10x_fsmc.c ****   /* Check the parameters */
+ 178:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_NORSRAM_BANK(FSMC_NORSRAMInitStruct->FSMC_Bank));
+ 184              		.loc 1 178 3 view .LVU49
+ 179:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_MUX(FSMC_NORSRAMInitStruct->FSMC_DataAddressMux));
+ 185              		.loc 1 179 3 view .LVU50
+ 180:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_MEMORY(FSMC_NORSRAMInitStruct->FSMC_MemoryType));
+ 186              		.loc 1 180 3 view .LVU51
+ 181:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_MEMORY_WIDTH(FSMC_NORSRAMInitStruct->FSMC_MemoryDataWidth));
+ 187              		.loc 1 181 3 view .LVU52
+ 182:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_BURSTMODE(FSMC_NORSRAMInitStruct->FSMC_BurstAccessMode));
+ 188              		.loc 1 182 3 view .LVU53
+ 183:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_ASYNWAIT(FSMC_NORSRAMInitStruct->FSMC_AsynchronousWait));
+ 189              		.loc 1 183 3 view .LVU54
+ 184:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_WAIT_POLARITY(FSMC_NORSRAMInitStruct->FSMC_WaitSignalPolarity));
+ 190              		.loc 1 184 3 view .LVU55
+ 185:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_WRAP_MODE(FSMC_NORSRAMInitStruct->FSMC_WrapMode));
+ 191              		.loc 1 185 3 view .LVU56
+ 186:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_WAIT_SIGNAL_ACTIVE(FSMC_NORSRAMInitStruct->FSMC_WaitSignalActive));
+ 192              		.loc 1 186 3 view .LVU57
+ 187:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_WRITE_OPERATION(FSMC_NORSRAMInitStruct->FSMC_WriteOperation));
+ 193              		.loc 1 187 3 view .LVU58
+ 188:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_WAITE_SIGNAL(FSMC_NORSRAMInitStruct->FSMC_WaitSignal));
+ 194              		.loc 1 188 3 view .LVU59
+ 189:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_EXTENDED_MODE(FSMC_NORSRAMInitStruct->FSMC_ExtendedMode));
+ 195              		.loc 1 189 3 view .LVU60
+ 190:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_WRITE_BURST(FSMC_NORSRAMInitStruct->FSMC_WriteBurst));  
+ 196              		.loc 1 190 3 view .LVU61
+ 191:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_ADDRESS_SETUP_TIME(FSMC_NORSRAMInitStruct->FSMC_ReadWriteTimingStruct->FSMC_
+ 197              		.loc 1 191 3 view .LVU62
+ 192:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_ADDRESS_HOLD_TIME(FSMC_NORSRAMInitStruct->FSMC_ReadWriteTimingStruct->FSMC_A
+ 198              		.loc 1 192 3 view .LVU63
+ 193:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_DATASETUP_TIME(FSMC_NORSRAMInitStruct->FSMC_ReadWriteTimingStruct->FSMC_Data
+ 199              		.loc 1 193 3 view .LVU64
+ 194:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_TURNAROUND_TIME(FSMC_NORSRAMInitStruct->FSMC_ReadWriteTimingStruct->FSMC_Bus
+ 200              		.loc 1 194 3 view .LVU65
+ 195:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_CLK_DIV(FSMC_NORSRAMInitStruct->FSMC_ReadWriteTimingStruct->FSMC_CLKDivision
+ 201              		.loc 1 195 3 view .LVU66
+ARM GAS  /tmp/ccfyTdtx.s 			page 8
+
+
+ 196:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_DATA_LATENCY(FSMC_NORSRAMInitStruct->FSMC_ReadWriteTimingStruct->FSMC_DataLa
+ 202              		.loc 1 196 3 view .LVU67
+ 197:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_ACCESS_MODE(FSMC_NORSRAMInitStruct->FSMC_ReadWriteTimingStruct->FSMC_AccessM
+ 203              		.loc 1 197 3 view .LVU68
+ 198:./Drivers/src/stm32f10x_fsmc.c ****   
+ 199:./Drivers/src/stm32f10x_fsmc.c ****   /* Bank1 NOR/SRAM control register configuration */ 
+ 200:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_Bank1->BTCR[FSMC_NORSRAMInitStruct->FSMC_Bank] = 
+ 204              		.loc 1 200 3 view .LVU69
+ 201:./Drivers/src/stm32f10x_fsmc.c ****             (uint32_t)FSMC_NORSRAMInitStruct->FSMC_DataAddressMux |
+ 205              		.loc 1 201 45 is_stmt 0 view .LVU70
+ 206 0000 4368     		ldr	r3, [r0, #4]
+ 202:./Drivers/src/stm32f10x_fsmc.c ****             FSMC_NORSRAMInitStruct->FSMC_MemoryType |
+ 207              		.loc 1 202 35 view .LVU71
+ 208 0002 8268     		ldr	r2, [r0, #8]
+ 201:./Drivers/src/stm32f10x_fsmc.c ****             (uint32_t)FSMC_NORSRAMInitStruct->FSMC_DataAddressMux |
+ 209              		.loc 1 201 67 view .LVU72
+ 210 0004 1343     		orrs	r3, r3, r2
+ 203:./Drivers/src/stm32f10x_fsmc.c ****             FSMC_NORSRAMInitStruct->FSMC_MemoryDataWidth |
+ 211              		.loc 1 203 35 view .LVU73
+ 212 0006 C268     		ldr	r2, [r0, #12]
+ 202:./Drivers/src/stm32f10x_fsmc.c ****             FSMC_NORSRAMInitStruct->FSMC_MemoryType |
+ 213              		.loc 1 202 53 view .LVU74
+ 214 0008 1343     		orrs	r3, r3, r2
+ 204:./Drivers/src/stm32f10x_fsmc.c ****             FSMC_NORSRAMInitStruct->FSMC_BurstAccessMode |
+ 215              		.loc 1 204 35 view .LVU75
+ 216 000a 0269     		ldr	r2, [r0, #16]
+ 203:./Drivers/src/stm32f10x_fsmc.c ****             FSMC_NORSRAMInitStruct->FSMC_MemoryDataWidth |
+ 217              		.loc 1 203 58 view .LVU76
+ 218 000c 1343     		orrs	r3, r3, r2
+ 205:./Drivers/src/stm32f10x_fsmc.c ****             FSMC_NORSRAMInitStruct->FSMC_AsynchronousWait |
+ 219              		.loc 1 205 35 view .LVU77
+ 220 000e 4269     		ldr	r2, [r0, #20]
+ 204:./Drivers/src/stm32f10x_fsmc.c ****             FSMC_NORSRAMInitStruct->FSMC_BurstAccessMode |
+ 221              		.loc 1 204 58 view .LVU78
+ 222 0010 1343     		orrs	r3, r3, r2
+ 206:./Drivers/src/stm32f10x_fsmc.c ****             FSMC_NORSRAMInitStruct->FSMC_WaitSignalPolarity |
+ 223              		.loc 1 206 35 view .LVU79
+ 224 0012 8269     		ldr	r2, [r0, #24]
+ 205:./Drivers/src/stm32f10x_fsmc.c ****             FSMC_NORSRAMInitStruct->FSMC_AsynchronousWait |
+ 225              		.loc 1 205 59 view .LVU80
+ 226 0014 1343     		orrs	r3, r3, r2
+ 207:./Drivers/src/stm32f10x_fsmc.c ****             FSMC_NORSRAMInitStruct->FSMC_WrapMode |
+ 227              		.loc 1 207 35 view .LVU81
+ 228 0016 C269     		ldr	r2, [r0, #28]
+ 206:./Drivers/src/stm32f10x_fsmc.c ****             FSMC_NORSRAMInitStruct->FSMC_WaitSignalPolarity |
+ 229              		.loc 1 206 61 view .LVU82
+ 230 0018 1343     		orrs	r3, r3, r2
+ 208:./Drivers/src/stm32f10x_fsmc.c ****             FSMC_NORSRAMInitStruct->FSMC_WaitSignalActive |
+ 231              		.loc 1 208 35 view .LVU83
+ 232 001a 026A     		ldr	r2, [r0, #32]
+ 207:./Drivers/src/stm32f10x_fsmc.c ****             FSMC_NORSRAMInitStruct->FSMC_WrapMode |
+ 233              		.loc 1 207 51 view .LVU84
+ 234 001c 1343     		orrs	r3, r3, r2
+ 209:./Drivers/src/stm32f10x_fsmc.c ****             FSMC_NORSRAMInitStruct->FSMC_WriteOperation |
+ 235              		.loc 1 209 35 view .LVU85
+ 236 001e 426A     		ldr	r2, [r0, #36]
+ 208:./Drivers/src/stm32f10x_fsmc.c ****             FSMC_NORSRAMInitStruct->FSMC_WaitSignalActive |
+ARM GAS  /tmp/ccfyTdtx.s 			page 9
+
+
+ 237              		.loc 1 208 59 view .LVU86
+ 238 0020 1343     		orrs	r3, r3, r2
+ 210:./Drivers/src/stm32f10x_fsmc.c ****             FSMC_NORSRAMInitStruct->FSMC_WaitSignal |
+ 239              		.loc 1 210 35 view .LVU87
+ 240 0022 826A     		ldr	r2, [r0, #40]
+ 209:./Drivers/src/stm32f10x_fsmc.c ****             FSMC_NORSRAMInitStruct->FSMC_WriteOperation |
+ 241              		.loc 1 209 57 view .LVU88
+ 242 0024 1343     		orrs	r3, r3, r2
+ 211:./Drivers/src/stm32f10x_fsmc.c ****             FSMC_NORSRAMInitStruct->FSMC_ExtendedMode |
+ 243              		.loc 1 211 35 view .LVU89
+ 244 0026 C26A     		ldr	r2, [r0, #44]
+ 210:./Drivers/src/stm32f10x_fsmc.c ****             FSMC_NORSRAMInitStruct->FSMC_WaitSignal |
+ 245              		.loc 1 210 53 view .LVU90
+ 246 0028 1343     		orrs	r3, r3, r2
+ 212:./Drivers/src/stm32f10x_fsmc.c ****             FSMC_NORSRAMInitStruct->FSMC_WriteBurst;
+ 247              		.loc 1 212 35 view .LVU91
+ 248 002a 026B     		ldr	r2, [r0, #48]
+ 200:./Drivers/src/stm32f10x_fsmc.c ****             (uint32_t)FSMC_NORSRAMInitStruct->FSMC_DataAddressMux |
+ 249              		.loc 1 200 42 view .LVU92
+ 250 002c 0168     		ldr	r1, [r0]
+ 211:./Drivers/src/stm32f10x_fsmc.c ****             FSMC_NORSRAMInitStruct->FSMC_ExtendedMode |
+ 251              		.loc 1 211 55 view .LVU93
+ 252 002e 1343     		orrs	r3, r3, r2
+ 200:./Drivers/src/stm32f10x_fsmc.c ****             (uint32_t)FSMC_NORSRAMInitStruct->FSMC_DataAddressMux |
+ 253              		.loc 1 200 55 view .LVU94
+ 254 0030 4FF02042 		mov	r2, #-1610612736
+ 255 0034 42F82130 		str	r3, [r2, r1, lsl #2]
+ 213:./Drivers/src/stm32f10x_fsmc.c **** 
+ 214:./Drivers/src/stm32f10x_fsmc.c ****   if(FSMC_NORSRAMInitStruct->FSMC_MemoryType == FSMC_MemoryType_NOR)
+ 256              		.loc 1 214 3 is_stmt 1 view .LVU95
+ 257              		.loc 1 214 28 is_stmt 0 view .LVU96
+ 258 0038 8368     		ldr	r3, [r0, #8]
+ 259              		.loc 1 214 5 view .LVU97
+ 260 003a 082B     		cmp	r3, #8
+ 261 003c 25D0     		beq	.L13
+ 262              	.L10:
+ 215:./Drivers/src/stm32f10x_fsmc.c ****   {
+ 216:./Drivers/src/stm32f10x_fsmc.c ****     FSMC_Bank1->BTCR[FSMC_NORSRAMInitStruct->FSMC_Bank] |= (uint32_t)BCR_FACCEN_Set;
+ 217:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 218:./Drivers/src/stm32f10x_fsmc.c ****   
+ 219:./Drivers/src/stm32f10x_fsmc.c ****   /* Bank1 NOR/SRAM timing register configuration */
+ 220:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_Bank1->BTCR[FSMC_NORSRAMInitStruct->FSMC_Bank+1] = 
+ 263              		.loc 1 220 3 is_stmt 1 view .LVU98
+ 221:./Drivers/src/stm32f10x_fsmc.c ****             (uint32_t)FSMC_NORSRAMInitStruct->FSMC_ReadWriteTimingStruct->FSMC_AddressSetupTime |
+ 264              		.loc 1 221 45 is_stmt 0 view .LVU99
+ 265 003e 426B     		ldr	r2, [r0, #52]
+ 266              		.loc 1 221 73 view .LVU100
+ 267 0040 1368     		ldr	r3, [r2]
+ 222:./Drivers/src/stm32f10x_fsmc.c ****             (FSMC_NORSRAMInitStruct->FSMC_ReadWriteTimingStruct->FSMC_AddressHoldTime << 4) |
+ 268              		.loc 1 222 64 view .LVU101
+ 269 0042 5168     		ldr	r1, [r2, #4]
+ 221:./Drivers/src/stm32f10x_fsmc.c ****             (uint32_t)FSMC_NORSRAMInitStruct->FSMC_ReadWriteTimingStruct->FSMC_AddressSetupTime |
+ 270              		.loc 1 221 97 view .LVU102
+ 271 0044 43EA0113 		orr	r3, r3, r1, lsl #4
+ 223:./Drivers/src/stm32f10x_fsmc.c ****             (FSMC_NORSRAMInitStruct->FSMC_ReadWriteTimingStruct->FSMC_DataSetupTime << 8) |
+ 272              		.loc 1 223 64 view .LVU103
+ 273 0048 9168     		ldr	r1, [r2, #8]
+ARM GAS  /tmp/ccfyTdtx.s 			page 10
+
+
+ 222:./Drivers/src/stm32f10x_fsmc.c ****             (FSMC_NORSRAMInitStruct->FSMC_ReadWriteTimingStruct->FSMC_AddressHoldTime << 4) |
+ 274              		.loc 1 222 93 view .LVU104
+ 275 004a 43EA0123 		orr	r3, r3, r1, lsl #8
+ 224:./Drivers/src/stm32f10x_fsmc.c ****             (FSMC_NORSRAMInitStruct->FSMC_ReadWriteTimingStruct->FSMC_BusTurnAroundDuration << 16) 
+ 276              		.loc 1 224 64 view .LVU105
+ 277 004e D168     		ldr	r1, [r2, #12]
+ 223:./Drivers/src/stm32f10x_fsmc.c ****             (FSMC_NORSRAMInitStruct->FSMC_ReadWriteTimingStruct->FSMC_DataSetupTime << 8) |
+ 278              		.loc 1 223 91 view .LVU106
+ 279 0050 43EA0143 		orr	r3, r3, r1, lsl #16
+ 225:./Drivers/src/stm32f10x_fsmc.c ****             (FSMC_NORSRAMInitStruct->FSMC_ReadWriteTimingStruct->FSMC_CLKDivision << 20) |
+ 280              		.loc 1 225 64 view .LVU107
+ 281 0054 1169     		ldr	r1, [r2, #16]
+ 224:./Drivers/src/stm32f10x_fsmc.c ****             (FSMC_NORSRAMInitStruct->FSMC_ReadWriteTimingStruct->FSMC_BusTurnAroundDuration << 16) 
+ 282              		.loc 1 224 100 view .LVU108
+ 283 0056 43EA0153 		orr	r3, r3, r1, lsl #20
+ 226:./Drivers/src/stm32f10x_fsmc.c ****             (FSMC_NORSRAMInitStruct->FSMC_ReadWriteTimingStruct->FSMC_DataLatency << 24) |
+ 284              		.loc 1 226 64 view .LVU109
+ 285 005a 5169     		ldr	r1, [r2, #20]
+ 225:./Drivers/src/stm32f10x_fsmc.c ****             (FSMC_NORSRAMInitStruct->FSMC_ReadWriteTimingStruct->FSMC_CLKDivision << 20) |
+ 286              		.loc 1 225 90 view .LVU110
+ 287 005c 43EA0163 		orr	r3, r3, r1, lsl #24
+ 227:./Drivers/src/stm32f10x_fsmc.c ****              FSMC_NORSRAMInitStruct->FSMC_ReadWriteTimingStruct->FSMC_AccessMode;
+ 288              		.loc 1 227 64 view .LVU111
+ 289 0060 9169     		ldr	r1, [r2, #24]
+ 220:./Drivers/src/stm32f10x_fsmc.c ****             (uint32_t)FSMC_NORSRAMInitStruct->FSMC_ReadWriteTimingStruct->FSMC_AddressSetupTime |
+ 290              		.loc 1 220 42 view .LVU112
+ 291 0062 0268     		ldr	r2, [r0]
+ 220:./Drivers/src/stm32f10x_fsmc.c ****             (uint32_t)FSMC_NORSRAMInitStruct->FSMC_ReadWriteTimingStruct->FSMC_AddressSetupTime |
+ 292              		.loc 1 220 53 view .LVU113
+ 293 0064 0132     		adds	r2, r2, #1
+ 226:./Drivers/src/stm32f10x_fsmc.c ****             (FSMC_NORSRAMInitStruct->FSMC_ReadWriteTimingStruct->FSMC_DataLatency << 24) |
+ 294              		.loc 1 226 90 view .LVU114
+ 295 0066 0B43     		orrs	r3, r3, r1
+ 220:./Drivers/src/stm32f10x_fsmc.c ****             (uint32_t)FSMC_NORSRAMInitStruct->FSMC_ReadWriteTimingStruct->FSMC_AddressSetupTime |
+ 296              		.loc 1 220 57 view .LVU115
+ 297 0068 4FF02041 		mov	r1, #-1610612736
+ 298 006c 41F82230 		str	r3, [r1, r2, lsl #2]
+ 228:./Drivers/src/stm32f10x_fsmc.c ****             
+ 229:./Drivers/src/stm32f10x_fsmc.c ****     
+ 230:./Drivers/src/stm32f10x_fsmc.c ****   /* Bank1 NOR/SRAM timing register for write configuration, if extended mode is used */
+ 231:./Drivers/src/stm32f10x_fsmc.c ****   if(FSMC_NORSRAMInitStruct->FSMC_ExtendedMode == FSMC_ExtendedMode_Enable)
+ 299              		.loc 1 231 3 is_stmt 1 view .LVU116
+ 300              		.loc 1 231 28 is_stmt 0 view .LVU117
+ 301 0070 C36A     		ldr	r3, [r0, #44]
+ 302              		.loc 1 231 5 view .LVU118
+ 303 0072 B3F5804F 		cmp	r3, #16384
+ 304 0076 10D0     		beq	.L14
+ 232:./Drivers/src/stm32f10x_fsmc.c ****   {
+ 233:./Drivers/src/stm32f10x_fsmc.c ****     assert_param(IS_FSMC_ADDRESS_SETUP_TIME(FSMC_NORSRAMInitStruct->FSMC_WriteTimingStruct->FSMC_Ad
+ 234:./Drivers/src/stm32f10x_fsmc.c ****     assert_param(IS_FSMC_ADDRESS_HOLD_TIME(FSMC_NORSRAMInitStruct->FSMC_WriteTimingStruct->FSMC_Add
+ 235:./Drivers/src/stm32f10x_fsmc.c ****     assert_param(IS_FSMC_DATASETUP_TIME(FSMC_NORSRAMInitStruct->FSMC_WriteTimingStruct->FSMC_DataSe
+ 236:./Drivers/src/stm32f10x_fsmc.c ****     assert_param(IS_FSMC_CLK_DIV(FSMC_NORSRAMInitStruct->FSMC_WriteTimingStruct->FSMC_CLKDivision))
+ 237:./Drivers/src/stm32f10x_fsmc.c ****     assert_param(IS_FSMC_DATA_LATENCY(FSMC_NORSRAMInitStruct->FSMC_WriteTimingStruct->FSMC_DataLate
+ 238:./Drivers/src/stm32f10x_fsmc.c ****     assert_param(IS_FSMC_ACCESS_MODE(FSMC_NORSRAMInitStruct->FSMC_WriteTimingStruct->FSMC_AccessMod
+ 239:./Drivers/src/stm32f10x_fsmc.c ****     FSMC_Bank1E->BWTR[FSMC_NORSRAMInitStruct->FSMC_Bank] = 
+ 240:./Drivers/src/stm32f10x_fsmc.c ****               (uint32_t)FSMC_NORSRAMInitStruct->FSMC_WriteTimingStruct->FSMC_AddressSetupTime |
+ 241:./Drivers/src/stm32f10x_fsmc.c ****               (FSMC_NORSRAMInitStruct->FSMC_WriteTimingStruct->FSMC_AddressHoldTime << 4 )|
+ARM GAS  /tmp/ccfyTdtx.s 			page 11
+
+
+ 242:./Drivers/src/stm32f10x_fsmc.c ****               (FSMC_NORSRAMInitStruct->FSMC_WriteTimingStruct->FSMC_DataSetupTime << 8) |
+ 243:./Drivers/src/stm32f10x_fsmc.c ****               (FSMC_NORSRAMInitStruct->FSMC_WriteTimingStruct->FSMC_CLKDivision << 20) |
+ 244:./Drivers/src/stm32f10x_fsmc.c ****               (FSMC_NORSRAMInitStruct->FSMC_WriteTimingStruct->FSMC_DataLatency << 24) |
+ 245:./Drivers/src/stm32f10x_fsmc.c ****                FSMC_NORSRAMInitStruct->FSMC_WriteTimingStruct->FSMC_AccessMode;
+ 246:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 247:./Drivers/src/stm32f10x_fsmc.c ****   else
+ 248:./Drivers/src/stm32f10x_fsmc.c ****   {
+ 249:./Drivers/src/stm32f10x_fsmc.c ****     FSMC_Bank1E->BWTR[FSMC_NORSRAMInitStruct->FSMC_Bank] = 0x0FFFFFFF;
+ 305              		.loc 1 249 5 is_stmt 1 view .LVU119
+ 306              		.loc 1 249 45 is_stmt 0 view .LVU120
+ 307 0078 0368     		ldr	r3, [r0]
+ 308              		.loc 1 249 58 view .LVU121
+ 309 007a 9B00     		lsls	r3, r3, #2
+ 310 007c 03F12043 		add	r3, r3, #-1610612736
+ 311 0080 6FF07042 		mvn	r2, #-268435456
+ 312 0084 C3F80421 		str	r2, [r3, #260]
+ 250:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 251:./Drivers/src/stm32f10x_fsmc.c **** }
+ 313              		.loc 1 251 1 view .LVU122
+ 314 0088 7047     		bx	lr
+ 315              	.L13:
+ 216:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 316              		.loc 1 216 5 is_stmt 1 view .LVU123
+ 216:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 317              		.loc 1 216 44 is_stmt 0 view .LVU124
+ 318 008a 0168     		ldr	r1, [r0]
+ 216:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 319              		.loc 1 216 21 view .LVU125
+ 320 008c 52F82130 		ldr	r3, [r2, r1, lsl #2]
+ 216:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 321              		.loc 1 216 57 view .LVU126
+ 322 0090 43F04003 		orr	r3, r3, #64
+ 323 0094 42F82130 		str	r3, [r2, r1, lsl #2]
+ 324 0098 D1E7     		b	.L10
+ 325              	.L14:
+ 233:./Drivers/src/stm32f10x_fsmc.c ****     assert_param(IS_FSMC_ADDRESS_HOLD_TIME(FSMC_NORSRAMInitStruct->FSMC_WriteTimingStruct->FSMC_Add
+ 326              		.loc 1 233 5 is_stmt 1 view .LVU127
+ 234:./Drivers/src/stm32f10x_fsmc.c ****     assert_param(IS_FSMC_DATASETUP_TIME(FSMC_NORSRAMInitStruct->FSMC_WriteTimingStruct->FSMC_DataSe
+ 327              		.loc 1 234 5 view .LVU128
+ 235:./Drivers/src/stm32f10x_fsmc.c ****     assert_param(IS_FSMC_CLK_DIV(FSMC_NORSRAMInitStruct->FSMC_WriteTimingStruct->FSMC_CLKDivision))
+ 328              		.loc 1 235 5 view .LVU129
+ 236:./Drivers/src/stm32f10x_fsmc.c ****     assert_param(IS_FSMC_DATA_LATENCY(FSMC_NORSRAMInitStruct->FSMC_WriteTimingStruct->FSMC_DataLate
+ 329              		.loc 1 236 5 view .LVU130
+ 237:./Drivers/src/stm32f10x_fsmc.c ****     assert_param(IS_FSMC_ACCESS_MODE(FSMC_NORSRAMInitStruct->FSMC_WriteTimingStruct->FSMC_AccessMod
+ 330              		.loc 1 237 5 view .LVU131
+ 238:./Drivers/src/stm32f10x_fsmc.c ****     FSMC_Bank1E->BWTR[FSMC_NORSRAMInitStruct->FSMC_Bank] = 
+ 331              		.loc 1 238 5 view .LVU132
+ 239:./Drivers/src/stm32f10x_fsmc.c ****               (uint32_t)FSMC_NORSRAMInitStruct->FSMC_WriteTimingStruct->FSMC_AddressSetupTime |
+ 332              		.loc 1 239 5 view .LVU133
+ 240:./Drivers/src/stm32f10x_fsmc.c ****               (FSMC_NORSRAMInitStruct->FSMC_WriteTimingStruct->FSMC_AddressHoldTime << 4 )|
+ 333              		.loc 1 240 47 is_stmt 0 view .LVU134
+ 334 009a 826B     		ldr	r2, [r0, #56]
+ 240:./Drivers/src/stm32f10x_fsmc.c ****               (FSMC_NORSRAMInitStruct->FSMC_WriteTimingStruct->FSMC_AddressHoldTime << 4 )|
+ 335              		.loc 1 240 71 view .LVU135
+ 336 009c 1368     		ldr	r3, [r2]
+ 241:./Drivers/src/stm32f10x_fsmc.c ****               (FSMC_NORSRAMInitStruct->FSMC_WriteTimingStruct->FSMC_DataSetupTime << 8) |
+ 337              		.loc 1 241 62 view .LVU136
+ARM GAS  /tmp/ccfyTdtx.s 			page 12
+
+
+ 338 009e 5168     		ldr	r1, [r2, #4]
+ 240:./Drivers/src/stm32f10x_fsmc.c ****               (FSMC_NORSRAMInitStruct->FSMC_WriteTimingStruct->FSMC_AddressHoldTime << 4 )|
+ 339              		.loc 1 240 95 view .LVU137
+ 340 00a0 43EA0113 		orr	r3, r3, r1, lsl #4
+ 242:./Drivers/src/stm32f10x_fsmc.c ****               (FSMC_NORSRAMInitStruct->FSMC_WriteTimingStruct->FSMC_CLKDivision << 20) |
+ 341              		.loc 1 242 62 view .LVU138
+ 342 00a4 9168     		ldr	r1, [r2, #8]
+ 241:./Drivers/src/stm32f10x_fsmc.c ****               (FSMC_NORSRAMInitStruct->FSMC_WriteTimingStruct->FSMC_DataSetupTime << 8) |
+ 343              		.loc 1 241 91 view .LVU139
+ 344 00a6 43EA0123 		orr	r3, r3, r1, lsl #8
+ 243:./Drivers/src/stm32f10x_fsmc.c ****               (FSMC_NORSRAMInitStruct->FSMC_WriteTimingStruct->FSMC_DataLatency << 24) |
+ 345              		.loc 1 243 62 view .LVU140
+ 346 00aa 1169     		ldr	r1, [r2, #16]
+ 242:./Drivers/src/stm32f10x_fsmc.c ****               (FSMC_NORSRAMInitStruct->FSMC_WriteTimingStruct->FSMC_CLKDivision << 20) |
+ 347              		.loc 1 242 89 view .LVU141
+ 348 00ac 43EA0153 		orr	r3, r3, r1, lsl #20
+ 244:./Drivers/src/stm32f10x_fsmc.c ****                FSMC_NORSRAMInitStruct->FSMC_WriteTimingStruct->FSMC_AccessMode;
+ 349              		.loc 1 244 62 view .LVU142
+ 350 00b0 5169     		ldr	r1, [r2, #20]
+ 243:./Drivers/src/stm32f10x_fsmc.c ****               (FSMC_NORSRAMInitStruct->FSMC_WriteTimingStruct->FSMC_DataLatency << 24) |
+ 351              		.loc 1 243 88 view .LVU143
+ 352 00b2 43EA0163 		orr	r3, r3, r1, lsl #24
+ 245:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 353              		.loc 1 245 62 view .LVU144
+ 354 00b6 9169     		ldr	r1, [r2, #24]
+ 239:./Drivers/src/stm32f10x_fsmc.c ****               (uint32_t)FSMC_NORSRAMInitStruct->FSMC_WriteTimingStruct->FSMC_AddressSetupTime |
+ 355              		.loc 1 239 45 view .LVU145
+ 356 00b8 0268     		ldr	r2, [r0]
+ 244:./Drivers/src/stm32f10x_fsmc.c ****                FSMC_NORSRAMInitStruct->FSMC_WriteTimingStruct->FSMC_AccessMode;
+ 357              		.loc 1 244 88 view .LVU146
+ 358 00ba 0B43     		orrs	r3, r3, r1
+ 239:./Drivers/src/stm32f10x_fsmc.c ****               (uint32_t)FSMC_NORSRAMInitStruct->FSMC_WriteTimingStruct->FSMC_AddressSetupTime |
+ 359              		.loc 1 239 58 view .LVU147
+ 360 00bc 9200     		lsls	r2, r2, #2
+ 361 00be 02F12042 		add	r2, r2, #-1610612736
+ 362 00c2 C2F80431 		str	r3, [r2, #260]
+ 363 00c6 7047     		bx	lr
+ 364              		.cfi_endproc
+ 365              	.LFE32:
+ 367              		.section	.text.FSMC_NANDInit,"ax",%progbits
+ 368              		.align	1
+ 369              		.global	FSMC_NANDInit
+ 370              		.syntax unified
+ 371              		.thumb
+ 372              		.thumb_func
+ 374              	FSMC_NANDInit:
+ 375              	.LVL6:
+ 376              	.LFB33:
+ 252:./Drivers/src/stm32f10x_fsmc.c **** 
+ 253:./Drivers/src/stm32f10x_fsmc.c **** /**
+ 254:./Drivers/src/stm32f10x_fsmc.c ****   * @brief  Initializes the FSMC NAND Banks according to the specified 
+ 255:./Drivers/src/stm32f10x_fsmc.c ****   *         parameters in the FSMC_NANDInitStruct.
+ 256:./Drivers/src/stm32f10x_fsmc.c ****   * @param  FSMC_NANDInitStruct : pointer to a FSMC_NANDInitTypeDef 
+ 257:./Drivers/src/stm32f10x_fsmc.c ****   *         structure that contains the configuration information for the FSMC 
+ 258:./Drivers/src/stm32f10x_fsmc.c ****   *         NAND specified Banks.                       
+ 259:./Drivers/src/stm32f10x_fsmc.c ****   * @retval None
+ 260:./Drivers/src/stm32f10x_fsmc.c ****   */
+ARM GAS  /tmp/ccfyTdtx.s 			page 13
+
+
+ 261:./Drivers/src/stm32f10x_fsmc.c **** void FSMC_NANDInit(FSMC_NANDInitTypeDef* FSMC_NANDInitStruct)
+ 262:./Drivers/src/stm32f10x_fsmc.c **** {
+ 377              		.loc 1 262 1 is_stmt 1 view -0
+ 378              		.cfi_startproc
+ 379              		@ args = 0, pretend = 0, frame = 0
+ 380              		@ frame_needed = 0, uses_anonymous_args = 0
+ 381              		@ link register save eliminated.
+ 382              		.loc 1 262 1 is_stmt 0 view .LVU149
+ 383 0000 10B4     		push	{r4}
+ 384              	.LCFI0:
+ 385              		.cfi_def_cfa_offset 4
+ 386              		.cfi_offset 4, -4
+ 263:./Drivers/src/stm32f10x_fsmc.c ****   uint32_t tmppcr = 0x00000000, tmppmem = 0x00000000, tmppatt = 0x00000000; 
+ 387              		.loc 1 263 3 is_stmt 1 view .LVU150
+ 388              	.LVL7:
+ 264:./Drivers/src/stm32f10x_fsmc.c ****     
+ 265:./Drivers/src/stm32f10x_fsmc.c ****   /* Check the parameters */
+ 266:./Drivers/src/stm32f10x_fsmc.c ****   assert_param( IS_FSMC_NAND_BANK(FSMC_NANDInitStruct->FSMC_Bank));
+ 389              		.loc 1 266 3 view .LVU151
+ 267:./Drivers/src/stm32f10x_fsmc.c ****   assert_param( IS_FSMC_WAIT_FEATURE(FSMC_NANDInitStruct->FSMC_Waitfeature));
+ 390              		.loc 1 267 3 view .LVU152
+ 268:./Drivers/src/stm32f10x_fsmc.c ****   assert_param( IS_FSMC_MEMORY_WIDTH(FSMC_NANDInitStruct->FSMC_MemoryDataWidth));
+ 391              		.loc 1 268 3 view .LVU153
+ 269:./Drivers/src/stm32f10x_fsmc.c ****   assert_param( IS_FSMC_ECC_STATE(FSMC_NANDInitStruct->FSMC_ECC));
+ 392              		.loc 1 269 3 view .LVU154
+ 270:./Drivers/src/stm32f10x_fsmc.c ****   assert_param( IS_FSMC_ECCPAGE_SIZE(FSMC_NANDInitStruct->FSMC_ECCPageSize));
+ 393              		.loc 1 270 3 view .LVU155
+ 271:./Drivers/src/stm32f10x_fsmc.c ****   assert_param( IS_FSMC_TCLR_TIME(FSMC_NANDInitStruct->FSMC_TCLRSetupTime));
+ 394              		.loc 1 271 3 view .LVU156
+ 272:./Drivers/src/stm32f10x_fsmc.c ****   assert_param( IS_FSMC_TAR_TIME(FSMC_NANDInitStruct->FSMC_TARSetupTime));
+ 395              		.loc 1 272 3 view .LVU157
+ 273:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_SETUP_TIME(FSMC_NANDInitStruct->FSMC_CommonSpaceTimingStruct->FSMC_SetupTime
+ 396              		.loc 1 273 3 view .LVU158
+ 274:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_WAIT_TIME(FSMC_NANDInitStruct->FSMC_CommonSpaceTimingStruct->FSMC_WaitSetupT
+ 397              		.loc 1 274 3 view .LVU159
+ 275:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_HOLD_TIME(FSMC_NANDInitStruct->FSMC_CommonSpaceTimingStruct->FSMC_HoldSetupT
+ 398              		.loc 1 275 3 view .LVU160
+ 276:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_HIZ_TIME(FSMC_NANDInitStruct->FSMC_CommonSpaceTimingStruct->FSMC_HiZSetupTim
+ 399              		.loc 1 276 3 view .LVU161
+ 277:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_SETUP_TIME(FSMC_NANDInitStruct->FSMC_AttributeSpaceTimingStruct->FSMC_SetupT
+ 400              		.loc 1 277 3 view .LVU162
+ 278:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_WAIT_TIME(FSMC_NANDInitStruct->FSMC_AttributeSpaceTimingStruct->FSMC_WaitSet
+ 401              		.loc 1 278 3 view .LVU163
+ 279:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_HOLD_TIME(FSMC_NANDInitStruct->FSMC_AttributeSpaceTimingStruct->FSMC_HoldSet
+ 402              		.loc 1 279 3 view .LVU164
+ 280:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_HIZ_TIME(FSMC_NANDInitStruct->FSMC_AttributeSpaceTimingStruct->FSMC_HiZSetup
+ 403              		.loc 1 280 3 view .LVU165
+ 281:./Drivers/src/stm32f10x_fsmc.c ****   
+ 282:./Drivers/src/stm32f10x_fsmc.c ****   /* Set the tmppcr value according to FSMC_NANDInitStruct parameters */
+ 283:./Drivers/src/stm32f10x_fsmc.c ****   tmppcr = (uint32_t)FSMC_NANDInitStruct->FSMC_Waitfeature |
+ 404              		.loc 1 283 3 view .LVU166
+ 405              		.loc 1 283 41 is_stmt 0 view .LVU167
+ 406 0002 4368     		ldr	r3, [r0, #4]
+ 284:./Drivers/src/stm32f10x_fsmc.c ****             PCR_MemoryType_NAND |
+ 285:./Drivers/src/stm32f10x_fsmc.c ****             FSMC_NANDInitStruct->FSMC_MemoryDataWidth |
+ 407              		.loc 1 285 32 view .LVU168
+ 408 0004 8268     		ldr	r2, [r0, #8]
+ARM GAS  /tmp/ccfyTdtx.s 			page 14
+
+
+ 284:./Drivers/src/stm32f10x_fsmc.c ****             PCR_MemoryType_NAND |
+ 409              		.loc 1 284 33 view .LVU169
+ 410 0006 1343     		orrs	r3, r3, r2
+ 286:./Drivers/src/stm32f10x_fsmc.c ****             FSMC_NANDInitStruct->FSMC_ECC |
+ 411              		.loc 1 286 32 view .LVU170
+ 412 0008 C268     		ldr	r2, [r0, #12]
+ 285:./Drivers/src/stm32f10x_fsmc.c ****             FSMC_NANDInitStruct->FSMC_ECC |
+ 413              		.loc 1 285 55 view .LVU171
+ 414 000a 1343     		orrs	r3, r3, r2
+ 287:./Drivers/src/stm32f10x_fsmc.c ****             FSMC_NANDInitStruct->FSMC_ECCPageSize |
+ 415              		.loc 1 287 32 view .LVU172
+ 416 000c 0269     		ldr	r2, [r0, #16]
+ 286:./Drivers/src/stm32f10x_fsmc.c ****             FSMC_NANDInitStruct->FSMC_ECC |
+ 417              		.loc 1 286 43 view .LVU173
+ 418 000e 1343     		orrs	r3, r3, r2
+ 288:./Drivers/src/stm32f10x_fsmc.c ****             (FSMC_NANDInitStruct->FSMC_TCLRSetupTime << 9 )|
+ 419              		.loc 1 288 33 view .LVU174
+ 420 0010 4269     		ldr	r2, [r0, #20]
+ 287:./Drivers/src/stm32f10x_fsmc.c ****             FSMC_NANDInitStruct->FSMC_ECCPageSize |
+ 421              		.loc 1 287 51 view .LVU175
+ 422 0012 43EA4223 		orr	r3, r3, r2, lsl #9
+ 289:./Drivers/src/stm32f10x_fsmc.c ****             (FSMC_NANDInitStruct->FSMC_TARSetupTime << 13);
+ 423              		.loc 1 289 33 view .LVU176
+ 424 0016 8269     		ldr	r2, [r0, #24]
+ 288:./Drivers/src/stm32f10x_fsmc.c ****             (FSMC_NANDInitStruct->FSMC_TCLRSetupTime << 9 )|
+ 425              		.loc 1 288 60 view .LVU177
+ 426 0018 43EA4233 		orr	r3, r3, r2, lsl #13
+ 283:./Drivers/src/stm32f10x_fsmc.c ****             PCR_MemoryType_NAND |
+ 427              		.loc 1 283 10 view .LVU178
+ 428 001c 43F00803 		orr	r3, r3, #8
+ 429              	.LVL8:
+ 290:./Drivers/src/stm32f10x_fsmc.c ****             
+ 291:./Drivers/src/stm32f10x_fsmc.c ****   /* Set tmppmem value according to FSMC_CommonSpaceTimingStructure parameters */
+ 292:./Drivers/src/stm32f10x_fsmc.c ****   tmppmem = (uint32_t)FSMC_NANDInitStruct->FSMC_CommonSpaceTimingStruct->FSMC_SetupTime |
+ 430              		.loc 1 292 3 is_stmt 1 view .LVU179
+ 431              		.loc 1 292 42 is_stmt 0 view .LVU180
+ 432 0020 C469     		ldr	r4, [r0, #28]
+ 433              		.loc 1 292 72 view .LVU181
+ 434 0022 2268     		ldr	r2, [r4]
+ 293:./Drivers/src/stm32f10x_fsmc.c ****             (FSMC_NANDInitStruct->FSMC_CommonSpaceTimingStruct->FSMC_WaitSetupTime << 8) |
+ 435              		.loc 1 293 63 view .LVU182
+ 436 0024 6168     		ldr	r1, [r4, #4]
+ 292:./Drivers/src/stm32f10x_fsmc.c ****             (FSMC_NANDInitStruct->FSMC_CommonSpaceTimingStruct->FSMC_WaitSetupTime << 8) |
+ 437              		.loc 1 292 89 view .LVU183
+ 438 0026 42EA0121 		orr	r1, r2, r1, lsl #8
+ 294:./Drivers/src/stm32f10x_fsmc.c ****             (FSMC_NANDInitStruct->FSMC_CommonSpaceTimingStruct->FSMC_HoldSetupTime << 16)|
+ 439              		.loc 1 294 63 view .LVU184
+ 440 002a A268     		ldr	r2, [r4, #8]
+ 293:./Drivers/src/stm32f10x_fsmc.c ****             (FSMC_NANDInitStruct->FSMC_CommonSpaceTimingStruct->FSMC_WaitSetupTime << 8) |
+ 441              		.loc 1 293 90 view .LVU185
+ 442 002c 41EA0241 		orr	r1, r1, r2, lsl #16
+ 295:./Drivers/src/stm32f10x_fsmc.c ****             (FSMC_NANDInitStruct->FSMC_CommonSpaceTimingStruct->FSMC_HiZSetupTime << 24); 
+ 443              		.loc 1 295 63 view .LVU186
+ 444 0030 E268     		ldr	r2, [r4, #12]
+ 292:./Drivers/src/stm32f10x_fsmc.c ****             (FSMC_NANDInitStruct->FSMC_CommonSpaceTimingStruct->FSMC_WaitSetupTime << 8) |
+ 445              		.loc 1 292 11 view .LVU187
+ 446 0032 41EA0261 		orr	r1, r1, r2, lsl #24
+ARM GAS  /tmp/ccfyTdtx.s 			page 15
+
+
+ 447              	.LVL9:
+ 296:./Drivers/src/stm32f10x_fsmc.c ****             
+ 297:./Drivers/src/stm32f10x_fsmc.c ****   /* Set tmppatt value according to FSMC_AttributeSpaceTimingStructure parameters */
+ 298:./Drivers/src/stm32f10x_fsmc.c ****   tmppatt = (uint32_t)FSMC_NANDInitStruct->FSMC_AttributeSpaceTimingStruct->FSMC_SetupTime |
+ 448              		.loc 1 298 3 is_stmt 1 view .LVU188
+ 449              		.loc 1 298 42 is_stmt 0 view .LVU189
+ 450 0036 046A     		ldr	r4, [r0, #32]
+ 451              		.loc 1 298 75 view .LVU190
+ 452 0038 2268     		ldr	r2, [r4]
+ 453              		.loc 1 298 92 view .LVU191
+ 454 003a D4F804C0 		ldr	ip, [r4, #4]
+ 455 003e 42EA0C22 		orr	r2, r2, ip, lsl #8
+ 299:./Drivers/src/stm32f10x_fsmc.c ****             (FSMC_NANDInitStruct->FSMC_AttributeSpaceTimingStruct->FSMC_WaitSetupTime << 8) |
+ 456              		.loc 1 299 93 view .LVU192
+ 457 0042 D4F808C0 		ldr	ip, [r4, #8]
+ 458 0046 42EA0C42 		orr	r2, r2, ip, lsl #16
+ 300:./Drivers/src/stm32f10x_fsmc.c ****             (FSMC_NANDInitStruct->FSMC_AttributeSpaceTimingStruct->FSMC_HoldSetupTime << 16)|
+ 301:./Drivers/src/stm32f10x_fsmc.c ****             (FSMC_NANDInitStruct->FSMC_AttributeSpaceTimingStruct->FSMC_HiZSetupTime << 24);
+ 459              		.loc 1 301 66 view .LVU193
+ 460 004a E468     		ldr	r4, [r4, #12]
+ 298:./Drivers/src/stm32f10x_fsmc.c ****             (FSMC_NANDInitStruct->FSMC_AttributeSpaceTimingStruct->FSMC_WaitSetupTime << 8) |
+ 461              		.loc 1 298 11 view .LVU194
+ 462 004c 42EA0462 		orr	r2, r2, r4, lsl #24
+ 463              	.LVL10:
+ 302:./Drivers/src/stm32f10x_fsmc.c ****   
+ 303:./Drivers/src/stm32f10x_fsmc.c ****   if(FSMC_NANDInitStruct->FSMC_Bank == FSMC_Bank2_NAND)
+ 464              		.loc 1 303 3 is_stmt 1 view .LVU195
+ 465              		.loc 1 303 25 is_stmt 0 view .LVU196
+ 466 0050 0068     		ldr	r0, [r0]
+ 467              	.LVL11:
+ 468              		.loc 1 303 5 view .LVU197
+ 469 0052 1028     		cmp	r0, #16
+ 470 0054 09D0     		beq	.L19
+ 304:./Drivers/src/stm32f10x_fsmc.c ****   {
+ 305:./Drivers/src/stm32f10x_fsmc.c ****     /* FSMC_Bank2_NAND registers configuration */
+ 306:./Drivers/src/stm32f10x_fsmc.c ****     FSMC_Bank2->PCR2 = tmppcr;
+ 307:./Drivers/src/stm32f10x_fsmc.c ****     FSMC_Bank2->PMEM2 = tmppmem;
+ 308:./Drivers/src/stm32f10x_fsmc.c ****     FSMC_Bank2->PATT2 = tmppatt;
+ 309:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 310:./Drivers/src/stm32f10x_fsmc.c ****   else
+ 311:./Drivers/src/stm32f10x_fsmc.c ****   {
+ 312:./Drivers/src/stm32f10x_fsmc.c ****     /* FSMC_Bank3_NAND registers configuration */
+ 313:./Drivers/src/stm32f10x_fsmc.c ****     FSMC_Bank3->PCR3 = tmppcr;
+ 471              		.loc 1 313 5 is_stmt 1 view .LVU198
+ 472              		.loc 1 313 22 is_stmt 0 view .LVU199
+ 473 0056 4FF02040 		mov	r0, #-1610612736
+ 474 005a C0F88030 		str	r3, [r0, #128]
+ 314:./Drivers/src/stm32f10x_fsmc.c ****     FSMC_Bank3->PMEM3 = tmppmem;
+ 475              		.loc 1 314 5 is_stmt 1 view .LVU200
+ 476              		.loc 1 314 23 is_stmt 0 view .LVU201
+ 477 005e C0F88810 		str	r1, [r0, #136]
+ 315:./Drivers/src/stm32f10x_fsmc.c ****     FSMC_Bank3->PATT3 = tmppatt;
+ 478              		.loc 1 315 5 is_stmt 1 view .LVU202
+ 479              		.loc 1 315 23 is_stmt 0 view .LVU203
+ 480 0062 C0F88C20 		str	r2, [r0, #140]
+ 481              	.L15:
+ 316:./Drivers/src/stm32f10x_fsmc.c ****   }
+ARM GAS  /tmp/ccfyTdtx.s 			page 16
+
+
+ 317:./Drivers/src/stm32f10x_fsmc.c **** }
+ 482              		.loc 1 317 1 view .LVU204
+ 483 0066 10BC     		pop	{r4}
+ 484              	.LCFI1:
+ 485              		.cfi_remember_state
+ 486              		.cfi_restore 4
+ 487              		.cfi_def_cfa_offset 0
+ 488 0068 7047     		bx	lr
+ 489              	.L19:
+ 490              	.LCFI2:
+ 491              		.cfi_restore_state
+ 306:./Drivers/src/stm32f10x_fsmc.c ****     FSMC_Bank2->PMEM2 = tmppmem;
+ 492              		.loc 1 306 5 is_stmt 1 view .LVU205
+ 306:./Drivers/src/stm32f10x_fsmc.c ****     FSMC_Bank2->PMEM2 = tmppmem;
+ 493              		.loc 1 306 22 is_stmt 0 view .LVU206
+ 494 006a 4FF02040 		mov	r0, #-1610612736
+ 495 006e 0366     		str	r3, [r0, #96]
+ 307:./Drivers/src/stm32f10x_fsmc.c ****     FSMC_Bank2->PATT2 = tmppatt;
+ 496              		.loc 1 307 5 is_stmt 1 view .LVU207
+ 307:./Drivers/src/stm32f10x_fsmc.c ****     FSMC_Bank2->PATT2 = tmppatt;
+ 497              		.loc 1 307 23 is_stmt 0 view .LVU208
+ 498 0070 8166     		str	r1, [r0, #104]
+ 308:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 499              		.loc 1 308 5 is_stmt 1 view .LVU209
+ 308:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 500              		.loc 1 308 23 is_stmt 0 view .LVU210
+ 501 0072 C266     		str	r2, [r0, #108]
+ 502 0074 F7E7     		b	.L15
+ 503              		.cfi_endproc
+ 504              	.LFE33:
+ 506              		.section	.text.FSMC_PCCARDInit,"ax",%progbits
+ 507              		.align	1
+ 508              		.global	FSMC_PCCARDInit
+ 509              		.syntax unified
+ 510              		.thumb
+ 511              		.thumb_func
+ 513              	FSMC_PCCARDInit:
+ 514              	.LVL12:
+ 515              	.LFB34:
+ 318:./Drivers/src/stm32f10x_fsmc.c **** 
+ 319:./Drivers/src/stm32f10x_fsmc.c **** /**
+ 320:./Drivers/src/stm32f10x_fsmc.c ****   * @brief  Initializes the FSMC PCCARD Bank according to the specified 
+ 321:./Drivers/src/stm32f10x_fsmc.c ****   *         parameters in the FSMC_PCCARDInitStruct.
+ 322:./Drivers/src/stm32f10x_fsmc.c ****   * @param  FSMC_PCCARDInitStruct : pointer to a FSMC_PCCARDInitTypeDef
+ 323:./Drivers/src/stm32f10x_fsmc.c ****   *         structure that contains the configuration information for the FSMC 
+ 324:./Drivers/src/stm32f10x_fsmc.c ****   *         PCCARD Bank.                       
+ 325:./Drivers/src/stm32f10x_fsmc.c ****   * @retval None
+ 326:./Drivers/src/stm32f10x_fsmc.c ****   */
+ 327:./Drivers/src/stm32f10x_fsmc.c **** void FSMC_PCCARDInit(FSMC_PCCARDInitTypeDef* FSMC_PCCARDInitStruct)
+ 328:./Drivers/src/stm32f10x_fsmc.c **** {
+ 516              		.loc 1 328 1 is_stmt 1 view -0
+ 517              		.cfi_startproc
+ 518              		@ args = 0, pretend = 0, frame = 0
+ 519              		@ frame_needed = 0, uses_anonymous_args = 0
+ 520              		@ link register save eliminated.
+ 329:./Drivers/src/stm32f10x_fsmc.c ****   /* Check the parameters */
+ 330:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_WAIT_FEATURE(FSMC_PCCARDInitStruct->FSMC_Waitfeature));
+ARM GAS  /tmp/ccfyTdtx.s 			page 17
+
+
+ 521              		.loc 1 330 3 view .LVU212
+ 331:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_TCLR_TIME(FSMC_PCCARDInitStruct->FSMC_TCLRSetupTime));
+ 522              		.loc 1 331 3 view .LVU213
+ 332:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_TAR_TIME(FSMC_PCCARDInitStruct->FSMC_TARSetupTime));
+ 523              		.loc 1 332 3 view .LVU214
+ 333:./Drivers/src/stm32f10x_fsmc.c ****  
+ 334:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_SETUP_TIME(FSMC_PCCARDInitStruct->FSMC_CommonSpaceTimingStruct->FSMC_SetupTi
+ 524              		.loc 1 334 3 view .LVU215
+ 335:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_WAIT_TIME(FSMC_PCCARDInitStruct->FSMC_CommonSpaceTimingStruct->FSMC_WaitSetu
+ 525              		.loc 1 335 3 view .LVU216
+ 336:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_HOLD_TIME(FSMC_PCCARDInitStruct->FSMC_CommonSpaceTimingStruct->FSMC_HoldSetu
+ 526              		.loc 1 336 3 view .LVU217
+ 337:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_HIZ_TIME(FSMC_PCCARDInitStruct->FSMC_CommonSpaceTimingStruct->FSMC_HiZSetupT
+ 527              		.loc 1 337 3 view .LVU218
+ 338:./Drivers/src/stm32f10x_fsmc.c ****   
+ 339:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_SETUP_TIME(FSMC_PCCARDInitStruct->FSMC_AttributeSpaceTimingStruct->FSMC_Setu
+ 528              		.loc 1 339 3 view .LVU219
+ 340:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_WAIT_TIME(FSMC_PCCARDInitStruct->FSMC_AttributeSpaceTimingStruct->FSMC_WaitS
+ 529              		.loc 1 340 3 view .LVU220
+ 341:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_HOLD_TIME(FSMC_PCCARDInitStruct->FSMC_AttributeSpaceTimingStruct->FSMC_HoldS
+ 530              		.loc 1 341 3 view .LVU221
+ 342:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_HIZ_TIME(FSMC_PCCARDInitStruct->FSMC_AttributeSpaceTimingStruct->FSMC_HiZSet
+ 531              		.loc 1 342 3 view .LVU222
+ 343:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_SETUP_TIME(FSMC_PCCARDInitStruct->FSMC_IOSpaceTimingStruct->FSMC_SetupTime))
+ 532              		.loc 1 343 3 view .LVU223
+ 344:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_WAIT_TIME(FSMC_PCCARDInitStruct->FSMC_IOSpaceTimingStruct->FSMC_WaitSetupTim
+ 533              		.loc 1 344 3 view .LVU224
+ 345:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_HOLD_TIME(FSMC_PCCARDInitStruct->FSMC_IOSpaceTimingStruct->FSMC_HoldSetupTim
+ 534              		.loc 1 345 3 view .LVU225
+ 346:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_HIZ_TIME(FSMC_PCCARDInitStruct->FSMC_IOSpaceTimingStruct->FSMC_HiZSetupTime)
+ 535              		.loc 1 346 3 view .LVU226
+ 347:./Drivers/src/stm32f10x_fsmc.c ****   
+ 348:./Drivers/src/stm32f10x_fsmc.c ****   /* Set the PCR4 register value according to FSMC_PCCARDInitStruct parameters */
+ 349:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_Bank4->PCR4 = (uint32_t)FSMC_PCCARDInitStruct->FSMC_Waitfeature |
+ 536              		.loc 1 349 3 view .LVU227
+ 537              		.loc 1 349 53 is_stmt 0 view .LVU228
+ 538 0000 0368     		ldr	r3, [r0]
+ 350:./Drivers/src/stm32f10x_fsmc.c ****                      FSMC_MemoryDataWidth_16b |  
+ 351:./Drivers/src/stm32f10x_fsmc.c ****                      (FSMC_PCCARDInitStruct->FSMC_TCLRSetupTime << 9) |
+ 539              		.loc 1 351 44 view .LVU229
+ 540 0002 4268     		ldr	r2, [r0, #4]
+ 350:./Drivers/src/stm32f10x_fsmc.c ****                      FSMC_MemoryDataWidth_16b |  
+ 541              		.loc 1 350 47 view .LVU230
+ 542 0004 43EA4223 		orr	r3, r3, r2, lsl #9
+ 352:./Drivers/src/stm32f10x_fsmc.c ****                      (FSMC_PCCARDInitStruct->FSMC_TARSetupTime << 13);
+ 543              		.loc 1 352 44 view .LVU231
+ 544 0008 8268     		ldr	r2, [r0, #8]
+ 351:./Drivers/src/stm32f10x_fsmc.c ****                      (FSMC_PCCARDInitStruct->FSMC_TARSetupTime << 13);
+ 545              		.loc 1 351 71 view .LVU232
+ 546 000a 43EA4233 		orr	r3, r3, r2, lsl #13
+ 547 000e 43F01003 		orr	r3, r3, #16
+ 349:./Drivers/src/stm32f10x_fsmc.c ****                      FSMC_MemoryDataWidth_16b |  
+ 548              		.loc 1 349 20 view .LVU233
+ 549 0012 4FF02042 		mov	r2, #-1610612736
+ 550 0016 C2F8A030 		str	r3, [r2, #160]
+ 353:./Drivers/src/stm32f10x_fsmc.c ****             
+ 354:./Drivers/src/stm32f10x_fsmc.c ****   /* Set PMEM4 register value according to FSMC_CommonSpaceTimingStructure parameters */
+ARM GAS  /tmp/ccfyTdtx.s 			page 18
+
+
+ 355:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_Bank4->PMEM4 = (uint32_t)FSMC_PCCARDInitStruct->FSMC_CommonSpaceTimingStruct->FSMC_SetupTime
+ 551              		.loc 1 355 3 is_stmt 1 view .LVU234
+ 552              		.loc 1 355 54 is_stmt 0 view .LVU235
+ 553 001a C168     		ldr	r1, [r0, #12]
+ 554              		.loc 1 355 84 view .LVU236
+ 555 001c 0B68     		ldr	r3, [r1]
+ 556              		.loc 1 355 101 view .LVU237
+ 557 001e D1F804C0 		ldr	ip, [r1, #4]
+ 558 0022 43EA0C23 		orr	r3, r3, ip, lsl #8
+ 356:./Drivers/src/stm32f10x_fsmc.c ****                       (FSMC_PCCARDInitStruct->FSMC_CommonSpaceTimingStruct->FSMC_WaitSetupTime << 8
+ 559              		.loc 1 356 102 view .LVU238
+ 560 0026 D1F808C0 		ldr	ip, [r1, #8]
+ 561 002a 43EA0C43 		orr	r3, r3, ip, lsl #16
+ 357:./Drivers/src/stm32f10x_fsmc.c ****                       (FSMC_PCCARDInitStruct->FSMC_CommonSpaceTimingStruct->FSMC_HoldSetupTime << 1
+ 358:./Drivers/src/stm32f10x_fsmc.c ****                       (FSMC_PCCARDInitStruct->FSMC_CommonSpaceTimingStruct->FSMC_HiZSetupTime << 24
+ 562              		.loc 1 358 75 view .LVU239
+ 563 002e C968     		ldr	r1, [r1, #12]
+ 357:./Drivers/src/stm32f10x_fsmc.c ****                       (FSMC_PCCARDInitStruct->FSMC_CommonSpaceTimingStruct->FSMC_HoldSetupTime << 1
+ 564              		.loc 1 357 102 view .LVU240
+ 565 0030 43EA0163 		orr	r3, r3, r1, lsl #24
+ 355:./Drivers/src/stm32f10x_fsmc.c ****                       (FSMC_PCCARDInitStruct->FSMC_CommonSpaceTimingStruct->FSMC_WaitSetupTime << 8
+ 566              		.loc 1 355 21 view .LVU241
+ 567 0034 C2F8A830 		str	r3, [r2, #168]
+ 359:./Drivers/src/stm32f10x_fsmc.c ****             
+ 360:./Drivers/src/stm32f10x_fsmc.c ****   /* Set PATT4 register value according to FSMC_AttributeSpaceTimingStructure parameters */
+ 361:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_Bank4->PATT4 = (uint32_t)FSMC_PCCARDInitStruct->FSMC_AttributeSpaceTimingStruct->FSMC_SetupT
+ 568              		.loc 1 361 3 is_stmt 1 view .LVU242
+ 569              		.loc 1 361 54 is_stmt 0 view .LVU243
+ 570 0038 0169     		ldr	r1, [r0, #16]
+ 571              		.loc 1 361 87 view .LVU244
+ 572 003a 0B68     		ldr	r3, [r1]
+ 573              		.loc 1 361 104 view .LVU245
+ 574 003c D1F804C0 		ldr	ip, [r1, #4]
+ 575 0040 43EA0C23 		orr	r3, r3, ip, lsl #8
+ 362:./Drivers/src/stm32f10x_fsmc.c ****                       (FSMC_PCCARDInitStruct->FSMC_AttributeSpaceTimingStruct->FSMC_WaitSetupTime <
+ 576              		.loc 1 362 105 view .LVU246
+ 577 0044 D1F808C0 		ldr	ip, [r1, #8]
+ 578 0048 43EA0C43 		orr	r3, r3, ip, lsl #16
+ 363:./Drivers/src/stm32f10x_fsmc.c ****                       (FSMC_PCCARDInitStruct->FSMC_AttributeSpaceTimingStruct->FSMC_HoldSetupTime <
+ 364:./Drivers/src/stm32f10x_fsmc.c ****                       (FSMC_PCCARDInitStruct->FSMC_AttributeSpaceTimingStruct->FSMC_HiZSetupTime <<
+ 579              		.loc 1 364 78 view .LVU247
+ 580 004c C968     		ldr	r1, [r1, #12]
+ 363:./Drivers/src/stm32f10x_fsmc.c ****                       (FSMC_PCCARDInitStruct->FSMC_AttributeSpaceTimingStruct->FSMC_HoldSetupTime <
+ 581              		.loc 1 363 105 view .LVU248
+ 582 004e 43EA0163 		orr	r3, r3, r1, lsl #24
+ 361:./Drivers/src/stm32f10x_fsmc.c ****                       (FSMC_PCCARDInitStruct->FSMC_AttributeSpaceTimingStruct->FSMC_WaitSetupTime <
+ 583              		.loc 1 361 21 view .LVU249
+ 584 0052 C2F8AC30 		str	r3, [r2, #172]
+ 365:./Drivers/src/stm32f10x_fsmc.c ****             
+ 366:./Drivers/src/stm32f10x_fsmc.c ****   /* Set PIO4 register value according to FSMC_IOSpaceTimingStructure parameters */
+ 367:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_Bank4->PIO4 = (uint32_t)FSMC_PCCARDInitStruct->FSMC_IOSpaceTimingStruct->FSMC_SetupTime |
+ 585              		.loc 1 367 3 is_stmt 1 view .LVU250
+ 586              		.loc 1 367 53 is_stmt 0 view .LVU251
+ 587 0056 4169     		ldr	r1, [r0, #20]
+ 588              		.loc 1 367 79 view .LVU252
+ 589 0058 0B68     		ldr	r3, [r1]
+ 368:./Drivers/src/stm32f10x_fsmc.c ****                      (FSMC_PCCARDInitStruct->FSMC_IOSpaceTimingStruct->FSMC_WaitSetupTime << 8) |
+ARM GAS  /tmp/ccfyTdtx.s 			page 19
+
+
+ 590              		.loc 1 368 70 view .LVU253
+ 591 005a 4868     		ldr	r0, [r1, #4]
+ 592              	.LVL13:
+ 367:./Drivers/src/stm32f10x_fsmc.c ****                      (FSMC_PCCARDInitStruct->FSMC_IOSpaceTimingStruct->FSMC_WaitSetupTime << 8) |
+ 593              		.loc 1 367 96 view .LVU254
+ 594 005c 43EA0023 		orr	r3, r3, r0, lsl #8
+ 369:./Drivers/src/stm32f10x_fsmc.c ****                      (FSMC_PCCARDInitStruct->FSMC_IOSpaceTimingStruct->FSMC_HoldSetupTime << 16)|
+ 595              		.loc 1 369 70 view .LVU255
+ 596 0060 8868     		ldr	r0, [r1, #8]
+ 368:./Drivers/src/stm32f10x_fsmc.c ****                      (FSMC_PCCARDInitStruct->FSMC_IOSpaceTimingStruct->FSMC_WaitSetupTime << 8) |
+ 597              		.loc 1 368 97 view .LVU256
+ 598 0062 43EA0043 		orr	r3, r3, r0, lsl #16
+ 370:./Drivers/src/stm32f10x_fsmc.c ****                      (FSMC_PCCARDInitStruct->FSMC_IOSpaceTimingStruct->FSMC_HiZSetupTime << 24);   
+ 599              		.loc 1 370 70 view .LVU257
+ 600 0066 C968     		ldr	r1, [r1, #12]
+ 369:./Drivers/src/stm32f10x_fsmc.c ****                      (FSMC_PCCARDInitStruct->FSMC_IOSpaceTimingStruct->FSMC_HoldSetupTime << 16)|
+ 601              		.loc 1 369 97 view .LVU258
+ 602 0068 43EA0163 		orr	r3, r3, r1, lsl #24
+ 367:./Drivers/src/stm32f10x_fsmc.c ****                      (FSMC_PCCARDInitStruct->FSMC_IOSpaceTimingStruct->FSMC_WaitSetupTime << 8) |
+ 603              		.loc 1 367 20 view .LVU259
+ 604 006c C2F8B030 		str	r3, [r2, #176]
+ 371:./Drivers/src/stm32f10x_fsmc.c **** }
+ 605              		.loc 1 371 1 view .LVU260
+ 606 0070 7047     		bx	lr
+ 607              		.cfi_endproc
+ 608              	.LFE34:
+ 610              		.section	.text.FSMC_NORSRAMStructInit,"ax",%progbits
+ 611              		.align	1
+ 612              		.global	FSMC_NORSRAMStructInit
+ 613              		.syntax unified
+ 614              		.thumb
+ 615              		.thumb_func
+ 617              	FSMC_NORSRAMStructInit:
+ 618              	.LVL14:
+ 619              	.LFB35:
+ 372:./Drivers/src/stm32f10x_fsmc.c **** 
+ 373:./Drivers/src/stm32f10x_fsmc.c **** /**
+ 374:./Drivers/src/stm32f10x_fsmc.c ****   * @brief  Fills each FSMC_NORSRAMInitStruct member with its default value.
+ 375:./Drivers/src/stm32f10x_fsmc.c ****   * @param  FSMC_NORSRAMInitStruct: pointer to a FSMC_NORSRAMInitTypeDef 
+ 376:./Drivers/src/stm32f10x_fsmc.c ****   *         structure which will be initialized.
+ 377:./Drivers/src/stm32f10x_fsmc.c ****   * @retval None
+ 378:./Drivers/src/stm32f10x_fsmc.c ****   */
+ 379:./Drivers/src/stm32f10x_fsmc.c **** void FSMC_NORSRAMStructInit(FSMC_NORSRAMInitTypeDef* FSMC_NORSRAMInitStruct)
+ 380:./Drivers/src/stm32f10x_fsmc.c **** {  
+ 620              		.loc 1 380 1 is_stmt 1 view -0
+ 621              		.cfi_startproc
+ 622              		@ args = 0, pretend = 0, frame = 0
+ 623              		@ frame_needed = 0, uses_anonymous_args = 0
+ 624              		@ link register save eliminated.
+ 381:./Drivers/src/stm32f10x_fsmc.c ****   /* Reset NOR/SRAM Init structure parameters values */
+ 382:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_NORSRAMInitStruct->FSMC_Bank = FSMC_Bank1_NORSRAM1;
+ 625              		.loc 1 382 3 view .LVU262
+ 626              		.loc 1 382 37 is_stmt 0 view .LVU263
+ 627 0000 0023     		movs	r3, #0
+ 628 0002 0360     		str	r3, [r0]
+ 383:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_NORSRAMInitStruct->FSMC_DataAddressMux = FSMC_DataAddressMux_Enable;
+ 629              		.loc 1 383 3 is_stmt 1 view .LVU264
+ARM GAS  /tmp/ccfyTdtx.s 			page 20
+
+
+ 630              		.loc 1 383 47 is_stmt 0 view .LVU265
+ 631 0004 0222     		movs	r2, #2
+ 632 0006 4260     		str	r2, [r0, #4]
+ 384:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_NORSRAMInitStruct->FSMC_MemoryType = FSMC_MemoryType_SRAM;
+ 633              		.loc 1 384 3 is_stmt 1 view .LVU266
+ 634              		.loc 1 384 43 is_stmt 0 view .LVU267
+ 635 0008 8360     		str	r3, [r0, #8]
+ 385:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_NORSRAMInitStruct->FSMC_MemoryDataWidth = FSMC_MemoryDataWidth_8b;
+ 636              		.loc 1 385 3 is_stmt 1 view .LVU268
+ 637              		.loc 1 385 48 is_stmt 0 view .LVU269
+ 638 000a C360     		str	r3, [r0, #12]
+ 386:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_NORSRAMInitStruct->FSMC_BurstAccessMode = FSMC_BurstAccessMode_Disable;
+ 639              		.loc 1 386 3 is_stmt 1 view .LVU270
+ 640              		.loc 1 386 48 is_stmt 0 view .LVU271
+ 641 000c 0361     		str	r3, [r0, #16]
+ 387:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_NORSRAMInitStruct->FSMC_AsynchronousWait = FSMC_AsynchronousWait_Disable;
+ 642              		.loc 1 387 3 is_stmt 1 view .LVU272
+ 643              		.loc 1 387 49 is_stmt 0 view .LVU273
+ 644 000e 4361     		str	r3, [r0, #20]
+ 388:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_NORSRAMInitStruct->FSMC_WaitSignalPolarity = FSMC_WaitSignalPolarity_Low;
+ 645              		.loc 1 388 3 is_stmt 1 view .LVU274
+ 646              		.loc 1 388 51 is_stmt 0 view .LVU275
+ 647 0010 8361     		str	r3, [r0, #24]
+ 389:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_NORSRAMInitStruct->FSMC_WrapMode = FSMC_WrapMode_Disable;
+ 648              		.loc 1 389 3 is_stmt 1 view .LVU276
+ 649              		.loc 1 389 41 is_stmt 0 view .LVU277
+ 650 0012 C361     		str	r3, [r0, #28]
+ 390:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_NORSRAMInitStruct->FSMC_WaitSignalActive = FSMC_WaitSignalActive_BeforeWaitState;
+ 651              		.loc 1 390 3 is_stmt 1 view .LVU278
+ 652              		.loc 1 390 49 is_stmt 0 view .LVU279
+ 653 0014 0362     		str	r3, [r0, #32]
+ 391:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_NORSRAMInitStruct->FSMC_WriteOperation = FSMC_WriteOperation_Enable;
+ 654              		.loc 1 391 3 is_stmt 1 view .LVU280
+ 655              		.loc 1 391 47 is_stmt 0 view .LVU281
+ 656 0016 4FF48052 		mov	r2, #4096
+ 657 001a 4262     		str	r2, [r0, #36]
+ 392:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_NORSRAMInitStruct->FSMC_WaitSignal = FSMC_WaitSignal_Enable;
+ 658              		.loc 1 392 3 is_stmt 1 view .LVU282
+ 659              		.loc 1 392 43 is_stmt 0 view .LVU283
+ 660 001c 4FF40052 		mov	r2, #8192
+ 661 0020 8262     		str	r2, [r0, #40]
+ 393:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_NORSRAMInitStruct->FSMC_ExtendedMode = FSMC_ExtendedMode_Disable;
+ 662              		.loc 1 393 3 is_stmt 1 view .LVU284
+ 663              		.loc 1 393 45 is_stmt 0 view .LVU285
+ 664 0022 C362     		str	r3, [r0, #44]
+ 394:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_NORSRAMInitStruct->FSMC_WriteBurst = FSMC_WriteBurst_Disable;
+ 665              		.loc 1 394 3 is_stmt 1 view .LVU286
+ 666              		.loc 1 394 43 is_stmt 0 view .LVU287
+ 667 0024 0363     		str	r3, [r0, #48]
+ 395:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_NORSRAMInitStruct->FSMC_ReadWriteTimingStruct->FSMC_AddressSetupTime = 0xF;
+ 668              		.loc 1 395 3 is_stmt 1 view .LVU288
+ 669              		.loc 1 395 25 is_stmt 0 view .LVU289
+ 670 0026 416B     		ldr	r1, [r0, #52]
+ 671              		.loc 1 395 77 view .LVU290
+ 672 0028 0F22     		movs	r2, #15
+ 673 002a 0A60     		str	r2, [r1]
+ 396:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_NORSRAMInitStruct->FSMC_ReadWriteTimingStruct->FSMC_AddressHoldTime = 0xF;
+ARM GAS  /tmp/ccfyTdtx.s 			page 21
+
+
+ 674              		.loc 1 396 3 is_stmt 1 view .LVU291
+ 675              		.loc 1 396 25 is_stmt 0 view .LVU292
+ 676 002c 416B     		ldr	r1, [r0, #52]
+ 677              		.loc 1 396 76 view .LVU293
+ 678 002e 4A60     		str	r2, [r1, #4]
+ 397:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_NORSRAMInitStruct->FSMC_ReadWriteTimingStruct->FSMC_DataSetupTime = 0xFF;
+ 679              		.loc 1 397 3 is_stmt 1 view .LVU294
+ 680              		.loc 1 397 74 is_stmt 0 view .LVU295
+ 681 0030 FF21     		movs	r1, #255
+ 682 0032 D0F834C0 		ldr	ip, [r0, #52]
+ 683 0036 CCF80810 		str	r1, [ip, #8]
+ 398:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_NORSRAMInitStruct->FSMC_ReadWriteTimingStruct->FSMC_BusTurnAroundDuration = 0xF;
+ 684              		.loc 1 398 3 is_stmt 1 view .LVU296
+ 685              		.loc 1 398 82 is_stmt 0 view .LVU297
+ 686 003a D0F834C0 		ldr	ip, [r0, #52]
+ 687 003e CCF80C20 		str	r2, [ip, #12]
+ 399:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_NORSRAMInitStruct->FSMC_ReadWriteTimingStruct->FSMC_CLKDivision = 0xF;
+ 688              		.loc 1 399 3 is_stmt 1 view .LVU298
+ 689              		.loc 1 399 72 is_stmt 0 view .LVU299
+ 690 0042 D0F834C0 		ldr	ip, [r0, #52]
+ 691 0046 CCF81020 		str	r2, [ip, #16]
+ 400:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_NORSRAMInitStruct->FSMC_ReadWriteTimingStruct->FSMC_DataLatency = 0xF;
+ 692              		.loc 1 400 3 is_stmt 1 view .LVU300
+ 693              		.loc 1 400 72 is_stmt 0 view .LVU301
+ 694 004a D0F834C0 		ldr	ip, [r0, #52]
+ 695 004e CCF81420 		str	r2, [ip, #20]
+ 401:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_NORSRAMInitStruct->FSMC_ReadWriteTimingStruct->FSMC_AccessMode = FSMC_AccessMode_A; 
+ 696              		.loc 1 401 3 is_stmt 1 view .LVU302
+ 697              		.loc 1 401 71 is_stmt 0 view .LVU303
+ 698 0052 D0F834C0 		ldr	ip, [r0, #52]
+ 699 0056 CCF81830 		str	r3, [ip, #24]
+ 402:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_NORSRAMInitStruct->FSMC_WriteTimingStruct->FSMC_AddressSetupTime = 0xF;
+ 700              		.loc 1 402 3 is_stmt 1 view .LVU304
+ 701              		.loc 1 402 73 is_stmt 0 view .LVU305
+ 702 005a D0F838C0 		ldr	ip, [r0, #56]
+ 703 005e CCF80020 		str	r2, [ip]
+ 403:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_NORSRAMInitStruct->FSMC_WriteTimingStruct->FSMC_AddressHoldTime = 0xF;
+ 704              		.loc 1 403 3 is_stmt 1 view .LVU306
+ 705              		.loc 1 403 72 is_stmt 0 view .LVU307
+ 706 0062 D0F838C0 		ldr	ip, [r0, #56]
+ 707 0066 CCF80420 		str	r2, [ip, #4]
+ 404:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_NORSRAMInitStruct->FSMC_WriteTimingStruct->FSMC_DataSetupTime = 0xFF;
+ 708              		.loc 1 404 3 is_stmt 1 view .LVU308
+ 709              		.loc 1 404 70 is_stmt 0 view .LVU309
+ 710 006a D0F838C0 		ldr	ip, [r0, #56]
+ 711 006e CCF80810 		str	r1, [ip, #8]
+ 405:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_NORSRAMInitStruct->FSMC_WriteTimingStruct->FSMC_BusTurnAroundDuration = 0xF;
+ 712              		.loc 1 405 3 is_stmt 1 view .LVU310
+ 713              		.loc 1 405 25 is_stmt 0 view .LVU311
+ 714 0072 816B     		ldr	r1, [r0, #56]
+ 715              		.loc 1 405 78 view .LVU312
+ 716 0074 CA60     		str	r2, [r1, #12]
+ 406:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_NORSRAMInitStruct->FSMC_WriteTimingStruct->FSMC_CLKDivision = 0xF;
+ 717              		.loc 1 406 3 is_stmt 1 view .LVU313
+ 718              		.loc 1 406 25 is_stmt 0 view .LVU314
+ 719 0076 816B     		ldr	r1, [r0, #56]
+ 720              		.loc 1 406 68 view .LVU315
+ARM GAS  /tmp/ccfyTdtx.s 			page 22
+
+
+ 721 0078 0A61     		str	r2, [r1, #16]
+ 407:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_NORSRAMInitStruct->FSMC_WriteTimingStruct->FSMC_DataLatency = 0xF;
+ 722              		.loc 1 407 3 is_stmt 1 view .LVU316
+ 723              		.loc 1 407 25 is_stmt 0 view .LVU317
+ 724 007a 816B     		ldr	r1, [r0, #56]
+ 725              		.loc 1 407 68 view .LVU318
+ 726 007c 4A61     		str	r2, [r1, #20]
+ 408:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_NORSRAMInitStruct->FSMC_WriteTimingStruct->FSMC_AccessMode = FSMC_AccessMode_A;
+ 727              		.loc 1 408 3 is_stmt 1 view .LVU319
+ 728              		.loc 1 408 25 is_stmt 0 view .LVU320
+ 729 007e 826B     		ldr	r2, [r0, #56]
+ 730              		.loc 1 408 67 view .LVU321
+ 731 0080 9361     		str	r3, [r2, #24]
+ 409:./Drivers/src/stm32f10x_fsmc.c **** }
+ 732              		.loc 1 409 1 view .LVU322
+ 733 0082 7047     		bx	lr
+ 734              		.cfi_endproc
+ 735              	.LFE35:
+ 737              		.section	.text.FSMC_NANDStructInit,"ax",%progbits
+ 738              		.align	1
+ 739              		.global	FSMC_NANDStructInit
+ 740              		.syntax unified
+ 741              		.thumb
+ 742              		.thumb_func
+ 744              	FSMC_NANDStructInit:
+ 745              	.LVL15:
+ 746              	.LFB36:
+ 410:./Drivers/src/stm32f10x_fsmc.c **** 
+ 411:./Drivers/src/stm32f10x_fsmc.c **** /**
+ 412:./Drivers/src/stm32f10x_fsmc.c ****   * @brief  Fills each FSMC_NANDInitStruct member with its default value.
+ 413:./Drivers/src/stm32f10x_fsmc.c ****   * @param  FSMC_NANDInitStruct: pointer to a FSMC_NANDInitTypeDef 
+ 414:./Drivers/src/stm32f10x_fsmc.c ****   *         structure which will be initialized.
+ 415:./Drivers/src/stm32f10x_fsmc.c ****   * @retval None
+ 416:./Drivers/src/stm32f10x_fsmc.c ****   */
+ 417:./Drivers/src/stm32f10x_fsmc.c **** void FSMC_NANDStructInit(FSMC_NANDInitTypeDef* FSMC_NANDInitStruct)
+ 418:./Drivers/src/stm32f10x_fsmc.c **** { 
+ 747              		.loc 1 418 1 is_stmt 1 view -0
+ 748              		.cfi_startproc
+ 749              		@ args = 0, pretend = 0, frame = 0
+ 750              		@ frame_needed = 0, uses_anonymous_args = 0
+ 751              		@ link register save eliminated.
+ 419:./Drivers/src/stm32f10x_fsmc.c ****   /* Reset NAND Init structure parameters values */
+ 420:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_NANDInitStruct->FSMC_Bank = FSMC_Bank2_NAND;
+ 752              		.loc 1 420 3 view .LVU324
+ 753              		.loc 1 420 34 is_stmt 0 view .LVU325
+ 754 0000 1023     		movs	r3, #16
+ 755 0002 0360     		str	r3, [r0]
+ 421:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_NANDInitStruct->FSMC_Waitfeature = FSMC_Waitfeature_Disable;
+ 756              		.loc 1 421 3 is_stmt 1 view .LVU326
+ 757              		.loc 1 421 41 is_stmt 0 view .LVU327
+ 758 0004 0023     		movs	r3, #0
+ 759 0006 4360     		str	r3, [r0, #4]
+ 422:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_NANDInitStruct->FSMC_MemoryDataWidth = FSMC_MemoryDataWidth_8b;
+ 760              		.loc 1 422 3 is_stmt 1 view .LVU328
+ 761              		.loc 1 422 45 is_stmt 0 view .LVU329
+ 762 0008 8360     		str	r3, [r0, #8]
+ 423:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_NANDInitStruct->FSMC_ECC = FSMC_ECC_Disable;
+ARM GAS  /tmp/ccfyTdtx.s 			page 23
+
+
+ 763              		.loc 1 423 3 is_stmt 1 view .LVU330
+ 764              		.loc 1 423 33 is_stmt 0 view .LVU331
+ 765 000a C360     		str	r3, [r0, #12]
+ 424:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_NANDInitStruct->FSMC_ECCPageSize = FSMC_ECCPageSize_256Bytes;
+ 766              		.loc 1 424 3 is_stmt 1 view .LVU332
+ 767              		.loc 1 424 41 is_stmt 0 view .LVU333
+ 768 000c 0361     		str	r3, [r0, #16]
+ 425:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_NANDInitStruct->FSMC_TCLRSetupTime = 0x0;
+ 769              		.loc 1 425 3 is_stmt 1 view .LVU334
+ 770              		.loc 1 425 43 is_stmt 0 view .LVU335
+ 771 000e 4361     		str	r3, [r0, #20]
+ 426:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_NANDInitStruct->FSMC_TARSetupTime = 0x0;
+ 772              		.loc 1 426 3 is_stmt 1 view .LVU336
+ 773              		.loc 1 426 42 is_stmt 0 view .LVU337
+ 774 0010 8361     		str	r3, [r0, #24]
+ 427:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_NANDInitStruct->FSMC_CommonSpaceTimingStruct->FSMC_SetupTime = 0xFC;
+ 775              		.loc 1 427 3 is_stmt 1 view .LVU338
+ 776              		.loc 1 427 22 is_stmt 0 view .LVU339
+ 777 0012 C269     		ldr	r2, [r0, #28]
+ 778              		.loc 1 427 69 view .LVU340
+ 779 0014 FC23     		movs	r3, #252
+ 780 0016 1360     		str	r3, [r2]
+ 428:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_NANDInitStruct->FSMC_CommonSpaceTimingStruct->FSMC_WaitSetupTime = 0xFC;
+ 781              		.loc 1 428 3 is_stmt 1 view .LVU341
+ 782              		.loc 1 428 22 is_stmt 0 view .LVU342
+ 783 0018 C269     		ldr	r2, [r0, #28]
+ 784              		.loc 1 428 73 view .LVU343
+ 785 001a 5360     		str	r3, [r2, #4]
+ 429:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_NANDInitStruct->FSMC_CommonSpaceTimingStruct->FSMC_HoldSetupTime = 0xFC;
+ 786              		.loc 1 429 3 is_stmt 1 view .LVU344
+ 787              		.loc 1 429 22 is_stmt 0 view .LVU345
+ 788 001c C269     		ldr	r2, [r0, #28]
+ 789              		.loc 1 429 73 view .LVU346
+ 790 001e 9360     		str	r3, [r2, #8]
+ 430:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_NANDInitStruct->FSMC_CommonSpaceTimingStruct->FSMC_HiZSetupTime = 0xFC;
+ 791              		.loc 1 430 3 is_stmt 1 view .LVU347
+ 792              		.loc 1 430 22 is_stmt 0 view .LVU348
+ 793 0020 C269     		ldr	r2, [r0, #28]
+ 794              		.loc 1 430 72 view .LVU349
+ 795 0022 D360     		str	r3, [r2, #12]
+ 431:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_NANDInitStruct->FSMC_AttributeSpaceTimingStruct->FSMC_SetupTime = 0xFC;
+ 796              		.loc 1 431 3 is_stmt 1 view .LVU350
+ 797              		.loc 1 431 22 is_stmt 0 view .LVU351
+ 798 0024 026A     		ldr	r2, [r0, #32]
+ 799              		.loc 1 431 72 view .LVU352
+ 800 0026 1360     		str	r3, [r2]
+ 432:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_NANDInitStruct->FSMC_AttributeSpaceTimingStruct->FSMC_WaitSetupTime = 0xFC;
+ 801              		.loc 1 432 3 is_stmt 1 view .LVU353
+ 802              		.loc 1 432 22 is_stmt 0 view .LVU354
+ 803 0028 026A     		ldr	r2, [r0, #32]
+ 804              		.loc 1 432 76 view .LVU355
+ 805 002a 5360     		str	r3, [r2, #4]
+ 433:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_NANDInitStruct->FSMC_AttributeSpaceTimingStruct->FSMC_HoldSetupTime = 0xFC;
+ 806              		.loc 1 433 3 is_stmt 1 view .LVU356
+ 807              		.loc 1 433 22 is_stmt 0 view .LVU357
+ 808 002c 026A     		ldr	r2, [r0, #32]
+ 809              		.loc 1 433 76 view .LVU358
+ARM GAS  /tmp/ccfyTdtx.s 			page 24
+
+
+ 810 002e 9360     		str	r3, [r2, #8]
+ 434:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_NANDInitStruct->FSMC_AttributeSpaceTimingStruct->FSMC_HiZSetupTime = 0xFC;	  
+ 811              		.loc 1 434 3 is_stmt 1 view .LVU359
+ 812              		.loc 1 434 22 is_stmt 0 view .LVU360
+ 813 0030 026A     		ldr	r2, [r0, #32]
+ 814              		.loc 1 434 75 view .LVU361
+ 815 0032 D360     		str	r3, [r2, #12]
+ 435:./Drivers/src/stm32f10x_fsmc.c **** }
+ 816              		.loc 1 435 1 view .LVU362
+ 817 0034 7047     		bx	lr
+ 818              		.cfi_endproc
+ 819              	.LFE36:
+ 821              		.section	.text.FSMC_PCCARDStructInit,"ax",%progbits
+ 822              		.align	1
+ 823              		.global	FSMC_PCCARDStructInit
+ 824              		.syntax unified
+ 825              		.thumb
+ 826              		.thumb_func
+ 828              	FSMC_PCCARDStructInit:
+ 829              	.LVL16:
+ 830              	.LFB37:
+ 436:./Drivers/src/stm32f10x_fsmc.c **** 
+ 437:./Drivers/src/stm32f10x_fsmc.c **** /**
+ 438:./Drivers/src/stm32f10x_fsmc.c ****   * @brief  Fills each FSMC_PCCARDInitStruct member with its default value.
+ 439:./Drivers/src/stm32f10x_fsmc.c ****   * @param  FSMC_PCCARDInitStruct: pointer to a FSMC_PCCARDInitTypeDef 
+ 440:./Drivers/src/stm32f10x_fsmc.c ****   *         structure which will be initialized.
+ 441:./Drivers/src/stm32f10x_fsmc.c ****   * @retval None
+ 442:./Drivers/src/stm32f10x_fsmc.c ****   */
+ 443:./Drivers/src/stm32f10x_fsmc.c **** void FSMC_PCCARDStructInit(FSMC_PCCARDInitTypeDef* FSMC_PCCARDInitStruct)
+ 444:./Drivers/src/stm32f10x_fsmc.c **** {
+ 831              		.loc 1 444 1 is_stmt 1 view -0
+ 832              		.cfi_startproc
+ 833              		@ args = 0, pretend = 0, frame = 0
+ 834              		@ frame_needed = 0, uses_anonymous_args = 0
+ 835              		@ link register save eliminated.
+ 445:./Drivers/src/stm32f10x_fsmc.c ****   /* Reset PCCARD Init structure parameters values */
+ 446:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_PCCARDInitStruct->FSMC_Waitfeature = FSMC_Waitfeature_Disable;
+ 836              		.loc 1 446 3 view .LVU364
+ 837              		.loc 1 446 43 is_stmt 0 view .LVU365
+ 838 0000 0023     		movs	r3, #0
+ 839 0002 0360     		str	r3, [r0]
+ 447:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_PCCARDInitStruct->FSMC_TCLRSetupTime = 0x0;
+ 840              		.loc 1 447 3 is_stmt 1 view .LVU366
+ 841              		.loc 1 447 45 is_stmt 0 view .LVU367
+ 842 0004 4360     		str	r3, [r0, #4]
+ 448:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_PCCARDInitStruct->FSMC_TARSetupTime = 0x0;
+ 843              		.loc 1 448 3 is_stmt 1 view .LVU368
+ 844              		.loc 1 448 44 is_stmt 0 view .LVU369
+ 845 0006 8360     		str	r3, [r0, #8]
+ 449:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_PCCARDInitStruct->FSMC_CommonSpaceTimingStruct->FSMC_SetupTime = 0xFC;
+ 846              		.loc 1 449 3 is_stmt 1 view .LVU370
+ 847              		.loc 1 449 24 is_stmt 0 view .LVU371
+ 848 0008 C268     		ldr	r2, [r0, #12]
+ 849              		.loc 1 449 71 view .LVU372
+ 850 000a FC23     		movs	r3, #252
+ 851 000c 1360     		str	r3, [r2]
+ 450:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_PCCARDInitStruct->FSMC_CommonSpaceTimingStruct->FSMC_WaitSetupTime = 0xFC;
+ARM GAS  /tmp/ccfyTdtx.s 			page 25
+
+
+ 852              		.loc 1 450 3 is_stmt 1 view .LVU373
+ 853              		.loc 1 450 24 is_stmt 0 view .LVU374
+ 854 000e C268     		ldr	r2, [r0, #12]
+ 855              		.loc 1 450 75 view .LVU375
+ 856 0010 5360     		str	r3, [r2, #4]
+ 451:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_PCCARDInitStruct->FSMC_CommonSpaceTimingStruct->FSMC_HoldSetupTime = 0xFC;
+ 857              		.loc 1 451 3 is_stmt 1 view .LVU376
+ 858              		.loc 1 451 24 is_stmt 0 view .LVU377
+ 859 0012 C268     		ldr	r2, [r0, #12]
+ 860              		.loc 1 451 75 view .LVU378
+ 861 0014 9360     		str	r3, [r2, #8]
+ 452:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_PCCARDInitStruct->FSMC_CommonSpaceTimingStruct->FSMC_HiZSetupTime = 0xFC;
+ 862              		.loc 1 452 3 is_stmt 1 view .LVU379
+ 863              		.loc 1 452 24 is_stmt 0 view .LVU380
+ 864 0016 C268     		ldr	r2, [r0, #12]
+ 865              		.loc 1 452 74 view .LVU381
+ 866 0018 D360     		str	r3, [r2, #12]
+ 453:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_PCCARDInitStruct->FSMC_AttributeSpaceTimingStruct->FSMC_SetupTime = 0xFC;
+ 867              		.loc 1 453 3 is_stmt 1 view .LVU382
+ 868              		.loc 1 453 24 is_stmt 0 view .LVU383
+ 869 001a 0269     		ldr	r2, [r0, #16]
+ 870              		.loc 1 453 74 view .LVU384
+ 871 001c 1360     		str	r3, [r2]
+ 454:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_PCCARDInitStruct->FSMC_AttributeSpaceTimingStruct->FSMC_WaitSetupTime = 0xFC;
+ 872              		.loc 1 454 3 is_stmt 1 view .LVU385
+ 873              		.loc 1 454 24 is_stmt 0 view .LVU386
+ 874 001e 0269     		ldr	r2, [r0, #16]
+ 875              		.loc 1 454 78 view .LVU387
+ 876 0020 5360     		str	r3, [r2, #4]
+ 455:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_PCCARDInitStruct->FSMC_AttributeSpaceTimingStruct->FSMC_HoldSetupTime = 0xFC;
+ 877              		.loc 1 455 3 is_stmt 1 view .LVU388
+ 878              		.loc 1 455 24 is_stmt 0 view .LVU389
+ 879 0022 0269     		ldr	r2, [r0, #16]
+ 880              		.loc 1 455 78 view .LVU390
+ 881 0024 9360     		str	r3, [r2, #8]
+ 456:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_PCCARDInitStruct->FSMC_AttributeSpaceTimingStruct->FSMC_HiZSetupTime = 0xFC;	
+ 882              		.loc 1 456 3 is_stmt 1 view .LVU391
+ 883              		.loc 1 456 24 is_stmt 0 view .LVU392
+ 884 0026 0269     		ldr	r2, [r0, #16]
+ 885              		.loc 1 456 77 view .LVU393
+ 886 0028 D360     		str	r3, [r2, #12]
+ 457:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_PCCARDInitStruct->FSMC_IOSpaceTimingStruct->FSMC_SetupTime = 0xFC;
+ 887              		.loc 1 457 3 is_stmt 1 view .LVU394
+ 888              		.loc 1 457 24 is_stmt 0 view .LVU395
+ 889 002a 4269     		ldr	r2, [r0, #20]
+ 890              		.loc 1 457 67 view .LVU396
+ 891 002c 1360     		str	r3, [r2]
+ 458:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_PCCARDInitStruct->FSMC_IOSpaceTimingStruct->FSMC_WaitSetupTime = 0xFC;
+ 892              		.loc 1 458 3 is_stmt 1 view .LVU397
+ 893              		.loc 1 458 24 is_stmt 0 view .LVU398
+ 894 002e 4269     		ldr	r2, [r0, #20]
+ 895              		.loc 1 458 71 view .LVU399
+ 896 0030 5360     		str	r3, [r2, #4]
+ 459:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_PCCARDInitStruct->FSMC_IOSpaceTimingStruct->FSMC_HoldSetupTime = 0xFC;
+ 897              		.loc 1 459 3 is_stmt 1 view .LVU400
+ 898              		.loc 1 459 24 is_stmt 0 view .LVU401
+ 899 0032 4269     		ldr	r2, [r0, #20]
+ARM GAS  /tmp/ccfyTdtx.s 			page 26
+
+
+ 900              		.loc 1 459 71 view .LVU402
+ 901 0034 9360     		str	r3, [r2, #8]
+ 460:./Drivers/src/stm32f10x_fsmc.c ****   FSMC_PCCARDInitStruct->FSMC_IOSpaceTimingStruct->FSMC_HiZSetupTime = 0xFC;
+ 902              		.loc 1 460 3 is_stmt 1 view .LVU403
+ 903              		.loc 1 460 24 is_stmt 0 view .LVU404
+ 904 0036 4269     		ldr	r2, [r0, #20]
+ 905              		.loc 1 460 70 view .LVU405
+ 906 0038 D360     		str	r3, [r2, #12]
+ 461:./Drivers/src/stm32f10x_fsmc.c **** }
+ 907              		.loc 1 461 1 view .LVU406
+ 908 003a 7047     		bx	lr
+ 909              		.cfi_endproc
+ 910              	.LFE37:
+ 912              		.section	.text.FSMC_NORSRAMCmd,"ax",%progbits
+ 913              		.align	1
+ 914              		.global	FSMC_NORSRAMCmd
+ 915              		.syntax unified
+ 916              		.thumb
+ 917              		.thumb_func
+ 919              	FSMC_NORSRAMCmd:
+ 920              	.LVL17:
+ 921              	.LFB38:
+ 462:./Drivers/src/stm32f10x_fsmc.c **** 
+ 463:./Drivers/src/stm32f10x_fsmc.c **** /**
+ 464:./Drivers/src/stm32f10x_fsmc.c ****   * @brief  Enables or disables the specified NOR/SRAM Memory Bank.
+ 465:./Drivers/src/stm32f10x_fsmc.c ****   * @param  FSMC_Bank: specifies the FSMC Bank to be used
+ 466:./Drivers/src/stm32f10x_fsmc.c ****   *   This parameter can be one of the following values:
+ 467:./Drivers/src/stm32f10x_fsmc.c ****   *     @arg FSMC_Bank1_NORSRAM1: FSMC Bank1 NOR/SRAM1  
+ 468:./Drivers/src/stm32f10x_fsmc.c ****   *     @arg FSMC_Bank1_NORSRAM2: FSMC Bank1 NOR/SRAM2 
+ 469:./Drivers/src/stm32f10x_fsmc.c ****   *     @arg FSMC_Bank1_NORSRAM3: FSMC Bank1 NOR/SRAM3 
+ 470:./Drivers/src/stm32f10x_fsmc.c ****   *     @arg FSMC_Bank1_NORSRAM4: FSMC Bank1 NOR/SRAM4 
+ 471:./Drivers/src/stm32f10x_fsmc.c ****   * @param  NewState: new state of the FSMC_Bank. This parameter can be: ENABLE or DISABLE.
+ 472:./Drivers/src/stm32f10x_fsmc.c ****   * @retval None
+ 473:./Drivers/src/stm32f10x_fsmc.c ****   */
+ 474:./Drivers/src/stm32f10x_fsmc.c **** void FSMC_NORSRAMCmd(uint32_t FSMC_Bank, FunctionalState NewState)
+ 475:./Drivers/src/stm32f10x_fsmc.c **** {
+ 922              		.loc 1 475 1 is_stmt 1 view -0
+ 923              		.cfi_startproc
+ 924              		@ args = 0, pretend = 0, frame = 0
+ 925              		@ frame_needed = 0, uses_anonymous_args = 0
+ 926              		@ link register save eliminated.
+ 476:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_NORSRAM_BANK(FSMC_Bank));
+ 927              		.loc 1 476 3 view .LVU408
+ 477:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FUNCTIONAL_STATE(NewState));
+ 928              		.loc 1 477 3 view .LVU409
+ 478:./Drivers/src/stm32f10x_fsmc.c ****   
+ 479:./Drivers/src/stm32f10x_fsmc.c ****   if (NewState != DISABLE)
+ 929              		.loc 1 479 3 view .LVU410
+ 930              		.loc 1 479 6 is_stmt 0 view .LVU411
+ 931 0000 41B1     		cbz	r1, .L25
+ 480:./Drivers/src/stm32f10x_fsmc.c ****   {
+ 481:./Drivers/src/stm32f10x_fsmc.c ****     /* Enable the selected NOR/SRAM Bank by setting the PBKEN bit in the BCRx register */
+ 482:./Drivers/src/stm32f10x_fsmc.c ****     FSMC_Bank1->BTCR[FSMC_Bank] |= BCR_MBKEN_Set;
+ 932              		.loc 1 482 5 is_stmt 1 view .LVU412
+ 933              		.loc 1 482 21 is_stmt 0 view .LVU413
+ 934 0002 4FF02042 		mov	r2, #-1610612736
+ 935 0006 52F82030 		ldr	r3, [r2, r0, lsl #2]
+ARM GAS  /tmp/ccfyTdtx.s 			page 27
+
+
+ 936              		.loc 1 482 33 view .LVU414
+ 937 000a 43F00103 		orr	r3, r3, #1
+ 938 000e 42F82030 		str	r3, [r2, r0, lsl #2]
+ 939 0012 7047     		bx	lr
+ 940              	.L25:
+ 483:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 484:./Drivers/src/stm32f10x_fsmc.c ****   else
+ 485:./Drivers/src/stm32f10x_fsmc.c ****   {
+ 486:./Drivers/src/stm32f10x_fsmc.c ****     /* Disable the selected NOR/SRAM Bank by clearing the PBKEN bit in the BCRx register */
+ 487:./Drivers/src/stm32f10x_fsmc.c ****     FSMC_Bank1->BTCR[FSMC_Bank] &= BCR_MBKEN_Reset;
+ 941              		.loc 1 487 5 is_stmt 1 view .LVU415
+ 942              		.loc 1 487 21 is_stmt 0 view .LVU416
+ 943 0014 4FF02042 		mov	r2, #-1610612736
+ 944 0018 52F82010 		ldr	r1, [r2, r0, lsl #2]
+ 945              	.LVL18:
+ 946              		.loc 1 487 33 view .LVU417
+ 947 001c 024B     		ldr	r3, .L27
+ 948 001e 0B40     		ands	r3, r3, r1
+ 949 0020 42F82030 		str	r3, [r2, r0, lsl #2]
+ 488:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 489:./Drivers/src/stm32f10x_fsmc.c **** }
+ 950              		.loc 1 489 1 view .LVU418
+ 951 0024 7047     		bx	lr
+ 952              	.L28:
+ 953 0026 00BF     		.align	2
+ 954              	.L27:
+ 955 0028 FEFF0F00 		.word	1048574
+ 956              		.cfi_endproc
+ 957              	.LFE38:
+ 959              		.section	.text.FSMC_NANDCmd,"ax",%progbits
+ 960              		.align	1
+ 961              		.global	FSMC_NANDCmd
+ 962              		.syntax unified
+ 963              		.thumb
+ 964              		.thumb_func
+ 966              	FSMC_NANDCmd:
+ 967              	.LVL19:
+ 968              	.LFB39:
+ 490:./Drivers/src/stm32f10x_fsmc.c **** 
+ 491:./Drivers/src/stm32f10x_fsmc.c **** /**
+ 492:./Drivers/src/stm32f10x_fsmc.c ****   * @brief  Enables or disables the specified NAND Memory Bank.
+ 493:./Drivers/src/stm32f10x_fsmc.c ****   * @param  FSMC_Bank: specifies the FSMC Bank to be used
+ 494:./Drivers/src/stm32f10x_fsmc.c ****   *   This parameter can be one of the following values:
+ 495:./Drivers/src/stm32f10x_fsmc.c ****   *     @arg FSMC_Bank2_NAND: FSMC Bank2 NAND 
+ 496:./Drivers/src/stm32f10x_fsmc.c ****   *     @arg FSMC_Bank3_NAND: FSMC Bank3 NAND
+ 497:./Drivers/src/stm32f10x_fsmc.c ****   * @param  NewState: new state of the FSMC_Bank. This parameter can be: ENABLE or DISABLE.
+ 498:./Drivers/src/stm32f10x_fsmc.c ****   * @retval None
+ 499:./Drivers/src/stm32f10x_fsmc.c ****   */
+ 500:./Drivers/src/stm32f10x_fsmc.c **** void FSMC_NANDCmd(uint32_t FSMC_Bank, FunctionalState NewState)
+ 501:./Drivers/src/stm32f10x_fsmc.c **** {
+ 969              		.loc 1 501 1 is_stmt 1 view -0
+ 970              		.cfi_startproc
+ 971              		@ args = 0, pretend = 0, frame = 0
+ 972              		@ frame_needed = 0, uses_anonymous_args = 0
+ 973              		@ link register save eliminated.
+ 502:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_NAND_BANK(FSMC_Bank));
+ 974              		.loc 1 502 3 view .LVU420
+ARM GAS  /tmp/ccfyTdtx.s 			page 28
+
+
+ 503:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FUNCTIONAL_STATE(NewState));
+ 975              		.loc 1 503 3 view .LVU421
+ 504:./Drivers/src/stm32f10x_fsmc.c ****   
+ 505:./Drivers/src/stm32f10x_fsmc.c ****   if (NewState != DISABLE)
+ 976              		.loc 1 505 3 view .LVU422
+ 977              		.loc 1 505 6 is_stmt 0 view .LVU423
+ 978 0000 89B1     		cbz	r1, .L30
+ 506:./Drivers/src/stm32f10x_fsmc.c ****   {
+ 507:./Drivers/src/stm32f10x_fsmc.c ****     /* Enable the selected NAND Bank by setting the PBKEN bit in the PCRx register */
+ 508:./Drivers/src/stm32f10x_fsmc.c ****     if(FSMC_Bank == FSMC_Bank2_NAND)
+ 979              		.loc 1 508 5 is_stmt 1 view .LVU424
+ 980              		.loc 1 508 7 is_stmt 0 view .LVU425
+ 981 0002 1028     		cmp	r0, #16
+ 982 0004 08D0     		beq	.L34
+ 509:./Drivers/src/stm32f10x_fsmc.c ****     {
+ 510:./Drivers/src/stm32f10x_fsmc.c ****       FSMC_Bank2->PCR2 |= PCR_PBKEN_Set;
+ 511:./Drivers/src/stm32f10x_fsmc.c ****     }
+ 512:./Drivers/src/stm32f10x_fsmc.c ****     else
+ 513:./Drivers/src/stm32f10x_fsmc.c ****     {
+ 514:./Drivers/src/stm32f10x_fsmc.c ****       FSMC_Bank3->PCR3 |= PCR_PBKEN_Set;
+ 983              		.loc 1 514 7 is_stmt 1 view .LVU426
+ 984              		.loc 1 514 17 is_stmt 0 view .LVU427
+ 985 0006 4FF02042 		mov	r2, #-1610612736
+ 986 000a D2F88030 		ldr	r3, [r2, #128]
+ 987              		.loc 1 514 24 view .LVU428
+ 988 000e 43F00403 		orr	r3, r3, #4
+ 989 0012 C2F88030 		str	r3, [r2, #128]
+ 990 0016 7047     		bx	lr
+ 991              	.L34:
+ 510:./Drivers/src/stm32f10x_fsmc.c ****     }
+ 992              		.loc 1 510 7 is_stmt 1 view .LVU429
+ 510:./Drivers/src/stm32f10x_fsmc.c ****     }
+ 993              		.loc 1 510 17 is_stmt 0 view .LVU430
+ 994 0018 4FF02042 		mov	r2, #-1610612736
+ 995 001c 136E     		ldr	r3, [r2, #96]
+ 510:./Drivers/src/stm32f10x_fsmc.c ****     }
+ 996              		.loc 1 510 24 view .LVU431
+ 997 001e 43F00403 		orr	r3, r3, #4
+ 998 0022 1366     		str	r3, [r2, #96]
+ 999 0024 7047     		bx	lr
+ 1000              	.L30:
+ 515:./Drivers/src/stm32f10x_fsmc.c ****     }
+ 516:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 517:./Drivers/src/stm32f10x_fsmc.c ****   else
+ 518:./Drivers/src/stm32f10x_fsmc.c ****   {
+ 519:./Drivers/src/stm32f10x_fsmc.c ****     /* Disable the selected NAND Bank by clearing the PBKEN bit in the PCRx register */
+ 520:./Drivers/src/stm32f10x_fsmc.c ****     if(FSMC_Bank == FSMC_Bank2_NAND)
+ 1001              		.loc 1 520 5 is_stmt 1 view .LVU432
+ 1002              		.loc 1 520 7 is_stmt 0 view .LVU433
+ 1003 0026 1028     		cmp	r0, #16
+ 1004 0028 08D0     		beq	.L35
+ 521:./Drivers/src/stm32f10x_fsmc.c ****     {
+ 522:./Drivers/src/stm32f10x_fsmc.c ****       FSMC_Bank2->PCR2 &= PCR_PBKEN_Reset;
+ 523:./Drivers/src/stm32f10x_fsmc.c ****     }
+ 524:./Drivers/src/stm32f10x_fsmc.c ****     else
+ 525:./Drivers/src/stm32f10x_fsmc.c ****     {
+ 526:./Drivers/src/stm32f10x_fsmc.c ****       FSMC_Bank3->PCR3 &= PCR_PBKEN_Reset;
+ARM GAS  /tmp/ccfyTdtx.s 			page 29
+
+
+ 1005              		.loc 1 526 7 is_stmt 1 view .LVU434
+ 1006              		.loc 1 526 17 is_stmt 0 view .LVU435
+ 1007 002a 4FF02042 		mov	r2, #-1610612736
+ 1008 002e D2F88010 		ldr	r1, [r2, #128]
+ 1009              	.LVL20:
+ 1010              		.loc 1 526 24 view .LVU436
+ 1011 0032 064B     		ldr	r3, .L36
+ 1012 0034 0B40     		ands	r3, r3, r1
+ 1013 0036 C2F88030 		str	r3, [r2, #128]
+ 527:./Drivers/src/stm32f10x_fsmc.c ****     }
+ 528:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 529:./Drivers/src/stm32f10x_fsmc.c **** }
+ 1014              		.loc 1 529 1 view .LVU437
+ 1015 003a 7047     		bx	lr
+ 1016              	.LVL21:
+ 1017              	.L35:
+ 522:./Drivers/src/stm32f10x_fsmc.c ****     }
+ 1018              		.loc 1 522 7 is_stmt 1 view .LVU438
+ 522:./Drivers/src/stm32f10x_fsmc.c ****     }
+ 1019              		.loc 1 522 17 is_stmt 0 view .LVU439
+ 1020 003c 4FF02042 		mov	r2, #-1610612736
+ 1021 0040 116E     		ldr	r1, [r2, #96]
+ 1022              	.LVL22:
+ 522:./Drivers/src/stm32f10x_fsmc.c ****     }
+ 1023              		.loc 1 522 24 view .LVU440
+ 1024 0042 024B     		ldr	r3, .L36
+ 1025 0044 0B40     		ands	r3, r3, r1
+ 1026 0046 1366     		str	r3, [r2, #96]
+ 1027 0048 7047     		bx	lr
+ 1028              	.L37:
+ 1029 004a 00BF     		.align	2
+ 1030              	.L36:
+ 1031 004c FBFF0F00 		.word	1048571
+ 1032              		.cfi_endproc
+ 1033              	.LFE39:
+ 1035              		.section	.text.FSMC_PCCARDCmd,"ax",%progbits
+ 1036              		.align	1
+ 1037              		.global	FSMC_PCCARDCmd
+ 1038              		.syntax unified
+ 1039              		.thumb
+ 1040              		.thumb_func
+ 1042              	FSMC_PCCARDCmd:
+ 1043              	.LVL23:
+ 1044              	.LFB40:
+ 530:./Drivers/src/stm32f10x_fsmc.c **** 
+ 531:./Drivers/src/stm32f10x_fsmc.c **** /**
+ 532:./Drivers/src/stm32f10x_fsmc.c ****   * @brief  Enables or disables the PCCARD Memory Bank.
+ 533:./Drivers/src/stm32f10x_fsmc.c ****   * @param  NewState: new state of the PCCARD Memory Bank.  
+ 534:./Drivers/src/stm32f10x_fsmc.c ****   *   This parameter can be: ENABLE or DISABLE.
+ 535:./Drivers/src/stm32f10x_fsmc.c ****   * @retval None
+ 536:./Drivers/src/stm32f10x_fsmc.c ****   */
+ 537:./Drivers/src/stm32f10x_fsmc.c **** void FSMC_PCCARDCmd(FunctionalState NewState)
+ 538:./Drivers/src/stm32f10x_fsmc.c **** {
+ 1045              		.loc 1 538 1 is_stmt 1 view -0
+ 1046              		.cfi_startproc
+ 1047              		@ args = 0, pretend = 0, frame = 0
+ 1048              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  /tmp/ccfyTdtx.s 			page 30
+
+
+ 1049              		@ link register save eliminated.
+ 539:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FUNCTIONAL_STATE(NewState));
+ 1050              		.loc 1 539 3 view .LVU442
+ 540:./Drivers/src/stm32f10x_fsmc.c ****   
+ 541:./Drivers/src/stm32f10x_fsmc.c ****   if (NewState != DISABLE)
+ 1051              		.loc 1 541 3 view .LVU443
+ 1052              		.loc 1 541 6 is_stmt 0 view .LVU444
+ 1053 0000 40B1     		cbz	r0, .L39
+ 542:./Drivers/src/stm32f10x_fsmc.c ****   {
+ 543:./Drivers/src/stm32f10x_fsmc.c ****     /* Enable the PCCARD Bank by setting the PBKEN bit in the PCR4 register */
+ 544:./Drivers/src/stm32f10x_fsmc.c ****     FSMC_Bank4->PCR4 |= PCR_PBKEN_Set;
+ 1054              		.loc 1 544 5 is_stmt 1 view .LVU445
+ 1055              		.loc 1 544 15 is_stmt 0 view .LVU446
+ 1056 0002 4FF02042 		mov	r2, #-1610612736
+ 1057 0006 D2F8A030 		ldr	r3, [r2, #160]
+ 1058              		.loc 1 544 22 view .LVU447
+ 1059 000a 43F00403 		orr	r3, r3, #4
+ 1060 000e C2F8A030 		str	r3, [r2, #160]
+ 1061 0012 7047     		bx	lr
+ 1062              	.L39:
+ 545:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 546:./Drivers/src/stm32f10x_fsmc.c ****   else
+ 547:./Drivers/src/stm32f10x_fsmc.c ****   {
+ 548:./Drivers/src/stm32f10x_fsmc.c ****     /* Disable the PCCARD Bank by clearing the PBKEN bit in the PCR4 register */
+ 549:./Drivers/src/stm32f10x_fsmc.c ****     FSMC_Bank4->PCR4 &= PCR_PBKEN_Reset;
+ 1063              		.loc 1 549 5 is_stmt 1 view .LVU448
+ 1064              		.loc 1 549 15 is_stmt 0 view .LVU449
+ 1065 0014 4FF02042 		mov	r2, #-1610612736
+ 1066 0018 D2F8A010 		ldr	r1, [r2, #160]
+ 1067              		.loc 1 549 22 view .LVU450
+ 1068 001c 024B     		ldr	r3, .L41
+ 1069 001e 0B40     		ands	r3, r3, r1
+ 1070 0020 C2F8A030 		str	r3, [r2, #160]
+ 550:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 551:./Drivers/src/stm32f10x_fsmc.c **** }
+ 1071              		.loc 1 551 1 view .LVU451
+ 1072 0024 7047     		bx	lr
+ 1073              	.L42:
+ 1074 0026 00BF     		.align	2
+ 1075              	.L41:
+ 1076 0028 FBFF0F00 		.word	1048571
+ 1077              		.cfi_endproc
+ 1078              	.LFE40:
+ 1080              		.section	.text.FSMC_NANDECCCmd,"ax",%progbits
+ 1081              		.align	1
+ 1082              		.global	FSMC_NANDECCCmd
+ 1083              		.syntax unified
+ 1084              		.thumb
+ 1085              		.thumb_func
+ 1087              	FSMC_NANDECCCmd:
+ 1088              	.LVL24:
+ 1089              	.LFB41:
+ 552:./Drivers/src/stm32f10x_fsmc.c **** 
+ 553:./Drivers/src/stm32f10x_fsmc.c **** /**
+ 554:./Drivers/src/stm32f10x_fsmc.c ****   * @brief  Enables or disables the FSMC NAND ECC feature.
+ 555:./Drivers/src/stm32f10x_fsmc.c ****   * @param  FSMC_Bank: specifies the FSMC Bank to be used
+ 556:./Drivers/src/stm32f10x_fsmc.c ****   *   This parameter can be one of the following values:
+ARM GAS  /tmp/ccfyTdtx.s 			page 31
+
+
+ 557:./Drivers/src/stm32f10x_fsmc.c ****   *     @arg FSMC_Bank2_NAND: FSMC Bank2 NAND 
+ 558:./Drivers/src/stm32f10x_fsmc.c ****   *     @arg FSMC_Bank3_NAND: FSMC Bank3 NAND
+ 559:./Drivers/src/stm32f10x_fsmc.c ****   * @param  NewState: new state of the FSMC NAND ECC feature.  
+ 560:./Drivers/src/stm32f10x_fsmc.c ****   *   This parameter can be: ENABLE or DISABLE.
+ 561:./Drivers/src/stm32f10x_fsmc.c ****   * @retval None
+ 562:./Drivers/src/stm32f10x_fsmc.c ****   */
+ 563:./Drivers/src/stm32f10x_fsmc.c **** void FSMC_NANDECCCmd(uint32_t FSMC_Bank, FunctionalState NewState)
+ 564:./Drivers/src/stm32f10x_fsmc.c **** {
+ 1090              		.loc 1 564 1 is_stmt 1 view -0
+ 1091              		.cfi_startproc
+ 1092              		@ args = 0, pretend = 0, frame = 0
+ 1093              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1094              		@ link register save eliminated.
+ 565:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_NAND_BANK(FSMC_Bank));
+ 1095              		.loc 1 565 3 view .LVU453
+ 566:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FUNCTIONAL_STATE(NewState));
+ 1096              		.loc 1 566 3 view .LVU454
+ 567:./Drivers/src/stm32f10x_fsmc.c ****   
+ 568:./Drivers/src/stm32f10x_fsmc.c ****   if (NewState != DISABLE)
+ 1097              		.loc 1 568 3 view .LVU455
+ 1098              		.loc 1 568 6 is_stmt 0 view .LVU456
+ 1099 0000 89B1     		cbz	r1, .L44
+ 569:./Drivers/src/stm32f10x_fsmc.c ****   {
+ 570:./Drivers/src/stm32f10x_fsmc.c ****     /* Enable the selected NAND Bank ECC function by setting the ECCEN bit in the PCRx register */
+ 571:./Drivers/src/stm32f10x_fsmc.c ****     if(FSMC_Bank == FSMC_Bank2_NAND)
+ 1100              		.loc 1 571 5 is_stmt 1 view .LVU457
+ 1101              		.loc 1 571 7 is_stmt 0 view .LVU458
+ 1102 0002 1028     		cmp	r0, #16
+ 1103 0004 08D0     		beq	.L48
+ 572:./Drivers/src/stm32f10x_fsmc.c ****     {
+ 573:./Drivers/src/stm32f10x_fsmc.c ****       FSMC_Bank2->PCR2 |= PCR_ECCEN_Set;
+ 574:./Drivers/src/stm32f10x_fsmc.c ****     }
+ 575:./Drivers/src/stm32f10x_fsmc.c ****     else
+ 576:./Drivers/src/stm32f10x_fsmc.c ****     {
+ 577:./Drivers/src/stm32f10x_fsmc.c ****       FSMC_Bank3->PCR3 |= PCR_ECCEN_Set;
+ 1104              		.loc 1 577 7 is_stmt 1 view .LVU459
+ 1105              		.loc 1 577 17 is_stmt 0 view .LVU460
+ 1106 0006 4FF02042 		mov	r2, #-1610612736
+ 1107 000a D2F88030 		ldr	r3, [r2, #128]
+ 1108              		.loc 1 577 24 view .LVU461
+ 1109 000e 43F04003 		orr	r3, r3, #64
+ 1110 0012 C2F88030 		str	r3, [r2, #128]
+ 1111 0016 7047     		bx	lr
+ 1112              	.L48:
+ 573:./Drivers/src/stm32f10x_fsmc.c ****     }
+ 1113              		.loc 1 573 7 is_stmt 1 view .LVU462
+ 573:./Drivers/src/stm32f10x_fsmc.c ****     }
+ 1114              		.loc 1 573 17 is_stmt 0 view .LVU463
+ 1115 0018 4FF02042 		mov	r2, #-1610612736
+ 1116 001c 136E     		ldr	r3, [r2, #96]
+ 573:./Drivers/src/stm32f10x_fsmc.c ****     }
+ 1117              		.loc 1 573 24 view .LVU464
+ 1118 001e 43F04003 		orr	r3, r3, #64
+ 1119 0022 1366     		str	r3, [r2, #96]
+ 1120 0024 7047     		bx	lr
+ 1121              	.L44:
+ 578:./Drivers/src/stm32f10x_fsmc.c ****     }
+ARM GAS  /tmp/ccfyTdtx.s 			page 32
+
+
+ 579:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 580:./Drivers/src/stm32f10x_fsmc.c ****   else
+ 581:./Drivers/src/stm32f10x_fsmc.c ****   {
+ 582:./Drivers/src/stm32f10x_fsmc.c ****     /* Disable the selected NAND Bank ECC function by clearing the ECCEN bit in the PCRx register *
+ 583:./Drivers/src/stm32f10x_fsmc.c ****     if(FSMC_Bank == FSMC_Bank2_NAND)
+ 1122              		.loc 1 583 5 is_stmt 1 view .LVU465
+ 1123              		.loc 1 583 7 is_stmt 0 view .LVU466
+ 1124 0026 1028     		cmp	r0, #16
+ 1125 0028 08D0     		beq	.L49
+ 584:./Drivers/src/stm32f10x_fsmc.c ****     {
+ 585:./Drivers/src/stm32f10x_fsmc.c ****       FSMC_Bank2->PCR2 &= PCR_ECCEN_Reset;
+ 586:./Drivers/src/stm32f10x_fsmc.c ****     }
+ 587:./Drivers/src/stm32f10x_fsmc.c ****     else
+ 588:./Drivers/src/stm32f10x_fsmc.c ****     {
+ 589:./Drivers/src/stm32f10x_fsmc.c ****       FSMC_Bank3->PCR3 &= PCR_ECCEN_Reset;
+ 1126              		.loc 1 589 7 is_stmt 1 view .LVU467
+ 1127              		.loc 1 589 17 is_stmt 0 view .LVU468
+ 1128 002a 4FF02042 		mov	r2, #-1610612736
+ 1129 002e D2F88010 		ldr	r1, [r2, #128]
+ 1130              	.LVL25:
+ 1131              		.loc 1 589 24 view .LVU469
+ 1132 0032 064B     		ldr	r3, .L50
+ 1133 0034 0B40     		ands	r3, r3, r1
+ 1134 0036 C2F88030 		str	r3, [r2, #128]
+ 590:./Drivers/src/stm32f10x_fsmc.c ****     }
+ 591:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 592:./Drivers/src/stm32f10x_fsmc.c **** }
+ 1135              		.loc 1 592 1 view .LVU470
+ 1136 003a 7047     		bx	lr
+ 1137              	.LVL26:
+ 1138              	.L49:
+ 585:./Drivers/src/stm32f10x_fsmc.c ****     }
+ 1139              		.loc 1 585 7 is_stmt 1 view .LVU471
+ 585:./Drivers/src/stm32f10x_fsmc.c ****     }
+ 1140              		.loc 1 585 17 is_stmt 0 view .LVU472
+ 1141 003c 4FF02042 		mov	r2, #-1610612736
+ 1142 0040 116E     		ldr	r1, [r2, #96]
+ 1143              	.LVL27:
+ 585:./Drivers/src/stm32f10x_fsmc.c ****     }
+ 1144              		.loc 1 585 24 view .LVU473
+ 1145 0042 024B     		ldr	r3, .L50
+ 1146 0044 0B40     		ands	r3, r3, r1
+ 1147 0046 1366     		str	r3, [r2, #96]
+ 1148 0048 7047     		bx	lr
+ 1149              	.L51:
+ 1150 004a 00BF     		.align	2
+ 1151              	.L50:
+ 1152 004c BFFF0F00 		.word	1048511
+ 1153              		.cfi_endproc
+ 1154              	.LFE41:
+ 1156              		.section	.text.FSMC_GetECC,"ax",%progbits
+ 1157              		.align	1
+ 1158              		.global	FSMC_GetECC
+ 1159              		.syntax unified
+ 1160              		.thumb
+ 1161              		.thumb_func
+ 1163              	FSMC_GetECC:
+ARM GAS  /tmp/ccfyTdtx.s 			page 33
+
+
+ 1164              	.LVL28:
+ 1165              	.LFB42:
+ 593:./Drivers/src/stm32f10x_fsmc.c **** 
+ 594:./Drivers/src/stm32f10x_fsmc.c **** /**
+ 595:./Drivers/src/stm32f10x_fsmc.c ****   * @brief  Returns the error correction code register value.
+ 596:./Drivers/src/stm32f10x_fsmc.c ****   * @param  FSMC_Bank: specifies the FSMC Bank to be used
+ 597:./Drivers/src/stm32f10x_fsmc.c ****   *   This parameter can be one of the following values:
+ 598:./Drivers/src/stm32f10x_fsmc.c ****   *     @arg FSMC_Bank2_NAND: FSMC Bank2 NAND 
+ 599:./Drivers/src/stm32f10x_fsmc.c ****   *     @arg FSMC_Bank3_NAND: FSMC Bank3 NAND
+ 600:./Drivers/src/stm32f10x_fsmc.c ****   * @retval The Error Correction Code (ECC) value.
+ 601:./Drivers/src/stm32f10x_fsmc.c ****   */
+ 602:./Drivers/src/stm32f10x_fsmc.c **** uint32_t FSMC_GetECC(uint32_t FSMC_Bank)
+ 603:./Drivers/src/stm32f10x_fsmc.c **** {
+ 1166              		.loc 1 603 1 is_stmt 1 view -0
+ 1167              		.cfi_startproc
+ 1168              		@ args = 0, pretend = 0, frame = 0
+ 1169              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1170              		@ link register save eliminated.
+ 604:./Drivers/src/stm32f10x_fsmc.c ****   uint32_t eccval = 0x00000000;
+ 1171              		.loc 1 604 3 view .LVU475
+ 605:./Drivers/src/stm32f10x_fsmc.c ****   
+ 606:./Drivers/src/stm32f10x_fsmc.c ****   if(FSMC_Bank == FSMC_Bank2_NAND)
+ 1172              		.loc 1 606 3 view .LVU476
+ 1173              		.loc 1 606 5 is_stmt 0 view .LVU477
+ 1174 0000 1028     		cmp	r0, #16
+ 1175 0002 04D0     		beq	.L55
+ 607:./Drivers/src/stm32f10x_fsmc.c ****   {
+ 608:./Drivers/src/stm32f10x_fsmc.c ****     /* Get the ECCR2 register value */
+ 609:./Drivers/src/stm32f10x_fsmc.c ****     eccval = FSMC_Bank2->ECCR2;
+ 610:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 611:./Drivers/src/stm32f10x_fsmc.c ****   else
+ 612:./Drivers/src/stm32f10x_fsmc.c ****   {
+ 613:./Drivers/src/stm32f10x_fsmc.c ****     /* Get the ECCR3 register value */
+ 614:./Drivers/src/stm32f10x_fsmc.c ****     eccval = FSMC_Bank3->ECCR3;
+ 1176              		.loc 1 614 5 is_stmt 1 view .LVU478
+ 1177              		.loc 1 614 12 is_stmt 0 view .LVU479
+ 1178 0004 4FF02043 		mov	r3, #-1610612736
+ 1179 0008 D3F89400 		ldr	r0, [r3, #148]
+ 1180              	.LVL29:
+ 615:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 616:./Drivers/src/stm32f10x_fsmc.c ****   /* Return the error correction code value */
+ 617:./Drivers/src/stm32f10x_fsmc.c ****   return(eccval);
+ 1181              		.loc 1 617 3 is_stmt 1 view .LVU480
+ 618:./Drivers/src/stm32f10x_fsmc.c **** }
+ 1182              		.loc 1 618 1 is_stmt 0 view .LVU481
+ 1183 000c 7047     		bx	lr
+ 1184              	.LVL30:
+ 1185              	.L55:
+ 609:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 1186              		.loc 1 609 5 is_stmt 1 view .LVU482
+ 609:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 1187              		.loc 1 609 12 is_stmt 0 view .LVU483
+ 1188 000e 4FF02043 		mov	r3, #-1610612736
+ 1189 0012 586F     		ldr	r0, [r3, #116]
+ 1190              	.LVL31:
+ 609:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 1191              		.loc 1 609 12 view .LVU484
+ARM GAS  /tmp/ccfyTdtx.s 			page 34
+
+
+ 1192 0014 7047     		bx	lr
+ 1193              		.cfi_endproc
+ 1194              	.LFE42:
+ 1196              		.section	.text.FSMC_ITConfig,"ax",%progbits
+ 1197              		.align	1
+ 1198              		.global	FSMC_ITConfig
+ 1199              		.syntax unified
+ 1200              		.thumb
+ 1201              		.thumb_func
+ 1203              	FSMC_ITConfig:
+ 1204              	.LVL32:
+ 1205              	.LFB43:
+ 619:./Drivers/src/stm32f10x_fsmc.c **** 
+ 620:./Drivers/src/stm32f10x_fsmc.c **** /**
+ 621:./Drivers/src/stm32f10x_fsmc.c ****   * @brief  Enables or disables the specified FSMC interrupts.
+ 622:./Drivers/src/stm32f10x_fsmc.c ****   * @param  FSMC_Bank: specifies the FSMC Bank to be used
+ 623:./Drivers/src/stm32f10x_fsmc.c ****   *   This parameter can be one of the following values:
+ 624:./Drivers/src/stm32f10x_fsmc.c ****   *     @arg FSMC_Bank2_NAND: FSMC Bank2 NAND 
+ 625:./Drivers/src/stm32f10x_fsmc.c ****   *     @arg FSMC_Bank3_NAND: FSMC Bank3 NAND
+ 626:./Drivers/src/stm32f10x_fsmc.c ****   *     @arg FSMC_Bank4_PCCARD: FSMC Bank4 PCCARD
+ 627:./Drivers/src/stm32f10x_fsmc.c ****   * @param  FSMC_IT: specifies the FSMC interrupt sources to be enabled or disabled.
+ 628:./Drivers/src/stm32f10x_fsmc.c ****   *   This parameter can be any combination of the following values:
+ 629:./Drivers/src/stm32f10x_fsmc.c ****   *     @arg FSMC_IT_RisingEdge: Rising edge detection interrupt. 
+ 630:./Drivers/src/stm32f10x_fsmc.c ****   *     @arg FSMC_IT_Level: Level edge detection interrupt.
+ 631:./Drivers/src/stm32f10x_fsmc.c ****   *     @arg FSMC_IT_FallingEdge: Falling edge detection interrupt.
+ 632:./Drivers/src/stm32f10x_fsmc.c ****   * @param  NewState: new state of the specified FSMC interrupts.
+ 633:./Drivers/src/stm32f10x_fsmc.c ****   *   This parameter can be: ENABLE or DISABLE.
+ 634:./Drivers/src/stm32f10x_fsmc.c ****   * @retval None
+ 635:./Drivers/src/stm32f10x_fsmc.c ****   */
+ 636:./Drivers/src/stm32f10x_fsmc.c **** void FSMC_ITConfig(uint32_t FSMC_Bank, uint32_t FSMC_IT, FunctionalState NewState)
+ 637:./Drivers/src/stm32f10x_fsmc.c **** {
+ 1206              		.loc 1 637 1 is_stmt 1 view -0
+ 1207              		.cfi_startproc
+ 1208              		@ args = 0, pretend = 0, frame = 0
+ 1209              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1210              		@ link register save eliminated.
+ 638:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_IT_BANK(FSMC_Bank));
+ 1211              		.loc 1 638 3 view .LVU486
+ 639:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_IT(FSMC_IT));	
+ 1212              		.loc 1 639 3 view .LVU487
+ 640:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FUNCTIONAL_STATE(NewState));
+ 1213              		.loc 1 640 3 view .LVU488
+ 641:./Drivers/src/stm32f10x_fsmc.c ****   
+ 642:./Drivers/src/stm32f10x_fsmc.c ****   if (NewState != DISABLE)
+ 1214              		.loc 1 642 3 view .LVU489
+ 1215              		.loc 1 642 6 is_stmt 0 view .LVU490
+ 1216 0000 D2B1     		cbz	r2, .L57
+ 643:./Drivers/src/stm32f10x_fsmc.c ****   {
+ 644:./Drivers/src/stm32f10x_fsmc.c ****     /* Enable the selected FSMC_Bank2 interrupts */
+ 645:./Drivers/src/stm32f10x_fsmc.c ****     if(FSMC_Bank == FSMC_Bank2_NAND)
+ 1217              		.loc 1 645 5 is_stmt 1 view .LVU491
+ 1218              		.loc 1 645 7 is_stmt 0 view .LVU492
+ 1219 0002 1028     		cmp	r0, #16
+ 1220 0004 0AD0     		beq	.L63
+ 646:./Drivers/src/stm32f10x_fsmc.c ****     {
+ 647:./Drivers/src/stm32f10x_fsmc.c ****       FSMC_Bank2->SR2 |= FSMC_IT;
+ 648:./Drivers/src/stm32f10x_fsmc.c ****     }
+ARM GAS  /tmp/ccfyTdtx.s 			page 35
+
+
+ 649:./Drivers/src/stm32f10x_fsmc.c ****     /* Enable the selected FSMC_Bank3 interrupts */
+ 650:./Drivers/src/stm32f10x_fsmc.c ****     else if (FSMC_Bank == FSMC_Bank3_NAND)
+ 1221              		.loc 1 650 10 is_stmt 1 view .LVU493
+ 1222              		.loc 1 650 13 is_stmt 0 view .LVU494
+ 1223 0006 B0F5807F 		cmp	r0, #256
+ 1224 000a 0DD0     		beq	.L64
+ 651:./Drivers/src/stm32f10x_fsmc.c ****     {
+ 652:./Drivers/src/stm32f10x_fsmc.c ****       FSMC_Bank3->SR3 |= FSMC_IT;
+ 653:./Drivers/src/stm32f10x_fsmc.c ****     }
+ 654:./Drivers/src/stm32f10x_fsmc.c ****     /* Enable the selected FSMC_Bank4 interrupts */
+ 655:./Drivers/src/stm32f10x_fsmc.c ****     else
+ 656:./Drivers/src/stm32f10x_fsmc.c ****     {
+ 657:./Drivers/src/stm32f10x_fsmc.c ****       FSMC_Bank4->SR4 |= FSMC_IT;    
+ 1225              		.loc 1 657 7 is_stmt 1 view .LVU495
+ 1226              		.loc 1 657 17 is_stmt 0 view .LVU496
+ 1227 000c 4FF02042 		mov	r2, #-1610612736
+ 1228              	.LVL33:
+ 1229              		.loc 1 657 17 view .LVU497
+ 1230 0010 D2F8A430 		ldr	r3, [r2, #164]
+ 1231              		.loc 1 657 23 view .LVU498
+ 1232 0014 0B43     		orrs	r3, r3, r1
+ 1233 0016 C2F8A430 		str	r3, [r2, #164]
+ 1234 001a 7047     		bx	lr
+ 1235              	.LVL34:
+ 1236              	.L63:
+ 647:./Drivers/src/stm32f10x_fsmc.c ****     }
+ 1237              		.loc 1 647 7 is_stmt 1 view .LVU499
+ 647:./Drivers/src/stm32f10x_fsmc.c ****     }
+ 1238              		.loc 1 647 17 is_stmt 0 view .LVU500
+ 1239 001c 4FF02042 		mov	r2, #-1610612736
+ 1240              	.LVL35:
+ 647:./Drivers/src/stm32f10x_fsmc.c ****     }
+ 1241              		.loc 1 647 17 view .LVU501
+ 1242 0020 536E     		ldr	r3, [r2, #100]
+ 647:./Drivers/src/stm32f10x_fsmc.c ****     }
+ 1243              		.loc 1 647 23 view .LVU502
+ 1244 0022 0B43     		orrs	r3, r3, r1
+ 1245 0024 5366     		str	r3, [r2, #100]
+ 1246 0026 7047     		bx	lr
+ 1247              	.LVL36:
+ 1248              	.L64:
+ 652:./Drivers/src/stm32f10x_fsmc.c ****     }
+ 1249              		.loc 1 652 7 is_stmt 1 view .LVU503
+ 652:./Drivers/src/stm32f10x_fsmc.c ****     }
+ 1250              		.loc 1 652 17 is_stmt 0 view .LVU504
+ 1251 0028 4FF02042 		mov	r2, #-1610612736
+ 1252              	.LVL37:
+ 652:./Drivers/src/stm32f10x_fsmc.c ****     }
+ 1253              		.loc 1 652 17 view .LVU505
+ 1254 002c D2F88430 		ldr	r3, [r2, #132]
+ 652:./Drivers/src/stm32f10x_fsmc.c ****     }
+ 1255              		.loc 1 652 23 view .LVU506
+ 1256 0030 0B43     		orrs	r3, r3, r1
+ 1257 0032 C2F88430 		str	r3, [r2, #132]
+ 1258 0036 7047     		bx	lr
+ 1259              	.LVL38:
+ 1260              	.L57:
+ARM GAS  /tmp/ccfyTdtx.s 			page 36
+
+
+ 658:./Drivers/src/stm32f10x_fsmc.c ****     }
+ 659:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 660:./Drivers/src/stm32f10x_fsmc.c ****   else
+ 661:./Drivers/src/stm32f10x_fsmc.c ****   {
+ 662:./Drivers/src/stm32f10x_fsmc.c ****     /* Disable the selected FSMC_Bank2 interrupts */
+ 663:./Drivers/src/stm32f10x_fsmc.c ****     if(FSMC_Bank == FSMC_Bank2_NAND)
+ 1261              		.loc 1 663 5 is_stmt 1 view .LVU507
+ 1262              		.loc 1 663 7 is_stmt 0 view .LVU508
+ 1263 0038 1028     		cmp	r0, #16
+ 1264 003a 0BD0     		beq	.L65
+ 664:./Drivers/src/stm32f10x_fsmc.c ****     {
+ 665:./Drivers/src/stm32f10x_fsmc.c ****       
+ 666:./Drivers/src/stm32f10x_fsmc.c ****       FSMC_Bank2->SR2 &= (uint32_t)~FSMC_IT;
+ 667:./Drivers/src/stm32f10x_fsmc.c ****     }
+ 668:./Drivers/src/stm32f10x_fsmc.c ****     /* Disable the selected FSMC_Bank3 interrupts */
+ 669:./Drivers/src/stm32f10x_fsmc.c ****     else if (FSMC_Bank == FSMC_Bank3_NAND)
+ 1265              		.loc 1 669 10 is_stmt 1 view .LVU509
+ 1266              		.loc 1 669 13 is_stmt 0 view .LVU510
+ 1267 003c B0F5807F 		cmp	r0, #256
+ 1268 0040 0FD0     		beq	.L66
+ 670:./Drivers/src/stm32f10x_fsmc.c ****     {
+ 671:./Drivers/src/stm32f10x_fsmc.c ****       FSMC_Bank3->SR3 &= (uint32_t)~FSMC_IT;
+ 672:./Drivers/src/stm32f10x_fsmc.c ****     }
+ 673:./Drivers/src/stm32f10x_fsmc.c ****     /* Disable the selected FSMC_Bank4 interrupts */
+ 674:./Drivers/src/stm32f10x_fsmc.c ****     else
+ 675:./Drivers/src/stm32f10x_fsmc.c ****     {
+ 676:./Drivers/src/stm32f10x_fsmc.c ****       FSMC_Bank4->SR4 &= (uint32_t)~FSMC_IT;    
+ 1269              		.loc 1 676 7 is_stmt 1 view .LVU511
+ 1270              		.loc 1 676 17 is_stmt 0 view .LVU512
+ 1271 0042 4FF02042 		mov	r2, #-1610612736
+ 1272              	.LVL39:
+ 1273              		.loc 1 676 17 view .LVU513
+ 1274 0046 D2F8A430 		ldr	r3, [r2, #164]
+ 1275              		.loc 1 676 23 view .LVU514
+ 1276 004a 23EA0103 		bic	r3, r3, r1
+ 1277 004e C2F8A430 		str	r3, [r2, #164]
+ 677:./Drivers/src/stm32f10x_fsmc.c ****     }
+ 678:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 679:./Drivers/src/stm32f10x_fsmc.c **** }
+ 1278              		.loc 1 679 1 view .LVU515
+ 1279 0052 7047     		bx	lr
+ 1280              	.LVL40:
+ 1281              	.L65:
+ 666:./Drivers/src/stm32f10x_fsmc.c ****     }
+ 1282              		.loc 1 666 7 is_stmt 1 view .LVU516
+ 666:./Drivers/src/stm32f10x_fsmc.c ****     }
+ 1283              		.loc 1 666 17 is_stmt 0 view .LVU517
+ 1284 0054 4FF02042 		mov	r2, #-1610612736
+ 1285              	.LVL41:
+ 666:./Drivers/src/stm32f10x_fsmc.c ****     }
+ 1286              		.loc 1 666 17 view .LVU518
+ 1287 0058 536E     		ldr	r3, [r2, #100]
+ 666:./Drivers/src/stm32f10x_fsmc.c ****     }
+ 1288              		.loc 1 666 23 view .LVU519
+ 1289 005a 23EA0103 		bic	r3, r3, r1
+ 1290 005e 5366     		str	r3, [r2, #100]
+ 1291 0060 7047     		bx	lr
+ARM GAS  /tmp/ccfyTdtx.s 			page 37
+
+
+ 1292              	.LVL42:
+ 1293              	.L66:
+ 671:./Drivers/src/stm32f10x_fsmc.c ****     }
+ 1294              		.loc 1 671 7 is_stmt 1 view .LVU520
+ 671:./Drivers/src/stm32f10x_fsmc.c ****     }
+ 1295              		.loc 1 671 17 is_stmt 0 view .LVU521
+ 1296 0062 4FF02042 		mov	r2, #-1610612736
+ 1297              	.LVL43:
+ 671:./Drivers/src/stm32f10x_fsmc.c ****     }
+ 1298              		.loc 1 671 17 view .LVU522
+ 1299 0066 D2F88430 		ldr	r3, [r2, #132]
+ 671:./Drivers/src/stm32f10x_fsmc.c ****     }
+ 1300              		.loc 1 671 23 view .LVU523
+ 1301 006a 23EA0103 		bic	r3, r3, r1
+ 1302 006e C2F88430 		str	r3, [r2, #132]
+ 1303 0072 7047     		bx	lr
+ 1304              		.cfi_endproc
+ 1305              	.LFE43:
+ 1307              		.section	.text.FSMC_GetFlagStatus,"ax",%progbits
+ 1308              		.align	1
+ 1309              		.global	FSMC_GetFlagStatus
+ 1310              		.syntax unified
+ 1311              		.thumb
+ 1312              		.thumb_func
+ 1314              	FSMC_GetFlagStatus:
+ 1315              	.LVL44:
+ 1316              	.LFB44:
+ 680:./Drivers/src/stm32f10x_fsmc.c **** 
+ 681:./Drivers/src/stm32f10x_fsmc.c **** /**
+ 682:./Drivers/src/stm32f10x_fsmc.c ****   * @brief  Checks whether the specified FSMC flag is set or not.
+ 683:./Drivers/src/stm32f10x_fsmc.c ****   * @param  FSMC_Bank: specifies the FSMC Bank to be used
+ 684:./Drivers/src/stm32f10x_fsmc.c ****   *   This parameter can be one of the following values:
+ 685:./Drivers/src/stm32f10x_fsmc.c ****   *     @arg FSMC_Bank2_NAND: FSMC Bank2 NAND 
+ 686:./Drivers/src/stm32f10x_fsmc.c ****   *     @arg FSMC_Bank3_NAND: FSMC Bank3 NAND
+ 687:./Drivers/src/stm32f10x_fsmc.c ****   *     @arg FSMC_Bank4_PCCARD: FSMC Bank4 PCCARD
+ 688:./Drivers/src/stm32f10x_fsmc.c ****   * @param  FSMC_FLAG: specifies the flag to check.
+ 689:./Drivers/src/stm32f10x_fsmc.c ****   *   This parameter can be one of the following values:
+ 690:./Drivers/src/stm32f10x_fsmc.c ****   *     @arg FSMC_FLAG_RisingEdge: Rising egde detection Flag.
+ 691:./Drivers/src/stm32f10x_fsmc.c ****   *     @arg FSMC_FLAG_Level: Level detection Flag.
+ 692:./Drivers/src/stm32f10x_fsmc.c ****   *     @arg FSMC_FLAG_FallingEdge: Falling egde detection Flag.
+ 693:./Drivers/src/stm32f10x_fsmc.c ****   *     @arg FSMC_FLAG_FEMPT: Fifo empty Flag. 
+ 694:./Drivers/src/stm32f10x_fsmc.c ****   * @retval The new state of FSMC_FLAG (SET or RESET).
+ 695:./Drivers/src/stm32f10x_fsmc.c ****   */
+ 696:./Drivers/src/stm32f10x_fsmc.c **** FlagStatus FSMC_GetFlagStatus(uint32_t FSMC_Bank, uint32_t FSMC_FLAG)
+ 697:./Drivers/src/stm32f10x_fsmc.c **** {
+ 1317              		.loc 1 697 1 is_stmt 1 view -0
+ 1318              		.cfi_startproc
+ 1319              		@ args = 0, pretend = 0, frame = 0
+ 1320              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1321              		@ link register save eliminated.
+ 698:./Drivers/src/stm32f10x_fsmc.c ****   FlagStatus bitstatus = RESET;
+ 1322              		.loc 1 698 3 view .LVU525
+ 699:./Drivers/src/stm32f10x_fsmc.c ****   uint32_t tmpsr = 0x00000000;
+ 1323              		.loc 1 699 3 view .LVU526
+ 700:./Drivers/src/stm32f10x_fsmc.c ****   
+ 701:./Drivers/src/stm32f10x_fsmc.c ****   /* Check the parameters */
+ 702:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_GETFLAG_BANK(FSMC_Bank));
+ARM GAS  /tmp/ccfyTdtx.s 			page 38
+
+
+ 1324              		.loc 1 702 3 view .LVU527
+ 703:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_GET_FLAG(FSMC_FLAG));
+ 1325              		.loc 1 703 3 view .LVU528
+ 704:./Drivers/src/stm32f10x_fsmc.c ****   
+ 705:./Drivers/src/stm32f10x_fsmc.c ****   if(FSMC_Bank == FSMC_Bank2_NAND)
+ 1326              		.loc 1 705 3 view .LVU529
+ 1327              		.loc 1 705 5 is_stmt 0 view .LVU530
+ 1328 0000 1028     		cmp	r0, #16
+ 1329 0002 0AD0     		beq	.L73
+ 706:./Drivers/src/stm32f10x_fsmc.c ****   {
+ 707:./Drivers/src/stm32f10x_fsmc.c ****     tmpsr = FSMC_Bank2->SR2;
+ 708:./Drivers/src/stm32f10x_fsmc.c ****   }  
+ 709:./Drivers/src/stm32f10x_fsmc.c ****   else if(FSMC_Bank == FSMC_Bank3_NAND)
+ 1330              		.loc 1 709 8 is_stmt 1 view .LVU531
+ 1331              		.loc 1 709 10 is_stmt 0 view .LVU532
+ 1332 0004 B0F5807F 		cmp	r0, #256
+ 1333 0008 0BD0     		beq	.L74
+ 710:./Drivers/src/stm32f10x_fsmc.c ****   {
+ 711:./Drivers/src/stm32f10x_fsmc.c ****     tmpsr = FSMC_Bank3->SR3;
+ 712:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 713:./Drivers/src/stm32f10x_fsmc.c ****   /* FSMC_Bank4_PCCARD*/
+ 714:./Drivers/src/stm32f10x_fsmc.c ****   else
+ 715:./Drivers/src/stm32f10x_fsmc.c ****   {
+ 716:./Drivers/src/stm32f10x_fsmc.c ****     tmpsr = FSMC_Bank4->SR4;
+ 1334              		.loc 1 716 5 is_stmt 1 view .LVU533
+ 1335              		.loc 1 716 11 is_stmt 0 view .LVU534
+ 1336 000a 4FF02043 		mov	r3, #-1610612736
+ 1337 000e D3F8A430 		ldr	r3, [r3, #164]
+ 1338              	.LVL45:
+ 1339              	.L69:
+ 717:./Drivers/src/stm32f10x_fsmc.c ****   } 
+ 718:./Drivers/src/stm32f10x_fsmc.c ****   
+ 719:./Drivers/src/stm32f10x_fsmc.c ****   /* Get the flag status */
+ 720:./Drivers/src/stm32f10x_fsmc.c ****   if ((tmpsr & FSMC_FLAG) != (uint16_t)RESET )
+ 1340              		.loc 1 720 3 is_stmt 1 view .LVU535
+ 1341              		.loc 1 720 6 is_stmt 0 view .LVU536
+ 1342 0012 0B42     		tst	r3, r1
+ 1343 0014 0AD0     		beq	.L72
+ 721:./Drivers/src/stm32f10x_fsmc.c ****   {
+ 722:./Drivers/src/stm32f10x_fsmc.c ****     bitstatus = SET;
+ 1344              		.loc 1 722 15 view .LVU537
+ 1345 0016 0120     		movs	r0, #1
+ 1346              	.LVL46:
+ 1347              		.loc 1 722 15 view .LVU538
+ 1348 0018 7047     		bx	lr
+ 1349              	.LVL47:
+ 1350              	.L73:
+ 707:./Drivers/src/stm32f10x_fsmc.c ****   }  
+ 1351              		.loc 1 707 5 is_stmt 1 view .LVU539
+ 707:./Drivers/src/stm32f10x_fsmc.c ****   }  
+ 1352              		.loc 1 707 11 is_stmt 0 view .LVU540
+ 1353 001a 4FF02043 		mov	r3, #-1610612736
+ 1354 001e 5B6E     		ldr	r3, [r3, #100]
+ 1355              	.LVL48:
+ 707:./Drivers/src/stm32f10x_fsmc.c ****   }  
+ 1356              		.loc 1 707 11 view .LVU541
+ 1357 0020 F7E7     		b	.L69
+ARM GAS  /tmp/ccfyTdtx.s 			page 39
+
+
+ 1358              	.LVL49:
+ 1359              	.L74:
+ 711:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 1360              		.loc 1 711 5 is_stmt 1 view .LVU542
+ 711:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 1361              		.loc 1 711 11 is_stmt 0 view .LVU543
+ 1362 0022 4FF02043 		mov	r3, #-1610612736
+ 1363 0026 D3F88430 		ldr	r3, [r3, #132]
+ 1364              	.LVL50:
+ 711:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 1365              		.loc 1 711 11 view .LVU544
+ 1366 002a F2E7     		b	.L69
+ 1367              	.L72:
+ 723:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 724:./Drivers/src/stm32f10x_fsmc.c ****   else
+ 725:./Drivers/src/stm32f10x_fsmc.c ****   {
+ 726:./Drivers/src/stm32f10x_fsmc.c ****     bitstatus = RESET;
+ 1368              		.loc 1 726 15 view .LVU545
+ 1369 002c 0020     		movs	r0, #0
+ 1370              	.LVL51:
+ 727:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 728:./Drivers/src/stm32f10x_fsmc.c ****   /* Return the flag status */
+ 729:./Drivers/src/stm32f10x_fsmc.c ****   return bitstatus;
+ 1371              		.loc 1 729 3 is_stmt 1 view .LVU546
+ 730:./Drivers/src/stm32f10x_fsmc.c **** }
+ 1372              		.loc 1 730 1 is_stmt 0 view .LVU547
+ 1373 002e 7047     		bx	lr
+ 1374              		.cfi_endproc
+ 1375              	.LFE44:
+ 1377              		.section	.text.FSMC_ClearFlag,"ax",%progbits
+ 1378              		.align	1
+ 1379              		.global	FSMC_ClearFlag
+ 1380              		.syntax unified
+ 1381              		.thumb
+ 1382              		.thumb_func
+ 1384              	FSMC_ClearFlag:
+ 1385              	.LVL52:
+ 1386              	.LFB45:
+ 731:./Drivers/src/stm32f10x_fsmc.c **** 
+ 732:./Drivers/src/stm32f10x_fsmc.c **** /**
+ 733:./Drivers/src/stm32f10x_fsmc.c ****   * @brief  Clears the FSMC's pending flags.
+ 734:./Drivers/src/stm32f10x_fsmc.c ****   * @param  FSMC_Bank: specifies the FSMC Bank to be used
+ 735:./Drivers/src/stm32f10x_fsmc.c ****   *   This parameter can be one of the following values:
+ 736:./Drivers/src/stm32f10x_fsmc.c ****   *     @arg FSMC_Bank2_NAND: FSMC Bank2 NAND 
+ 737:./Drivers/src/stm32f10x_fsmc.c ****   *     @arg FSMC_Bank3_NAND: FSMC Bank3 NAND
+ 738:./Drivers/src/stm32f10x_fsmc.c ****   *     @arg FSMC_Bank4_PCCARD: FSMC Bank4 PCCARD
+ 739:./Drivers/src/stm32f10x_fsmc.c ****   * @param  FSMC_FLAG: specifies the flag to clear.
+ 740:./Drivers/src/stm32f10x_fsmc.c ****   *   This parameter can be any combination of the following values:
+ 741:./Drivers/src/stm32f10x_fsmc.c ****   *     @arg FSMC_FLAG_RisingEdge: Rising egde detection Flag.
+ 742:./Drivers/src/stm32f10x_fsmc.c ****   *     @arg FSMC_FLAG_Level: Level detection Flag.
+ 743:./Drivers/src/stm32f10x_fsmc.c ****   *     @arg FSMC_FLAG_FallingEdge: Falling egde detection Flag.
+ 744:./Drivers/src/stm32f10x_fsmc.c ****   * @retval None
+ 745:./Drivers/src/stm32f10x_fsmc.c ****   */
+ 746:./Drivers/src/stm32f10x_fsmc.c **** void FSMC_ClearFlag(uint32_t FSMC_Bank, uint32_t FSMC_FLAG)
+ 747:./Drivers/src/stm32f10x_fsmc.c **** {
+ 1387              		.loc 1 747 1 is_stmt 1 view -0
+ 1388              		.cfi_startproc
+ARM GAS  /tmp/ccfyTdtx.s 			page 40
+
+
+ 1389              		@ args = 0, pretend = 0, frame = 0
+ 1390              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1391              		@ link register save eliminated.
+ 748:./Drivers/src/stm32f10x_fsmc.c ****  /* Check the parameters */
+ 749:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_GETFLAG_BANK(FSMC_Bank));
+ 1392              		.loc 1 749 3 view .LVU549
+ 750:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_CLEAR_FLAG(FSMC_FLAG)) ;
+ 1393              		.loc 1 750 3 view .LVU550
+ 751:./Drivers/src/stm32f10x_fsmc.c ****     
+ 752:./Drivers/src/stm32f10x_fsmc.c ****   if(FSMC_Bank == FSMC_Bank2_NAND)
+ 1394              		.loc 1 752 3 view .LVU551
+ 1395              		.loc 1 752 5 is_stmt 0 view .LVU552
+ 1396 0000 1028     		cmp	r0, #16
+ 1397 0002 0BD0     		beq	.L79
+ 753:./Drivers/src/stm32f10x_fsmc.c ****   {
+ 754:./Drivers/src/stm32f10x_fsmc.c ****     FSMC_Bank2->SR2 &= ~FSMC_FLAG; 
+ 755:./Drivers/src/stm32f10x_fsmc.c ****   }  
+ 756:./Drivers/src/stm32f10x_fsmc.c ****   else if(FSMC_Bank == FSMC_Bank3_NAND)
+ 1398              		.loc 1 756 8 is_stmt 1 view .LVU553
+ 1399              		.loc 1 756 10 is_stmt 0 view .LVU554
+ 1400 0004 B0F5807F 		cmp	r0, #256
+ 1401 0008 0FD0     		beq	.L80
+ 757:./Drivers/src/stm32f10x_fsmc.c ****   {
+ 758:./Drivers/src/stm32f10x_fsmc.c ****     FSMC_Bank3->SR3 &= ~FSMC_FLAG;
+ 759:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 760:./Drivers/src/stm32f10x_fsmc.c ****   /* FSMC_Bank4_PCCARD*/
+ 761:./Drivers/src/stm32f10x_fsmc.c ****   else
+ 762:./Drivers/src/stm32f10x_fsmc.c ****   {
+ 763:./Drivers/src/stm32f10x_fsmc.c ****     FSMC_Bank4->SR4 &= ~FSMC_FLAG;
+ 1402              		.loc 1 763 5 is_stmt 1 view .LVU555
+ 1403              		.loc 1 763 15 is_stmt 0 view .LVU556
+ 1404 000a 4FF02042 		mov	r2, #-1610612736
+ 1405 000e D2F8A430 		ldr	r3, [r2, #164]
+ 1406              		.loc 1 763 21 view .LVU557
+ 1407 0012 23EA0103 		bic	r3, r3, r1
+ 1408 0016 C2F8A430 		str	r3, [r2, #164]
+ 764:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 765:./Drivers/src/stm32f10x_fsmc.c **** }
+ 1409              		.loc 1 765 1 view .LVU558
+ 1410 001a 7047     		bx	lr
+ 1411              	.L79:
+ 754:./Drivers/src/stm32f10x_fsmc.c ****   }  
+ 1412              		.loc 1 754 5 is_stmt 1 view .LVU559
+ 754:./Drivers/src/stm32f10x_fsmc.c ****   }  
+ 1413              		.loc 1 754 15 is_stmt 0 view .LVU560
+ 1414 001c 4FF02042 		mov	r2, #-1610612736
+ 1415 0020 536E     		ldr	r3, [r2, #100]
+ 754:./Drivers/src/stm32f10x_fsmc.c ****   }  
+ 1416              		.loc 1 754 21 view .LVU561
+ 1417 0022 23EA0103 		bic	r3, r3, r1
+ 1418 0026 5366     		str	r3, [r2, #100]
+ 1419 0028 7047     		bx	lr
+ 1420              	.L80:
+ 758:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 1421              		.loc 1 758 5 is_stmt 1 view .LVU562
+ 758:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 1422              		.loc 1 758 15 is_stmt 0 view .LVU563
+ARM GAS  /tmp/ccfyTdtx.s 			page 41
+
+
+ 1423 002a 4FF02042 		mov	r2, #-1610612736
+ 1424 002e D2F88430 		ldr	r3, [r2, #132]
+ 758:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 1425              		.loc 1 758 21 view .LVU564
+ 1426 0032 23EA0103 		bic	r3, r3, r1
+ 1427 0036 C2F88430 		str	r3, [r2, #132]
+ 1428 003a 7047     		bx	lr
+ 1429              		.cfi_endproc
+ 1430              	.LFE45:
+ 1432              		.section	.text.FSMC_GetITStatus,"ax",%progbits
+ 1433              		.align	1
+ 1434              		.global	FSMC_GetITStatus
+ 1435              		.syntax unified
+ 1436              		.thumb
+ 1437              		.thumb_func
+ 1439              	FSMC_GetITStatus:
+ 1440              	.LVL53:
+ 1441              	.LFB46:
+ 766:./Drivers/src/stm32f10x_fsmc.c **** 
+ 767:./Drivers/src/stm32f10x_fsmc.c **** /**
+ 768:./Drivers/src/stm32f10x_fsmc.c ****   * @brief  Checks whether the specified FSMC interrupt has occurred or not.
+ 769:./Drivers/src/stm32f10x_fsmc.c ****   * @param  FSMC_Bank: specifies the FSMC Bank to be used
+ 770:./Drivers/src/stm32f10x_fsmc.c ****   *   This parameter can be one of the following values:
+ 771:./Drivers/src/stm32f10x_fsmc.c ****   *     @arg FSMC_Bank2_NAND: FSMC Bank2 NAND 
+ 772:./Drivers/src/stm32f10x_fsmc.c ****   *     @arg FSMC_Bank3_NAND: FSMC Bank3 NAND
+ 773:./Drivers/src/stm32f10x_fsmc.c ****   *     @arg FSMC_Bank4_PCCARD: FSMC Bank4 PCCARD
+ 774:./Drivers/src/stm32f10x_fsmc.c ****   * @param  FSMC_IT: specifies the FSMC interrupt source to check.
+ 775:./Drivers/src/stm32f10x_fsmc.c ****   *   This parameter can be one of the following values:
+ 776:./Drivers/src/stm32f10x_fsmc.c ****   *     @arg FSMC_IT_RisingEdge: Rising edge detection interrupt. 
+ 777:./Drivers/src/stm32f10x_fsmc.c ****   *     @arg FSMC_IT_Level: Level edge detection interrupt.
+ 778:./Drivers/src/stm32f10x_fsmc.c ****   *     @arg FSMC_IT_FallingEdge: Falling edge detection interrupt. 
+ 779:./Drivers/src/stm32f10x_fsmc.c ****   * @retval The new state of FSMC_IT (SET or RESET).
+ 780:./Drivers/src/stm32f10x_fsmc.c ****   */
+ 781:./Drivers/src/stm32f10x_fsmc.c **** ITStatus FSMC_GetITStatus(uint32_t FSMC_Bank, uint32_t FSMC_IT)
+ 782:./Drivers/src/stm32f10x_fsmc.c **** {
+ 1442              		.loc 1 782 1 is_stmt 1 view -0
+ 1443              		.cfi_startproc
+ 1444              		@ args = 0, pretend = 0, frame = 0
+ 1445              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1446              		@ link register save eliminated.
+ 783:./Drivers/src/stm32f10x_fsmc.c ****   ITStatus bitstatus = RESET;
+ 1447              		.loc 1 783 3 view .LVU566
+ 784:./Drivers/src/stm32f10x_fsmc.c ****   uint32_t tmpsr = 0x0, itstatus = 0x0, itenable = 0x0; 
+ 1448              		.loc 1 784 3 view .LVU567
+ 785:./Drivers/src/stm32f10x_fsmc.c ****   
+ 786:./Drivers/src/stm32f10x_fsmc.c ****   /* Check the parameters */
+ 787:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_IT_BANK(FSMC_Bank));
+ 1449              		.loc 1 787 3 view .LVU568
+ 788:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_GET_IT(FSMC_IT));
+ 1450              		.loc 1 788 3 view .LVU569
+ 789:./Drivers/src/stm32f10x_fsmc.c ****   
+ 790:./Drivers/src/stm32f10x_fsmc.c ****   if(FSMC_Bank == FSMC_Bank2_NAND)
+ 1451              		.loc 1 790 3 view .LVU570
+ 1452              		.loc 1 790 5 is_stmt 0 view .LVU571
+ 1453 0000 1028     		cmp	r0, #16
+ 1454 0002 0DD0     		beq	.L88
+ 791:./Drivers/src/stm32f10x_fsmc.c ****   {
+ARM GAS  /tmp/ccfyTdtx.s 			page 42
+
+
+ 792:./Drivers/src/stm32f10x_fsmc.c ****     tmpsr = FSMC_Bank2->SR2;
+ 793:./Drivers/src/stm32f10x_fsmc.c ****   }  
+ 794:./Drivers/src/stm32f10x_fsmc.c ****   else if(FSMC_Bank == FSMC_Bank3_NAND)
+ 1455              		.loc 1 794 8 is_stmt 1 view .LVU572
+ 1456              		.loc 1 794 10 is_stmt 0 view .LVU573
+ 1457 0004 B0F5807F 		cmp	r0, #256
+ 1458 0008 0ED0     		beq	.L89
+ 795:./Drivers/src/stm32f10x_fsmc.c ****   {
+ 796:./Drivers/src/stm32f10x_fsmc.c ****     tmpsr = FSMC_Bank3->SR3;
+ 797:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 798:./Drivers/src/stm32f10x_fsmc.c ****   /* FSMC_Bank4_PCCARD*/
+ 799:./Drivers/src/stm32f10x_fsmc.c ****   else
+ 800:./Drivers/src/stm32f10x_fsmc.c ****   {
+ 801:./Drivers/src/stm32f10x_fsmc.c ****     tmpsr = FSMC_Bank4->SR4;
+ 1459              		.loc 1 801 5 is_stmt 1 view .LVU574
+ 1460              		.loc 1 801 11 is_stmt 0 view .LVU575
+ 1461 000a 4FF02043 		mov	r3, #-1610612736
+ 1462 000e D3F8A430 		ldr	r3, [r3, #164]
+ 1463              	.LVL54:
+ 1464              	.L83:
+ 802:./Drivers/src/stm32f10x_fsmc.c ****   } 
+ 803:./Drivers/src/stm32f10x_fsmc.c ****   
+ 804:./Drivers/src/stm32f10x_fsmc.c ****   itstatus = tmpsr & FSMC_IT;
+ 1465              		.loc 1 804 3 is_stmt 1 view .LVU576
+ 805:./Drivers/src/stm32f10x_fsmc.c ****   
+ 806:./Drivers/src/stm32f10x_fsmc.c ****   itenable = tmpsr & (FSMC_IT >> 3);
+ 1466              		.loc 1 806 3 view .LVU577
+ 1467              		.loc 1 806 12 is_stmt 0 view .LVU578
+ 1468 0012 03EAD102 		and	r2, r3, r1, lsr #3
+ 1469              	.LVL55:
+ 807:./Drivers/src/stm32f10x_fsmc.c ****   if ((itstatus != (uint32_t)RESET)  && (itenable != (uint32_t)RESET))
+ 1470              		.loc 1 807 3 is_stmt 1 view .LVU579
+ 1471              		.loc 1 807 6 is_stmt 0 view .LVU580
+ 1472 0016 0B42     		tst	r3, r1
+ 1473 0018 0BD0     		beq	.L86
+ 1474              		.loc 1 807 38 discriminator 1 view .LVU581
+ 1475 001a 62B9     		cbnz	r2, .L87
+ 808:./Drivers/src/stm32f10x_fsmc.c ****   {
+ 809:./Drivers/src/stm32f10x_fsmc.c ****     bitstatus = SET;
+ 810:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 811:./Drivers/src/stm32f10x_fsmc.c ****   else
+ 812:./Drivers/src/stm32f10x_fsmc.c ****   {
+ 813:./Drivers/src/stm32f10x_fsmc.c ****     bitstatus = RESET;
+ 1476              		.loc 1 813 15 view .LVU582
+ 1477 001c 0020     		movs	r0, #0
+ 1478              	.LVL56:
+ 1479              		.loc 1 813 15 view .LVU583
+ 1480 001e 7047     		bx	lr
+ 1481              	.LVL57:
+ 1482              	.L88:
+ 792:./Drivers/src/stm32f10x_fsmc.c ****   }  
+ 1483              		.loc 1 792 5 is_stmt 1 view .LVU584
+ 792:./Drivers/src/stm32f10x_fsmc.c ****   }  
+ 1484              		.loc 1 792 11 is_stmt 0 view .LVU585
+ 1485 0020 4FF02043 		mov	r3, #-1610612736
+ 1486 0024 5B6E     		ldr	r3, [r3, #100]
+ 1487              	.LVL58:
+ARM GAS  /tmp/ccfyTdtx.s 			page 43
+
+
+ 792:./Drivers/src/stm32f10x_fsmc.c ****   }  
+ 1488              		.loc 1 792 11 view .LVU586
+ 1489 0026 F4E7     		b	.L83
+ 1490              	.LVL59:
+ 1491              	.L89:
+ 796:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 1492              		.loc 1 796 5 is_stmt 1 view .LVU587
+ 796:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 1493              		.loc 1 796 11 is_stmt 0 view .LVU588
+ 1494 0028 4FF02043 		mov	r3, #-1610612736
+ 1495 002c D3F88430 		ldr	r3, [r3, #132]
+ 1496              	.LVL60:
+ 796:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 1497              		.loc 1 796 11 view .LVU589
+ 1498 0030 EFE7     		b	.L83
+ 1499              	.LVL61:
+ 1500              	.L86:
+ 1501              		.loc 1 813 15 view .LVU590
+ 1502 0032 0020     		movs	r0, #0
+ 1503              	.LVL62:
+ 1504              		.loc 1 813 15 view .LVU591
+ 1505 0034 7047     		bx	lr
+ 1506              	.LVL63:
+ 1507              	.L87:
+ 809:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 1508              		.loc 1 809 15 view .LVU592
+ 1509 0036 0120     		movs	r0, #1
+ 1510              	.LVL64:
+ 814:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 815:./Drivers/src/stm32f10x_fsmc.c ****   return bitstatus; 
+ 1511              		.loc 1 815 3 is_stmt 1 view .LVU593
+ 816:./Drivers/src/stm32f10x_fsmc.c **** }
+ 1512              		.loc 1 816 1 is_stmt 0 view .LVU594
+ 1513 0038 7047     		bx	lr
+ 1514              		.cfi_endproc
+ 1515              	.LFE46:
+ 1517              		.section	.text.FSMC_ClearITPendingBit,"ax",%progbits
+ 1518              		.align	1
+ 1519              		.global	FSMC_ClearITPendingBit
+ 1520              		.syntax unified
+ 1521              		.thumb
+ 1522              		.thumb_func
+ 1524              	FSMC_ClearITPendingBit:
+ 1525              	.LVL65:
+ 1526              	.LFB47:
+ 817:./Drivers/src/stm32f10x_fsmc.c **** 
+ 818:./Drivers/src/stm32f10x_fsmc.c **** /**
+ 819:./Drivers/src/stm32f10x_fsmc.c ****   * @brief  Clears the FSMC's interrupt pending bits.
+ 820:./Drivers/src/stm32f10x_fsmc.c ****   * @param  FSMC_Bank: specifies the FSMC Bank to be used
+ 821:./Drivers/src/stm32f10x_fsmc.c ****   *   This parameter can be one of the following values:
+ 822:./Drivers/src/stm32f10x_fsmc.c ****   *     @arg FSMC_Bank2_NAND: FSMC Bank2 NAND 
+ 823:./Drivers/src/stm32f10x_fsmc.c ****   *     @arg FSMC_Bank3_NAND: FSMC Bank3 NAND
+ 824:./Drivers/src/stm32f10x_fsmc.c ****   *     @arg FSMC_Bank4_PCCARD: FSMC Bank4 PCCARD
+ 825:./Drivers/src/stm32f10x_fsmc.c ****   * @param  FSMC_IT: specifies the interrupt pending bit to clear.
+ 826:./Drivers/src/stm32f10x_fsmc.c ****   *   This parameter can be any combination of the following values:
+ 827:./Drivers/src/stm32f10x_fsmc.c ****   *     @arg FSMC_IT_RisingEdge: Rising edge detection interrupt. 
+ 828:./Drivers/src/stm32f10x_fsmc.c ****   *     @arg FSMC_IT_Level: Level edge detection interrupt.
+ARM GAS  /tmp/ccfyTdtx.s 			page 44
+
+
+ 829:./Drivers/src/stm32f10x_fsmc.c ****   *     @arg FSMC_IT_FallingEdge: Falling edge detection interrupt.
+ 830:./Drivers/src/stm32f10x_fsmc.c ****   * @retval None
+ 831:./Drivers/src/stm32f10x_fsmc.c ****   */
+ 832:./Drivers/src/stm32f10x_fsmc.c **** void FSMC_ClearITPendingBit(uint32_t FSMC_Bank, uint32_t FSMC_IT)
+ 833:./Drivers/src/stm32f10x_fsmc.c **** {
+ 1527              		.loc 1 833 1 is_stmt 1 view -0
+ 1528              		.cfi_startproc
+ 1529              		@ args = 0, pretend = 0, frame = 0
+ 1530              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1531              		@ link register save eliminated.
+ 834:./Drivers/src/stm32f10x_fsmc.c ****   /* Check the parameters */
+ 835:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_IT_BANK(FSMC_Bank));
+ 1532              		.loc 1 835 3 view .LVU596
+ 836:./Drivers/src/stm32f10x_fsmc.c ****   assert_param(IS_FSMC_IT(FSMC_IT));
+ 1533              		.loc 1 836 3 view .LVU597
+ 837:./Drivers/src/stm32f10x_fsmc.c ****     
+ 838:./Drivers/src/stm32f10x_fsmc.c ****   if(FSMC_Bank == FSMC_Bank2_NAND)
+ 1534              		.loc 1 838 3 view .LVU598
+ 1535              		.loc 1 838 5 is_stmt 0 view .LVU599
+ 1536 0000 1028     		cmp	r0, #16
+ 1537 0002 0BD0     		beq	.L94
+ 839:./Drivers/src/stm32f10x_fsmc.c ****   {
+ 840:./Drivers/src/stm32f10x_fsmc.c ****     FSMC_Bank2->SR2 &= ~(FSMC_IT >> 3); 
+ 841:./Drivers/src/stm32f10x_fsmc.c ****   }  
+ 842:./Drivers/src/stm32f10x_fsmc.c ****   else if(FSMC_Bank == FSMC_Bank3_NAND)
+ 1538              		.loc 1 842 8 is_stmt 1 view .LVU600
+ 1539              		.loc 1 842 10 is_stmt 0 view .LVU601
+ 1540 0004 B0F5807F 		cmp	r0, #256
+ 1541 0008 0FD0     		beq	.L95
+ 843:./Drivers/src/stm32f10x_fsmc.c ****   {
+ 844:./Drivers/src/stm32f10x_fsmc.c ****     FSMC_Bank3->SR3 &= ~(FSMC_IT >> 3);
+ 845:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 846:./Drivers/src/stm32f10x_fsmc.c ****   /* FSMC_Bank4_PCCARD*/
+ 847:./Drivers/src/stm32f10x_fsmc.c ****   else
+ 848:./Drivers/src/stm32f10x_fsmc.c ****   {
+ 849:./Drivers/src/stm32f10x_fsmc.c ****     FSMC_Bank4->SR4 &= ~(FSMC_IT >> 3);
+ 1542              		.loc 1 849 5 is_stmt 1 view .LVU602
+ 1543              		.loc 1 849 15 is_stmt 0 view .LVU603
+ 1544 000a 4FF02042 		mov	r2, #-1610612736
+ 1545 000e D2F8A430 		ldr	r3, [r2, #164]
+ 1546              		.loc 1 849 21 view .LVU604
+ 1547 0012 23EAD103 		bic	r3, r3, r1, lsr #3
+ 1548 0016 C2F8A430 		str	r3, [r2, #164]
+ 850:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 851:./Drivers/src/stm32f10x_fsmc.c **** }
+ 1549              		.loc 1 851 1 view .LVU605
+ 1550 001a 7047     		bx	lr
+ 1551              	.L94:
+ 840:./Drivers/src/stm32f10x_fsmc.c ****   }  
+ 1552              		.loc 1 840 5 is_stmt 1 view .LVU606
+ 840:./Drivers/src/stm32f10x_fsmc.c ****   }  
+ 1553              		.loc 1 840 15 is_stmt 0 view .LVU607
+ 1554 001c 4FF02042 		mov	r2, #-1610612736
+ 1555 0020 536E     		ldr	r3, [r2, #100]
+ 840:./Drivers/src/stm32f10x_fsmc.c ****   }  
+ 1556              		.loc 1 840 21 view .LVU608
+ 1557 0022 23EAD103 		bic	r3, r3, r1, lsr #3
+ARM GAS  /tmp/ccfyTdtx.s 			page 45
+
+
+ 1558 0026 5366     		str	r3, [r2, #100]
+ 1559 0028 7047     		bx	lr
+ 1560              	.L95:
+ 844:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 1561              		.loc 1 844 5 is_stmt 1 view .LVU609
+ 844:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 1562              		.loc 1 844 15 is_stmt 0 view .LVU610
+ 1563 002a 4FF02042 		mov	r2, #-1610612736
+ 1564 002e D2F88430 		ldr	r3, [r2, #132]
+ 844:./Drivers/src/stm32f10x_fsmc.c ****   }
+ 1565              		.loc 1 844 21 view .LVU611
+ 1566 0032 23EAD103 		bic	r3, r3, r1, lsr #3
+ 1567 0036 C2F88430 		str	r3, [r2, #132]
+ 1568 003a 7047     		bx	lr
+ 1569              		.cfi_endproc
+ 1570              	.LFE47:
+ 1572              		.text
+ 1573              	.Letext0:
+ 1574              		.file 2 "/usr/arm-none-eabi/include/machine/_default_types.h"
+ 1575              		.file 3 "/usr/arm-none-eabi/include/sys/_stdint.h"
+ 1576              		.file 4 "cmsis/stm32f10x.h"
+ 1577              		.file 5 "Drivers/inc/stm32f10x_fsmc.h"
+ARM GAS  /tmp/ccfyTdtx.s 			page 46
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 stm32f10x_fsmc.c
+     /tmp/ccfyTdtx.s:19     .text.FSMC_NORSRAMDeInit:00000000 $t
+     /tmp/ccfyTdtx.s:25     .text.FSMC_NORSRAMDeInit:00000000 FSMC_NORSRAMDeInit
+     /tmp/ccfyTdtx.s:73     .text.FSMC_NANDDeInit:00000000 $t
+     /tmp/ccfyTdtx.s:79     .text.FSMC_NANDDeInit:00000000 FSMC_NANDDeInit
+     /tmp/ccfyTdtx.s:132    .text.FSMC_PCCARDDeInit:00000000 $t
+     /tmp/ccfyTdtx.s:138    .text.FSMC_PCCARDDeInit:00000000 FSMC_PCCARDDeInit
+     /tmp/ccfyTdtx.s:170    .text.FSMC_NORSRAMInit:00000000 $t
+     /tmp/ccfyTdtx.s:176    .text.FSMC_NORSRAMInit:00000000 FSMC_NORSRAMInit
+     /tmp/ccfyTdtx.s:368    .text.FSMC_NANDInit:00000000 $t
+     /tmp/ccfyTdtx.s:374    .text.FSMC_NANDInit:00000000 FSMC_NANDInit
+     /tmp/ccfyTdtx.s:507    .text.FSMC_PCCARDInit:00000000 $t
+     /tmp/ccfyTdtx.s:513    .text.FSMC_PCCARDInit:00000000 FSMC_PCCARDInit
+     /tmp/ccfyTdtx.s:611    .text.FSMC_NORSRAMStructInit:00000000 $t
+     /tmp/ccfyTdtx.s:617    .text.FSMC_NORSRAMStructInit:00000000 FSMC_NORSRAMStructInit
+     /tmp/ccfyTdtx.s:738    .text.FSMC_NANDStructInit:00000000 $t
+     /tmp/ccfyTdtx.s:744    .text.FSMC_NANDStructInit:00000000 FSMC_NANDStructInit
+     /tmp/ccfyTdtx.s:822    .text.FSMC_PCCARDStructInit:00000000 $t
+     /tmp/ccfyTdtx.s:828    .text.FSMC_PCCARDStructInit:00000000 FSMC_PCCARDStructInit
+     /tmp/ccfyTdtx.s:913    .text.FSMC_NORSRAMCmd:00000000 $t
+     /tmp/ccfyTdtx.s:919    .text.FSMC_NORSRAMCmd:00000000 FSMC_NORSRAMCmd
+     /tmp/ccfyTdtx.s:955    .text.FSMC_NORSRAMCmd:00000028 $d
+     /tmp/ccfyTdtx.s:960    .text.FSMC_NANDCmd:00000000 $t
+     /tmp/ccfyTdtx.s:966    .text.FSMC_NANDCmd:00000000 FSMC_NANDCmd
+     /tmp/ccfyTdtx.s:1031   .text.FSMC_NANDCmd:0000004c $d
+     /tmp/ccfyTdtx.s:1036   .text.FSMC_PCCARDCmd:00000000 $t
+     /tmp/ccfyTdtx.s:1042   .text.FSMC_PCCARDCmd:00000000 FSMC_PCCARDCmd
+     /tmp/ccfyTdtx.s:1076   .text.FSMC_PCCARDCmd:00000028 $d
+     /tmp/ccfyTdtx.s:1081   .text.FSMC_NANDECCCmd:00000000 $t
+     /tmp/ccfyTdtx.s:1087   .text.FSMC_NANDECCCmd:00000000 FSMC_NANDECCCmd
+     /tmp/ccfyTdtx.s:1152   .text.FSMC_NANDECCCmd:0000004c $d
+     /tmp/ccfyTdtx.s:1157   .text.FSMC_GetECC:00000000 $t
+     /tmp/ccfyTdtx.s:1163   .text.FSMC_GetECC:00000000 FSMC_GetECC
+     /tmp/ccfyTdtx.s:1197   .text.FSMC_ITConfig:00000000 $t
+     /tmp/ccfyTdtx.s:1203   .text.FSMC_ITConfig:00000000 FSMC_ITConfig
+     /tmp/ccfyTdtx.s:1308   .text.FSMC_GetFlagStatus:00000000 $t
+     /tmp/ccfyTdtx.s:1314   .text.FSMC_GetFlagStatus:00000000 FSMC_GetFlagStatus
+     /tmp/ccfyTdtx.s:1378   .text.FSMC_ClearFlag:00000000 $t
+     /tmp/ccfyTdtx.s:1384   .text.FSMC_ClearFlag:00000000 FSMC_ClearFlag
+     /tmp/ccfyTdtx.s:1433   .text.FSMC_GetITStatus:00000000 $t
+     /tmp/ccfyTdtx.s:1439   .text.FSMC_GetITStatus:00000000 FSMC_GetITStatus
+     /tmp/ccfyTdtx.s:1518   .text.FSMC_ClearITPendingBit:00000000 $t
+     /tmp/ccfyTdtx.s:1524   .text.FSMC_ClearITPendingBit:00000000 FSMC_ClearITPendingBit
+
+NO UNDEFINED SYMBOLS

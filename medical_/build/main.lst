@@ -1,0 +1,116 @@
+ARM GAS  /tmp/cclyEQFy.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.arch armv7-m
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"main.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.file 1 "./source/main.c"
+  18              		.section	.rodata.main.str1.4,"aMS",%progbits,1
+  19              		.align	2
+  20              	.LC0:
+  21 0000 48656C6C 		.ascii	"HelloWorld !\015\012\000"
+  21      6F576F72 
+  21      6C642021 
+  21      0D0A00
+  22              		.section	.text.main,"ax",%progbits
+  23              		.align	1
+  24              		.global	main
+  25              		.syntax unified
+  26              		.thumb
+  27              		.thumb_func
+  29              	main:
+  30              	.LFB3:
+   1:./source/main.c **** #include "serial.h"
+   2:./source/main.c **** #include <Delay.h>
+   3:./source/main.c **** #include <Key.h>
+   4:./source/main.c **** #include <stdint.h>
+   5:./source/main.c **** #include <stdio.h>
+   6:./source/main.c **** 
+   7:./source/main.c **** uint8_t KeyNum;
+   8:./source/main.c **** 
+   9:./source/main.c **** int main(void) {
+  31              		.loc 1 9 16 view -0
+  32              		.cfi_startproc
+  33              		@ Volatile: function does not return.
+  34              		@ args = 0, pretend = 0, frame = 0
+  35              		@ frame_needed = 0, uses_anonymous_args = 0
+  36 0000 08B5     		push	{r3, lr}
+  37              	.LCFI0:
+  38              		.cfi_def_cfa_offset 8
+  39              		.cfi_offset 3, -8
+  40              		.cfi_offset 14, -4
+  10:./source/main.c **** 
+  11:./source/main.c ****   serial_init();
+  41              		.loc 1 11 3 view .LVU1
+  42 0002 FFF7FEFF 		bl	serial_init
+  43              	.LVL0:
+  44              	.L2:
+ARM GAS  /tmp/cclyEQFy.s 			page 2
+
+
+  12:./source/main.c **** 
+  13:./source/main.c ****   // serial_sendbyte('G');
+  14:./source/main.c ****   // uint8_t DFG[] = {0x42, 0x41, 0x45, 0x22};
+  15:./source/main.c **** 
+  16:./source/main.c ****   // serial_sendarray(DFG, 4);
+  17:./source/main.c **** 
+  18:./source/main.c ****   while (1) {
+  45              		.loc 1 18 3 view .LVU2
+  19:./source/main.c ****     serial_sendstring("HelloWorld !\r\n");
+  46              		.loc 1 19 5 view .LVU3
+  47 0006 0448     		ldr	r0, .L4
+  48 0008 FFF7FEFF 		bl	serial_sendstring
+  49              	.LVL1:
+  20:./source/main.c ****     Delay_ms(500);
+  50              		.loc 1 20 5 discriminator 1 view .LVU4
+  51 000c 4FF4FA70 		mov	r0, #500
+  52 0010 FFF7FEFF 		bl	Delay_ms
+  53              	.LVL2:
+  18:./source/main.c ****     serial_sendstring("HelloWorld !\r\n");
+  54              		.loc 1 18 9 view .LVU5
+  55 0014 F7E7     		b	.L2
+  56              	.L5:
+  57 0016 00BF     		.align	2
+  58              	.L4:
+  59 0018 00000000 		.word	.LC0
+  60              		.cfi_endproc
+  61              	.LFE3:
+  63              		.global	KeyNum
+  64              		.section	.bss.KeyNum,"aw",%nobits
+  67              	KeyNum:
+  68 0000 00       		.space	1
+  69              		.text
+  70              	.Letext0:
+  71              		.file 2 "/usr/arm-none-eabi/include/machine/_default_types.h"
+  72              		.file 3 "/usr/arm-none-eabi/include/sys/_stdint.h"
+  73              		.file 4 "Libraries/inc/Delay.h"
+  74              		.file 5 "Libraries/inc/serial.h"
+ARM GAS  /tmp/cclyEQFy.s 			page 3
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 main.c
+     /tmp/cclyEQFy.s:19     .rodata.main.str1.4:00000000 $d
+     /tmp/cclyEQFy.s:23     .text.main:00000000 $t
+     /tmp/cclyEQFy.s:29     .text.main:00000000 main
+     /tmp/cclyEQFy.s:59     .text.main:00000018 $d
+     /tmp/cclyEQFy.s:67     .bss.KeyNum:00000000 KeyNum
+     /tmp/cclyEQFy.s:68     .bss.KeyNum:00000000 $d
+
+UNDEFINED SYMBOLS
+serial_init
+serial_sendstring
+Delay_ms
