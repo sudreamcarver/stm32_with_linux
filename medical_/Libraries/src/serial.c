@@ -4,6 +4,10 @@
 #include "stm32f10x_usart.h"
 #include <stdint.h>
 
+uint8_t RxDatapkg[4];
+uint8_t TxDatapkg[4];
+uint8_t RxFlag;
+
 void serial_init(void) {
   RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1, ENABLE);
   RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
@@ -77,8 +81,23 @@ void serial_sendnumber(uint32_t Number, uint8_t Length) {
   }
 }
 
+void serial_sendpkg(void) {
+  serial_sendbyte(0xFF);
+  serial_sendarray(TxDatapkg, 4);
+  serial_sendbyte(0xFE);
+}
+
+uint8_t serial_GetRxFlag(void) {
+  if (RxFlag == 1) {
+    RxFlag = 0;
+    return 1;
+  }
+  return 0;
+}
+
 void USART1_IRQHandler(void) {
   if (USART_GetFlagStatus(USART1, USART_IT_RXNE) == SET) {
+    USART_ClearITPendingBit(USART1, USART_IT_RXNE);
   }
 }
 
