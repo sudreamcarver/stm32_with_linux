@@ -1,0 +1,34 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/arm-none-eabi-gcc",
+      "-c",
+      "-mcpu=cortex-m3",
+      "-mthumb",
+      "-DUSE_STDPERIPH_DRIVER",
+      "-DHSE_VALUE=8000000",
+      "-DHSE_STARTUP_TIMEOUT=5000",
+      "-DLSI_VALUE=32768",
+      "-DLSE_VALUE=40000",
+      "-DVDD_VALUE=3300",
+      "-DSTM32F10X_MD",
+      "-Icmsis",
+      "-IDrivers/inc",
+      "-ILibraries/inc",
+      "-Isource",
+      "-Og",
+      "-Wall",
+      "-fdata-sections",
+      "-ffunction-sections",
+      "-g",
+      "-gdwarf-2",
+      "-Wa,-a,-ad,-alms=build/OLED.lst",
+      "-o",
+      "build/OLED.o",
+      "./Libraries/src/OLED.c"
+    ],
+    "directory": "/home/carver/Documents/stm32_with_linux/stm_OLED",
+    "file": "/home/carver/Documents/stm32_with_linux/stm_OLED/Libraries/src/OLED.c",
+    "output": "/home/carver/Documents/stm32_with_linux/stm_OLED/build/OLED.o"
+  }
+]
