@@ -23,14 +23,14 @@
       "-ffunction-sections",
       "-g",
       "-gdwarf-2",
-      "-Wa,-a,-ad,-alms=build/serial.lst",
+      "-Wa,-a,-ad,-alms=build/Key.lst",
       "-o",
-      "build/serial.o",
-      "./Libraries/src/serial.c"
+      "build/Key.o",
+      "./Libraries/src/Key.c"
     ],
-    "directory": "/home/carver/Documents/stm32_with_linux/medical_",
-    "file": "/home/carver/Documents/stm32_with_linux/medical_/Libraries/src/serial.c",
-    "output": "/home/carver/Documents/stm32_with_linux/medical_/build/serial.o"
+    "directory": "/home/carver/Documents/stm32_with_linux/serial_port",
+    "file": "/home/carver/Documents/stm32_with_linux/serial_port/Libraries/src/Key.c",
+    "output": "/home/carver/Documents/stm32_with_linux/serial_port/build/Key.o"
   },
   {
     "arguments": [
@@ -56,13 +56,13 @@
       "-ffunction-sections",
       "-g",
       "-gdwarf-2",
-      "-Wa,-a,-ad,-alms=build/main.lst",
+      "-Wa,-a,-ad,-alms=build/sys.lst",
       "-o",
-      "build/main.o",
-      "./source/main.c"
+      "build/sys.o",
+      "./Libraries/src/sys.c"
     ],
-    "directory": "/home/carver/Documents/stm32_with_linux/medical_",
-    "file": "/home/carver/Documents/stm32_with_linux/medical_/source/main.c",
-    "output": "/home/carver/Documents/stm32_with_linux/medical_/build/main.o"
+    "directory": "/home/carver/Documents/stm32_with_linux/serial_port",
+    "file": "/home/carver/Documents/stm32_with_linux/serial_port/Libraries/src/sys.c",
+    "output": "/home/carver/Documents/stm32_with_linux/serial_port/build/sys.o"
   }
 ]
