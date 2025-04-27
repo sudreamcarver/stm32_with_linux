@@ -18,7 +18,7 @@ int8_t ch_heartRate_valid;    // 用于显示心率计算是否有效的指示�
 int32_t n_spo2;       // SPO2值
 int8_t ch_spo2_valid; // 用于显示SPO2是否有效的指示符
 
-uint32_t un_min, un_max, un_prev_data; // restore signal
+uint32_t un_min, un_max, un_prev_data; // restore min and max signal
 int i;                                 // index
 int32_t n_brightness;
 float f_temp;

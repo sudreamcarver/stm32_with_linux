@@ -7,12 +7,14 @@ void INTX_DISABLE(void) { __ASM volatile("cpsid i"); }
 void INTX_ENABLE(void) { __ASM volatile("cpsie i"); }
 // 设置栈顶地址
 
+// this for arm-cc
 // addr:栈顶地址
 //__asm void MSR_MSP(u32 addr) {
 // MSR MSP, r0 // set Main Stack value
 //             BX r14
 //}
 
+// this for arm-none-eabi-gcc
 void MSR_MSP(uint32_t addr) {
   __asm volatile("MSR MSP, %0   \n" /* 将函数参数 addr 写入 MSP 寄存器 */
                  "BX LR         \n"
