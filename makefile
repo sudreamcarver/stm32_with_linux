@@ -76,12 +76,13 @@ C_INCLUDES = \
 	     -IDrivers/inc \
 	     -ILibraries/inc \
 	     -Isource \
-         -I/usr/arm-none-eabi/include
+         -isystem /usr/arm-none-eabi/include \
+		 -isystem /usr/lib/gcc/arm-none-eabi/14.2.0/include/
 
 #compile gcc flags
 ASFLAGS = $(MCU) $(AS_DEFS) $(AS_INCLUDES) $(OPT) -Wall -fdata-sections -ffunction-sections
 
-CFLAGS = $(MCU) $(C_DEFS) $(C_INCLUDES) $(OPT) -Wall -fdata-sections -ffunction-sections
+CFLAGS = $(MCU) $(C_DEFS) $(C_INCLUDES) $(OPT) -Wall -fdata-sections -ffunction-sections -nostdinc
 
 ifeq ($(DEBUG), 1)
 	CFLAGS += -g -gdwarf-2

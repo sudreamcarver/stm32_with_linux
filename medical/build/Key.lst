@@ -1,0 +1,261 @@
+ARM GAS  /tmp/ccPg8bKl.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.arch armv7-m
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"Key.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.file 1 "./Libraries/src/Key.c"
+  18              		.section	.text.Key_Init,"ax",%progbits
+  19              		.align	1
+  20              		.global	Key_Init
+  21              		.syntax unified
+  22              		.thumb
+  23              		.thumb_func
+  25              	Key_Init:
+  26              	.LFB29:
+   1:./Libraries/src/Key.c **** #include "delay.h"
+   2:./Libraries/src/Key.c **** #include "stm32f10x.h" // Device header
+   3:./Libraries/src/Key.c **** 
+   4:./Libraries/src/Key.c **** void Key_Init(void) {
+  27              		.loc 1 4 21 view -0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 8
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31 0000 00B5     		push	{lr}
+  32              	.LCFI0:
+  33              		.cfi_def_cfa_offset 4
+  34              		.cfi_offset 14, -4
+  35 0002 83B0     		sub	sp, sp, #12
+  36              	.LCFI1:
+  37              		.cfi_def_cfa_offset 16
+   5:./Libraries/src/Key.c ****   RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE);
+  38              		.loc 1 5 3 view .LVU1
+  39 0004 0121     		movs	r1, #1
+  40 0006 0820     		movs	r0, #8
+  41 0008 FFF7FEFF 		bl	RCC_APB2PeriphClockCmd
+  42              	.LVL0:
+   6:./Libraries/src/Key.c **** 
+   7:./Libraries/src/Key.c ****   GPIO_InitTypeDef GPIO_InitStructure;
+  43              		.loc 1 7 3 view .LVU2
+   8:./Libraries/src/Key.c ****   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;
+  44              		.loc 1 8 3 view .LVU3
+  45              		.loc 1 8 32 is_stmt 0 view .LVU4
+  46 000c 4823     		movs	r3, #72
+  47 000e 8DF80730 		strb	r3, [sp, #7]
+   9:./Libraries/src/Key.c ****   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_1 | GPIO_Pin_11;
+  48              		.loc 1 9 3 is_stmt 1 view .LVU5
+  49              		.loc 1 9 31 is_stmt 0 view .LVU6
+ARM GAS  /tmp/ccPg8bKl.s 			page 2
+
+
+  50 0012 40F60203 		movw	r3, #2050
+  51 0016 ADF80430 		strh	r3, [sp, #4]	@ movhi
+  10:./Libraries/src/Key.c ****   GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+  52              		.loc 1 10 3 is_stmt 1 view .LVU7
+  53              		.loc 1 10 33 is_stmt 0 view .LVU8
+  54 001a 0323     		movs	r3, #3
+  55 001c 8DF80630 		strb	r3, [sp, #6]
+  11:./Libraries/src/Key.c ****   GPIO_Init(GPIOB, &GPIO_InitStructure);
+  56              		.loc 1 11 3 is_stmt 1 view .LVU9
+  57 0020 01A9     		add	r1, sp, #4
+  58 0022 0348     		ldr	r0, .L3
+  59 0024 FFF7FEFF 		bl	GPIO_Init
+  60              	.LVL1:
+  12:./Libraries/src/Key.c **** }
+  61              		.loc 1 12 1 is_stmt 0 view .LVU10
+  62 0028 03B0     		add	sp, sp, #12
+  63              	.LCFI2:
+  64              		.cfi_def_cfa_offset 4
+  65              		@ sp needed
+  66 002a 5DF804FB 		ldr	pc, [sp], #4
+  67              	.L4:
+  68 002e 00BF     		.align	2
+  69              	.L3:
+  70 0030 000C0140 		.word	1073810432
+  71              		.cfi_endproc
+  72              	.LFE29:
+  74              		.section	.text.Key_GetNum,"ax",%progbits
+  75              		.align	1
+  76              		.global	Key_GetNum
+  77              		.syntax unified
+  78              		.thumb
+  79              		.thumb_func
+  81              	Key_GetNum:
+  82              	.LFB30:
+  13:./Libraries/src/Key.c **** 
+  14:./Libraries/src/Key.c **** uint8_t Key_GetNum(void) {
+  83              		.loc 1 14 26 is_stmt 1 view -0
+  84              		.cfi_startproc
+  85              		@ args = 0, pretend = 0, frame = 0
+  86              		@ frame_needed = 0, uses_anonymous_args = 0
+  87 0000 10B5     		push	{r4, lr}
+  88              	.LCFI3:
+  89              		.cfi_def_cfa_offset 8
+  90              		.cfi_offset 4, -8
+  91              		.cfi_offset 14, -4
+  15:./Libraries/src/Key.c ****   uint8_t KeyNum = 0;
+  92              		.loc 1 15 3 view .LVU12
+  93              	.LVL2:
+  16:./Libraries/src/Key.c ****   if (GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_1) == 0) {
+  94              		.loc 1 16 3 view .LVU13
+  95              		.loc 1 16 7 is_stmt 0 view .LVU14
+  96 0002 0221     		movs	r1, #2
+  97 0004 1448     		ldr	r0, .L14
+  98 0006 FFF7FEFF 		bl	GPIO_ReadInputDataBit
+  99              	.LVL3:
+ 100              		.loc 1 16 6 discriminator 1 view .LVU15
+ 101 000a 40B1     		cbz	r0, .L12
+ARM GAS  /tmp/ccPg8bKl.s 			page 3
+
+
+  15:./Libraries/src/Key.c ****   uint8_t KeyNum = 0;
+ 102              		.loc 1 15 11 view .LVU16
+ 103 000c 0024     		movs	r4, #0
+ 104              	.LVL4:
+ 105              	.L6:
+  17:./Libraries/src/Key.c ****     Delay_ms(20);
+  18:./Libraries/src/Key.c ****     while (GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_1) == 0)
+  19:./Libraries/src/Key.c ****       ;
+  20:./Libraries/src/Key.c ****     Delay_ms(20);
+  21:./Libraries/src/Key.c ****     KeyNum = 1;
+  22:./Libraries/src/Key.c ****   }
+  23:./Libraries/src/Key.c ****   if (GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_11) == 0) {
+ 106              		.loc 1 23 3 is_stmt 1 view .LVU17
+ 107              		.loc 1 23 7 is_stmt 0 view .LVU18
+ 108 000e 4FF40061 		mov	r1, #2048
+ 109 0012 1148     		ldr	r0, .L14
+ 110 0014 FFF7FEFF 		bl	GPIO_ReadInputDataBit
+ 111              	.LVL5:
+ 112              		.loc 1 23 6 discriminator 1 view .LVU19
+ 113 0018 78B1     		cbz	r0, .L13
+ 114              	.LVL6:
+ 115              	.L8:
+  24:./Libraries/src/Key.c ****     Delay_ms(20);
+  25:./Libraries/src/Key.c ****     while (GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_11) == 0)
+  26:./Libraries/src/Key.c ****       ;
+  27:./Libraries/src/Key.c ****     Delay_ms(20);
+  28:./Libraries/src/Key.c ****     KeyNum = 2;
+  29:./Libraries/src/Key.c ****   }
+  30:./Libraries/src/Key.c **** 
+  31:./Libraries/src/Key.c ****   return KeyNum;
+ 116              		.loc 1 31 3 is_stmt 1 view .LVU20
+  32:./Libraries/src/Key.c **** }
+ 117              		.loc 1 32 1 is_stmt 0 view .LVU21
+ 118 001a 2046     		mov	r0, r4
+ 119 001c 10BD     		pop	{r4, pc}
+ 120              	.LVL7:
+ 121              	.L12:
+  17:./Libraries/src/Key.c ****     Delay_ms(20);
+ 122              		.loc 1 17 5 is_stmt 1 view .LVU22
+ 123 001e 1420     		movs	r0, #20
+ 124 0020 FFF7FEFF 		bl	Delay_ms
+ 125              	.LVL8:
+  18:./Libraries/src/Key.c ****       ;
+ 126              		.loc 1 18 5 view .LVU23
+ 127              	.L7:
+  18:./Libraries/src/Key.c ****       ;
+ 128              		.loc 1 18 53 discriminator 1 view .LVU24
+  18:./Libraries/src/Key.c ****       ;
+ 129              		.loc 1 18 12 is_stmt 0 discriminator 1 view .LVU25
+ 130 0024 0221     		movs	r1, #2
+ 131 0026 0C48     		ldr	r0, .L14
+ 132 0028 FFF7FEFF 		bl	GPIO_ReadInputDataBit
+ 133              	.LVL9:
+  18:./Libraries/src/Key.c ****       ;
+ 134              		.loc 1 18 53 discriminator 1 view .LVU26
+ 135 002c 0028     		cmp	r0, #0
+ 136 002e F9D0     		beq	.L7
+ARM GAS  /tmp/ccPg8bKl.s 			page 4
+
+
+  20:./Libraries/src/Key.c ****     KeyNum = 1;
+ 137              		.loc 1 20 5 is_stmt 1 view .LVU27
+ 138 0030 1420     		movs	r0, #20
+ 139 0032 FFF7FEFF 		bl	Delay_ms
+ 140              	.LVL10:
+  21:./Libraries/src/Key.c ****   }
+ 141              		.loc 1 21 5 view .LVU28
+  21:./Libraries/src/Key.c ****   }
+ 142              		.loc 1 21 12 is_stmt 0 view .LVU29
+ 143 0036 0124     		movs	r4, #1
+ 144 0038 E9E7     		b	.L6
+ 145              	.LVL11:
+ 146              	.L13:
+  24:./Libraries/src/Key.c ****     while (GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_11) == 0)
+ 147              		.loc 1 24 5 is_stmt 1 view .LVU30
+ 148 003a 1420     		movs	r0, #20
+ 149 003c FFF7FEFF 		bl	Delay_ms
+ 150              	.LVL12:
+  25:./Libraries/src/Key.c ****       ;
+ 151              		.loc 1 25 5 view .LVU31
+ 152              	.L9:
+  25:./Libraries/src/Key.c ****       ;
+ 153              		.loc 1 25 54 discriminator 1 view .LVU32
+  25:./Libraries/src/Key.c ****       ;
+ 154              		.loc 1 25 12 is_stmt 0 discriminator 1 view .LVU33
+ 155 0040 4FF40061 		mov	r1, #2048
+ 156 0044 0448     		ldr	r0, .L14
+ 157 0046 FFF7FEFF 		bl	GPIO_ReadInputDataBit
+ 158              	.LVL13:
+  25:./Libraries/src/Key.c ****       ;
+ 159              		.loc 1 25 54 discriminator 1 view .LVU34
+ 160 004a 0028     		cmp	r0, #0
+ 161 004c F8D0     		beq	.L9
+  27:./Libraries/src/Key.c ****     KeyNum = 2;
+ 162              		.loc 1 27 5 is_stmt 1 view .LVU35
+ 163 004e 1420     		movs	r0, #20
+ 164 0050 FFF7FEFF 		bl	Delay_ms
+ 165              	.LVL14:
+  28:./Libraries/src/Key.c ****   }
+ 166              		.loc 1 28 5 view .LVU36
+  28:./Libraries/src/Key.c ****   }
+ 167              		.loc 1 28 12 is_stmt 0 view .LVU37
+ 168 0054 0224     		movs	r4, #2
+ 169 0056 E0E7     		b	.L8
+ 170              	.L15:
+ 171              		.align	2
+ 172              	.L14:
+ 173 0058 000C0140 		.word	1073810432
+ 174              		.cfi_endproc
+ 175              	.LFE30:
+ 177              		.text
+ 178              	.Letext0:
+ 179              		.file 2 "/usr/arm-none-eabi/include/machine/_default_types.h"
+ 180              		.file 3 "/usr/arm-none-eabi/include/sys/_stdint.h"
+ 181              		.file 4 "cmsis/stm32f10x.h"
+ 182              		.file 5 "Drivers/inc/stm32f10x_gpio.h"
+ 183              		.file 6 "Libraries/inc/delay.h"
+ARM GAS  /tmp/ccPg8bKl.s 			page 5
+
+
+ 184              		.file 7 "Drivers/inc/stm32f10x_rcc.h"
+ARM GAS  /tmp/ccPg8bKl.s 			page 6
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 Key.c
+     /tmp/ccPg8bKl.s:19     .text.Key_Init:00000000 $t
+     /tmp/ccPg8bKl.s:25     .text.Key_Init:00000000 Key_Init
+     /tmp/ccPg8bKl.s:70     .text.Key_Init:00000030 $d
+     /tmp/ccPg8bKl.s:75     .text.Key_GetNum:00000000 $t
+     /tmp/ccPg8bKl.s:81     .text.Key_GetNum:00000000 Key_GetNum
+     /tmp/ccPg8bKl.s:173    .text.Key_GetNum:00000058 $d
+
+UNDEFINED SYMBOLS
+RCC_APB2PeriphClockCmd
+GPIO_Init
+GPIO_ReadInputDataBit
+Delay_ms

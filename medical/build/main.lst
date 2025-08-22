@@ -1,0 +1,1038 @@
+ARM GAS  /tmp/ccVZMZ0b.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.arch armv7-m
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"main.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.file 1 "./source/main.c"
+  18              		.section	.rodata.main.str1.4,"aMS",%progbits,1
+  19              		.align	2
+  20              	.LC0:
+  21 0000 48656172 		.ascii	"HeartRate:\000"
+  21      74526174 
+  21      653A00
+  22 000b 00       		.align	2
+  23              	.LC1:
+  24 000c 53504F32 		.ascii	"SPO2:\000"
+  24      3A00
+  25 0012 0000     		.align	2
+  26              	.LC2:
+  27 0014 0A0D00   		.ascii	"\012\015\000"
+  28              		.section	.text.main,"ax",%progbits
+  29              		.align	1
+  30              		.global	main
+  31              		.syntax unified
+  32              		.thumb
+  33              		.thumb_func
+  35              	main:
+  36              	.LFB29:
+   1:./source/main.c **** #include "OLED.h"
+   2:./source/main.c **** #include "max30102.h"
+   3:./source/main.c **** #include "serial.h"
+   4:./source/main.c **** #include <Key.h>
+   5:./source/main.c **** #include <delay.h>
+   6:./source/main.c **** #include <stdint.h>
+   7:./source/main.c **** 
+   8:./source/main.c **** #define MAX_BRIGHTNESS 255
+   9:./source/main.c **** #define INTERRUPT_REG 0x00
+  10:./source/main.c **** 
+  11:./source/main.c **** uint32_t aun_ir_buffer[500]; // IR LED 红外光数据，用于计算血氧
+  12:./source/main.c **** int32_t n_ir_buffer_length;  // 数据长度
+  13:./source/main.c **** 
+  14:./source/main.c **** uint32_t aun_red_buffer[500]; // RED 红光数据，用于计算心率
+  15:./source/main.c **** int32_t n_heart_rate;         // 心率值
+  16:./source/main.c **** int8_t ch_heartRate_valid;    // 用于显示心率计算是否有效的指示符
+  17:./source/main.c **** 
+  18:./source/main.c **** int32_t n_spo2;       // SPO2值
+  19:./source/main.c **** int8_t ch_spo2_valid; // 用于显示SPO2是否有效的指示符
+ARM GAS  /tmp/ccVZMZ0b.s 			page 2
+
+
+  20:./source/main.c **** 
+  21:./source/main.c **** uint32_t un_min, un_max, un_prev_data; // restore min and max signal
+  22:./source/main.c **** int i;                                 // index
+  23:./source/main.c **** int32_t n_brightness;
+  24:./source/main.c **** float f_temp;
+  25:./source/main.c **** 
+  26:./source/main.c **** uint8_t temp[6];
+  27:./source/main.c **** uint8_t str[100];
+  28:./source/main.c **** uint8_t dis_hr = 0, dis_spo2 = 0;
+  29:./source/main.c **** 
+  30:./source/main.c **** int main(void) {
+  37              		.loc 1 30 16 view -0
+  38              		.cfi_startproc
+  39              		@ Volatile: function does not return.
+  40              		@ args = 0, pretend = 0, frame = 0
+  41              		@ frame_needed = 0, uses_anonymous_args = 0
+  42 0000 00B5     		push	{lr}
+  43              	.LCFI0:
+  44              		.cfi_def_cfa_offset 4
+  45              		.cfi_offset 14, -4
+  46 0002 85B0     		sub	sp, sp, #20
+  47              	.LCFI1:
+  48              		.cfi_def_cfa_offset 24
+  31:./source/main.c ****   OLED_Init();
+  49              		.loc 1 31 3 view .LVU1
+  50 0004 FFF7FEFF 		bl	OLED_Init
+  51              	.LVL0:
+  32:./source/main.c ****   serial_init();
+  52              		.loc 1 32 3 view .LVU2
+  53 0008 FFF7FEFF 		bl	serial_init
+  54              	.LVL1:
+  33:./source/main.c ****   MAX30102_Init();
+  55              		.loc 1 33 3 view .LVU3
+  56 000c FFF7FEFF 		bl	MAX30102_Init
+  57              	.LVL2:
+  34:./source/main.c **** 
+  35:./source/main.c ****   un_min = 0x3FFFF;
+  58              		.loc 1 35 3 view .LVU4
+  59              		.loc 1 35 10 is_stmt 0 view .LVU5
+  60 0010 8A4B     		ldr	r3, .L27
+  61 0012 8B4A     		ldr	r2, .L27+4
+  62 0014 1A60     		str	r2, [r3]
+  36:./source/main.c ****   un_max = 0;
+  63              		.loc 1 36 3 is_stmt 1 view .LVU6
+  64              		.loc 1 36 10 is_stmt 0 view .LVU7
+  65 0016 0024     		movs	r4, #0
+  66 0018 8A4B     		ldr	r3, .L27+8
+  67 001a 1C60     		str	r4, [r3]
+  37:./source/main.c **** 
+  38:./source/main.c ****   OLED_ShowString(1, 1, "HeartRate:");
+  68              		.loc 1 38 3 is_stmt 1 view .LVU8
+  69 001c 8A4A     		ldr	r2, .L27+12
+  70 001e 0121     		movs	r1, #1
+  71 0020 0846     		mov	r0, r1
+  72 0022 FFF7FEFF 		bl	OLED_ShowString
+  73              	.LVL3:
+  39:./source/main.c ****   OLED_ShowString(2, 1, "SPO2:");
+ARM GAS  /tmp/ccVZMZ0b.s 			page 3
+
+
+  74              		.loc 1 39 3 view .LVU9
+  75 0026 894A     		ldr	r2, .L27+16
+  76 0028 0121     		movs	r1, #1
+  77 002a 0220     		movs	r0, #2
+  78 002c FFF7FEFF 		bl	OLED_ShowString
+  79              	.LVL4:
+  40:./source/main.c **** 
+  41:./source/main.c ****   n_ir_buffer_length = 500; // 缓冲区长度为100,可存储以100sps运行的5秒样本
+  80              		.loc 1 41 3 view .LVU10
+  81              		.loc 1 41 22 is_stmt 0 view .LVU11
+  82 0030 874B     		ldr	r3, .L27+20
+  83 0032 4FF4FA72 		mov	r2, #500
+  84 0036 1A60     		str	r2, [r3]
+  42:./source/main.c ****                             // 读取500个样本，并确定信号范围
+  43:./source/main.c **** 
+  44:./source/main.c ****   for (i = 0; i < n_ir_buffer_length; i++) {
+  85              		.loc 1 44 3 is_stmt 1 view .LVU12
+  86              		.loc 1 44 10 is_stmt 0 view .LVU13
+  87 0038 864B     		ldr	r3, .L27+24
+  88 003a 1C60     		str	r4, [r3]
+  89              		.loc 1 44 3 view .LVU14
+  90 003c 02E0     		b	.L2
+  91              	.L5:
+  92              		.loc 1 44 40 is_stmt 1 discriminator 2 view .LVU15
+  93 003e 0131     		adds	r1, r1, #1
+  94 0040 844B     		ldr	r3, .L27+24
+  95 0042 1960     		str	r1, [r3]
+  96              	.L2:
+  97              		.loc 1 44 17 discriminator 1 view .LVU16
+  98 0044 834B     		ldr	r3, .L27+24
+  99 0046 1B68     		ldr	r3, [r3]
+ 100 0048 814A     		ldr	r2, .L27+20
+ 101 004a 1168     		ldr	r1, [r2]
+ 102 004c 8B42     		cmp	r3, r1
+ 103 004e 30DA     		bge	.L23
+ 104              	.L3:
+  45:./source/main.c ****     while (MAX30102_INT == 1)
+ 105              		.loc 1 45 25 discriminator 1 view .LVU17
+ 106              		.loc 1 45 12 is_stmt 0 discriminator 1 view .LVU18
+ 107 0050 814B     		ldr	r3, .L27+28
+ 108 0052 D3F82431 		ldr	r3, [r3, #292]
+ 109              		.loc 1 45 25 discriminator 1 view .LVU19
+ 110 0056 012B     		cmp	r3, #1
+ 111 0058 FAD0     		beq	.L3
+  46:./source/main.c ****       ;
+  47:./source/main.c **** 
+  48:./source/main.c ****     max30102_FIFO_ReadBytes(REG_FIFO_DATA, temp);
+ 112              		.loc 1 48 5 is_stmt 1 view .LVU20
+ 113 005a 804C     		ldr	r4, .L27+32
+ 114 005c 2146     		mov	r1, r4
+ 115 005e 0720     		movs	r0, #7
+ 116 0060 FFF7FEFF 		bl	max30102_FIFO_ReadBytes
+ 117              	.LVL5:
+  49:./source/main.c ****     aun_red_buffer[i] = (long)((long)((long)temp[0] & 0x03) << 16) |
+ 118              		.loc 1 49 5 view .LVU21
+ 119              		.loc 1 49 49 is_stmt 0 view .LVU22
+ 120 0064 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
+ARM GAS  /tmp/ccVZMZ0b.s 			page 4
+
+
+ 121              		.loc 1 49 25 view .LVU23
+ 122 0066 1B04     		lsls	r3, r3, #16
+ 123 0068 03F44033 		and	r3, r3, #196608
+  50:./source/main.c ****                         (long)temp[1] << 8 | (long)temp[2];
+ 124              		.loc 1 50 35 view .LVU24
+ 125 006c 6278     		ldrb	r2, [r4, #1]	@ zero_extendqisi2
+  49:./source/main.c ****     aun_red_buffer[i] = (long)((long)((long)temp[0] & 0x03) << 16) |
+ 126              		.loc 1 49 68 view .LVU25
+ 127 006e 43EA0223 		orr	r3, r3, r2, lsl #8
+ 128              		.loc 1 50 56 view .LVU26
+ 129 0072 A278     		ldrb	r2, [r4, #2]	@ zero_extendqisi2
+  49:./source/main.c ****     aun_red_buffer[i] = (long)((long)((long)temp[0] & 0x03) << 16) |
+ 130              		.loc 1 49 19 view .LVU27
+ 131 0074 7749     		ldr	r1, .L27+24
+ 132 0076 0968     		ldr	r1, [r1]
+ 133              		.loc 1 50 44 view .LVU28
+ 134 0078 1343     		orrs	r3, r3, r2
+  49:./source/main.c ****     aun_red_buffer[i] = (long)((long)((long)temp[0] & 0x03) << 16) |
+ 135              		.loc 1 49 23 view .LVU29
+ 136 007a 794A     		ldr	r2, .L27+36
+ 137 007c 42F82130 		str	r3, [r2, r1, lsl #2]
+  51:./source/main.c ****     aun_ir_buffer[i] = (long)((long)((long)temp[3] & 0x03) << 16) |
+ 138              		.loc 1 51 5 is_stmt 1 view .LVU30
+ 139              		.loc 1 51 48 is_stmt 0 view .LVU31
+ 140 0080 E278     		ldrb	r2, [r4, #3]	@ zero_extendqisi2
+ 141              		.loc 1 51 24 view .LVU32
+ 142 0082 1204     		lsls	r2, r2, #16
+ 143 0084 02F44032 		and	r2, r2, #196608
+  52:./source/main.c ****                        (long)temp[4] << 8 | (long)temp[5];
+ 144              		.loc 1 52 34 view .LVU33
+ 145 0088 2079     		ldrb	r0, [r4, #4]	@ zero_extendqisi2
+  51:./source/main.c ****     aun_ir_buffer[i] = (long)((long)((long)temp[3] & 0x03) << 16) |
+ 146              		.loc 1 51 67 view .LVU34
+ 147 008a 42EA0022 		orr	r2, r2, r0, lsl #8
+ 148              		.loc 1 52 55 view .LVU35
+ 149 008e 6079     		ldrb	r0, [r4, #5]	@ zero_extendqisi2
+ 150              		.loc 1 52 43 view .LVU36
+ 151 0090 0243     		orrs	r2, r2, r0
+  51:./source/main.c ****     aun_ir_buffer[i] = (long)((long)((long)temp[3] & 0x03) << 16) |
+ 152              		.loc 1 51 22 view .LVU37
+ 153 0092 7448     		ldr	r0, .L27+40
+ 154 0094 40F82120 		str	r2, [r0, r1, lsl #2]
+  53:./source/main.c **** 
+  54:./source/main.c ****     // 替换最值
+  55:./source/main.c ****     if (un_min > aun_red_buffer[i])
+ 155              		.loc 1 55 5 is_stmt 1 view .LVU38
+ 156              		.loc 1 55 16 is_stmt 0 view .LVU39
+ 157 0098 684A     		ldr	r2, .L27
+ 158 009a 1268     		ldr	r2, [r2]
+ 159              		.loc 1 55 8 view .LVU40
+ 160 009c 9342     		cmp	r3, r2
+ 161 009e 01D2     		bcs	.L4
+  56:./source/main.c ****       un_min = aun_red_buffer[i];
+ 162              		.loc 1 56 7 is_stmt 1 view .LVU41
+ 163              		.loc 1 56 14 is_stmt 0 view .LVU42
+ 164 00a0 664A     		ldr	r2, .L27
+ 165 00a2 1360     		str	r3, [r2]
+ARM GAS  /tmp/ccVZMZ0b.s 			page 5
+
+
+ 166              	.L4:
+  57:./source/main.c ****     if (un_max < aun_red_buffer[i])
+ 167              		.loc 1 57 5 is_stmt 1 view .LVU43
+ 168              		.loc 1 57 16 is_stmt 0 view .LVU44
+ 169 00a4 674A     		ldr	r2, .L27+8
+ 170 00a6 1268     		ldr	r2, [r2]
+ 171              		.loc 1 57 8 view .LVU45
+ 172 00a8 9342     		cmp	r3, r2
+ 173 00aa C8D9     		bls	.L5
+  58:./source/main.c ****       un_max = aun_red_buffer[i];
+ 174              		.loc 1 58 7 is_stmt 1 view .LVU46
+ 175              		.loc 1 58 14 is_stmt 0 view .LVU47
+ 176 00ac 654A     		ldr	r2, .L27+8
+ 177 00ae 1360     		str	r3, [r2]
+ 178 00b0 C5E7     		b	.L5
+ 179              	.L23:
+  59:./source/main.c ****   }
+  60:./source/main.c **** 
+  61:./source/main.c ****   un_prev_data = aun_red_buffer[i];
+ 180              		.loc 1 61 3 is_stmt 1 view .LVU48
+ 181              		.loc 1 61 32 is_stmt 0 view .LVU49
+ 182 00b2 6B4A     		ldr	r2, .L27+36
+ 183 00b4 52F82300 		ldr	r0, [r2, r3, lsl #2]
+ 184              		.loc 1 61 16 view .LVU50
+ 185 00b8 6B4B     		ldr	r3, .L27+44
+ 186 00ba 1860     		str	r0, [r3]
+  62:./source/main.c **** 
+  63:./source/main.c ****   maxim_heart_rate_and_oxygen_saturation(
+ 187              		.loc 1 63 3 is_stmt 1 view .LVU51
+ 188 00bc 6B4B     		ldr	r3, .L27+48
+ 189 00be 0293     		str	r3, [sp, #8]
+ 190 00c0 6B4B     		ldr	r3, .L27+52
+ 191 00c2 0193     		str	r3, [sp, #4]
+ 192 00c4 6B4B     		ldr	r3, .L27+56
+ 193 00c6 0093     		str	r3, [sp]
+ 194 00c8 6B4B     		ldr	r3, .L27+60
+ 195 00ca 6648     		ldr	r0, .L27+40
+ 196 00cc FFF7FEFF 		bl	maxim_heart_rate_and_oxygen_saturation
+ 197              	.LVL6:
+ 198 00d0 12E1     		b	.L21
+ 199              	.L8:
+  64:./source/main.c ****       aun_ir_buffer, n_ir_buffer_length, aun_red_buffer, &n_spo2,
+  65:./source/main.c ****       &ch_spo2_valid, &n_heart_rate, &ch_heartRate_valid);
+  66:./source/main.c **** 
+  67:./source/main.c ****   while (1) {
+  68:./source/main.c ****     for (i = 100; i < 500; i++) {
+ 200              		.loc 1 68 29 discriminator 2 view .LVU52
+ 201 00d2 0133     		adds	r3, r3, #1
+ 202 00d4 5F4A     		ldr	r2, .L27+24
+ 203 00d6 1360     		str	r3, [r2]
+ 204              	.L6:
+ 205              		.loc 1 68 21 discriminator 1 view .LVU53
+ 206 00d8 5E4B     		ldr	r3, .L27+24
+ 207 00da 1B68     		ldr	r3, [r3]
+ 208 00dc B3F5FA7F 		cmp	r3, #500
+ 209 00e0 18DA     		bge	.L24
+  69:./source/main.c ****       // 将数据前推100位
+ARM GAS  /tmp/ccVZMZ0b.s 			page 6
+
+
+  70:./source/main.c ****       aun_red_buffer[i - 100] = aun_red_buffer[i];
+ 210              		.loc 1 70 7 view .LVU54
+ 211              		.loc 1 70 24 is_stmt 0 view .LVU55
+ 212 00e2 A3F16401 		sub	r1, r3, #100
+ 213              		.loc 1 70 47 view .LVU56
+ 214 00e6 5E48     		ldr	r0, .L27+36
+ 215 00e8 50F82320 		ldr	r2, [r0, r3, lsl #2]
+ 216              		.loc 1 70 31 view .LVU57
+ 217 00ec 40F82120 		str	r2, [r0, r1, lsl #2]
+  71:./source/main.c ****       aun_ir_buffer[i - 100] = aun_ir_buffer[i];
+ 218              		.loc 1 71 7 is_stmt 1 view .LVU58
+ 219              		.loc 1 71 45 is_stmt 0 view .LVU59
+ 220 00f0 5C48     		ldr	r0, .L27+40
+ 221 00f2 50F82340 		ldr	r4, [r0, r3, lsl #2]
+ 222              		.loc 1 71 30 view .LVU60
+ 223 00f6 40F82140 		str	r4, [r0, r1, lsl #2]
+  72:./source/main.c **** 
+  73:./source/main.c ****       // update the signal main and max
+  74:./source/main.c ****       if (un_min > aun_red_buffer[i])
+ 224              		.loc 1 74 7 is_stmt 1 view .LVU61
+ 225              		.loc 1 74 18 is_stmt 0 view .LVU62
+ 226 00fa 5049     		ldr	r1, .L27
+ 227 00fc 0968     		ldr	r1, [r1]
+ 228              		.loc 1 74 10 view .LVU63
+ 229 00fe 8A42     		cmp	r2, r1
+ 230 0100 01D2     		bcs	.L7
+  75:./source/main.c ****         un_min = aun_red_buffer[i];
+ 231              		.loc 1 75 9 is_stmt 1 view .LVU64
+ 232              		.loc 1 75 16 is_stmt 0 view .LVU65
+ 233 0102 4E49     		ldr	r1, .L27
+ 234 0104 0A60     		str	r2, [r1]
+ 235              	.L7:
+  76:./source/main.c ****       if (un_max < aun_red_buffer[i])
+ 236              		.loc 1 76 7 is_stmt 1 view .LVU66
+ 237              		.loc 1 76 18 is_stmt 0 view .LVU67
+ 238 0106 4F49     		ldr	r1, .L27+8
+ 239 0108 0968     		ldr	r1, [r1]
+ 240              		.loc 1 76 10 view .LVU68
+ 241 010a 8A42     		cmp	r2, r1
+ 242 010c E1D9     		bls	.L8
+  77:./source/main.c ****         un_max = aun_red_buffer[i];
+ 243              		.loc 1 77 9 is_stmt 1 view .LVU69
+ 244              		.loc 1 77 16 is_stmt 0 view .LVU70
+ 245 010e 4D49     		ldr	r1, .L27+8
+ 246 0110 0A60     		str	r2, [r1]
+ 247 0112 DEE7     		b	.L8
+ 248              	.L24:
+  78:./source/main.c ****     }
+  79:./source/main.c **** 
+  80:./source/main.c ****     for (i = 400; i < 500; i++) {
+ 249              		.loc 1 80 5 is_stmt 1 view .LVU71
+ 250              		.loc 1 80 12 is_stmt 0 view .LVU72
+ 251 0114 4F4B     		ldr	r3, .L27+24
+ 252 0116 4FF4C872 		mov	r2, #400
+ 253 011a 1A60     		str	r2, [r3]
+ 254              		.loc 1 80 5 view .LVU73
+ 255 011c 2CE0     		b	.L10
+ARM GAS  /tmp/ccVZMZ0b.s 			page 7
+
+
+ 256              	.L12:
+  81:./source/main.c ****       un_prev_data = aun_red_buffer[i - 1];
+  82:./source/main.c ****       while (MAX30102_INT == 1)
+  83:./source/main.c ****         ;
+  84:./source/main.c ****       max30102_FIFO_ReadBytes(REG_FIFO_DATA, temp);
+  85:./source/main.c ****       aun_red_buffer[i] = (long)((long)((long)temp[0] & 0x03) << 16) |
+  86:./source/main.c ****                           (long)temp[1] << 8 | (long)temp[2];
+  87:./source/main.c ****       aun_ir_buffer[i] = (long)((long)((long)temp[3] & 0x03) << 16) |
+  88:./source/main.c ****                          (long)temp[4] << 8 | (long)temp[5];
+  89:./source/main.c ****       if (aun_red_buffer[i] > un_prev_data) {
+  90:./source/main.c ****         f_temp = aun_red_buffer[i] - un_prev_data;
+  91:./source/main.c ****         f_temp /= (un_max - un_min);
+  92:./source/main.c ****         f_temp *= MAX_BRIGHTNESS;
+  93:./source/main.c ****         n_brightness -= (int)f_temp;
+  94:./source/main.c ****         if (n_brightness < 0)
+  95:./source/main.c ****           n_brightness = 0;
+  96:./source/main.c ****       } else {
+  97:./source/main.c ****         f_temp = un_prev_data - aun_red_buffer[i];
+ 257              		.loc 1 97 9 is_stmt 1 view .LVU74
+ 258              		.loc 1 97 16 is_stmt 0 view .LVU75
+ 259 011e C01A     		subs	r0, r0, r3
+ 260 0120 FFF7FEFF 		bl	__aeabi_ui2f
+ 261              	.LVL7:
+ 262 0124 0446     		mov	r4, r0
+ 263 0126 554E     		ldr	r6, .L27+64
+ 264 0128 3060     		str	r0, [r6]	@ float
+  98:./source/main.c ****         f_temp /= (un_max - un_min);
+ 265              		.loc 1 98 9 is_stmt 1 view .LVU76
+ 266              		.loc 1 98 27 is_stmt 0 view .LVU77
+ 267 012a 464B     		ldr	r3, .L27+8
+ 268 012c 1868     		ldr	r0, [r3]
+ 269 012e 434B     		ldr	r3, .L27
+ 270 0130 1B68     		ldr	r3, [r3]
+ 271              		.loc 1 98 16 view .LVU78
+ 272 0132 C01A     		subs	r0, r0, r3
+ 273 0134 FFF7FEFF 		bl	__aeabi_ui2f
+ 274              	.LVL8:
+ 275 0138 0146     		mov	r1, r0
+ 276 013a 2046     		mov	r0, r4
+ 277 013c FFF7FEFF 		bl	__aeabi_fdiv
+ 278              	.LVL9:
+ 279 0140 3060     		str	r0, [r6]	@ float
+  99:./source/main.c ****         f_temp *= MAX_BRIGHTNESS;
+ 280              		.loc 1 99 9 is_stmt 1 view .LVU79
+ 281              		.loc 1 99 16 is_stmt 0 view .LVU80
+ 282 0142 4F49     		ldr	r1, .L27+68
+ 283 0144 FFF7FEFF 		bl	__aeabi_fmul
+ 284              	.LVL10:
+ 285 0148 3060     		str	r0, [r6]	@ float
+ 100:./source/main.c ****         n_brightness += (int)f_temp;
+ 286              		.loc 1 100 9 is_stmt 1 view .LVU81
+ 287              		.loc 1 100 25 is_stmt 0 view .LVU82
+ 288 014a FFF7FEFF 		bl	__aeabi_f2iz
+ 289              	.LVL11:
+ 290              		.loc 1 100 22 view .LVU83
+ 291 014e 4D4B     		ldr	r3, .L27+72
+ 292 0150 1A68     		ldr	r2, [r3]
+ARM GAS  /tmp/ccVZMZ0b.s 			page 8
+
+
+ 293 0152 1044     		add	r0, r0, r2
+ 294 0154 1860     		str	r0, [r3]
+ 101:./source/main.c ****         if (n_brightness > MAX_BRIGHTNESS)
+ 295              		.loc 1 101 9 is_stmt 1 view .LVU84
+ 296              		.loc 1 101 12 is_stmt 0 view .LVU85
+ 297 0156 FF28     		cmp	r0, #255
+ 298 0158 01DD     		ble	.L13
+ 102:./source/main.c ****           n_brightness = MAX_BRIGHTNESS;
+ 299              		.loc 1 102 11 is_stmt 1 view .LVU86
+ 300              		.loc 1 102 24 is_stmt 0 view .LVU87
+ 301 015a FF22     		movs	r2, #255
+ 302 015c 1A60     		str	r2, [r3]
+ 303              	.L13:
+ 103:./source/main.c ****       }
+ 104:./source/main.c **** 
+ 105:./source/main.c ****       if (ch_heartRate_valid == 1 && n_heart_rate < 120) {
+ 304              		.loc 1 105 7 is_stmt 1 view .LVU88
+ 305              		.loc 1 105 30 is_stmt 0 view .LVU89
+ 306 015e 434B     		ldr	r3, .L27+48
+ 307 0160 93F90030 		ldrsb	r3, [r3]
+ 308              		.loc 1 105 10 view .LVU90
+ 309 0164 012B     		cmp	r3, #1
+ 310 0166 5DD0     		beq	.L25
+ 311              	.L14:
+ 106:./source/main.c ****         dis_hr = n_heart_rate;
+ 107:./source/main.c ****         dis_spo2 = n_spo2;
+ 108:./source/main.c ****       } else {
+ 109:./source/main.c ****         dis_hr = 0;
+ 312              		.loc 1 109 9 is_stmt 1 view .LVU91
+ 313              		.loc 1 109 16 is_stmt 0 view .LVU92
+ 314 0168 0023     		movs	r3, #0
+ 315 016a 474A     		ldr	r2, .L27+76
+ 316 016c 1370     		strb	r3, [r2]
+ 110:./source/main.c ****         dis_spo2 = 0;
+ 317              		.loc 1 110 9 is_stmt 1 view .LVU93
+ 318              		.loc 1 110 18 is_stmt 0 view .LVU94
+ 319 016e 474A     		ldr	r2, .L27+80
+ 320 0170 1370     		strb	r3, [r2]
+ 321              	.L15:
+  80:./source/main.c ****       un_prev_data = aun_red_buffer[i - 1];
+ 322              		.loc 1 80 29 is_stmt 1 discriminator 2 view .LVU95
+ 323 0172 0135     		adds	r5, r5, #1
+ 324 0174 374B     		ldr	r3, .L27+24
+ 325 0176 1D60     		str	r5, [r3]
+ 326              	.L10:
+  80:./source/main.c ****       un_prev_data = aun_red_buffer[i - 1];
+ 327              		.loc 1 80 21 discriminator 1 view .LVU96
+ 328 0178 364B     		ldr	r3, .L27+24
+ 329 017a 1B68     		ldr	r3, [r3]
+ 330 017c B3F5FA7F 		cmp	r3, #500
+ 331 0180 80F28680 		bge	.L26
+  81:./source/main.c ****       while (MAX30102_INT == 1)
+ 332              		.loc 1 81 7 view .LVU97
+  81:./source/main.c ****       while (MAX30102_INT == 1)
+ 333              		.loc 1 81 39 is_stmt 0 view .LVU98
+ 334 0184 013B     		subs	r3, r3, #1
+  81:./source/main.c ****       while (MAX30102_INT == 1)
+ARM GAS  /tmp/ccVZMZ0b.s 			page 9
+
+
+ 335              		.loc 1 81 36 view .LVU99
+ 336 0186 364A     		ldr	r2, .L27+36
+ 337 0188 52F82320 		ldr	r2, [r2, r3, lsl #2]
+  81:./source/main.c ****       while (MAX30102_INT == 1)
+ 338              		.loc 1 81 20 view .LVU100
+ 339 018c 364B     		ldr	r3, .L27+44
+ 340 018e 1A60     		str	r2, [r3]
+  82:./source/main.c ****         ;
+ 341              		.loc 1 82 7 is_stmt 1 view .LVU101
+ 342              	.L11:
+  82:./source/main.c ****         ;
+ 343              		.loc 1 82 27 discriminator 1 view .LVU102
+  82:./source/main.c ****         ;
+ 344              		.loc 1 82 14 is_stmt 0 discriminator 1 view .LVU103
+ 345 0190 314B     		ldr	r3, .L27+28
+ 346 0192 D3F82431 		ldr	r3, [r3, #292]
+  82:./source/main.c ****         ;
+ 347              		.loc 1 82 27 discriminator 1 view .LVU104
+ 348 0196 012B     		cmp	r3, #1
+ 349 0198 FAD0     		beq	.L11
+  84:./source/main.c ****       aun_red_buffer[i] = (long)((long)((long)temp[0] & 0x03) << 16) |
+ 350              		.loc 1 84 7 is_stmt 1 view .LVU105
+ 351 019a 304C     		ldr	r4, .L27+32
+ 352 019c 2146     		mov	r1, r4
+ 353 019e 0720     		movs	r0, #7
+ 354 01a0 FFF7FEFF 		bl	max30102_FIFO_ReadBytes
+ 355              	.LVL12:
+  85:./source/main.c ****                           (long)temp[1] << 8 | (long)temp[2];
+ 356              		.loc 1 85 7 view .LVU106
+  85:./source/main.c ****                           (long)temp[1] << 8 | (long)temp[2];
+ 357              		.loc 1 85 51 is_stmt 0 view .LVU107
+ 358 01a4 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
+  85:./source/main.c ****                           (long)temp[1] << 8 | (long)temp[2];
+ 359              		.loc 1 85 27 view .LVU108
+ 360 01a6 1B04     		lsls	r3, r3, #16
+ 361 01a8 03F44033 		and	r3, r3, #196608
+  86:./source/main.c ****       aun_ir_buffer[i] = (long)((long)((long)temp[3] & 0x03) << 16) |
+ 362              		.loc 1 86 37 view .LVU109
+ 363 01ac 6278     		ldrb	r2, [r4, #1]	@ zero_extendqisi2
+  85:./source/main.c ****                           (long)temp[1] << 8 | (long)temp[2];
+ 364              		.loc 1 85 70 view .LVU110
+ 365 01ae 43EA0223 		orr	r3, r3, r2, lsl #8
+  86:./source/main.c ****       aun_ir_buffer[i] = (long)((long)((long)temp[3] & 0x03) << 16) |
+ 366              		.loc 1 86 58 view .LVU111
+ 367 01b2 A278     		ldrb	r2, [r4, #2]	@ zero_extendqisi2
+  85:./source/main.c ****                           (long)temp[1] << 8 | (long)temp[2];
+ 368              		.loc 1 85 21 view .LVU112
+ 369 01b4 2749     		ldr	r1, .L27+24
+ 370 01b6 0D68     		ldr	r5, [r1]
+  86:./source/main.c ****       aun_ir_buffer[i] = (long)((long)((long)temp[3] & 0x03) << 16) |
+ 371              		.loc 1 86 46 view .LVU113
+ 372 01b8 1343     		orrs	r3, r3, r2
+  85:./source/main.c ****                           (long)temp[1] << 8 | (long)temp[2];
+ 373              		.loc 1 85 25 view .LVU114
+ 374 01ba 294A     		ldr	r2, .L27+36
+ 375 01bc 42F82530 		str	r3, [r2, r5, lsl #2]
+  87:./source/main.c ****                          (long)temp[4] << 8 | (long)temp[5];
+ARM GAS  /tmp/ccVZMZ0b.s 			page 10
+
+
+ 376              		.loc 1 87 7 is_stmt 1 view .LVU115
+  87:./source/main.c ****                          (long)temp[4] << 8 | (long)temp[5];
+ 377              		.loc 1 87 50 is_stmt 0 view .LVU116
+ 378 01c0 E278     		ldrb	r2, [r4, #3]	@ zero_extendqisi2
+  87:./source/main.c ****                          (long)temp[4] << 8 | (long)temp[5];
+ 379              		.loc 1 87 26 view .LVU117
+ 380 01c2 1204     		lsls	r2, r2, #16
+ 381 01c4 02F44032 		and	r2, r2, #196608
+  88:./source/main.c ****       if (aun_red_buffer[i] > un_prev_data) {
+ 382              		.loc 1 88 36 view .LVU118
+ 383 01c8 2179     		ldrb	r1, [r4, #4]	@ zero_extendqisi2
+  87:./source/main.c ****                          (long)temp[4] << 8 | (long)temp[5];
+ 384              		.loc 1 87 69 view .LVU119
+ 385 01ca 42EA0122 		orr	r2, r2, r1, lsl #8
+  88:./source/main.c ****       if (aun_red_buffer[i] > un_prev_data) {
+ 386              		.loc 1 88 57 view .LVU120
+ 387 01ce 6179     		ldrb	r1, [r4, #5]	@ zero_extendqisi2
+  88:./source/main.c ****       if (aun_red_buffer[i] > un_prev_data) {
+ 388              		.loc 1 88 45 view .LVU121
+ 389 01d0 0A43     		orrs	r2, r2, r1
+  87:./source/main.c ****                          (long)temp[4] << 8 | (long)temp[5];
+ 390              		.loc 1 87 24 view .LVU122
+ 391 01d2 2449     		ldr	r1, .L27+40
+ 392 01d4 41F82520 		str	r2, [r1, r5, lsl #2]
+  89:./source/main.c ****         f_temp = aun_red_buffer[i] - un_prev_data;
+ 393              		.loc 1 89 7 is_stmt 1 view .LVU123
+  89:./source/main.c ****         f_temp = aun_red_buffer[i] - un_prev_data;
+ 394              		.loc 1 89 29 is_stmt 0 view .LVU124
+ 395 01d8 234A     		ldr	r2, .L27+44
+ 396 01da 1068     		ldr	r0, [r2]
+  89:./source/main.c ****         f_temp = aun_red_buffer[i] - un_prev_data;
+ 397              		.loc 1 89 10 view .LVU125
+ 398 01dc 8342     		cmp	r3, r0
+ 399 01de 9ED9     		bls	.L12
+  90:./source/main.c ****         f_temp /= (un_max - un_min);
+ 400              		.loc 1 90 9 is_stmt 1 view .LVU126
+  90:./source/main.c ****         f_temp /= (un_max - un_min);
+ 401              		.loc 1 90 16 is_stmt 0 view .LVU127
+ 402 01e0 181A     		subs	r0, r3, r0
+ 403 01e2 FFF7FEFF 		bl	__aeabi_ui2f
+ 404              	.LVL13:
+ 405 01e6 0446     		mov	r4, r0
+ 406 01e8 244E     		ldr	r6, .L27+64
+ 407 01ea 3060     		str	r0, [r6]	@ float
+  91:./source/main.c ****         f_temp *= MAX_BRIGHTNESS;
+ 408              		.loc 1 91 9 is_stmt 1 view .LVU128
+  91:./source/main.c ****         f_temp *= MAX_BRIGHTNESS;
+ 409              		.loc 1 91 27 is_stmt 0 view .LVU129
+ 410 01ec 154B     		ldr	r3, .L27+8
+ 411 01ee 1868     		ldr	r0, [r3]
+ 412 01f0 124B     		ldr	r3, .L27
+ 413 01f2 1B68     		ldr	r3, [r3]
+  91:./source/main.c ****         f_temp *= MAX_BRIGHTNESS;
+ 414              		.loc 1 91 16 view .LVU130
+ 415 01f4 C01A     		subs	r0, r0, r3
+ 416 01f6 FFF7FEFF 		bl	__aeabi_ui2f
+ 417              	.LVL14:
+ARM GAS  /tmp/ccVZMZ0b.s 			page 11
+
+
+ 418 01fa 0146     		mov	r1, r0
+ 419 01fc 2046     		mov	r0, r4
+ 420 01fe FFF7FEFF 		bl	__aeabi_fdiv
+ 421              	.LVL15:
+ 422 0202 3060     		str	r0, [r6]	@ float
+  92:./source/main.c ****         n_brightness -= (int)f_temp;
+ 423              		.loc 1 92 9 is_stmt 1 view .LVU131
+  92:./source/main.c ****         n_brightness -= (int)f_temp;
+ 424              		.loc 1 92 16 is_stmt 0 view .LVU132
+ 425 0204 1E49     		ldr	r1, .L27+68
+ 426 0206 FFF7FEFF 		bl	__aeabi_fmul
+ 427              	.LVL16:
+ 428 020a 3060     		str	r0, [r6]	@ float
+  93:./source/main.c ****         if (n_brightness < 0)
+ 429              		.loc 1 93 9 is_stmt 1 view .LVU133
+  93:./source/main.c ****         if (n_brightness < 0)
+ 430              		.loc 1 93 25 is_stmt 0 view .LVU134
+ 431 020c FFF7FEFF 		bl	__aeabi_f2iz
+ 432              	.LVL17:
+  93:./source/main.c ****         if (n_brightness < 0)
+ 433              		.loc 1 93 22 view .LVU135
+ 434 0210 1C4A     		ldr	r2, .L27+72
+ 435 0212 1368     		ldr	r3, [r2]
+ 436 0214 181A     		subs	r0, r3, r0
+ 437 0216 1060     		str	r0, [r2]
+  94:./source/main.c ****           n_brightness = 0;
+ 438              		.loc 1 94 9 is_stmt 1 view .LVU136
+  94:./source/main.c ****           n_brightness = 0;
+ 439              		.loc 1 94 12 is_stmt 0 view .LVU137
+ 440 0218 0028     		cmp	r0, #0
+ 441 021a A0DA     		bge	.L13
+  95:./source/main.c ****       } else {
+ 442              		.loc 1 95 11 is_stmt 1 view .LVU138
+  95:./source/main.c ****       } else {
+ 443              		.loc 1 95 24 is_stmt 0 view .LVU139
+ 444 021c 1346     		mov	r3, r2
+ 445 021e 0022     		movs	r2, #0
+ 446 0220 1A60     		str	r2, [r3]
+ 447 0222 9CE7     		b	.L13
+ 448              	.L25:
+ 105:./source/main.c ****         dis_hr = n_heart_rate;
+ 449              		.loc 1 105 51 discriminator 1 view .LVU140
+ 450 0224 124B     		ldr	r3, .L27+52
+ 451 0226 1B68     		ldr	r3, [r3]
+ 105:./source/main.c ****         dis_hr = n_heart_rate;
+ 452              		.loc 1 105 35 discriminator 1 view .LVU141
+ 453 0228 772B     		cmp	r3, #119
+ 454 022a 9DDC     		bgt	.L14
+ 106:./source/main.c ****         dis_spo2 = n_spo2;
+ 455              		.loc 1 106 9 is_stmt 1 view .LVU142
+ 106:./source/main.c ****         dis_spo2 = n_spo2;
+ 456              		.loc 1 106 16 is_stmt 0 view .LVU143
+ 457 022c 164A     		ldr	r2, .L27+76
+ 458 022e 1370     		strb	r3, [r2]
+ 107:./source/main.c ****       } else {
+ 459              		.loc 1 107 9 is_stmt 1 view .LVU144
+ 107:./source/main.c ****       } else {
+ARM GAS  /tmp/ccVZMZ0b.s 			page 12
+
+
+ 460              		.loc 1 107 18 is_stmt 0 view .LVU145
+ 461 0230 114B     		ldr	r3, .L27+60
+ 462 0232 1A68     		ldr	r2, [r3]
+ 463 0234 154B     		ldr	r3, .L27+80
+ 464 0236 1A70     		strb	r2, [r3]
+ 465 0238 9BE7     		b	.L15
+ 466              	.L28:
+ 467 023a 00BF     		.align	2
+ 468              	.L27:
+ 469 023c 00000000 		.word	un_min
+ 470 0240 FFFF0300 		.word	262143
+ 471 0244 00000000 		.word	un_max
+ 472 0248 00000000 		.word	.LC0
+ 473 024c 0C000000 		.word	.LC1
+ 474 0250 00000000 		.word	n_ir_buffer_length
+ 475 0254 00000000 		.word	i
+ 476 0258 00802142 		.word	1109491712
+ 477 025c 00000000 		.word	temp
+ 478 0260 00000000 		.word	aun_red_buffer
+ 479 0264 00000000 		.word	aun_ir_buffer
+ 480 0268 00000000 		.word	un_prev_data
+ 481 026c 00000000 		.word	ch_heartRate_valid
+ 482 0270 00000000 		.word	n_heart_rate
+ 483 0274 00000000 		.word	ch_spo2_valid
+ 484 0278 00000000 		.word	n_spo2
+ 485 027c 00000000 		.word	f_temp
+ 486 0280 00007F43 		.word	1132396544
+ 487 0284 00000000 		.word	n_brightness
+ 488 0288 00000000 		.word	dis_hr
+ 489 028c 00000000 		.word	dis_spo2
+ 490              	.L26:
+ 111:./source/main.c ****       }
+ 112:./source/main.c ****     }
+ 113:./source/main.c ****     maxim_heart_rate_and_oxygen_saturation(
+ 491              		.loc 1 113 5 is_stmt 1 view .LVU146
+ 492 0290 254B     		ldr	r3, .L29
+ 493 0292 0293     		str	r3, [sp, #8]
+ 494 0294 254B     		ldr	r3, .L29+4
+ 495 0296 0193     		str	r3, [sp, #4]
+ 496 0298 254B     		ldr	r3, .L29+8
+ 497 029a 0093     		str	r3, [sp]
+ 498 029c 254B     		ldr	r3, .L29+12
+ 499 029e 264A     		ldr	r2, .L29+16
+ 500 02a0 2649     		ldr	r1, .L29+20
+ 501 02a2 0968     		ldr	r1, [r1]
+ 502 02a4 2648     		ldr	r0, .L29+24
+ 503 02a6 FFF7FEFF 		bl	maxim_heart_rate_and_oxygen_saturation
+ 504              	.LVL18:
+ 114:./source/main.c ****         aun_ir_buffer, n_ir_buffer_length, aun_red_buffer, &n_spo2,
+ 115:./source/main.c ****         &ch_spo2_valid, &n_heart_rate, &ch_heartRate_valid);
+ 116:./source/main.c **** 
+ 117:./source/main.c ****     if (dis_hr == 0) {
+ 505              		.loc 1 117 5 view .LVU147
+ 506              		.loc 1 117 16 is_stmt 0 view .LVU148
+ 507 02aa 264B     		ldr	r3, .L29+28
+ 508 02ac 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 509              		.loc 1 117 8 view .LVU149
+ARM GAS  /tmp/ccVZMZ0b.s 			page 13
+
+
+ 510 02ae 3ABB     		cbnz	r2, .L17
+ 118:./source/main.c ****       OLED_ShowNum(1, 11, 000, 3);
+ 511              		.loc 1 118 7 is_stmt 1 view .LVU150
+ 512 02b0 0323     		movs	r3, #3
+ 513 02b2 0B21     		movs	r1, #11
+ 514 02b4 0120     		movs	r0, #1
+ 515 02b6 FFF7FEFF 		bl	OLED_ShowNum
+ 516              	.LVL19:
+ 517              	.L18:
+ 119:./source/main.c ****     } else {
+ 120:./source/main.c ****       OLED_ShowNum(1, 11, dis_hr - 20, 3);
+ 121:./source/main.c ****     }
+ 122:./source/main.c **** 
+ 123:./source/main.c ****     OLED_ShowNum(2, 6, dis_spo2, 3);
+ 518              		.loc 1 123 5 view .LVU151
+ 519 02ba 0323     		movs	r3, #3
+ 520 02bc 224A     		ldr	r2, .L29+32
+ 521 02be 1278     		ldrb	r2, [r2]	@ zero_extendqisi2
+ 522 02c0 0621     		movs	r1, #6
+ 523 02c2 0220     		movs	r0, #2
+ 524 02c4 FFF7FEFF 		bl	OLED_ShowNum
+ 525              	.LVL20:
+ 124:./source/main.c **** 
+ 125:./source/main.c ****     if (dis_hr == 0) {
+ 526              		.loc 1 125 5 view .LVU152
+ 527              		.loc 1 125 16 is_stmt 0 view .LVU153
+ 528 02c8 1E4B     		ldr	r3, .L29+28
+ 529 02ca 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 530              		.loc 1 125 8 view .LVU154
+ 531 02cc FBB9     		cbnz	r3, .L19
+ 126:./source/main.c ****       serial_sendstring("HeartRate:");
+ 532              		.loc 1 126 7 is_stmt 1 view .LVU155
+ 533 02ce 1F48     		ldr	r0, .L29+36
+ 534 02d0 FFF7FEFF 		bl	serial_sendstring
+ 535              	.LVL21:
+ 127:./source/main.c ****       serial_sendnumber(000, 3);
+ 536              		.loc 1 127 7 view .LVU156
+ 537 02d4 0321     		movs	r1, #3
+ 538 02d6 0020     		movs	r0, #0
+ 539 02d8 FFF7FEFF 		bl	serial_sendnumber
+ 540              	.LVL22:
+ 128:./source/main.c ****       serial_sendstring("\n\r");
+ 541              		.loc 1 128 7 view .LVU157
+ 542 02dc 1C48     		ldr	r0, .L29+40
+ 543 02de FFF7FEFF 		bl	serial_sendstring
+ 544              	.LVL23:
+ 545              	.L20:
+ 129:./source/main.c **** 
+ 130:./source/main.c ****     } else {
+ 131:./source/main.c ****       serial_sendstring("HeartRate:");
+ 132:./source/main.c ****       serial_sendnumber(dis_hr - 20, 3);
+ 133:./source/main.c ****       serial_sendstring("\n\r");
+ 134:./source/main.c ****     }
+ 135:./source/main.c **** 
+ 136:./source/main.c ****     serial_sendstring("SPO2:");
+ 546              		.loc 1 136 5 view .LVU158
+ 547 02e2 1C48     		ldr	r0, .L29+44
+ARM GAS  /tmp/ccVZMZ0b.s 			page 14
+
+
+ 548 02e4 FFF7FEFF 		bl	serial_sendstring
+ 549              	.LVL24:
+ 137:./source/main.c ****     serial_sendnumber(dis_spo2, 3);
+ 550              		.loc 1 137 5 view .LVU159
+ 551 02e8 0321     		movs	r1, #3
+ 552 02ea 174B     		ldr	r3, .L29+32
+ 553 02ec 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 554 02ee FFF7FEFF 		bl	serial_sendnumber
+ 555              	.LVL25:
+ 138:./source/main.c ****     serial_sendstring("\n\r");
+ 556              		.loc 1 138 5 view .LVU160
+ 557 02f2 1748     		ldr	r0, .L29+40
+ 558 02f4 FFF7FEFF 		bl	serial_sendstring
+ 559              	.LVL26:
+  67:./source/main.c ****     for (i = 100; i < 500; i++) {
+ 560              		.loc 1 67 9 view .LVU161
+ 561              	.L21:
+  67:./source/main.c ****     for (i = 100; i < 500; i++) {
+ 562              		.loc 1 67 3 view .LVU162
+  68:./source/main.c ****       // 将数据前推100位
+ 563              		.loc 1 68 5 view .LVU163
+  68:./source/main.c ****       // 将数据前推100位
+ 564              		.loc 1 68 12 is_stmt 0 view .LVU164
+ 565 02f8 174B     		ldr	r3, .L29+48
+ 566 02fa 6422     		movs	r2, #100
+ 567 02fc 1A60     		str	r2, [r3]
+  68:./source/main.c ****       // 将数据前推100位
+ 568              		.loc 1 68 5 view .LVU165
+ 569 02fe EBE6     		b	.L6
+ 570              	.L17:
+ 120:./source/main.c ****     }
+ 571              		.loc 1 120 7 is_stmt 1 view .LVU166
+ 572 0300 0323     		movs	r3, #3
+ 573 0302 143A     		subs	r2, r2, #20
+ 574 0304 0B21     		movs	r1, #11
+ 575 0306 0120     		movs	r0, #1
+ 576 0308 FFF7FEFF 		bl	OLED_ShowNum
+ 577              	.LVL27:
+ 578 030c D5E7     		b	.L18
+ 579              	.L19:
+ 131:./source/main.c ****       serial_sendnumber(dis_hr - 20, 3);
+ 580              		.loc 1 131 7 view .LVU167
+ 581 030e 0F48     		ldr	r0, .L29+36
+ 582 0310 FFF7FEFF 		bl	serial_sendstring
+ 583              	.LVL28:
+ 132:./source/main.c ****       serial_sendstring("\n\r");
+ 584              		.loc 1 132 7 view .LVU168
+ 132:./source/main.c ****       serial_sendstring("\n\r");
+ 585              		.loc 1 132 32 is_stmt 0 view .LVU169
+ 586 0314 0B4B     		ldr	r3, .L29+28
+ 587 0316 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 132:./source/main.c ****       serial_sendstring("\n\r");
+ 588              		.loc 1 132 7 view .LVU170
+ 589 0318 0321     		movs	r1, #3
+ 590 031a 1438     		subs	r0, r0, #20
+ 591 031c FFF7FEFF 		bl	serial_sendnumber
+ 592              	.LVL29:
+ARM GAS  /tmp/ccVZMZ0b.s 			page 15
+
+
+ 133:./source/main.c ****     }
+ 593              		.loc 1 133 7 is_stmt 1 view .LVU171
+ 594 0320 0B48     		ldr	r0, .L29+40
+ 595 0322 FFF7FEFF 		bl	serial_sendstring
+ 596              	.LVL30:
+ 597 0326 DCE7     		b	.L20
+ 598              	.L30:
+ 599              		.align	2
+ 600              	.L29:
+ 601 0328 00000000 		.word	ch_heartRate_valid
+ 602 032c 00000000 		.word	n_heart_rate
+ 603 0330 00000000 		.word	ch_spo2_valid
+ 604 0334 00000000 		.word	n_spo2
+ 605 0338 00000000 		.word	aun_red_buffer
+ 606 033c 00000000 		.word	n_ir_buffer_length
+ 607 0340 00000000 		.word	aun_ir_buffer
+ 608 0344 00000000 		.word	dis_hr
+ 609 0348 00000000 		.word	dis_spo2
+ 610 034c 00000000 		.word	.LC0
+ 611 0350 14000000 		.word	.LC2
+ 612 0354 0C000000 		.word	.LC1
+ 613 0358 00000000 		.word	i
+ 614              		.cfi_endproc
+ 615              	.LFE29:
+ 617              		.global	dis_spo2
+ 618              		.section	.bss.dis_spo2,"aw",%nobits
+ 621              	dis_spo2:
+ 622 0000 00       		.space	1
+ 623              		.global	dis_hr
+ 624              		.section	.bss.dis_hr,"aw",%nobits
+ 627              	dis_hr:
+ 628 0000 00       		.space	1
+ 629              		.global	str
+ 630              		.section	.bss.str,"aw",%nobits
+ 631              		.align	2
+ 634              	str:
+ 635 0000 00000000 		.space	100
+ 635      00000000 
+ 635      00000000 
+ 635      00000000 
+ 635      00000000 
+ 636              		.global	temp
+ 637              		.section	.bss.temp,"aw",%nobits
+ 638              		.align	2
+ 641              	temp:
+ 642 0000 00000000 		.space	6
+ 642      0000
+ 643              		.global	f_temp
+ 644              		.section	.bss.f_temp,"aw",%nobits
+ 645              		.align	2
+ 648              	f_temp:
+ 649 0000 00000000 		.space	4
+ 650              		.global	n_brightness
+ 651              		.section	.bss.n_brightness,"aw",%nobits
+ 652              		.align	2
+ 655              	n_brightness:
+ 656 0000 00000000 		.space	4
+ARM GAS  /tmp/ccVZMZ0b.s 			page 16
+
+
+ 657              		.global	i
+ 658              		.section	.bss.i,"aw",%nobits
+ 659              		.align	2
+ 662              	i:
+ 663 0000 00000000 		.space	4
+ 664              		.global	un_prev_data
+ 665              		.section	.bss.un_prev_data,"aw",%nobits
+ 666              		.align	2
+ 669              	un_prev_data:
+ 670 0000 00000000 		.space	4
+ 671              		.global	un_max
+ 672              		.section	.bss.un_max,"aw",%nobits
+ 673              		.align	2
+ 676              	un_max:
+ 677 0000 00000000 		.space	4
+ 678              		.global	un_min
+ 679              		.section	.bss.un_min,"aw",%nobits
+ 680              		.align	2
+ 683              	un_min:
+ 684 0000 00000000 		.space	4
+ 685              		.global	ch_spo2_valid
+ 686              		.section	.bss.ch_spo2_valid,"aw",%nobits
+ 689              	ch_spo2_valid:
+ 690 0000 00       		.space	1
+ 691              		.global	n_spo2
+ 692              		.section	.bss.n_spo2,"aw",%nobits
+ 693              		.align	2
+ 696              	n_spo2:
+ 697 0000 00000000 		.space	4
+ 698              		.global	ch_heartRate_valid
+ 699              		.section	.bss.ch_heartRate_valid,"aw",%nobits
+ 702              	ch_heartRate_valid:
+ 703 0000 00       		.space	1
+ 704              		.global	n_heart_rate
+ 705              		.section	.bss.n_heart_rate,"aw",%nobits
+ 706              		.align	2
+ 709              	n_heart_rate:
+ 710 0000 00000000 		.space	4
+ 711              		.global	aun_red_buffer
+ 712              		.section	.bss.aun_red_buffer,"aw",%nobits
+ 713              		.align	2
+ 716              	aun_red_buffer:
+ 717 0000 00000000 		.space	2000
+ 717      00000000 
+ 717      00000000 
+ 717      00000000 
+ 717      00000000 
+ 718              		.global	n_ir_buffer_length
+ 719              		.section	.bss.n_ir_buffer_length,"aw",%nobits
+ 720              		.align	2
+ 723              	n_ir_buffer_length:
+ 724 0000 00000000 		.space	4
+ 725              		.global	aun_ir_buffer
+ 726              		.section	.bss.aun_ir_buffer,"aw",%nobits
+ 727              		.align	2
+ 730              	aun_ir_buffer:
+ 731 0000 00000000 		.space	2000
+ARM GAS  /tmp/ccVZMZ0b.s 			page 17
+
+
+ 731      00000000 
+ 731      00000000 
+ 731      00000000 
+ 731      00000000 
+ 732              		.text
+ 733              	.Letext0:
+ 734              		.file 2 "/usr/arm-none-eabi/include/machine/_default_types.h"
+ 735              		.file 3 "/usr/arm-none-eabi/include/sys/_stdint.h"
+ 736              		.file 4 "Libraries/inc/serial.h"
+ 737              		.file 5 "Libraries/inc/OLED.h"
+ 738              		.file 6 "Libraries/inc/max30102.h"
+ 739              		.file 7 "cmsis/stm32f10x.h"
+ARM GAS  /tmp/ccVZMZ0b.s 			page 18
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 main.c
+     /tmp/ccVZMZ0b.s:19     .rodata.main.str1.4:00000000 $d
+     /tmp/ccVZMZ0b.s:29     .text.main:00000000 $t
+     /tmp/ccVZMZ0b.s:35     .text.main:00000000 main
+     /tmp/ccVZMZ0b.s:469    .text.main:0000023c $d
+     /tmp/ccVZMZ0b.s:683    .bss.un_min:00000000 un_min
+     /tmp/ccVZMZ0b.s:676    .bss.un_max:00000000 un_max
+     /tmp/ccVZMZ0b.s:723    .bss.n_ir_buffer_length:00000000 n_ir_buffer_length
+     /tmp/ccVZMZ0b.s:662    .bss.i:00000000 i
+     /tmp/ccVZMZ0b.s:641    .bss.temp:00000000 temp
+     /tmp/ccVZMZ0b.s:716    .bss.aun_red_buffer:00000000 aun_red_buffer
+     /tmp/ccVZMZ0b.s:730    .bss.aun_ir_buffer:00000000 aun_ir_buffer
+     /tmp/ccVZMZ0b.s:669    .bss.un_prev_data:00000000 un_prev_data
+     /tmp/ccVZMZ0b.s:702    .bss.ch_heartRate_valid:00000000 ch_heartRate_valid
+     /tmp/ccVZMZ0b.s:709    .bss.n_heart_rate:00000000 n_heart_rate
+     /tmp/ccVZMZ0b.s:689    .bss.ch_spo2_valid:00000000 ch_spo2_valid
+     /tmp/ccVZMZ0b.s:696    .bss.n_spo2:00000000 n_spo2
+     /tmp/ccVZMZ0b.s:648    .bss.f_temp:00000000 f_temp
+     /tmp/ccVZMZ0b.s:655    .bss.n_brightness:00000000 n_brightness
+     /tmp/ccVZMZ0b.s:627    .bss.dis_hr:00000000 dis_hr
+     /tmp/ccVZMZ0b.s:621    .bss.dis_spo2:00000000 dis_spo2
+     /tmp/ccVZMZ0b.s:492    .text.main:00000290 $t
+     /tmp/ccVZMZ0b.s:601    .text.main:00000328 $d
+     /tmp/ccVZMZ0b.s:622    .bss.dis_spo2:00000000 $d
+     /tmp/ccVZMZ0b.s:628    .bss.dis_hr:00000000 $d
+     /tmp/ccVZMZ0b.s:634    .bss.str:00000000 str
+     /tmp/ccVZMZ0b.s:631    .bss.str:00000000 $d
+     /tmp/ccVZMZ0b.s:638    .bss.temp:00000000 $d
+     /tmp/ccVZMZ0b.s:645    .bss.f_temp:00000000 $d
+     /tmp/ccVZMZ0b.s:652    .bss.n_brightness:00000000 $d
+     /tmp/ccVZMZ0b.s:659    .bss.i:00000000 $d
+     /tmp/ccVZMZ0b.s:666    .bss.un_prev_data:00000000 $d
+     /tmp/ccVZMZ0b.s:673    .bss.un_max:00000000 $d
+     /tmp/ccVZMZ0b.s:680    .bss.un_min:00000000 $d
+     /tmp/ccVZMZ0b.s:690    .bss.ch_spo2_valid:00000000 $d
+     /tmp/ccVZMZ0b.s:693    .bss.n_spo2:00000000 $d
+     /tmp/ccVZMZ0b.s:703    .bss.ch_heartRate_valid:00000000 $d
+     /tmp/ccVZMZ0b.s:706    .bss.n_heart_rate:00000000 $d
+     /tmp/ccVZMZ0b.s:713    .bss.aun_red_buffer:00000000 $d
+     /tmp/ccVZMZ0b.s:720    .bss.n_ir_buffer_length:00000000 $d
+     /tmp/ccVZMZ0b.s:727    .bss.aun_ir_buffer:00000000 $d
+
+UNDEFINED SYMBOLS
+OLED_Init
+serial_init
+MAX30102_Init
+OLED_ShowString
+max30102_FIFO_ReadBytes
+maxim_heart_rate_and_oxygen_saturation
+__aeabi_ui2f
+__aeabi_fdiv
+__aeabi_fmul
+__aeabi_f2iz
+OLED_ShowNum
+serial_sendstring
+serial_sendnumber
+ARM GAS  /tmp/ccVZMZ0b.s 			page 19
+
+
