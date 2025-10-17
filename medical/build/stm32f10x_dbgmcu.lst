@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccDgsThu.s 			page 1
+ARM GAS  /tmp/ccslfV49.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -17,7 +17,7 @@ ARM GAS  /tmp/ccDgsThu.s 			page 1
   14              		.text
   15              	.Ltext0:
   16              		.cfi_sections	.debug_frame
-  17              		.file 1 "./Drivers/src/stm32f10x_dbgmcu.c"
+  17              		.file 1 "./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu
   18              		.section	.text.DBGMCU_GetREVID,"ax",%progbits
   19              		.align	1
   20              		.global	DBGMCU_GetREVID
@@ -26,107 +26,107 @@ ARM GAS  /tmp/ccDgsThu.s 			page 1
   23              		.thumb_func
   25              	DBGMCU_GetREVID:
   26              	.LFB29:
-   1:./Drivers/src/stm32f10x_dbgmcu.c **** /**
-   2:./Drivers/src/stm32f10x_dbgmcu.c ****   ******************************************************************************
-   3:./Drivers/src/stm32f10x_dbgmcu.c ****   * @file    stm32f10x_dbgmcu.c
-   4:./Drivers/src/stm32f10x_dbgmcu.c ****   * @author  MCD Application Team
-   5:./Drivers/src/stm32f10x_dbgmcu.c ****   * @version V3.6.2
-   6:./Drivers/src/stm32f10x_dbgmcu.c ****   * @date    17-September-2021
-   7:./Drivers/src/stm32f10x_dbgmcu.c ****   * @brief   This file provides all the DBGMCU firmware functions.
-   8:./Drivers/src/stm32f10x_dbgmcu.c ****   ******************************************************************************
-   9:./Drivers/src/stm32f10x_dbgmcu.c ****   * @attention
-  10:./Drivers/src/stm32f10x_dbgmcu.c ****   *
-  11:./Drivers/src/stm32f10x_dbgmcu.c ****   * Copyright (c) 2012 STMicroelectronics.
-  12:./Drivers/src/stm32f10x_dbgmcu.c ****   * All rights reserved.
-  13:./Drivers/src/stm32f10x_dbgmcu.c ****   *
-  14:./Drivers/src/stm32f10x_dbgmcu.c ****   * This software is licensed under terms that can be found in the LICENSE file
-  15:./Drivers/src/stm32f10x_dbgmcu.c ****   * in the root directory of this software component.
-  16:./Drivers/src/stm32f10x_dbgmcu.c ****   * If no LICENSE file comes with this software, it is provided AS-IS.
-  17:./Drivers/src/stm32f10x_dbgmcu.c ****   *
-  18:./Drivers/src/stm32f10x_dbgmcu.c ****   ******************************************************************************
-  19:./Drivers/src/stm32f10x_dbgmcu.c ****   */
-  20:./Drivers/src/stm32f10x_dbgmcu.c **** 
-  21:./Drivers/src/stm32f10x_dbgmcu.c **** /* Includes ------------------------------------------------------------------*/
-  22:./Drivers/src/stm32f10x_dbgmcu.c **** #include "stm32f10x_dbgmcu.h"
-  23:./Drivers/src/stm32f10x_dbgmcu.c **** 
-  24:./Drivers/src/stm32f10x_dbgmcu.c **** /** @addtogroup STM32F10x_StdPeriph_Driver
-  25:./Drivers/src/stm32f10x_dbgmcu.c ****   * @{
-  26:./Drivers/src/stm32f10x_dbgmcu.c ****   */
-  27:./Drivers/src/stm32f10x_dbgmcu.c **** 
-  28:./Drivers/src/stm32f10x_dbgmcu.c **** /** @defgroup DBGMCU 
-  29:./Drivers/src/stm32f10x_dbgmcu.c ****   * @brief DBGMCU driver modules
-  30:./Drivers/src/stm32f10x_dbgmcu.c ****   * @{
-  31:./Drivers/src/stm32f10x_dbgmcu.c ****   */ 
-  32:./Drivers/src/stm32f10x_dbgmcu.c **** 
-ARM GAS  /tmp/ccDgsThu.s 			page 2
+   1:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c **** /**
+   2:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   ******************************************************************************
+   3:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   * @file    stm32f10x_dbgmcu.c
+   4:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   * @author  MCD Application Team
+   5:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   * @version V3.6.2
+   6:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   * @date    17-September-2021
+   7:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   * @brief   This file provides all the DBGMCU firmware functions.
+   8:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   ******************************************************************************
+   9:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   * @attention
+  10:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   *
+  11:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   * Copyright (c) 2012 STMicroelectronics.
+  12:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   * All rights reserved.
+  13:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   *
+  14:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   * This software is licensed under terms that can be found in the LICENSE file
+  15:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   * in the root directory of this software component.
+  16:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   * If no LICENSE file comes with this software, it is provided AS-IS.
+  17:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   *
+  18:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   ******************************************************************************
+  19:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   */
+  20:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c **** 
+  21:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c **** /* Includes ------------------------------------------------------------------*/
+  22:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c **** #include "stm32f10x_dbgmcu.h"
+  23:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c **** 
+  24:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c **** /** @addtogroup STM32F10x_StdPeriph_Driver
+  25:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   * @{
+  26:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   */
+  27:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c **** 
+  28:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c **** /** @defgroup DBGMCU 
+  29:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   * @brief DBGMCU driver modules
+  30:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   * @{
+  31:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   */ 
+  32:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c **** 
+ARM GAS  /tmp/ccslfV49.s 			page 2
 
 
-  33:./Drivers/src/stm32f10x_dbgmcu.c **** /** @defgroup DBGMCU_Private_TypesDefinitions
-  34:./Drivers/src/stm32f10x_dbgmcu.c ****   * @{
-  35:./Drivers/src/stm32f10x_dbgmcu.c ****   */
-  36:./Drivers/src/stm32f10x_dbgmcu.c **** 
-  37:./Drivers/src/stm32f10x_dbgmcu.c **** /**
-  38:./Drivers/src/stm32f10x_dbgmcu.c ****   * @}
-  39:./Drivers/src/stm32f10x_dbgmcu.c ****   */
-  40:./Drivers/src/stm32f10x_dbgmcu.c **** 
-  41:./Drivers/src/stm32f10x_dbgmcu.c **** /** @defgroup DBGMCU_Private_Defines
-  42:./Drivers/src/stm32f10x_dbgmcu.c ****   * @{
-  43:./Drivers/src/stm32f10x_dbgmcu.c ****   */
-  44:./Drivers/src/stm32f10x_dbgmcu.c **** 
-  45:./Drivers/src/stm32f10x_dbgmcu.c **** #define IDCODE_DEVID_MASK    ((uint32_t)0x00000FFF)
-  46:./Drivers/src/stm32f10x_dbgmcu.c **** /**
-  47:./Drivers/src/stm32f10x_dbgmcu.c ****   * @}
-  48:./Drivers/src/stm32f10x_dbgmcu.c ****   */
-  49:./Drivers/src/stm32f10x_dbgmcu.c **** 
-  50:./Drivers/src/stm32f10x_dbgmcu.c **** /** @defgroup DBGMCU_Private_Macros
-  51:./Drivers/src/stm32f10x_dbgmcu.c ****   * @{
-  52:./Drivers/src/stm32f10x_dbgmcu.c ****   */
-  53:./Drivers/src/stm32f10x_dbgmcu.c **** 
-  54:./Drivers/src/stm32f10x_dbgmcu.c **** /**
-  55:./Drivers/src/stm32f10x_dbgmcu.c ****   * @}
-  56:./Drivers/src/stm32f10x_dbgmcu.c ****   */
-  57:./Drivers/src/stm32f10x_dbgmcu.c **** 
-  58:./Drivers/src/stm32f10x_dbgmcu.c **** /** @defgroup DBGMCU_Private_Variables
-  59:./Drivers/src/stm32f10x_dbgmcu.c ****   * @{
-  60:./Drivers/src/stm32f10x_dbgmcu.c ****   */
-  61:./Drivers/src/stm32f10x_dbgmcu.c **** 
-  62:./Drivers/src/stm32f10x_dbgmcu.c **** /**
-  63:./Drivers/src/stm32f10x_dbgmcu.c ****   * @}
-  64:./Drivers/src/stm32f10x_dbgmcu.c ****   */
-  65:./Drivers/src/stm32f10x_dbgmcu.c **** 
-  66:./Drivers/src/stm32f10x_dbgmcu.c **** /** @defgroup DBGMCU_Private_FunctionPrototypes
-  67:./Drivers/src/stm32f10x_dbgmcu.c ****   * @{
-  68:./Drivers/src/stm32f10x_dbgmcu.c ****   */
-  69:./Drivers/src/stm32f10x_dbgmcu.c **** 
-  70:./Drivers/src/stm32f10x_dbgmcu.c **** /**
-  71:./Drivers/src/stm32f10x_dbgmcu.c ****   * @}
-  72:./Drivers/src/stm32f10x_dbgmcu.c ****   */
-  73:./Drivers/src/stm32f10x_dbgmcu.c **** 
-  74:./Drivers/src/stm32f10x_dbgmcu.c **** /** @defgroup DBGMCU_Private_Functions
-  75:./Drivers/src/stm32f10x_dbgmcu.c ****   * @{
-  76:./Drivers/src/stm32f10x_dbgmcu.c ****   */
-  77:./Drivers/src/stm32f10x_dbgmcu.c **** 
-  78:./Drivers/src/stm32f10x_dbgmcu.c **** /**
-  79:./Drivers/src/stm32f10x_dbgmcu.c ****   * @brief  Returns the device revision identifier.
-  80:./Drivers/src/stm32f10x_dbgmcu.c ****   * @param  None
-  81:./Drivers/src/stm32f10x_dbgmcu.c ****   * @retval Device revision identifier
-  82:./Drivers/src/stm32f10x_dbgmcu.c ****   */
-  83:./Drivers/src/stm32f10x_dbgmcu.c **** uint32_t DBGMCU_GetREVID(void)
-  84:./Drivers/src/stm32f10x_dbgmcu.c **** {
+  33:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c **** /** @defgroup DBGMCU_Private_TypesDefinitions
+  34:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   * @{
+  35:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   */
+  36:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c **** 
+  37:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c **** /**
+  38:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   * @}
+  39:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   */
+  40:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c **** 
+  41:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c **** /** @defgroup DBGMCU_Private_Defines
+  42:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   * @{
+  43:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   */
+  44:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c **** 
+  45:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c **** #define IDCODE_DEVID_MASK    ((uint32_t)0x00000FFF)
+  46:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c **** /**
+  47:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   * @}
+  48:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   */
+  49:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c **** 
+  50:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c **** /** @defgroup DBGMCU_Private_Macros
+  51:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   * @{
+  52:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   */
+  53:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c **** 
+  54:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c **** /**
+  55:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   * @}
+  56:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   */
+  57:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c **** 
+  58:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c **** /** @defgroup DBGMCU_Private_Variables
+  59:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   * @{
+  60:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   */
+  61:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c **** 
+  62:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c **** /**
+  63:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   * @}
+  64:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   */
+  65:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c **** 
+  66:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c **** /** @defgroup DBGMCU_Private_FunctionPrototypes
+  67:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   * @{
+  68:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   */
+  69:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c **** 
+  70:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c **** /**
+  71:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   * @}
+  72:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   */
+  73:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c **** 
+  74:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c **** /** @defgroup DBGMCU_Private_Functions
+  75:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   * @{
+  76:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   */
+  77:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c **** 
+  78:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c **** /**
+  79:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   * @brief  Returns the device revision identifier.
+  80:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   * @param  None
+  81:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   * @retval Device revision identifier
+  82:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   */
+  83:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c **** uint32_t DBGMCU_GetREVID(void)
+  84:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c **** {
   27              		.loc 1 84 1 view -0
   28              		.cfi_startproc
   29              		@ args = 0, pretend = 0, frame = 0
   30              		@ frame_needed = 0, uses_anonymous_args = 0
   31              		@ link register save eliminated.
-ARM GAS  /tmp/ccDgsThu.s 			page 3
+ARM GAS  /tmp/ccslfV49.s 			page 3
 
 
-  85:./Drivers/src/stm32f10x_dbgmcu.c ****    return(DBGMCU->IDCODE >> 16);
+  85:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****    return(DBGMCU->IDCODE >> 16);
   32              		.loc 1 85 4 view .LVU1
   33              		.loc 1 85 17 is_stmt 0 view .LVU2
   34 0000 014B     		ldr	r3, .L2
   35 0002 1868     		ldr	r0, [r3]
-  86:./Drivers/src/stm32f10x_dbgmcu.c **** }
+  86:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c **** }
   36              		.loc 1 86 1 view .LVU3
   37 0004 000C     		lsrs	r0, r0, #16
   38 0006 7047     		bx	lr
@@ -144,25 +144,25 @@ ARM GAS  /tmp/ccDgsThu.s 			page 1
   51              		.thumb_func
   53              	DBGMCU_GetDEVID:
   54              	.LFB30:
-  87:./Drivers/src/stm32f10x_dbgmcu.c **** 
-  88:./Drivers/src/stm32f10x_dbgmcu.c **** /**
-  89:./Drivers/src/stm32f10x_dbgmcu.c ****   * @brief  Returns the device identifier.
-  90:./Drivers/src/stm32f10x_dbgmcu.c ****   * @param  None
-  91:./Drivers/src/stm32f10x_dbgmcu.c ****   * @retval Device identifier
-  92:./Drivers/src/stm32f10x_dbgmcu.c ****   */
-  93:./Drivers/src/stm32f10x_dbgmcu.c **** uint32_t DBGMCU_GetDEVID(void)
-  94:./Drivers/src/stm32f10x_dbgmcu.c **** {
+  87:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c **** 
+  88:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c **** /**
+  89:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   * @brief  Returns the device identifier.
+  90:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   * @param  None
+  91:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   * @retval Device identifier
+  92:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   */
+  93:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c **** uint32_t DBGMCU_GetDEVID(void)
+  94:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c **** {
   55              		.loc 1 94 1 is_stmt 1 view -0
   56              		.cfi_startproc
   57              		@ args = 0, pretend = 0, frame = 0
   58              		@ frame_needed = 0, uses_anonymous_args = 0
   59              		@ link register save eliminated.
-  95:./Drivers/src/stm32f10x_dbgmcu.c ****    return(DBGMCU->IDCODE & IDCODE_DEVID_MASK);
+  95:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****    return(DBGMCU->IDCODE & IDCODE_DEVID_MASK);
   60              		.loc 1 95 4 view .LVU5
   61              		.loc 1 95 17 is_stmt 0 view .LVU6
   62 0000 024B     		ldr	r3, .L5
   63 0002 1868     		ldr	r0, [r3]
-  96:./Drivers/src/stm32f10x_dbgmcu.c **** }
+  96:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c **** }
   64              		.loc 1 96 1 view .LVU7
   65 0004 C0F30B00 		ubfx	r0, r0, #0, #12
   66 0008 7047     		bx	lr
@@ -178,70 +178,70 @@ ARM GAS  /tmp/ccDgsThu.s 			page 1
   77              		.syntax unified
   78              		.thumb
   79              		.thumb_func
-ARM GAS  /tmp/ccDgsThu.s 			page 4
+ARM GAS  /tmp/ccslfV49.s 			page 4
 
 
   81              	DBGMCU_Config:
   82              	.LVL0:
   83              	.LFB31:
-  97:./Drivers/src/stm32f10x_dbgmcu.c **** 
-  98:./Drivers/src/stm32f10x_dbgmcu.c **** /**
-  99:./Drivers/src/stm32f10x_dbgmcu.c ****   * @brief  Configures the specified peripheral and low power mode behavior
- 100:./Drivers/src/stm32f10x_dbgmcu.c ****   *   when the MCU under Debug mode.
- 101:./Drivers/src/stm32f10x_dbgmcu.c ****   * @param  DBGMCU_Periph: specifies the peripheral and low power mode.
- 102:./Drivers/src/stm32f10x_dbgmcu.c ****   *   This parameter can be any combination of the following values:
- 103:./Drivers/src/stm32f10x_dbgmcu.c ****   *     @arg DBGMCU_SLEEP: Keep debugger connection during SLEEP mode              
- 104:./Drivers/src/stm32f10x_dbgmcu.c ****   *     @arg DBGMCU_STOP: Keep debugger connection during STOP mode               
- 105:./Drivers/src/stm32f10x_dbgmcu.c ****   *     @arg DBGMCU_STANDBY: Keep debugger connection during STANDBY mode            
- 106:./Drivers/src/stm32f10x_dbgmcu.c ****   *     @arg DBGMCU_IWDG_STOP: Debug IWDG stopped when Core is halted          
- 107:./Drivers/src/stm32f10x_dbgmcu.c ****   *     @arg DBGMCU_WWDG_STOP: Debug WWDG stopped when Core is halted          
- 108:./Drivers/src/stm32f10x_dbgmcu.c ****   *     @arg DBGMCU_TIM1_STOP: TIM1 counter stopped when Core is halted          
- 109:./Drivers/src/stm32f10x_dbgmcu.c ****   *     @arg DBGMCU_TIM2_STOP: TIM2 counter stopped when Core is halted          
- 110:./Drivers/src/stm32f10x_dbgmcu.c ****   *     @arg DBGMCU_TIM3_STOP: TIM3 counter stopped when Core is halted          
- 111:./Drivers/src/stm32f10x_dbgmcu.c ****   *     @arg DBGMCU_TIM4_STOP: TIM4 counter stopped when Core is halted          
- 112:./Drivers/src/stm32f10x_dbgmcu.c ****   *     @arg DBGMCU_CAN1_STOP: Debug CAN2 stopped when Core is halted           
- 113:./Drivers/src/stm32f10x_dbgmcu.c ****   *     @arg DBGMCU_I2C1_SMBUS_TIMEOUT: I2C1 SMBUS timeout mode stopped when Core is halted
- 114:./Drivers/src/stm32f10x_dbgmcu.c ****   *     @arg DBGMCU_I2C2_SMBUS_TIMEOUT: I2C2 SMBUS timeout mode stopped when Core is halted
- 115:./Drivers/src/stm32f10x_dbgmcu.c ****   *     @arg DBGMCU_TIM5_STOP: TIM5 counter stopped when Core is halted          
- 116:./Drivers/src/stm32f10x_dbgmcu.c ****   *     @arg DBGMCU_TIM6_STOP: TIM6 counter stopped when Core is halted          
- 117:./Drivers/src/stm32f10x_dbgmcu.c ****   *     @arg DBGMCU_TIM7_STOP: TIM7 counter stopped when Core is halted          
- 118:./Drivers/src/stm32f10x_dbgmcu.c ****   *     @arg DBGMCU_TIM8_STOP: TIM8 counter stopped when Core is halted
- 119:./Drivers/src/stm32f10x_dbgmcu.c ****   *     @arg DBGMCU_CAN2_STOP: Debug CAN2 stopped when Core is halted 
- 120:./Drivers/src/stm32f10x_dbgmcu.c ****   *     @arg DBGMCU_TIM15_STOP: TIM15 counter stopped when Core is halted
- 121:./Drivers/src/stm32f10x_dbgmcu.c ****   *     @arg DBGMCU_TIM16_STOP: TIM16 counter stopped when Core is halted
- 122:./Drivers/src/stm32f10x_dbgmcu.c ****   *     @arg DBGMCU_TIM17_STOP: TIM17 counter stopped when Core is halted                
- 123:./Drivers/src/stm32f10x_dbgmcu.c ****   *     @arg DBGMCU_TIM9_STOP: TIM9 counter stopped when Core is halted
- 124:./Drivers/src/stm32f10x_dbgmcu.c ****   *     @arg DBGMCU_TIM10_STOP: TIM10 counter stopped when Core is halted
- 125:./Drivers/src/stm32f10x_dbgmcu.c ****   *     @arg DBGMCU_TIM11_STOP: TIM11 counter stopped when Core is halted
- 126:./Drivers/src/stm32f10x_dbgmcu.c ****   *     @arg DBGMCU_TIM12_STOP: TIM12 counter stopped when Core is halted
- 127:./Drivers/src/stm32f10x_dbgmcu.c ****   *     @arg DBGMCU_TIM13_STOP: TIM13 counter stopped when Core is halted
- 128:./Drivers/src/stm32f10x_dbgmcu.c ****   *     @arg DBGMCU_TIM14_STOP: TIM14 counter stopped when Core is halted
- 129:./Drivers/src/stm32f10x_dbgmcu.c ****   * @param  NewState: new state of the specified peripheral in Debug mode.
- 130:./Drivers/src/stm32f10x_dbgmcu.c ****   *   This parameter can be: ENABLE or DISABLE.
- 131:./Drivers/src/stm32f10x_dbgmcu.c ****   * @retval None
- 132:./Drivers/src/stm32f10x_dbgmcu.c ****   */
- 133:./Drivers/src/stm32f10x_dbgmcu.c **** void DBGMCU_Config(uint32_t DBGMCU_Periph, FunctionalState NewState)
- 134:./Drivers/src/stm32f10x_dbgmcu.c **** {
+  97:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c **** 
+  98:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c **** /**
+  99:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   * @brief  Configures the specified peripheral and low power mode behavior
+ 100:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   *   when the MCU under Debug mode.
+ 101:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   * @param  DBGMCU_Periph: specifies the peripheral and low power mode.
+ 102:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   *   This parameter can be any combination of the following values:
+ 103:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   *     @arg DBGMCU_SLEEP: Keep debugger connection during SLEEP mode              
+ 104:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   *     @arg DBGMCU_STOP: Keep debugger connection during STOP mode               
+ 105:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   *     @arg DBGMCU_STANDBY: Keep debugger connection during STANDBY mode            
+ 106:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   *     @arg DBGMCU_IWDG_STOP: Debug IWDG stopped when Core is halted          
+ 107:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   *     @arg DBGMCU_WWDG_STOP: Debug WWDG stopped when Core is halted          
+ 108:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   *     @arg DBGMCU_TIM1_STOP: TIM1 counter stopped when Core is halted          
+ 109:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   *     @arg DBGMCU_TIM2_STOP: TIM2 counter stopped when Core is halted          
+ 110:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   *     @arg DBGMCU_TIM3_STOP: TIM3 counter stopped when Core is halted          
+ 111:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   *     @arg DBGMCU_TIM4_STOP: TIM4 counter stopped when Core is halted          
+ 112:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   *     @arg DBGMCU_CAN1_STOP: Debug CAN2 stopped when Core is halted           
+ 113:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   *     @arg DBGMCU_I2C1_SMBUS_TIMEOUT: I2C1 SMBUS timeout mode stopped when Core is halted
+ 114:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   *     @arg DBGMCU_I2C2_SMBUS_TIMEOUT: I2C2 SMBUS timeout mode stopped when Core is halted
+ 115:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   *     @arg DBGMCU_TIM5_STOP: TIM5 counter stopped when Core is halted          
+ 116:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   *     @arg DBGMCU_TIM6_STOP: TIM6 counter stopped when Core is halted          
+ 117:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   *     @arg DBGMCU_TIM7_STOP: TIM7 counter stopped when Core is halted          
+ 118:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   *     @arg DBGMCU_TIM8_STOP: TIM8 counter stopped when Core is halted
+ 119:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   *     @arg DBGMCU_CAN2_STOP: Debug CAN2 stopped when Core is halted 
+ 120:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   *     @arg DBGMCU_TIM15_STOP: TIM15 counter stopped when Core is halted
+ 121:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   *     @arg DBGMCU_TIM16_STOP: TIM16 counter stopped when Core is halted
+ 122:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   *     @arg DBGMCU_TIM17_STOP: TIM17 counter stopped when Core is halted                
+ 123:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   *     @arg DBGMCU_TIM9_STOP: TIM9 counter stopped when Core is halted
+ 124:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   *     @arg DBGMCU_TIM10_STOP: TIM10 counter stopped when Core is halted
+ 125:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   *     @arg DBGMCU_TIM11_STOP: TIM11 counter stopped when Core is halted
+ 126:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   *     @arg DBGMCU_TIM12_STOP: TIM12 counter stopped when Core is halted
+ 127:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   *     @arg DBGMCU_TIM13_STOP: TIM13 counter stopped when Core is halted
+ 128:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   *     @arg DBGMCU_TIM14_STOP: TIM14 counter stopped when Core is halted
+ 129:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   * @param  NewState: new state of the specified peripheral in Debug mode.
+ 130:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   *   This parameter can be: ENABLE or DISABLE.
+ 131:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   * @retval None
+ 132:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   */
+ 133:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c **** void DBGMCU_Config(uint32_t DBGMCU_Periph, FunctionalState NewState)
+ 134:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c **** {
   84              		.loc 1 134 1 is_stmt 1 view -0
   85              		.cfi_startproc
   86              		@ args = 0, pretend = 0, frame = 0
   87              		@ frame_needed = 0, uses_anonymous_args = 0
   88              		@ link register save eliminated.
- 135:./Drivers/src/stm32f10x_dbgmcu.c ****   /* Check the parameters */
- 136:./Drivers/src/stm32f10x_dbgmcu.c ****   assert_param(IS_DBGMCU_PERIPH(DBGMCU_Periph));
+ 135:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   /* Check the parameters */
+ 136:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   assert_param(IS_DBGMCU_PERIPH(DBGMCU_Periph));
   89              		.loc 1 136 3 view .LVU9
- 137:./Drivers/src/stm32f10x_dbgmcu.c ****   assert_param(IS_FUNCTIONAL_STATE(NewState));
+ 137:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   assert_param(IS_FUNCTIONAL_STATE(NewState));
   90              		.loc 1 137 3 view .LVU10
- 138:./Drivers/src/stm32f10x_dbgmcu.c **** 
- 139:./Drivers/src/stm32f10x_dbgmcu.c ****   if (NewState != DISABLE)
+ 138:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c **** 
+ 139:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   if (NewState != DISABLE)
   91              		.loc 1 139 3 view .LVU11
   92              		.loc 1 139 6 is_stmt 0 view .LVU12
   93 0000 21B1     		cbz	r1, .L8
- 140:./Drivers/src/stm32f10x_dbgmcu.c ****   {
-ARM GAS  /tmp/ccDgsThu.s 			page 5
+ 140:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   {
+ARM GAS  /tmp/ccslfV49.s 			page 5
 
 
- 141:./Drivers/src/stm32f10x_dbgmcu.c ****     DBGMCU->CR |= DBGMCU_Periph;
+ 141:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****     DBGMCU->CR |= DBGMCU_Periph;
   94              		.loc 1 141 5 is_stmt 1 view .LVU13
   95              		.loc 1 141 11 is_stmt 0 view .LVU14
   96 0002 054A     		ldr	r2, .L10
@@ -251,10 +251,10 @@ ARM GAS  /tmp/ccDgsThu.s 			page 1
  100 0008 5360     		str	r3, [r2, #4]
  101 000a 7047     		bx	lr
  102              	.L8:
- 142:./Drivers/src/stm32f10x_dbgmcu.c ****   }
- 143:./Drivers/src/stm32f10x_dbgmcu.c ****   else
- 144:./Drivers/src/stm32f10x_dbgmcu.c ****   {
- 145:./Drivers/src/stm32f10x_dbgmcu.c ****     DBGMCU->CR &= ~DBGMCU_Periph;
+ 142:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   }
+ 143:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   else
+ 144:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   {
+ 145:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****     DBGMCU->CR &= ~DBGMCU_Periph;
  103              		.loc 1 145 5 is_stmt 1 view .LVU16
  104              		.loc 1 145 11 is_stmt 0 view .LVU17
  105 000c 024A     		ldr	r2, .L10
@@ -262,8 +262,8 @@ ARM GAS  /tmp/ccDgsThu.s 			page 1
  107              		.loc 1 145 16 view .LVU18
  108 0010 23EA0003 		bic	r3, r3, r0
  109 0014 5360     		str	r3, [r2, #4]
- 146:./Drivers/src/stm32f10x_dbgmcu.c ****   }
- 147:./Drivers/src/stm32f10x_dbgmcu.c **** }
+ 146:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c ****   }
+ 147:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_dbgmcu.c **** }
  110              		.loc 1 147 1 view .LVU19
  111 0016 7047     		bx	lr
  112              	.L11:
@@ -277,19 +277,19 @@ ARM GAS  /tmp/ccDgsThu.s 			page 1
  121              		.file 2 "/usr/arm-none-eabi/include/machine/_default_types.h"
  122              		.file 3 "/usr/arm-none-eabi/include/sys/_stdint.h"
  123              		.file 4 "cmsis/stm32f10x.h"
-ARM GAS  /tmp/ccDgsThu.s 			page 6
+ARM GAS  /tmp/ccslfV49.s 			page 6
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f10x_dbgmcu.c
-     /tmp/ccDgsThu.s:19     .text.DBGMCU_GetREVID:00000000 $t
-     /tmp/ccDgsThu.s:25     .text.DBGMCU_GetREVID:00000000 DBGMCU_GetREVID
-     /tmp/ccDgsThu.s:42     .text.DBGMCU_GetREVID:00000008 $d
-     /tmp/ccDgsThu.s:47     .text.DBGMCU_GetDEVID:00000000 $t
-     /tmp/ccDgsThu.s:53     .text.DBGMCU_GetDEVID:00000000 DBGMCU_GetDEVID
-     /tmp/ccDgsThu.s:70     .text.DBGMCU_GetDEVID:0000000c $d
-     /tmp/ccDgsThu.s:75     .text.DBGMCU_Config:00000000 $t
-     /tmp/ccDgsThu.s:81     .text.DBGMCU_Config:00000000 DBGMCU_Config
-     /tmp/ccDgsThu.s:115    .text.DBGMCU_Config:00000018 $d
+     /tmp/ccslfV49.s:19     .text.DBGMCU_GetREVID:00000000 $t
+     /tmp/ccslfV49.s:25     .text.DBGMCU_GetREVID:00000000 DBGMCU_GetREVID
+     /tmp/ccslfV49.s:42     .text.DBGMCU_GetREVID:00000008 $d
+     /tmp/ccslfV49.s:47     .text.DBGMCU_GetDEVID:00000000 $t
+     /tmp/ccslfV49.s:53     .text.DBGMCU_GetDEVID:00000000 DBGMCU_GetDEVID
+     /tmp/ccslfV49.s:70     .text.DBGMCU_GetDEVID:0000000c $d
+     /tmp/ccslfV49.s:75     .text.DBGMCU_Config:00000000 $t
+     /tmp/ccslfV49.s:81     .text.DBGMCU_Config:00000000 DBGMCU_Config
+     /tmp/ccslfV49.s:115    .text.DBGMCU_Config:00000018 $d
 
 NO UNDEFINED SYMBOLS

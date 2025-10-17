@@ -4,6 +4,7 @@
 #include <Key.h>
 #include <delay.h>
 #include <stdint.h>
+#include <complex.h>
 
 #define MAX_BRIGHTNESS 255
 #define INTERRUPT_REG 0x00

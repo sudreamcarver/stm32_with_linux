@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccePm4u8.s 			page 1
+ARM GAS  /tmp/ccylSSln.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -17,7 +17,7 @@ ARM GAS  /tmp/ccePm4u8.s 			page 1
   14              		.text
   15              	.Ltext0:
   16              		.cfi_sections	.debug_frame
-  17              		.file 1 "./Libraries/src/sys.c"
+  17              		.file 1 "./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Libraries/src/sys.c"
   18              		.section	.text.WFI_SET,"ax",%progbits
   19              		.align	1
   20              		.global	WFI_SET
@@ -26,9 +26,9 @@ ARM GAS  /tmp/ccePm4u8.s 			page 1
   23              		.thumb_func
   25              	WFI_SET:
   26              	.LFB29:
-   1:./Libraries/src/sys.c **** #include "sys.h"
-   2:./Libraries/src/sys.c **** 
-   3:./Libraries/src/sys.c **** void WFI_SET(void) { __ASM volatile("wfi"); }
+   1:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Libraries/src/sys.c **** #include "sys.h"
+   2:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Libraries/src/sys.c **** 
+   3:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Libraries/src/sys.c **** void WFI_SET(void) { __ASM volatile("wfi"); }
   27              		.loc 1 3 20 view -0
   28              		.cfi_startproc
   29              		@ args = 0, pretend = 0, frame = 0
@@ -36,7 +36,7 @@ ARM GAS  /tmp/ccePm4u8.s 			page 1
   31              		@ link register save eliminated.
   32              		.loc 1 3 22 view .LVU1
   33              		.syntax unified
-  34              	@ 3 "./Libraries/src/sys.c" 1
+  34              	@ 3 "./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Libraries/src/sys.c" 1
   35 0000 30BF     		wfi
   36              	@ 0 "" 2
   37              		.loc 1 3 45 is_stmt 0 view .LVU2
@@ -53,19 +53,19 @@ ARM GAS  /tmp/ccePm4u8.s 			page 1
   49              		.thumb_func
   51              	INTX_DISABLE:
   52              	.LFB30:
-   4:./Libraries/src/sys.c **** // 关闭所有中断
-   5:./Libraries/src/sys.c **** void INTX_DISABLE(void) { __ASM volatile("cpsid i"); }
+   4:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Libraries/src/sys.c **** // 关闭所有中断
+   5:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Libraries/src/sys.c **** void INTX_DISABLE(void) { __ASM volatile("cpsid i"); }
   53              		.loc 1 5 25 is_stmt 1 view -0
   54              		.cfi_startproc
   55              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /tmp/ccePm4u8.s 			page 2
+ARM GAS  /tmp/ccylSSln.s 			page 2
 
 
   56              		@ frame_needed = 0, uses_anonymous_args = 0
   57              		@ link register save eliminated.
   58              		.loc 1 5 27 view .LVU4
   59              		.syntax unified
-  60              	@ 5 "./Libraries/src/sys.c" 1
+  60              	@ 5 "./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Libraries/src/sys.c" 1
   61 0000 72B6     		cpsid i
   62              	@ 0 "" 2
   63              		.loc 1 5 54 is_stmt 0 view .LVU5
@@ -82,8 +82,8 @@ ARM GAS  /tmp/ccePm4u8.s 			page 1
   75              		.thumb_func
   77              	INTX_ENABLE:
   78              	.LFB31:
-   6:./Libraries/src/sys.c **** // 开启所有中断
-   7:./Libraries/src/sys.c **** void INTX_ENABLE(void) { __ASM volatile("cpsie i"); }
+   6:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Libraries/src/sys.c **** // 开启所有中断
+   7:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Libraries/src/sys.c **** void INTX_ENABLE(void) { __ASM volatile("cpsie i"); }
   79              		.loc 1 7 24 is_stmt 1 view -0
   80              		.cfi_startproc
   81              		@ args = 0, pretend = 0, frame = 0
@@ -91,7 +91,7 @@ ARM GAS  /tmp/ccePm4u8.s 			page 1
   83              		@ link register save eliminated.
   84              		.loc 1 7 26 view .LVU7
   85              		.syntax unified
-  86              	@ 7 "./Libraries/src/sys.c" 1
+  86              	@ 7 "./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Libraries/src/sys.c" 1
   87 0000 62B6     		cpsie i
   88              	@ 0 "" 2
   89              		.loc 1 7 53 is_stmt 0 view .LVU8
@@ -109,37 +109,37 @@ ARM GAS  /tmp/ccePm4u8.s 			page 1
  103              	MSR_MSP:
  104              	.LVL0:
  105              	.LFB32:
-   8:./Libraries/src/sys.c **** // 设置栈顶地址
-   9:./Libraries/src/sys.c **** 
-  10:./Libraries/src/sys.c **** // this for arm-cc
-  11:./Libraries/src/sys.c **** // addr:栈顶地址
-  12:./Libraries/src/sys.c **** //__asm void MSR_MSP(u32 addr) {
-  13:./Libraries/src/sys.c **** // MSR MSP, r0 // set Main Stack value
-  14:./Libraries/src/sys.c **** //             BX r14
-  15:./Libraries/src/sys.c **** //}
-  16:./Libraries/src/sys.c **** 
-ARM GAS  /tmp/ccePm4u8.s 			page 3
+   8:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Libraries/src/sys.c **** // 设置栈顶地址
+   9:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Libraries/src/sys.c **** 
+  10:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Libraries/src/sys.c **** // this for arm-cc
+  11:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Libraries/src/sys.c **** // addr:栈顶地址
+  12:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Libraries/src/sys.c **** //__asm void MSR_MSP(u32 addr) {
+  13:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Libraries/src/sys.c **** // MSR MSP, r0 // set Main Stack value
+  14:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Libraries/src/sys.c **** //             BX r14
+  15:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Libraries/src/sys.c **** //}
+  16:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Libraries/src/sys.c **** 
+ARM GAS  /tmp/ccylSSln.s 			page 3
 
 
-  17:./Libraries/src/sys.c **** // this for arm-none-eabi-gcc
-  18:./Libraries/src/sys.c **** void MSR_MSP(uint32_t addr) {
+  17:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Libraries/src/sys.c **** // this for arm-none-eabi-gcc
+  18:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Libraries/src/sys.c **** void MSR_MSP(uint32_t addr) {
  106              		.loc 1 18 29 is_stmt 1 view -0
  107              		.cfi_startproc
  108              		@ args = 0, pretend = 0, frame = 0
  109              		@ frame_needed = 0, uses_anonymous_args = 0
  110              		@ link register save eliminated.
-  19:./Libraries/src/sys.c ****   __asm volatile("MSR MSP, %0   \n" /* 将函数参数 addr 写入 MSP 寄存器 */
+  19:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Libraries/src/sys.c ****   __asm volatile("MSR MSP, %0   \n" /* 将函数参数 addr 写入 MSP 寄存器 */
  111              		.loc 1 19 3 view .LVU10
  112              		.syntax unified
- 113              	@ 19 "./Libraries/src/sys.c" 1
+ 113              	@ 19 "./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Libraries/src/sys.c" 1
  114 0000 80F30888 		MSR MSP, r0   
  115 0004 7047     	BX LR         
  116              	
  117              	@ 0 "" 2
-  20:./Libraries/src/sys.c ****                  "BX LR         \n"
-  21:./Libraries/src/sys.c ****                  :
-  22:./Libraries/src/sys.c ****                  : "r"(addr));
-  23:./Libraries/src/sys.c **** }
+  20:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Libraries/src/sys.c ****                  "BX LR         \n"
+  21:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Libraries/src/sys.c ****                  :
+  22:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Libraries/src/sys.c ****                  : "r"(addr));
+  23:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Libraries/src/sys.c **** }
  118              		.loc 1 23 1 is_stmt 0 view .LVU11
  119              		.thumb
  120              		.syntax unified
@@ -150,18 +150,18 @@ ARM GAS  /tmp/ccePm4u8.s 			page 1
  126              	.Letext0:
  127              		.file 2 "/usr/arm-none-eabi/include/machine/_default_types.h"
  128              		.file 3 "/usr/arm-none-eabi/include/sys/_stdint.h"
-ARM GAS  /tmp/ccePm4u8.s 			page 4
+ARM GAS  /tmp/ccylSSln.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 sys.c
-     /tmp/ccePm4u8.s:19     .text.WFI_SET:00000000 $t
-     /tmp/ccePm4u8.s:25     .text.WFI_SET:00000000 WFI_SET
-     /tmp/ccePm4u8.s:45     .text.INTX_DISABLE:00000000 $t
-     /tmp/ccePm4u8.s:51     .text.INTX_DISABLE:00000000 INTX_DISABLE
-     /tmp/ccePm4u8.s:71     .text.INTX_ENABLE:00000000 $t
-     /tmp/ccePm4u8.s:77     .text.INTX_ENABLE:00000000 INTX_ENABLE
-     /tmp/ccePm4u8.s:97     .text.MSR_MSP:00000000 $t
-     /tmp/ccePm4u8.s:103    .text.MSR_MSP:00000000 MSR_MSP
+     /tmp/ccylSSln.s:19     .text.WFI_SET:00000000 $t
+     /tmp/ccylSSln.s:25     .text.WFI_SET:00000000 WFI_SET
+     /tmp/ccylSSln.s:45     .text.INTX_DISABLE:00000000 $t
+     /tmp/ccylSSln.s:51     .text.INTX_DISABLE:00000000 INTX_DISABLE
+     /tmp/ccylSSln.s:71     .text.INTX_ENABLE:00000000 $t
+     /tmp/ccylSSln.s:77     .text.INTX_ENABLE:00000000 INTX_ENABLE
+     /tmp/ccylSSln.s:97     .text.MSR_MSP:00000000 $t
+     /tmp/ccylSSln.s:103    .text.MSR_MSP:00000000 MSR_MSP
 
 NO UNDEFINED SYMBOLS

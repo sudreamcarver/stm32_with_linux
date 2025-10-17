@@ -77,7 +77,11 @@ C_INCLUDES = \
 	     -ILibraries/inc \
 	     -Isource \
          -isystem /usr/arm-none-eabi/include \
-		 -isystem /usr/lib/gcc/arm-none-eabi/14.2.0/include/
+         -isystem /usr/arm-none-eabi/include/machine/ \
+         -isystem /usr/arm-none-eabi/include/newlib-nano/ \
+         -isystem /usr/arm-none-eabi/include/sys/ \
+         -isystem /usr/arm-none-eabi/include/ssp/ \
+		 -isystem /usr/lib/gcc/arm-none-eabi/14.2.0/include/ 
 
 #compile gcc flags
 ASFLAGS = $(MCU) $(AS_DEFS) $(AS_INCLUDES) $(OPT) -Wall -fdata-sections -ffunction-sections

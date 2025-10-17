@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc8GAdzf.s 			page 1
+ARM GAS  /tmp/ccfjDgPg.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -17,7 +17,7 @@ ARM GAS  /tmp/cc8GAdzf.s 			page 1
   14              		.text
   15              	.Ltext0:
   16              		.cfi_sections	.debug_frame
-  17              		.file 1 "./Drivers/src/stm32f10x_bkp.c"
+  17              		.file 1 "./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c"
   18              		.section	.text.BKP_DeInit,"ax",%progbits
   19              		.align	1
   20              		.global	BKP_DeInit
@@ -26,132 +26,132 @@ ARM GAS  /tmp/cc8GAdzf.s 			page 1
   23              		.thumb_func
   25              	BKP_DeInit:
   26              	.LFB29:
-   1:./Drivers/src/stm32f10x_bkp.c **** /**
-   2:./Drivers/src/stm32f10x_bkp.c ****   ******************************************************************************
-   3:./Drivers/src/stm32f10x_bkp.c ****   * @file    stm32f10x_bkp.c
-   4:./Drivers/src/stm32f10x_bkp.c ****   * @author  MCD Application Team
-   5:./Drivers/src/stm32f10x_bkp.c ****   * @version V3.6.2
-   6:./Drivers/src/stm32f10x_bkp.c ****   * @date    17-September-2021
-   7:./Drivers/src/stm32f10x_bkp.c ****   * @brief   This file provides all the BKP firmware functions.
-   8:./Drivers/src/stm32f10x_bkp.c ****   ******************************************************************************
-   9:./Drivers/src/stm32f10x_bkp.c ****   * @attention
-  10:./Drivers/src/stm32f10x_bkp.c ****   *
-  11:./Drivers/src/stm32f10x_bkp.c ****   * Copyright (c) 2012 STMicroelectronics.
-  12:./Drivers/src/stm32f10x_bkp.c ****   * All rights reserved.
-  13:./Drivers/src/stm32f10x_bkp.c ****   *
-  14:./Drivers/src/stm32f10x_bkp.c ****   * This software is licensed under terms that can be found in the LICENSE file
-  15:./Drivers/src/stm32f10x_bkp.c ****   * in the root directory of this software component.
-  16:./Drivers/src/stm32f10x_bkp.c ****   * If no LICENSE file comes with this software, it is provided AS-IS.
-  17:./Drivers/src/stm32f10x_bkp.c ****   *
-  18:./Drivers/src/stm32f10x_bkp.c ****   ******************************************************************************
-  19:./Drivers/src/stm32f10x_bkp.c ****   */
-  20:./Drivers/src/stm32f10x_bkp.c **** 
-  21:./Drivers/src/stm32f10x_bkp.c **** /* Includes ------------------------------------------------------------------*/
-  22:./Drivers/src/stm32f10x_bkp.c **** #include "stm32f10x_bkp.h"
-  23:./Drivers/src/stm32f10x_bkp.c **** #include "stm32f10x_rcc.h"
-  24:./Drivers/src/stm32f10x_bkp.c **** 
-  25:./Drivers/src/stm32f10x_bkp.c **** /** @addtogroup STM32F10x_StdPeriph_Driver
-  26:./Drivers/src/stm32f10x_bkp.c ****   * @{
-  27:./Drivers/src/stm32f10x_bkp.c ****   */
-  28:./Drivers/src/stm32f10x_bkp.c **** 
-  29:./Drivers/src/stm32f10x_bkp.c **** /** @defgroup BKP 
-  30:./Drivers/src/stm32f10x_bkp.c ****   * @brief BKP driver modules
-  31:./Drivers/src/stm32f10x_bkp.c ****   * @{
-  32:./Drivers/src/stm32f10x_bkp.c ****   */
-ARM GAS  /tmp/cc8GAdzf.s 			page 2
+   1:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** /**
+   2:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   ******************************************************************************
+   3:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @file    stm32f10x_bkp.c
+   4:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @author  MCD Application Team
+   5:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @version V3.6.2
+   6:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @date    17-September-2021
+   7:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @brief   This file provides all the BKP firmware functions.
+   8:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   ******************************************************************************
+   9:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @attention
+  10:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   *
+  11:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * Copyright (c) 2012 STMicroelectronics.
+  12:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * All rights reserved.
+  13:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   *
+  14:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * This software is licensed under terms that can be found in the LICENSE file
+  15:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * in the root directory of this software component.
+  16:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * If no LICENSE file comes with this software, it is provided AS-IS.
+  17:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   *
+  18:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   ******************************************************************************
+  19:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   */
+  20:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** 
+  21:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** /* Includes ------------------------------------------------------------------*/
+  22:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** #include "stm32f10x_bkp.h"
+  23:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** #include "stm32f10x_rcc.h"
+  24:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** 
+  25:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** /** @addtogroup STM32F10x_StdPeriph_Driver
+  26:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @{
+  27:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   */
+  28:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** 
+  29:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** /** @defgroup BKP 
+  30:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @brief BKP driver modules
+  31:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @{
+  32:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   */
+ARM GAS  /tmp/ccfjDgPg.s 			page 2
 
 
-  33:./Drivers/src/stm32f10x_bkp.c **** 
-  34:./Drivers/src/stm32f10x_bkp.c **** /** @defgroup BKP_Private_TypesDefinitions
-  35:./Drivers/src/stm32f10x_bkp.c ****   * @{
-  36:./Drivers/src/stm32f10x_bkp.c ****   */
-  37:./Drivers/src/stm32f10x_bkp.c **** 
-  38:./Drivers/src/stm32f10x_bkp.c **** /**
-  39:./Drivers/src/stm32f10x_bkp.c ****   * @}
-  40:./Drivers/src/stm32f10x_bkp.c ****   */
-  41:./Drivers/src/stm32f10x_bkp.c **** 
-  42:./Drivers/src/stm32f10x_bkp.c **** /** @defgroup BKP_Private_Defines
-  43:./Drivers/src/stm32f10x_bkp.c ****   * @{
-  44:./Drivers/src/stm32f10x_bkp.c ****   */
-  45:./Drivers/src/stm32f10x_bkp.c **** 
-  46:./Drivers/src/stm32f10x_bkp.c **** /* ------------ BKP registers bit address in the alias region --------------- */
-  47:./Drivers/src/stm32f10x_bkp.c **** #define BKP_OFFSET        (BKP_BASE - PERIPH_BASE)
-  48:./Drivers/src/stm32f10x_bkp.c **** 
-  49:./Drivers/src/stm32f10x_bkp.c **** /* --- CR Register ----*/
-  50:./Drivers/src/stm32f10x_bkp.c **** 
-  51:./Drivers/src/stm32f10x_bkp.c **** /* Alias word address of TPAL bit */
-  52:./Drivers/src/stm32f10x_bkp.c **** #define CR_OFFSET         (BKP_OFFSET + 0x30)
-  53:./Drivers/src/stm32f10x_bkp.c **** #define TPAL_BitNumber    0x01
-  54:./Drivers/src/stm32f10x_bkp.c **** #define CR_TPAL_BB        (PERIPH_BB_BASE + (CR_OFFSET * 32) + (TPAL_BitNumber * 4))
-  55:./Drivers/src/stm32f10x_bkp.c **** 
-  56:./Drivers/src/stm32f10x_bkp.c **** /* Alias word address of TPE bit */
-  57:./Drivers/src/stm32f10x_bkp.c **** #define TPE_BitNumber     0x00
-  58:./Drivers/src/stm32f10x_bkp.c **** #define CR_TPE_BB         (PERIPH_BB_BASE + (CR_OFFSET * 32) + (TPE_BitNumber * 4))
-  59:./Drivers/src/stm32f10x_bkp.c **** 
-  60:./Drivers/src/stm32f10x_bkp.c **** /* --- CSR Register ---*/
-  61:./Drivers/src/stm32f10x_bkp.c **** 
-  62:./Drivers/src/stm32f10x_bkp.c **** /* Alias word address of TPIE bit */
-  63:./Drivers/src/stm32f10x_bkp.c **** #define CSR_OFFSET        (BKP_OFFSET + 0x34)
-  64:./Drivers/src/stm32f10x_bkp.c **** #define TPIE_BitNumber    0x02
-  65:./Drivers/src/stm32f10x_bkp.c **** #define CSR_TPIE_BB       (PERIPH_BB_BASE + (CSR_OFFSET * 32) + (TPIE_BitNumber * 4))
-  66:./Drivers/src/stm32f10x_bkp.c **** 
-  67:./Drivers/src/stm32f10x_bkp.c **** /* Alias word address of TIF bit */
-  68:./Drivers/src/stm32f10x_bkp.c **** #define TIF_BitNumber     0x09
-  69:./Drivers/src/stm32f10x_bkp.c **** #define CSR_TIF_BB        (PERIPH_BB_BASE + (CSR_OFFSET * 32) + (TIF_BitNumber * 4))
-  70:./Drivers/src/stm32f10x_bkp.c **** 
-  71:./Drivers/src/stm32f10x_bkp.c **** /* Alias word address of TEF bit */
-  72:./Drivers/src/stm32f10x_bkp.c **** #define TEF_BitNumber     0x08
-  73:./Drivers/src/stm32f10x_bkp.c **** #define CSR_TEF_BB        (PERIPH_BB_BASE + (CSR_OFFSET * 32) + (TEF_BitNumber * 4))
-  74:./Drivers/src/stm32f10x_bkp.c **** 
-  75:./Drivers/src/stm32f10x_bkp.c **** /* ---------------------- BKP registers bit mask ------------------------ */
-  76:./Drivers/src/stm32f10x_bkp.c **** 
-  77:./Drivers/src/stm32f10x_bkp.c **** /* RTCCR register bit mask */
-  78:./Drivers/src/stm32f10x_bkp.c **** #define RTCCR_CAL_MASK    ((uint16_t)0xFF80)
-  79:./Drivers/src/stm32f10x_bkp.c **** #define RTCCR_MASK        ((uint16_t)0xFC7F)
-  80:./Drivers/src/stm32f10x_bkp.c **** 
-  81:./Drivers/src/stm32f10x_bkp.c **** /**
-  82:./Drivers/src/stm32f10x_bkp.c ****   * @}
-  83:./Drivers/src/stm32f10x_bkp.c ****   */ 
-  84:./Drivers/src/stm32f10x_bkp.c **** 
-  85:./Drivers/src/stm32f10x_bkp.c **** 
-  86:./Drivers/src/stm32f10x_bkp.c **** /** @defgroup BKP_Private_Macros
-  87:./Drivers/src/stm32f10x_bkp.c ****   * @{
-  88:./Drivers/src/stm32f10x_bkp.c ****   */
-  89:./Drivers/src/stm32f10x_bkp.c **** 
-ARM GAS  /tmp/cc8GAdzf.s 			page 3
+  33:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** 
+  34:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** /** @defgroup BKP_Private_TypesDefinitions
+  35:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @{
+  36:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   */
+  37:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** 
+  38:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** /**
+  39:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @}
+  40:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   */
+  41:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** 
+  42:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** /** @defgroup BKP_Private_Defines
+  43:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @{
+  44:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   */
+  45:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** 
+  46:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** /* ------------ BKP registers bit address in the alias region --------------- */
+  47:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** #define BKP_OFFSET        (BKP_BASE - PERIPH_BASE)
+  48:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** 
+  49:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** /* --- CR Register ----*/
+  50:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** 
+  51:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** /* Alias word address of TPAL bit */
+  52:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** #define CR_OFFSET         (BKP_OFFSET + 0x30)
+  53:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** #define TPAL_BitNumber    0x01
+  54:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** #define CR_TPAL_BB        (PERIPH_BB_BASE + (CR_OFFSET * 32) + (TPAL_BitNumber * 4))
+  55:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** 
+  56:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** /* Alias word address of TPE bit */
+  57:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** #define TPE_BitNumber     0x00
+  58:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** #define CR_TPE_BB         (PERIPH_BB_BASE + (CR_OFFSET * 32) + (TPE_BitNumber * 4))
+  59:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** 
+  60:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** /* --- CSR Register ---*/
+  61:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** 
+  62:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** /* Alias word address of TPIE bit */
+  63:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** #define CSR_OFFSET        (BKP_OFFSET + 0x34)
+  64:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** #define TPIE_BitNumber    0x02
+  65:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** #define CSR_TPIE_BB       (PERIPH_BB_BASE + (CSR_OFFSET * 32) + (TPIE_BitNumber * 4))
+  66:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** 
+  67:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** /* Alias word address of TIF bit */
+  68:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** #define TIF_BitNumber     0x09
+  69:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** #define CSR_TIF_BB        (PERIPH_BB_BASE + (CSR_OFFSET * 32) + (TIF_BitNumber * 4))
+  70:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** 
+  71:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** /* Alias word address of TEF bit */
+  72:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** #define TEF_BitNumber     0x08
+  73:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** #define CSR_TEF_BB        (PERIPH_BB_BASE + (CSR_OFFSET * 32) + (TEF_BitNumber * 4))
+  74:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** 
+  75:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** /* ---------------------- BKP registers bit mask ------------------------ */
+  76:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** 
+  77:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** /* RTCCR register bit mask */
+  78:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** #define RTCCR_CAL_MASK    ((uint16_t)0xFF80)
+  79:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** #define RTCCR_MASK        ((uint16_t)0xFC7F)
+  80:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** 
+  81:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** /**
+  82:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @}
+  83:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   */ 
+  84:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** 
+  85:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** 
+  86:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** /** @defgroup BKP_Private_Macros
+  87:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @{
+  88:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   */
+  89:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** 
+ARM GAS  /tmp/ccfjDgPg.s 			page 3
 
 
-  90:./Drivers/src/stm32f10x_bkp.c **** /**
-  91:./Drivers/src/stm32f10x_bkp.c ****   * @}
-  92:./Drivers/src/stm32f10x_bkp.c ****   */
-  93:./Drivers/src/stm32f10x_bkp.c **** 
-  94:./Drivers/src/stm32f10x_bkp.c **** /** @defgroup BKP_Private_Variables
-  95:./Drivers/src/stm32f10x_bkp.c ****   * @{
-  96:./Drivers/src/stm32f10x_bkp.c ****   */
-  97:./Drivers/src/stm32f10x_bkp.c **** 
-  98:./Drivers/src/stm32f10x_bkp.c **** /**
-  99:./Drivers/src/stm32f10x_bkp.c ****   * @}
- 100:./Drivers/src/stm32f10x_bkp.c ****   */
- 101:./Drivers/src/stm32f10x_bkp.c **** 
- 102:./Drivers/src/stm32f10x_bkp.c **** /** @defgroup BKP_Private_FunctionPrototypes
- 103:./Drivers/src/stm32f10x_bkp.c ****   * @{
- 104:./Drivers/src/stm32f10x_bkp.c ****   */
- 105:./Drivers/src/stm32f10x_bkp.c **** 
- 106:./Drivers/src/stm32f10x_bkp.c **** /**
- 107:./Drivers/src/stm32f10x_bkp.c ****   * @}
- 108:./Drivers/src/stm32f10x_bkp.c ****   */
- 109:./Drivers/src/stm32f10x_bkp.c **** 
- 110:./Drivers/src/stm32f10x_bkp.c **** /** @defgroup BKP_Private_Functions
- 111:./Drivers/src/stm32f10x_bkp.c ****   * @{
- 112:./Drivers/src/stm32f10x_bkp.c ****   */
- 113:./Drivers/src/stm32f10x_bkp.c **** 
- 114:./Drivers/src/stm32f10x_bkp.c **** /**
- 115:./Drivers/src/stm32f10x_bkp.c ****   * @brief  Deinitializes the BKP peripheral registers to their default reset values.
- 116:./Drivers/src/stm32f10x_bkp.c ****   * @param  None
- 117:./Drivers/src/stm32f10x_bkp.c ****   * @retval None
- 118:./Drivers/src/stm32f10x_bkp.c ****   */
- 119:./Drivers/src/stm32f10x_bkp.c **** void BKP_DeInit(void)
- 120:./Drivers/src/stm32f10x_bkp.c **** {
+  90:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** /**
+  91:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @}
+  92:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   */
+  93:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** 
+  94:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** /** @defgroup BKP_Private_Variables
+  95:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @{
+  96:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   */
+  97:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** 
+  98:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** /**
+  99:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @}
+ 100:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   */
+ 101:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** 
+ 102:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** /** @defgroup BKP_Private_FunctionPrototypes
+ 103:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @{
+ 104:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   */
+ 105:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** 
+ 106:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** /**
+ 107:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @}
+ 108:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   */
+ 109:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** 
+ 110:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** /** @defgroup BKP_Private_Functions
+ 111:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @{
+ 112:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   */
+ 113:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** 
+ 114:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** /**
+ 115:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @brief  Deinitializes the BKP peripheral registers to their default reset values.
+ 116:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @param  None
+ 117:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @retval None
+ 118:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   */
+ 119:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** void BKP_DeInit(void)
+ 120:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** {
   27              		.loc 1 120 1 view -0
   28              		.cfi_startproc
   29              		@ args = 0, pretend = 0, frame = 0
@@ -161,24 +161,24 @@ ARM GAS  /tmp/cc8GAdzf.s 			page 1
   33              		.cfi_def_cfa_offset 8
   34              		.cfi_offset 3, -8
   35              		.cfi_offset 14, -4
- 121:./Drivers/src/stm32f10x_bkp.c ****   RCC_BackupResetCmd(ENABLE);
+ 121:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   RCC_BackupResetCmd(ENABLE);
   36              		.loc 1 121 3 view .LVU1
   37 0002 0120     		movs	r0, #1
   38 0004 FFF7FEFF 		bl	RCC_BackupResetCmd
   39              	.LVL0:
- 122:./Drivers/src/stm32f10x_bkp.c ****   RCC_BackupResetCmd(DISABLE);
+ 122:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   RCC_BackupResetCmd(DISABLE);
   40              		.loc 1 122 3 view .LVU2
   41 0008 0020     		movs	r0, #0
   42 000a FFF7FEFF 		bl	RCC_BackupResetCmd
   43              	.LVL1:
- 123:./Drivers/src/stm32f10x_bkp.c **** }
+ 123:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** }
   44              		.loc 1 123 1 is_stmt 0 view .LVU3
   45 000e 08BD     		pop	{r3, pc}
   46              		.cfi_endproc
   47              	.LFE29:
   49              		.section	.text.BKP_TamperPinLevelConfig,"ax",%progbits
   50              		.align	1
-ARM GAS  /tmp/cc8GAdzf.s 			page 4
+ARM GAS  /tmp/ccfjDgPg.s 			page 4
 
 
   51              		.global	BKP_TamperPinLevelConfig
@@ -188,31 +188,31 @@ ARM GAS  /tmp/cc8GAdzf.s 			page 1
   56              	BKP_TamperPinLevelConfig:
   57              	.LVL2:
   58              	.LFB30:
- 124:./Drivers/src/stm32f10x_bkp.c **** 
- 125:./Drivers/src/stm32f10x_bkp.c **** /**
- 126:./Drivers/src/stm32f10x_bkp.c ****   * @brief  Configures the Tamper Pin active level.
- 127:./Drivers/src/stm32f10x_bkp.c ****   * @param  BKP_TamperPinLevel: specifies the Tamper Pin active level.
- 128:./Drivers/src/stm32f10x_bkp.c ****   *   This parameter can be one of the following values:
- 129:./Drivers/src/stm32f10x_bkp.c ****   *     @arg BKP_TamperPinLevel_High: Tamper pin active on high level
- 130:./Drivers/src/stm32f10x_bkp.c ****   *     @arg BKP_TamperPinLevel_Low: Tamper pin active on low level
- 131:./Drivers/src/stm32f10x_bkp.c ****   * @retval None
- 132:./Drivers/src/stm32f10x_bkp.c ****   */
- 133:./Drivers/src/stm32f10x_bkp.c **** void BKP_TamperPinLevelConfig(uint16_t BKP_TamperPinLevel)
- 134:./Drivers/src/stm32f10x_bkp.c **** {
+ 124:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** 
+ 125:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** /**
+ 126:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @brief  Configures the Tamper Pin active level.
+ 127:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @param  BKP_TamperPinLevel: specifies the Tamper Pin active level.
+ 128:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   *   This parameter can be one of the following values:
+ 129:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   *     @arg BKP_TamperPinLevel_High: Tamper pin active on high level
+ 130:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   *     @arg BKP_TamperPinLevel_Low: Tamper pin active on low level
+ 131:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @retval None
+ 132:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   */
+ 133:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** void BKP_TamperPinLevelConfig(uint16_t BKP_TamperPinLevel)
+ 134:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** {
   59              		.loc 1 134 1 is_stmt 1 view -0
   60              		.cfi_startproc
   61              		@ args = 0, pretend = 0, frame = 0
   62              		@ frame_needed = 0, uses_anonymous_args = 0
   63              		@ link register save eliminated.
- 135:./Drivers/src/stm32f10x_bkp.c ****   /* Check the parameters */
- 136:./Drivers/src/stm32f10x_bkp.c ****   assert_param(IS_BKP_TAMPER_PIN_LEVEL(BKP_TamperPinLevel));
+ 135:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   /* Check the parameters */
+ 136:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   assert_param(IS_BKP_TAMPER_PIN_LEVEL(BKP_TamperPinLevel));
   64              		.loc 1 136 3 view .LVU5
- 137:./Drivers/src/stm32f10x_bkp.c ****   *(__IO uint32_t *) CR_TPAL_BB = BKP_TamperPinLevel;
+ 137:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   *(__IO uint32_t *) CR_TPAL_BB = BKP_TamperPinLevel;
   65              		.loc 1 137 3 view .LVU6
   66              		.loc 1 137 33 is_stmt 0 view .LVU7
   67 0000 014B     		ldr	r3, .L4
   68 0002 C3F80406 		str	r0, [r3, #1540]
- 138:./Drivers/src/stm32f10x_bkp.c **** }
+ 138:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** }
   69              		.loc 1 138 1 view .LVU8
   70 0006 7047     		bx	lr
   71              	.L5:
@@ -230,32 +230,32 @@ ARM GAS  /tmp/cc8GAdzf.s 			page 1
   85              	BKP_TamperPinCmd:
   86              	.LVL3:
   87              	.LFB31:
- 139:./Drivers/src/stm32f10x_bkp.c **** 
- 140:./Drivers/src/stm32f10x_bkp.c **** /**
- 141:./Drivers/src/stm32f10x_bkp.c ****   * @brief  Enables or disables the Tamper Pin activation.
- 142:./Drivers/src/stm32f10x_bkp.c ****   * @param  NewState: new state of the Tamper Pin activation.
- 143:./Drivers/src/stm32f10x_bkp.c ****   *   This parameter can be: ENABLE or DISABLE.
- 144:./Drivers/src/stm32f10x_bkp.c ****   * @retval None
- 145:./Drivers/src/stm32f10x_bkp.c ****   */
- 146:./Drivers/src/stm32f10x_bkp.c **** void BKP_TamperPinCmd(FunctionalState NewState)
-ARM GAS  /tmp/cc8GAdzf.s 			page 5
+ 139:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** 
+ 140:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** /**
+ 141:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @brief  Enables or disables the Tamper Pin activation.
+ 142:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @param  NewState: new state of the Tamper Pin activation.
+ 143:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   *   This parameter can be: ENABLE or DISABLE.
+ 144:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @retval None
+ 145:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   */
+ 146:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** void BKP_TamperPinCmd(FunctionalState NewState)
+ARM GAS  /tmp/ccfjDgPg.s 			page 5
 
 
- 147:./Drivers/src/stm32f10x_bkp.c **** {
+ 147:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** {
   88              		.loc 1 147 1 is_stmt 1 view -0
   89              		.cfi_startproc
   90              		@ args = 0, pretend = 0, frame = 0
   91              		@ frame_needed = 0, uses_anonymous_args = 0
   92              		@ link register save eliminated.
- 148:./Drivers/src/stm32f10x_bkp.c ****   /* Check the parameters */
- 149:./Drivers/src/stm32f10x_bkp.c ****   assert_param(IS_FUNCTIONAL_STATE(NewState));
+ 148:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   /* Check the parameters */
+ 149:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   assert_param(IS_FUNCTIONAL_STATE(NewState));
   93              		.loc 1 149 3 view .LVU10
- 150:./Drivers/src/stm32f10x_bkp.c ****   *(__IO uint32_t *) CR_TPE_BB = (uint32_t)NewState;
+ 150:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   *(__IO uint32_t *) CR_TPE_BB = (uint32_t)NewState;
   94              		.loc 1 150 3 view .LVU11
   95              		.loc 1 150 32 is_stmt 0 view .LVU12
   96 0000 014B     		ldr	r3, .L7
   97 0002 C3F80006 		str	r0, [r3, #1536]
- 151:./Drivers/src/stm32f10x_bkp.c **** }
+ 151:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** }
   98              		.loc 1 151 1 view .LVU13
   99 0006 7047     		bx	lr
  100              	.L8:
@@ -273,32 +273,32 @@ ARM GAS  /tmp/cc8GAdzf.s 			page 1
  114              	BKP_ITConfig:
  115              	.LVL4:
  116              	.LFB32:
- 152:./Drivers/src/stm32f10x_bkp.c **** 
- 153:./Drivers/src/stm32f10x_bkp.c **** /**
- 154:./Drivers/src/stm32f10x_bkp.c ****   * @brief  Enables or disables the Tamper Pin Interrupt.
- 155:./Drivers/src/stm32f10x_bkp.c ****   * @param  NewState: new state of the Tamper Pin Interrupt.
- 156:./Drivers/src/stm32f10x_bkp.c ****   *   This parameter can be: ENABLE or DISABLE.
- 157:./Drivers/src/stm32f10x_bkp.c ****   * @retval None
- 158:./Drivers/src/stm32f10x_bkp.c ****   */
- 159:./Drivers/src/stm32f10x_bkp.c **** void BKP_ITConfig(FunctionalState NewState)
- 160:./Drivers/src/stm32f10x_bkp.c **** {
+ 152:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** 
+ 153:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** /**
+ 154:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @brief  Enables or disables the Tamper Pin Interrupt.
+ 155:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @param  NewState: new state of the Tamper Pin Interrupt.
+ 156:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   *   This parameter can be: ENABLE or DISABLE.
+ 157:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @retval None
+ 158:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   */
+ 159:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** void BKP_ITConfig(FunctionalState NewState)
+ 160:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** {
  117              		.loc 1 160 1 is_stmt 1 view -0
  118              		.cfi_startproc
  119              		@ args = 0, pretend = 0, frame = 0
  120              		@ frame_needed = 0, uses_anonymous_args = 0
  121              		@ link register save eliminated.
- 161:./Drivers/src/stm32f10x_bkp.c ****   /* Check the parameters */
- 162:./Drivers/src/stm32f10x_bkp.c ****   assert_param(IS_FUNCTIONAL_STATE(NewState));
+ 161:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   /* Check the parameters */
+ 162:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   assert_param(IS_FUNCTIONAL_STATE(NewState));
  122              		.loc 1 162 3 view .LVU15
- 163:./Drivers/src/stm32f10x_bkp.c ****   *(__IO uint32_t *) CSR_TPIE_BB = (uint32_t)NewState;
+ 163:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   *(__IO uint32_t *) CSR_TPIE_BB = (uint32_t)NewState;
  123              		.loc 1 163 3 view .LVU16
  124              		.loc 1 163 34 is_stmt 0 view .LVU17
  125 0000 014B     		ldr	r3, .L10
  126 0002 C3F88806 		str	r0, [r3, #1672]
- 164:./Drivers/src/stm32f10x_bkp.c **** }
+ 164:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** }
  127              		.loc 1 164 1 view .LVU18
  128 0006 7047     		bx	lr
-ARM GAS  /tmp/cc8GAdzf.s 			page 6
+ARM GAS  /tmp/ccfjDgPg.s 			page 6
 
 
  129              	.L11:
@@ -316,61 +316,61 @@ ARM GAS  /tmp/cc8GAdzf.s 			page 1
  143              	BKP_RTCOutputConfig:
  144              	.LVL5:
  145              	.LFB33:
- 165:./Drivers/src/stm32f10x_bkp.c **** 
- 166:./Drivers/src/stm32f10x_bkp.c **** /**
- 167:./Drivers/src/stm32f10x_bkp.c ****   * @brief  Select the RTC output source to output on the Tamper pin.
- 168:./Drivers/src/stm32f10x_bkp.c ****   * @param  BKP_RTCOutputSource: specifies the RTC output source.
- 169:./Drivers/src/stm32f10x_bkp.c ****   *   This parameter can be one of the following values:
- 170:./Drivers/src/stm32f10x_bkp.c ****   *     @arg BKP_RTCOutputSource_None: no RTC output on the Tamper pin.
- 171:./Drivers/src/stm32f10x_bkp.c ****   *     @arg BKP_RTCOutputSource_CalibClock: output the RTC clock with frequency
- 172:./Drivers/src/stm32f10x_bkp.c ****   *                                          divided by 64 on the Tamper pin.
- 173:./Drivers/src/stm32f10x_bkp.c ****   *     @arg BKP_RTCOutputSource_Alarm: output the RTC Alarm pulse signal on
- 174:./Drivers/src/stm32f10x_bkp.c ****   *                                     the Tamper pin.
- 175:./Drivers/src/stm32f10x_bkp.c ****   *     @arg BKP_RTCOutputSource_Second: output the RTC Second pulse signal on
- 176:./Drivers/src/stm32f10x_bkp.c ****   *                                      the Tamper pin.  
- 177:./Drivers/src/stm32f10x_bkp.c ****   * @retval None
- 178:./Drivers/src/stm32f10x_bkp.c ****   */
- 179:./Drivers/src/stm32f10x_bkp.c **** void BKP_RTCOutputConfig(uint16_t BKP_RTCOutputSource)
- 180:./Drivers/src/stm32f10x_bkp.c **** {
+ 165:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** 
+ 166:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** /**
+ 167:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @brief  Select the RTC output source to output on the Tamper pin.
+ 168:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @param  BKP_RTCOutputSource: specifies the RTC output source.
+ 169:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   *   This parameter can be one of the following values:
+ 170:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   *     @arg BKP_RTCOutputSource_None: no RTC output on the Tamper pin.
+ 171:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   *     @arg BKP_RTCOutputSource_CalibClock: output the RTC clock with frequency
+ 172:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   *                                          divided by 64 on the Tamper pin.
+ 173:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   *     @arg BKP_RTCOutputSource_Alarm: output the RTC Alarm pulse signal on
+ 174:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   *                                     the Tamper pin.
+ 175:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   *     @arg BKP_RTCOutputSource_Second: output the RTC Second pulse signal on
+ 176:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   *                                      the Tamper pin.  
+ 177:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @retval None
+ 178:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   */
+ 179:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** void BKP_RTCOutputConfig(uint16_t BKP_RTCOutputSource)
+ 180:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** {
  146              		.loc 1 180 1 is_stmt 1 view -0
  147              		.cfi_startproc
  148              		@ args = 0, pretend = 0, frame = 0
  149              		@ frame_needed = 0, uses_anonymous_args = 0
  150              		@ link register save eliminated.
- 181:./Drivers/src/stm32f10x_bkp.c ****   uint16_t tmpreg = 0;
+ 181:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   uint16_t tmpreg = 0;
  151              		.loc 1 181 3 view .LVU20
- 182:./Drivers/src/stm32f10x_bkp.c ****   /* Check the parameters */
- 183:./Drivers/src/stm32f10x_bkp.c ****   assert_param(IS_BKP_RTC_OUTPUT_SOURCE(BKP_RTCOutputSource));
+ 182:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   /* Check the parameters */
+ 183:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   assert_param(IS_BKP_RTC_OUTPUT_SOURCE(BKP_RTCOutputSource));
  152              		.loc 1 183 3 view .LVU21
- 184:./Drivers/src/stm32f10x_bkp.c ****   tmpreg = BKP->RTCCR;
+ 184:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   tmpreg = BKP->RTCCR;
  153              		.loc 1 184 3 view .LVU22
  154              		.loc 1 184 10 is_stmt 0 view .LVU23
  155 0000 034A     		ldr	r2, .L13
  156 0002 938D     		ldrh	r3, [r2, #44]
  157 0004 9BB2     		uxth	r3, r3
  158              	.LVL6:
- 185:./Drivers/src/stm32f10x_bkp.c ****   /* Clear CCO, ASOE and ASOS bits */
- 186:./Drivers/src/stm32f10x_bkp.c ****   tmpreg &= RTCCR_MASK;
+ 185:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   /* Clear CCO, ASOE and ASOS bits */
+ 186:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   tmpreg &= RTCCR_MASK;
  159              		.loc 1 186 3 is_stmt 1 view .LVU24
  160              		.loc 1 186 10 is_stmt 0 view .LVU25
  161 0006 23F46073 		bic	r3, r3, #896
  162              	.LVL7:
- 187:./Drivers/src/stm32f10x_bkp.c ****   
- 188:./Drivers/src/stm32f10x_bkp.c ****   /* Set CCO, ASOE and ASOS bits according to BKP_RTCOutputSource value */
- 189:./Drivers/src/stm32f10x_bkp.c ****   tmpreg |= BKP_RTCOutputSource;
-ARM GAS  /tmp/cc8GAdzf.s 			page 7
+ 187:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   
+ 188:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   /* Set CCO, ASOE and ASOS bits according to BKP_RTCOutputSource value */
+ 189:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   tmpreg |= BKP_RTCOutputSource;
+ARM GAS  /tmp/ccfjDgPg.s 			page 7
 
 
  163              		.loc 1 189 3 is_stmt 1 view .LVU26
  164              		.loc 1 189 10 is_stmt 0 view .LVU27
  165 000a 0343     		orrs	r3, r3, r0
  166              	.LVL8:
- 190:./Drivers/src/stm32f10x_bkp.c ****   /* Store the new value */
- 191:./Drivers/src/stm32f10x_bkp.c ****   BKP->RTCCR = tmpreg;
+ 190:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   /* Store the new value */
+ 191:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   BKP->RTCCR = tmpreg;
  167              		.loc 1 191 3 is_stmt 1 view .LVU28
  168              		.loc 1 191 14 is_stmt 0 view .LVU29
  169 000c 9385     		strh	r3, [r2, #44]	@ movhi
- 192:./Drivers/src/stm32f10x_bkp.c **** }
+ 192:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** }
  170              		.loc 1 192 1 view .LVU30
  171 000e 7047     		bx	lr
  172              	.L14:
@@ -388,53 +388,53 @@ ARM GAS  /tmp/cc8GAdzf.s 			page 1
  186              	BKP_SetRTCCalibrationValue:
  187              	.LVL9:
  188              	.LFB34:
- 193:./Drivers/src/stm32f10x_bkp.c **** 
- 194:./Drivers/src/stm32f10x_bkp.c **** /**
- 195:./Drivers/src/stm32f10x_bkp.c ****   * @brief  Sets RTC Clock Calibration value.
- 196:./Drivers/src/stm32f10x_bkp.c ****   * @param  CalibrationValue: specifies the RTC Clock Calibration value.
- 197:./Drivers/src/stm32f10x_bkp.c ****   *   This parameter must be a number between 0 and 0x7F.
- 198:./Drivers/src/stm32f10x_bkp.c ****   * @retval None
- 199:./Drivers/src/stm32f10x_bkp.c ****   */
- 200:./Drivers/src/stm32f10x_bkp.c **** void BKP_SetRTCCalibrationValue(uint8_t CalibrationValue)
- 201:./Drivers/src/stm32f10x_bkp.c **** {
+ 193:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** 
+ 194:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** /**
+ 195:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @brief  Sets RTC Clock Calibration value.
+ 196:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @param  CalibrationValue: specifies the RTC Clock Calibration value.
+ 197:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   *   This parameter must be a number between 0 and 0x7F.
+ 198:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @retval None
+ 199:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   */
+ 200:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** void BKP_SetRTCCalibrationValue(uint8_t CalibrationValue)
+ 201:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** {
  189              		.loc 1 201 1 is_stmt 1 view -0
  190              		.cfi_startproc
  191              		@ args = 0, pretend = 0, frame = 0
  192              		@ frame_needed = 0, uses_anonymous_args = 0
  193              		@ link register save eliminated.
- 202:./Drivers/src/stm32f10x_bkp.c ****   uint16_t tmpreg = 0;
+ 202:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   uint16_t tmpreg = 0;
  194              		.loc 1 202 3 view .LVU32
- 203:./Drivers/src/stm32f10x_bkp.c ****   /* Check the parameters */
- 204:./Drivers/src/stm32f10x_bkp.c ****   assert_param(IS_BKP_CALIBRATION_VALUE(CalibrationValue));
+ 203:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   /* Check the parameters */
+ 204:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   assert_param(IS_BKP_CALIBRATION_VALUE(CalibrationValue));
  195              		.loc 1 204 3 view .LVU33
- 205:./Drivers/src/stm32f10x_bkp.c ****   tmpreg = BKP->RTCCR;
+ 205:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   tmpreg = BKP->RTCCR;
  196              		.loc 1 205 3 view .LVU34
  197              		.loc 1 205 10 is_stmt 0 view .LVU35
  198 0000 034A     		ldr	r2, .L16
  199 0002 938D     		ldrh	r3, [r2, #44]
  200 0004 9BB2     		uxth	r3, r3
  201              	.LVL10:
- 206:./Drivers/src/stm32f10x_bkp.c ****   /* Clear CAL[6:0] bits */
- 207:./Drivers/src/stm32f10x_bkp.c ****   tmpreg &= RTCCR_CAL_MASK;
+ 206:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   /* Clear CAL[6:0] bits */
+ 207:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   tmpreg &= RTCCR_CAL_MASK;
  202              		.loc 1 207 3 is_stmt 1 view .LVU36
  203              		.loc 1 207 10 is_stmt 0 view .LVU37
-ARM GAS  /tmp/cc8GAdzf.s 			page 8
+ARM GAS  /tmp/ccfjDgPg.s 			page 8
 
 
  204 0006 23F07F03 		bic	r3, r3, #127
  205              	.LVL11:
- 208:./Drivers/src/stm32f10x_bkp.c ****   /* Set CAL[6:0] bits according to CalibrationValue value */
- 209:./Drivers/src/stm32f10x_bkp.c ****   tmpreg |= CalibrationValue;
+ 208:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   /* Set CAL[6:0] bits according to CalibrationValue value */
+ 209:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   tmpreg |= CalibrationValue;
  206              		.loc 1 209 3 is_stmt 1 view .LVU38
  207              		.loc 1 209 10 is_stmt 0 view .LVU39
  208 000a 0343     		orrs	r3, r3, r0
  209              	.LVL12:
- 210:./Drivers/src/stm32f10x_bkp.c ****   /* Store the new value */
- 211:./Drivers/src/stm32f10x_bkp.c ****   BKP->RTCCR = tmpreg;
+ 210:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   /* Store the new value */
+ 211:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   BKP->RTCCR = tmpreg;
  210              		.loc 1 211 3 is_stmt 1 view .LVU40
  211              		.loc 1 211 14 is_stmt 0 view .LVU41
  212 000c 9385     		strh	r3, [r2, #44]	@ movhi
- 212:./Drivers/src/stm32f10x_bkp.c **** }
+ 212:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** }
  213              		.loc 1 212 1 view .LVU42
  214 000e 7047     		bx	lr
  215              	.L17:
@@ -452,16 +452,16 @@ ARM GAS  /tmp/cc8GAdzf.s 			page 1
  229              	BKP_WriteBackupRegister:
  230              	.LVL13:
  231              	.LFB35:
- 213:./Drivers/src/stm32f10x_bkp.c **** 
- 214:./Drivers/src/stm32f10x_bkp.c **** /**
- 215:./Drivers/src/stm32f10x_bkp.c ****   * @brief  Writes user data to the specified Data Backup Register.
- 216:./Drivers/src/stm32f10x_bkp.c ****   * @param  BKP_DR: specifies the Data Backup Register.
- 217:./Drivers/src/stm32f10x_bkp.c ****   *   This parameter can be BKP_DRx where x:[1, 42]
- 218:./Drivers/src/stm32f10x_bkp.c ****   * @param  Data: data to write
- 219:./Drivers/src/stm32f10x_bkp.c ****   * @retval None
- 220:./Drivers/src/stm32f10x_bkp.c ****   */
- 221:./Drivers/src/stm32f10x_bkp.c **** void BKP_WriteBackupRegister(uint16_t BKP_DR, uint16_t Data)
- 222:./Drivers/src/stm32f10x_bkp.c **** {
+ 213:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** 
+ 214:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** /**
+ 215:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @brief  Writes user data to the specified Data Backup Register.
+ 216:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @param  BKP_DR: specifies the Data Backup Register.
+ 217:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   *   This parameter can be BKP_DRx where x:[1, 42]
+ 218:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @param  Data: data to write
+ 219:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @retval None
+ 220:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   */
+ 221:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** void BKP_WriteBackupRegister(uint16_t BKP_DR, uint16_t Data)
+ 222:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** {
  232              		.loc 1 222 1 is_stmt 1 view -0
  233              		.cfi_startproc
  234              		@ args = 0, pretend = 0, frame = 8
@@ -471,25 +471,25 @@ ARM GAS  /tmp/cc8GAdzf.s 			page 1
  238 0000 82B0     		sub	sp, sp, #8
  239              	.LCFI1:
  240              		.cfi_def_cfa_offset 8
- 223:./Drivers/src/stm32f10x_bkp.c ****   __IO uint32_t tmp = 0;
+ 223:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   __IO uint32_t tmp = 0;
  241              		.loc 1 223 3 is_stmt 1 view .LVU45
  242              		.loc 1 223 17 is_stmt 0 view .LVU46
  243 0002 0023     		movs	r3, #0
  244 0004 0193     		str	r3, [sp, #4]
- 224:./Drivers/src/stm32f10x_bkp.c **** 
- 225:./Drivers/src/stm32f10x_bkp.c ****   /* Check the parameters */
-ARM GAS  /tmp/cc8GAdzf.s 			page 9
+ 224:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** 
+ 225:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   /* Check the parameters */
+ARM GAS  /tmp/ccfjDgPg.s 			page 9
 
 
- 226:./Drivers/src/stm32f10x_bkp.c ****   assert_param(IS_BKP_DR(BKP_DR));
+ 226:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   assert_param(IS_BKP_DR(BKP_DR));
  245              		.loc 1 226 3 is_stmt 1 view .LVU47
- 227:./Drivers/src/stm32f10x_bkp.c **** 
- 228:./Drivers/src/stm32f10x_bkp.c ****   tmp = (uint32_t)BKP_BASE; 
+ 227:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** 
+ 228:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   tmp = (uint32_t)BKP_BASE; 
  246              		.loc 1 228 3 view .LVU48
  247              		.loc 1 228 7 is_stmt 0 view .LVU49
  248 0006 044B     		ldr	r3, .L20
  249 0008 0193     		str	r3, [sp, #4]
- 229:./Drivers/src/stm32f10x_bkp.c ****   tmp += BKP_DR;
+ 229:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   tmp += BKP_DR;
  250              		.loc 1 229 3 is_stmt 1 view .LVU50
  251              		.loc 1 229 7 is_stmt 0 view .LVU51
  252 000a 019B     		ldr	r3, [sp, #4]
@@ -497,14 +497,14 @@ ARM GAS  /tmp/cc8GAdzf.s 			page 1
  254              	.LVL14:
  255              		.loc 1 229 7 view .LVU52
  256 000e 0190     		str	r0, [sp, #4]
- 230:./Drivers/src/stm32f10x_bkp.c **** 
- 231:./Drivers/src/stm32f10x_bkp.c ****   *(__IO uint32_t *) tmp = Data;
+ 230:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** 
+ 231:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   *(__IO uint32_t *) tmp = Data;
  257              		.loc 1 231 3 is_stmt 1 view .LVU53
  258              		.loc 1 231 4 is_stmt 0 view .LVU54
  259 0010 019B     		ldr	r3, [sp, #4]
  260              		.loc 1 231 26 view .LVU55
  261 0012 1960     		str	r1, [r3]
- 232:./Drivers/src/stm32f10x_bkp.c **** }
+ 232:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** }
  262              		.loc 1 232 1 view .LVU56
  263 0014 02B0     		add	sp, sp, #8
  264              	.LCFI2:
@@ -526,19 +526,19 @@ ARM GAS  /tmp/cc8GAdzf.s 			page 1
  282              	BKP_ReadBackupRegister:
  283              	.LVL15:
  284              	.LFB36:
- 233:./Drivers/src/stm32f10x_bkp.c **** 
- 234:./Drivers/src/stm32f10x_bkp.c **** /**
- 235:./Drivers/src/stm32f10x_bkp.c ****   * @brief  Reads data from the specified Data Backup Register.
- 236:./Drivers/src/stm32f10x_bkp.c ****   * @param  BKP_DR: specifies the Data Backup Register.
- 237:./Drivers/src/stm32f10x_bkp.c ****   *   This parameter can be BKP_DRx where x:[1, 42]
- 238:./Drivers/src/stm32f10x_bkp.c ****   * @retval The content of the specified Data Backup Register
- 239:./Drivers/src/stm32f10x_bkp.c ****   */
- 240:./Drivers/src/stm32f10x_bkp.c **** uint16_t BKP_ReadBackupRegister(uint16_t BKP_DR)
- 241:./Drivers/src/stm32f10x_bkp.c **** {
+ 233:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** 
+ 234:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** /**
+ 235:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @brief  Reads data from the specified Data Backup Register.
+ 236:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @param  BKP_DR: specifies the Data Backup Register.
+ 237:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   *   This parameter can be BKP_DRx where x:[1, 42]
+ 238:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @retval The content of the specified Data Backup Register
+ 239:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   */
+ 240:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** uint16_t BKP_ReadBackupRegister(uint16_t BKP_DR)
+ 241:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** {
  285              		.loc 1 241 1 is_stmt 1 view -0
  286              		.cfi_startproc
  287              		@ args = 0, pretend = 0, frame = 8
-ARM GAS  /tmp/cc8GAdzf.s 			page 10
+ARM GAS  /tmp/ccfjDgPg.s 			page 10
 
 
  288              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -547,22 +547,22 @@ ARM GAS  /tmp/cc8GAdzf.s 			page 1
  291 0000 82B0     		sub	sp, sp, #8
  292              	.LCFI3:
  293              		.cfi_def_cfa_offset 8
- 242:./Drivers/src/stm32f10x_bkp.c ****   __IO uint32_t tmp = 0;
+ 242:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   __IO uint32_t tmp = 0;
  294              		.loc 1 242 3 is_stmt 1 view .LVU59
  295              		.loc 1 242 17 is_stmt 0 view .LVU60
  296 0002 0023     		movs	r3, #0
  297 0004 0193     		str	r3, [sp, #4]
- 243:./Drivers/src/stm32f10x_bkp.c **** 
- 244:./Drivers/src/stm32f10x_bkp.c ****   /* Check the parameters */
- 245:./Drivers/src/stm32f10x_bkp.c ****   assert_param(IS_BKP_DR(BKP_DR));
+ 243:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** 
+ 244:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   /* Check the parameters */
+ 245:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   assert_param(IS_BKP_DR(BKP_DR));
  298              		.loc 1 245 3 is_stmt 1 view .LVU61
- 246:./Drivers/src/stm32f10x_bkp.c **** 
- 247:./Drivers/src/stm32f10x_bkp.c ****   tmp = (uint32_t)BKP_BASE; 
+ 246:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** 
+ 247:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   tmp = (uint32_t)BKP_BASE; 
  299              		.loc 1 247 3 view .LVU62
  300              		.loc 1 247 7 is_stmt 0 view .LVU63
  301 0006 054B     		ldr	r3, .L24
  302 0008 0193     		str	r3, [sp, #4]
- 248:./Drivers/src/stm32f10x_bkp.c ****   tmp += BKP_DR;
+ 248:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   tmp += BKP_DR;
  303              		.loc 1 248 3 is_stmt 1 view .LVU64
  304              		.loc 1 248 7 is_stmt 0 view .LVU65
  305 000a 019B     		ldr	r3, [sp, #4]
@@ -570,14 +570,14 @@ ARM GAS  /tmp/cc8GAdzf.s 			page 1
  307              	.LVL16:
  308              		.loc 1 248 7 view .LVU66
  309 000e 0190     		str	r0, [sp, #4]
- 249:./Drivers/src/stm32f10x_bkp.c **** 
- 250:./Drivers/src/stm32f10x_bkp.c ****   return (*(__IO uint16_t *) tmp);
+ 249:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** 
+ 250:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   return (*(__IO uint16_t *) tmp);
  310              		.loc 1 250 3 is_stmt 1 view .LVU67
  311              		.loc 1 250 12 is_stmt 0 view .LVU68
  312 0010 019B     		ldr	r3, [sp, #4]
  313              		.loc 1 250 11 view .LVU69
  314 0012 1888     		ldrh	r0, [r3]
- 251:./Drivers/src/stm32f10x_bkp.c **** }
+ 251:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** }
  315              		.loc 1 251 1 view .LVU70
  316 0014 80B2     		uxth	r0, r0
  317 0016 02B0     		add	sp, sp, #8
@@ -598,29 +598,29 @@ ARM GAS  /tmp/cc8GAdzf.s 			page 1
  333              		.thumb
  334              		.thumb_func
  336              	BKP_GetFlagStatus:
-ARM GAS  /tmp/cc8GAdzf.s 			page 11
+ARM GAS  /tmp/ccfjDgPg.s 			page 11
 
 
  337              	.LFB37:
- 252:./Drivers/src/stm32f10x_bkp.c **** 
- 253:./Drivers/src/stm32f10x_bkp.c **** /**
- 254:./Drivers/src/stm32f10x_bkp.c ****   * @brief  Checks whether the Tamper Pin Event flag is set or not.
- 255:./Drivers/src/stm32f10x_bkp.c ****   * @param  None
- 256:./Drivers/src/stm32f10x_bkp.c ****   * @retval The new state of the Tamper Pin Event flag (SET or RESET).
- 257:./Drivers/src/stm32f10x_bkp.c ****   */
- 258:./Drivers/src/stm32f10x_bkp.c **** FlagStatus BKP_GetFlagStatus(void)
- 259:./Drivers/src/stm32f10x_bkp.c **** {
+ 252:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** 
+ 253:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** /**
+ 254:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @brief  Checks whether the Tamper Pin Event flag is set or not.
+ 255:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @param  None
+ 256:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @retval The new state of the Tamper Pin Event flag (SET or RESET).
+ 257:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   */
+ 258:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** FlagStatus BKP_GetFlagStatus(void)
+ 259:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** {
  338              		.loc 1 259 1 is_stmt 1 view -0
  339              		.cfi_startproc
  340              		@ args = 0, pretend = 0, frame = 0
  341              		@ frame_needed = 0, uses_anonymous_args = 0
  342              		@ link register save eliminated.
- 260:./Drivers/src/stm32f10x_bkp.c ****   return (FlagStatus)(*(__IO uint32_t *) CSR_TEF_BB);
+ 260:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   return (FlagStatus)(*(__IO uint32_t *) CSR_TEF_BB);
  343              		.loc 1 260 3 view .LVU72
  344              		.loc 1 260 23 is_stmt 0 view .LVU73
  345 0000 024B     		ldr	r3, .L27
  346 0002 D3F8A006 		ldr	r0, [r3, #1696]
- 261:./Drivers/src/stm32f10x_bkp.c **** }
+ 261:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** }
  347              		.loc 1 261 1 view .LVU74
  348 0006 C0B2     		uxtb	r0, r0
  349 0008 7047     		bx	lr
@@ -638,33 +638,33 @@ ARM GAS  /tmp/cc8GAdzf.s 			page 1
  362              		.thumb_func
  364              	BKP_ClearFlag:
  365              	.LFB38:
- 262:./Drivers/src/stm32f10x_bkp.c **** 
- 263:./Drivers/src/stm32f10x_bkp.c **** /**
- 264:./Drivers/src/stm32f10x_bkp.c ****   * @brief  Clears Tamper Pin Event pending flag.
- 265:./Drivers/src/stm32f10x_bkp.c ****   * @param  None
- 266:./Drivers/src/stm32f10x_bkp.c ****   * @retval None
- 267:./Drivers/src/stm32f10x_bkp.c ****   */
- 268:./Drivers/src/stm32f10x_bkp.c **** void BKP_ClearFlag(void)
- 269:./Drivers/src/stm32f10x_bkp.c **** {
+ 262:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** 
+ 263:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** /**
+ 264:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @brief  Clears Tamper Pin Event pending flag.
+ 265:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @param  None
+ 266:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @retval None
+ 267:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   */
+ 268:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** void BKP_ClearFlag(void)
+ 269:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** {
  366              		.loc 1 269 1 is_stmt 1 view -0
  367              		.cfi_startproc
  368              		@ args = 0, pretend = 0, frame = 0
  369              		@ frame_needed = 0, uses_anonymous_args = 0
  370              		@ link register save eliminated.
- 270:./Drivers/src/stm32f10x_bkp.c ****   /* Set CTE bit to clear Tamper Pin Event flag */
- 271:./Drivers/src/stm32f10x_bkp.c ****   BKP->CSR |= BKP_CSR_CTE;
+ 270:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   /* Set CTE bit to clear Tamper Pin Event flag */
+ 271:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   BKP->CSR |= BKP_CSR_CTE;
  371              		.loc 1 271 3 view .LVU76
  372              		.loc 1 271 6 is_stmt 0 view .LVU77
  373 0000 034A     		ldr	r2, .L30
  374 0002 938E     		ldrh	r3, [r2, #52]
  375 0004 9BB2     		uxth	r3, r3
-ARM GAS  /tmp/cc8GAdzf.s 			page 12
+ARM GAS  /tmp/ccfjDgPg.s 			page 12
 
 
  376              		.loc 1 271 12 view .LVU78
  377 0006 43F00103 		orr	r3, r3, #1
  378 000a 9386     		strh	r3, [r2, #52]	@ movhi
- 272:./Drivers/src/stm32f10x_bkp.c **** }
+ 272:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** }
  379              		.loc 1 272 1 view .LVU79
  380 000c 7047     		bx	lr
  381              	.L31:
@@ -681,25 +681,25 @@ ARM GAS  /tmp/cc8GAdzf.s 			page 1
  393              		.thumb_func
  395              	BKP_GetITStatus:
  396              	.LFB39:
- 273:./Drivers/src/stm32f10x_bkp.c **** 
- 274:./Drivers/src/stm32f10x_bkp.c **** /**
- 275:./Drivers/src/stm32f10x_bkp.c ****   * @brief  Checks whether the Tamper Pin Interrupt has occurred or not.
- 276:./Drivers/src/stm32f10x_bkp.c ****   * @param  None
- 277:./Drivers/src/stm32f10x_bkp.c ****   * @retval The new state of the Tamper Pin Interrupt (SET or RESET).
- 278:./Drivers/src/stm32f10x_bkp.c ****   */
- 279:./Drivers/src/stm32f10x_bkp.c **** ITStatus BKP_GetITStatus(void)
- 280:./Drivers/src/stm32f10x_bkp.c **** {
+ 273:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** 
+ 274:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** /**
+ 275:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @brief  Checks whether the Tamper Pin Interrupt has occurred or not.
+ 276:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @param  None
+ 277:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @retval The new state of the Tamper Pin Interrupt (SET or RESET).
+ 278:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   */
+ 279:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** ITStatus BKP_GetITStatus(void)
+ 280:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** {
  397              		.loc 1 280 1 is_stmt 1 view -0
  398              		.cfi_startproc
  399              		@ args = 0, pretend = 0, frame = 0
  400              		@ frame_needed = 0, uses_anonymous_args = 0
  401              		@ link register save eliminated.
- 281:./Drivers/src/stm32f10x_bkp.c ****   return (ITStatus)(*(__IO uint32_t *) CSR_TIF_BB);
+ 281:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   return (ITStatus)(*(__IO uint32_t *) CSR_TIF_BB);
  402              		.loc 1 281 3 view .LVU81
  403              		.loc 1 281 21 is_stmt 0 view .LVU82
  404 0000 024B     		ldr	r3, .L33
  405 0002 D3F8A406 		ldr	r0, [r3, #1700]
- 282:./Drivers/src/stm32f10x_bkp.c **** }
+ 282:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** }
  406              		.loc 1 282 1 view .LVU83
  407 0006 C0B2     		uxtb	r0, r0
  408 0008 7047     		bx	lr
@@ -717,24 +717,24 @@ ARM GAS  /tmp/cc8GAdzf.s 			page 1
  421              		.thumb_func
  423              	BKP_ClearITPendingBit:
  424              	.LFB40:
- 283:./Drivers/src/stm32f10x_bkp.c **** 
-ARM GAS  /tmp/cc8GAdzf.s 			page 13
+ 283:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** 
+ARM GAS  /tmp/ccfjDgPg.s 			page 13
 
 
- 284:./Drivers/src/stm32f10x_bkp.c **** /**
- 285:./Drivers/src/stm32f10x_bkp.c ****   * @brief  Clears Tamper Pin Interrupt pending bit.
- 286:./Drivers/src/stm32f10x_bkp.c ****   * @param  None
- 287:./Drivers/src/stm32f10x_bkp.c ****   * @retval None
- 288:./Drivers/src/stm32f10x_bkp.c ****   */
- 289:./Drivers/src/stm32f10x_bkp.c **** void BKP_ClearITPendingBit(void)
- 290:./Drivers/src/stm32f10x_bkp.c **** {
+ 284:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** /**
+ 285:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @brief  Clears Tamper Pin Interrupt pending bit.
+ 286:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @param  None
+ 287:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   * @retval None
+ 288:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   */
+ 289:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** void BKP_ClearITPendingBit(void)
+ 290:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** {
  425              		.loc 1 290 1 is_stmt 1 view -0
  426              		.cfi_startproc
  427              		@ args = 0, pretend = 0, frame = 0
  428              		@ frame_needed = 0, uses_anonymous_args = 0
  429              		@ link register save eliminated.
- 291:./Drivers/src/stm32f10x_bkp.c ****   /* Set CTI bit to clear Tamper Pin Interrupt pending bit */
- 292:./Drivers/src/stm32f10x_bkp.c ****   BKP->CSR |= BKP_CSR_CTI;
+ 291:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   /* Set CTI bit to clear Tamper Pin Interrupt pending bit */
+ 292:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c ****   BKP->CSR |= BKP_CSR_CTI;
  430              		.loc 1 292 3 view .LVU85
  431              		.loc 1 292 6 is_stmt 0 view .LVU86
  432 0000 034A     		ldr	r2, .L36
@@ -743,7 +743,7 @@ ARM GAS  /tmp/cc8GAdzf.s 			page 1
  435              		.loc 1 292 12 view .LVU87
  436 0006 43F00203 		orr	r3, r3, #2
  437 000a 9386     		strh	r3, [r2, #52]	@ movhi
- 293:./Drivers/src/stm32f10x_bkp.c **** }
+ 293:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_bkp.c **** }
  438              		.loc 1 293 1 view .LVU88
  439 000c 7047     		bx	lr
  440              	.L37:
@@ -758,46 +758,46 @@ ARM GAS  /tmp/cc8GAdzf.s 			page 1
  450              		.file 3 "/usr/arm-none-eabi/include/sys/_stdint.h"
  451              		.file 4 "cmsis/stm32f10x.h"
  452              		.file 5 "Drivers/inc/stm32f10x_rcc.h"
-ARM GAS  /tmp/cc8GAdzf.s 			page 14
+ARM GAS  /tmp/ccfjDgPg.s 			page 14
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f10x_bkp.c
-     /tmp/cc8GAdzf.s:19     .text.BKP_DeInit:00000000 $t
-     /tmp/cc8GAdzf.s:25     .text.BKP_DeInit:00000000 BKP_DeInit
-     /tmp/cc8GAdzf.s:50     .text.BKP_TamperPinLevelConfig:00000000 $t
-     /tmp/cc8GAdzf.s:56     .text.BKP_TamperPinLevelConfig:00000000 BKP_TamperPinLevelConfig
-     /tmp/cc8GAdzf.s:74     .text.BKP_TamperPinLevelConfig:00000008 $d
-     /tmp/cc8GAdzf.s:79     .text.BKP_TamperPinCmd:00000000 $t
-     /tmp/cc8GAdzf.s:85     .text.BKP_TamperPinCmd:00000000 BKP_TamperPinCmd
-     /tmp/cc8GAdzf.s:103    .text.BKP_TamperPinCmd:00000008 $d
-     /tmp/cc8GAdzf.s:108    .text.BKP_ITConfig:00000000 $t
-     /tmp/cc8GAdzf.s:114    .text.BKP_ITConfig:00000000 BKP_ITConfig
-     /tmp/cc8GAdzf.s:132    .text.BKP_ITConfig:00000008 $d
-     /tmp/cc8GAdzf.s:137    .text.BKP_RTCOutputConfig:00000000 $t
-     /tmp/cc8GAdzf.s:143    .text.BKP_RTCOutputConfig:00000000 BKP_RTCOutputConfig
-     /tmp/cc8GAdzf.s:175    .text.BKP_RTCOutputConfig:00000010 $d
-     /tmp/cc8GAdzf.s:180    .text.BKP_SetRTCCalibrationValue:00000000 $t
-     /tmp/cc8GAdzf.s:186    .text.BKP_SetRTCCalibrationValue:00000000 BKP_SetRTCCalibrationValue
-     /tmp/cc8GAdzf.s:218    .text.BKP_SetRTCCalibrationValue:00000010 $d
-     /tmp/cc8GAdzf.s:223    .text.BKP_WriteBackupRegister:00000000 $t
-     /tmp/cc8GAdzf.s:229    .text.BKP_WriteBackupRegister:00000000 BKP_WriteBackupRegister
-     /tmp/cc8GAdzf.s:271    .text.BKP_WriteBackupRegister:00000018 $d
-     /tmp/cc8GAdzf.s:276    .text.BKP_ReadBackupRegister:00000000 $t
-     /tmp/cc8GAdzf.s:282    .text.BKP_ReadBackupRegister:00000000 BKP_ReadBackupRegister
-     /tmp/cc8GAdzf.s:325    .text.BKP_ReadBackupRegister:0000001c $d
-     /tmp/cc8GAdzf.s:330    .text.BKP_GetFlagStatus:00000000 $t
-     /tmp/cc8GAdzf.s:336    .text.BKP_GetFlagStatus:00000000 BKP_GetFlagStatus
-     /tmp/cc8GAdzf.s:353    .text.BKP_GetFlagStatus:0000000c $d
-     /tmp/cc8GAdzf.s:358    .text.BKP_ClearFlag:00000000 $t
-     /tmp/cc8GAdzf.s:364    .text.BKP_ClearFlag:00000000 BKP_ClearFlag
-     /tmp/cc8GAdzf.s:384    .text.BKP_ClearFlag:00000010 $d
-     /tmp/cc8GAdzf.s:389    .text.BKP_GetITStatus:00000000 $t
-     /tmp/cc8GAdzf.s:395    .text.BKP_GetITStatus:00000000 BKP_GetITStatus
-     /tmp/cc8GAdzf.s:412    .text.BKP_GetITStatus:0000000c $d
-     /tmp/cc8GAdzf.s:417    .text.BKP_ClearITPendingBit:00000000 $t
-     /tmp/cc8GAdzf.s:423    .text.BKP_ClearITPendingBit:00000000 BKP_ClearITPendingBit
-     /tmp/cc8GAdzf.s:443    .text.BKP_ClearITPendingBit:00000010 $d
+     /tmp/ccfjDgPg.s:19     .text.BKP_DeInit:00000000 $t
+     /tmp/ccfjDgPg.s:25     .text.BKP_DeInit:00000000 BKP_DeInit
+     /tmp/ccfjDgPg.s:50     .text.BKP_TamperPinLevelConfig:00000000 $t
+     /tmp/ccfjDgPg.s:56     .text.BKP_TamperPinLevelConfig:00000000 BKP_TamperPinLevelConfig
+     /tmp/ccfjDgPg.s:74     .text.BKP_TamperPinLevelConfig:00000008 $d
+     /tmp/ccfjDgPg.s:79     .text.BKP_TamperPinCmd:00000000 $t
+     /tmp/ccfjDgPg.s:85     .text.BKP_TamperPinCmd:00000000 BKP_TamperPinCmd
+     /tmp/ccfjDgPg.s:103    .text.BKP_TamperPinCmd:00000008 $d
+     /tmp/ccfjDgPg.s:108    .text.BKP_ITConfig:00000000 $t
+     /tmp/ccfjDgPg.s:114    .text.BKP_ITConfig:00000000 BKP_ITConfig
+     /tmp/ccfjDgPg.s:132    .text.BKP_ITConfig:00000008 $d
+     /tmp/ccfjDgPg.s:137    .text.BKP_RTCOutputConfig:00000000 $t
+     /tmp/ccfjDgPg.s:143    .text.BKP_RTCOutputConfig:00000000 BKP_RTCOutputConfig
+     /tmp/ccfjDgPg.s:175    .text.BKP_RTCOutputConfig:00000010 $d
+     /tmp/ccfjDgPg.s:180    .text.BKP_SetRTCCalibrationValue:00000000 $t
+     /tmp/ccfjDgPg.s:186    .text.BKP_SetRTCCalibrationValue:00000000 BKP_SetRTCCalibrationValue
+     /tmp/ccfjDgPg.s:218    .text.BKP_SetRTCCalibrationValue:00000010 $d
+     /tmp/ccfjDgPg.s:223    .text.BKP_WriteBackupRegister:00000000 $t
+     /tmp/ccfjDgPg.s:229    .text.BKP_WriteBackupRegister:00000000 BKP_WriteBackupRegister
+     /tmp/ccfjDgPg.s:271    .text.BKP_WriteBackupRegister:00000018 $d
+     /tmp/ccfjDgPg.s:276    .text.BKP_ReadBackupRegister:00000000 $t
+     /tmp/ccfjDgPg.s:282    .text.BKP_ReadBackupRegister:00000000 BKP_ReadBackupRegister
+     /tmp/ccfjDgPg.s:325    .text.BKP_ReadBackupRegister:0000001c $d
+     /tmp/ccfjDgPg.s:330    .text.BKP_GetFlagStatus:00000000 $t
+     /tmp/ccfjDgPg.s:336    .text.BKP_GetFlagStatus:00000000 BKP_GetFlagStatus
+     /tmp/ccfjDgPg.s:353    .text.BKP_GetFlagStatus:0000000c $d
+     /tmp/ccfjDgPg.s:358    .text.BKP_ClearFlag:00000000 $t
+     /tmp/ccfjDgPg.s:364    .text.BKP_ClearFlag:00000000 BKP_ClearFlag
+     /tmp/ccfjDgPg.s:384    .text.BKP_ClearFlag:00000010 $d
+     /tmp/ccfjDgPg.s:389    .text.BKP_GetITStatus:00000000 $t
+     /tmp/ccfjDgPg.s:395    .text.BKP_GetITStatus:00000000 BKP_GetITStatus
+     /tmp/ccfjDgPg.s:412    .text.BKP_GetITStatus:0000000c $d
+     /tmp/ccfjDgPg.s:417    .text.BKP_ClearITPendingBit:00000000 $t
+     /tmp/ccfjDgPg.s:423    .text.BKP_ClearITPendingBit:00000000 BKP_ClearITPendingBit
+     /tmp/ccfjDgPg.s:443    .text.BKP_ClearITPendingBit:00000010 $d
 
 UNDEFINED SYMBOLS
 RCC_BackupResetCmd

@@ -1,4 +1,5 @@
-build/stm32f10x_rcc.o: Drivers/src/stm32f10x_rcc.c \
+build/stm32f10x_rcc.o: \
+ .ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_rcc.c \
  Drivers/inc/stm32f10x_rcc.h cmsis/stm32f10x.h cmsis/core_cm3.h \
  cmsis/system_stm32f10x.h source/stm32f10x_conf.h \
  Drivers/inc/stm32f10x_adc.h Drivers/inc/stm32f10x_bkp.h \

@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccmMUiPy.s 			page 1
+ARM GAS  /tmp/ccYv0DLs.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -17,7 +17,7 @@ ARM GAS  /tmp/ccmMUiPy.s 			page 1
   14              		.text
   15              	.Ltext0:
   16              		.cfi_sections	.debug_frame
-  17              		.file 1 "./Drivers/src/stm32f10x_cec.c"
+  17              		.file 1 "./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c"
   18              		.section	.text.CEC_DeInit,"ax",%progbits
   19              		.align	1
   20              		.global	CEC_DeInit
@@ -26,130 +26,130 @@ ARM GAS  /tmp/ccmMUiPy.s 			page 1
   23              		.thumb_func
   25              	CEC_DeInit:
   26              	.LFB29:
-   1:./Drivers/src/stm32f10x_cec.c **** /**
-   2:./Drivers/src/stm32f10x_cec.c ****   ******************************************************************************
-   3:./Drivers/src/stm32f10x_cec.c ****   * @file    stm32f10x_cec.c
-   4:./Drivers/src/stm32f10x_cec.c ****   * @author  MCD Application Team
-   5:./Drivers/src/stm32f10x_cec.c ****   * @version V3.6.2
-   6:./Drivers/src/stm32f10x_cec.c ****   * @date    17-September-2021
-   7:./Drivers/src/stm32f10x_cec.c ****   * @brief   This file provides all the CEC firmware functions.
-   8:./Drivers/src/stm32f10x_cec.c ****   ******************************************************************************
-   9:./Drivers/src/stm32f10x_cec.c ****   * @attention
-  10:./Drivers/src/stm32f10x_cec.c ****   *
-  11:./Drivers/src/stm32f10x_cec.c ****   * Copyright (c) 2012 STMicroelectronics.
-  12:./Drivers/src/stm32f10x_cec.c ****   * All rights reserved.
-  13:./Drivers/src/stm32f10x_cec.c ****   *
-  14:./Drivers/src/stm32f10x_cec.c ****   * This software is licensed under terms that can be found in the LICENSE file
-  15:./Drivers/src/stm32f10x_cec.c ****   * in the root directory of this software component.
-  16:./Drivers/src/stm32f10x_cec.c ****   * If no LICENSE file comes with this software, it is provided AS-IS.
-  17:./Drivers/src/stm32f10x_cec.c ****   *
-  18:./Drivers/src/stm32f10x_cec.c ****   ******************************************************************************
-  19:./Drivers/src/stm32f10x_cec.c ****   */
-  20:./Drivers/src/stm32f10x_cec.c **** 
-  21:./Drivers/src/stm32f10x_cec.c **** /* Includes ------------------------------------------------------------------*/
-  22:./Drivers/src/stm32f10x_cec.c **** #include "stm32f10x_cec.h"
-  23:./Drivers/src/stm32f10x_cec.c **** #include "stm32f10x_rcc.h"
-  24:./Drivers/src/stm32f10x_cec.c **** 
-  25:./Drivers/src/stm32f10x_cec.c **** /** @addtogroup STM32F10x_StdPeriph_Driver
-  26:./Drivers/src/stm32f10x_cec.c ****   * @{
-  27:./Drivers/src/stm32f10x_cec.c ****   */
-  28:./Drivers/src/stm32f10x_cec.c **** 
-  29:./Drivers/src/stm32f10x_cec.c **** /** @defgroup CEC 
-  30:./Drivers/src/stm32f10x_cec.c ****   * @brief CEC driver modules
-  31:./Drivers/src/stm32f10x_cec.c ****   * @{
-  32:./Drivers/src/stm32f10x_cec.c ****   */
-ARM GAS  /tmp/ccmMUiPy.s 			page 2
+   1:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** /**
+   2:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   ******************************************************************************
+   3:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @file    stm32f10x_cec.c
+   4:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @author  MCD Application Team
+   5:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @version V3.6.2
+   6:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @date    17-September-2021
+   7:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @brief   This file provides all the CEC firmware functions.
+   8:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   ******************************************************************************
+   9:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @attention
+  10:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   *
+  11:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * Copyright (c) 2012 STMicroelectronics.
+  12:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * All rights reserved.
+  13:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   *
+  14:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * This software is licensed under terms that can be found in the LICENSE file
+  15:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * in the root directory of this software component.
+  16:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * If no LICENSE file comes with this software, it is provided AS-IS.
+  17:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   *
+  18:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   ******************************************************************************
+  19:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   */
+  20:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** 
+  21:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** /* Includes ------------------------------------------------------------------*/
+  22:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** #include "stm32f10x_cec.h"
+  23:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** #include "stm32f10x_rcc.h"
+  24:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** 
+  25:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** /** @addtogroup STM32F10x_StdPeriph_Driver
+  26:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @{
+  27:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   */
+  28:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** 
+  29:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** /** @defgroup CEC 
+  30:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @brief CEC driver modules
+  31:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @{
+  32:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   */
+ARM GAS  /tmp/ccYv0DLs.s 			page 2
 
 
-  33:./Drivers/src/stm32f10x_cec.c **** 
-  34:./Drivers/src/stm32f10x_cec.c **** /** @defgroup CEC_Private_TypesDefinitions
-  35:./Drivers/src/stm32f10x_cec.c ****   * @{
-  36:./Drivers/src/stm32f10x_cec.c ****   */
-  37:./Drivers/src/stm32f10x_cec.c **** 
-  38:./Drivers/src/stm32f10x_cec.c **** /**
-  39:./Drivers/src/stm32f10x_cec.c ****   * @}
-  40:./Drivers/src/stm32f10x_cec.c ****   */
-  41:./Drivers/src/stm32f10x_cec.c **** 
-  42:./Drivers/src/stm32f10x_cec.c **** 
-  43:./Drivers/src/stm32f10x_cec.c **** /** @defgroup CEC_Private_Defines
-  44:./Drivers/src/stm32f10x_cec.c ****   * @{
-  45:./Drivers/src/stm32f10x_cec.c ****   */ 
-  46:./Drivers/src/stm32f10x_cec.c **** 
-  47:./Drivers/src/stm32f10x_cec.c **** /* ------------ CEC registers bit address in the alias region ----------- */
-  48:./Drivers/src/stm32f10x_cec.c **** #define CEC_OFFSET                (CEC_BASE - PERIPH_BASE)
-  49:./Drivers/src/stm32f10x_cec.c **** 
-  50:./Drivers/src/stm32f10x_cec.c **** /* --- CFGR Register ---*/
-  51:./Drivers/src/stm32f10x_cec.c **** 
-  52:./Drivers/src/stm32f10x_cec.c **** /* Alias word address of PE bit */
-  53:./Drivers/src/stm32f10x_cec.c **** #define CFGR_OFFSET                 (CEC_OFFSET + 0x00)
-  54:./Drivers/src/stm32f10x_cec.c **** #define PE_BitNumber                0x00
-  55:./Drivers/src/stm32f10x_cec.c **** #define CFGR_PE_BB                  (PERIPH_BB_BASE + (CFGR_OFFSET * 32) + (PE_BitNumber * 4))
-  56:./Drivers/src/stm32f10x_cec.c **** 
-  57:./Drivers/src/stm32f10x_cec.c **** /* Alias word address of IE bit */
-  58:./Drivers/src/stm32f10x_cec.c **** #define IE_BitNumber                0x01
-  59:./Drivers/src/stm32f10x_cec.c **** #define CFGR_IE_BB                  (PERIPH_BB_BASE + (CFGR_OFFSET * 32) + (IE_BitNumber * 4))
-  60:./Drivers/src/stm32f10x_cec.c **** 
-  61:./Drivers/src/stm32f10x_cec.c **** /* --- CSR Register ---*/
-  62:./Drivers/src/stm32f10x_cec.c **** 
-  63:./Drivers/src/stm32f10x_cec.c **** /* Alias word address of TSOM bit */
-  64:./Drivers/src/stm32f10x_cec.c **** #define CSR_OFFSET                  (CEC_OFFSET + 0x10)
-  65:./Drivers/src/stm32f10x_cec.c **** #define TSOM_BitNumber              0x00
-  66:./Drivers/src/stm32f10x_cec.c **** #define CSR_TSOM_BB                 (PERIPH_BB_BASE + (CSR_OFFSET * 32) + (TSOM_BitNumber * 4))
-  67:./Drivers/src/stm32f10x_cec.c **** 
-  68:./Drivers/src/stm32f10x_cec.c **** /* Alias word address of TEOM bit */
-  69:./Drivers/src/stm32f10x_cec.c **** #define TEOM_BitNumber              0x01
-  70:./Drivers/src/stm32f10x_cec.c **** #define CSR_TEOM_BB                 (PERIPH_BB_BASE + (CSR_OFFSET * 32) + (TEOM_BitNumber * 4))
-  71:./Drivers/src/stm32f10x_cec.c ****   
-  72:./Drivers/src/stm32f10x_cec.c **** #define CFGR_CLEAR_Mask            (uint8_t)(0xF3)        /* CFGR register Mask */
-  73:./Drivers/src/stm32f10x_cec.c **** #define FLAG_Mask                  ((uint32_t)0x00FFFFFF) /* CEC FLAG mask */
-  74:./Drivers/src/stm32f10x_cec.c ****  
-  75:./Drivers/src/stm32f10x_cec.c **** /**
-  76:./Drivers/src/stm32f10x_cec.c ****   * @}
-  77:./Drivers/src/stm32f10x_cec.c ****   */ 
-  78:./Drivers/src/stm32f10x_cec.c **** 
-  79:./Drivers/src/stm32f10x_cec.c **** 
-  80:./Drivers/src/stm32f10x_cec.c **** /** @defgroup CEC_Private_Macros
-  81:./Drivers/src/stm32f10x_cec.c ****   * @{
-  82:./Drivers/src/stm32f10x_cec.c ****   */ 
-  83:./Drivers/src/stm32f10x_cec.c **** 
-  84:./Drivers/src/stm32f10x_cec.c **** /**
-  85:./Drivers/src/stm32f10x_cec.c ****   * @}
-  86:./Drivers/src/stm32f10x_cec.c ****   */ 
-  87:./Drivers/src/stm32f10x_cec.c **** 
-  88:./Drivers/src/stm32f10x_cec.c **** 
-  89:./Drivers/src/stm32f10x_cec.c **** /** @defgroup CEC_Private_Variables
-ARM GAS  /tmp/ccmMUiPy.s 			page 3
+  33:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** 
+  34:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** /** @defgroup CEC_Private_TypesDefinitions
+  35:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @{
+  36:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   */
+  37:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** 
+  38:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** /**
+  39:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @}
+  40:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   */
+  41:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** 
+  42:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** 
+  43:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** /** @defgroup CEC_Private_Defines
+  44:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @{
+  45:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   */ 
+  46:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** 
+  47:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** /* ------------ CEC registers bit address in the alias region ----------- */
+  48:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** #define CEC_OFFSET                (CEC_BASE - PERIPH_BASE)
+  49:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** 
+  50:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** /* --- CFGR Register ---*/
+  51:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** 
+  52:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** /* Alias word address of PE bit */
+  53:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** #define CFGR_OFFSET                 (CEC_OFFSET + 0x00)
+  54:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** #define PE_BitNumber                0x00
+  55:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** #define CFGR_PE_BB                  (PERIPH_BB_BASE + (CFGR_OFFSET * 32) + (PE_BitNumber * 4))
+  56:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** 
+  57:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** /* Alias word address of IE bit */
+  58:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** #define IE_BitNumber                0x01
+  59:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** #define CFGR_IE_BB                  (PERIPH_BB_BASE + (CFGR_OFFSET * 32) + (IE_BitNumber * 4))
+  60:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** 
+  61:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** /* --- CSR Register ---*/
+  62:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** 
+  63:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** /* Alias word address of TSOM bit */
+  64:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** #define CSR_OFFSET                  (CEC_OFFSET + 0x10)
+  65:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** #define TSOM_BitNumber              0x00
+  66:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** #define CSR_TSOM_BB                 (PERIPH_BB_BASE + (CSR_OFFSET * 32) + (TSOM_BitNumber * 4))
+  67:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** 
+  68:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** /* Alias word address of TEOM bit */
+  69:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** #define TEOM_BitNumber              0x01
+  70:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** #define CSR_TEOM_BB                 (PERIPH_BB_BASE + (CSR_OFFSET * 32) + (TEOM_BitNumber * 4))
+  71:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   
+  72:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** #define CFGR_CLEAR_Mask            (uint8_t)(0xF3)        /* CFGR register Mask */
+  73:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** #define FLAG_Mask                  ((uint32_t)0x00FFFFFF) /* CEC FLAG mask */
+  74:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****  
+  75:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** /**
+  76:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @}
+  77:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   */ 
+  78:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** 
+  79:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** 
+  80:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** /** @defgroup CEC_Private_Macros
+  81:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @{
+  82:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   */ 
+  83:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** 
+  84:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** /**
+  85:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @}
+  86:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   */ 
+  87:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** 
+  88:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** 
+  89:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** /** @defgroup CEC_Private_Variables
+ARM GAS  /tmp/ccYv0DLs.s 			page 3
 
 
-  90:./Drivers/src/stm32f10x_cec.c ****   * @{
-  91:./Drivers/src/stm32f10x_cec.c ****   */ 
-  92:./Drivers/src/stm32f10x_cec.c **** 
-  93:./Drivers/src/stm32f10x_cec.c **** /**
-  94:./Drivers/src/stm32f10x_cec.c ****   * @}
-  95:./Drivers/src/stm32f10x_cec.c ****   */ 
-  96:./Drivers/src/stm32f10x_cec.c **** 
-  97:./Drivers/src/stm32f10x_cec.c **** 
-  98:./Drivers/src/stm32f10x_cec.c **** /** @defgroup CEC_Private_FunctionPrototypes
-  99:./Drivers/src/stm32f10x_cec.c ****   * @{
- 100:./Drivers/src/stm32f10x_cec.c ****   */
- 101:./Drivers/src/stm32f10x_cec.c ****  
- 102:./Drivers/src/stm32f10x_cec.c **** /**
- 103:./Drivers/src/stm32f10x_cec.c ****   * @}
- 104:./Drivers/src/stm32f10x_cec.c ****   */ 
- 105:./Drivers/src/stm32f10x_cec.c **** 
- 106:./Drivers/src/stm32f10x_cec.c **** 
- 107:./Drivers/src/stm32f10x_cec.c **** /** @defgroup CEC_Private_Functions
- 108:./Drivers/src/stm32f10x_cec.c ****   * @{
- 109:./Drivers/src/stm32f10x_cec.c ****   */ 
- 110:./Drivers/src/stm32f10x_cec.c **** 
- 111:./Drivers/src/stm32f10x_cec.c **** /**
- 112:./Drivers/src/stm32f10x_cec.c ****   * @brief  Deinitializes the CEC peripheral registers to their default reset 
- 113:./Drivers/src/stm32f10x_cec.c ****   *         values.
- 114:./Drivers/src/stm32f10x_cec.c ****   * @param  None
- 115:./Drivers/src/stm32f10x_cec.c ****   * @retval None
- 116:./Drivers/src/stm32f10x_cec.c ****   */
- 117:./Drivers/src/stm32f10x_cec.c **** void CEC_DeInit(void)
- 118:./Drivers/src/stm32f10x_cec.c **** {
+  90:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @{
+  91:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   */ 
+  92:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** 
+  93:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** /**
+  94:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @}
+  95:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   */ 
+  96:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** 
+  97:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** 
+  98:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** /** @defgroup CEC_Private_FunctionPrototypes
+  99:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @{
+ 100:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   */
+ 101:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****  
+ 102:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** /**
+ 103:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @}
+ 104:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   */ 
+ 105:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** 
+ 106:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** 
+ 107:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** /** @defgroup CEC_Private_Functions
+ 108:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @{
+ 109:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   */ 
+ 110:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** 
+ 111:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** /**
+ 112:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @brief  Deinitializes the CEC peripheral registers to their default reset 
+ 113:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   *         values.
+ 114:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @param  None
+ 115:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @retval None
+ 116:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   */
+ 117:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** void CEC_DeInit(void)
+ 118:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** {
   27              		.loc 1 118 1 view -0
   28              		.cfi_startproc
   29              		@ args = 0, pretend = 0, frame = 0
@@ -159,26 +159,26 @@ ARM GAS  /tmp/ccmMUiPy.s 			page 1
   33              		.cfi_def_cfa_offset 8
   34              		.cfi_offset 3, -8
   35              		.cfi_offset 14, -4
- 119:./Drivers/src/stm32f10x_cec.c ****   /* Enable CEC reset state */
- 120:./Drivers/src/stm32f10x_cec.c ****   RCC_APB1PeriphResetCmd(RCC_APB1Periph_CEC, ENABLE);  
+ 119:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   /* Enable CEC reset state */
+ 120:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   RCC_APB1PeriphResetCmd(RCC_APB1Periph_CEC, ENABLE);  
   36              		.loc 1 120 3 view .LVU1
   37 0002 0121     		movs	r1, #1
   38 0004 4FF08040 		mov	r0, #1073741824
   39 0008 FFF7FEFF 		bl	RCC_APB1PeriphResetCmd
   40              	.LVL0:
- 121:./Drivers/src/stm32f10x_cec.c ****   /* Release CEC from reset state */
- 122:./Drivers/src/stm32f10x_cec.c ****   RCC_APB1PeriphResetCmd(RCC_APB1Periph_CEC, DISABLE); 
+ 121:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   /* Release CEC from reset state */
+ 122:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   RCC_APB1PeriphResetCmd(RCC_APB1Periph_CEC, DISABLE); 
   41              		.loc 1 122 3 view .LVU2
   42 000c 0021     		movs	r1, #0
   43 000e 4FF08040 		mov	r0, #1073741824
   44 0012 FFF7FEFF 		bl	RCC_APB1PeriphResetCmd
   45              	.LVL1:
- 123:./Drivers/src/stm32f10x_cec.c **** }
+ 123:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** }
   46              		.loc 1 123 1 is_stmt 0 view .LVU3
   47 0016 08BD     		pop	{r3, pc}
   48              		.cfi_endproc
   49              	.LFE29:
-ARM GAS  /tmp/ccmMUiPy.s 			page 4
+ARM GAS  /tmp/ccYv0DLs.s 			page 4
 
 
   51              		.section	.text.CEC_Init,"ax",%progbits
@@ -190,55 +190,55 @@ ARM GAS  /tmp/ccmMUiPy.s 			page 1
   58              	CEC_Init:
   59              	.LVL2:
   60              	.LFB30:
- 124:./Drivers/src/stm32f10x_cec.c **** 
- 125:./Drivers/src/stm32f10x_cec.c **** 
- 126:./Drivers/src/stm32f10x_cec.c **** /**
- 127:./Drivers/src/stm32f10x_cec.c ****   * @brief  Initializes the CEC peripheral according to the specified 
- 128:./Drivers/src/stm32f10x_cec.c ****   *         parameters in the CEC_InitStruct.
- 129:./Drivers/src/stm32f10x_cec.c ****   * @param  CEC_InitStruct: pointer to an CEC_InitTypeDef structure that
- 130:./Drivers/src/stm32f10x_cec.c ****   *         contains the configuration information for the specified
- 131:./Drivers/src/stm32f10x_cec.c ****   *         CEC peripheral.
- 132:./Drivers/src/stm32f10x_cec.c ****   * @retval None
- 133:./Drivers/src/stm32f10x_cec.c ****   */
- 134:./Drivers/src/stm32f10x_cec.c **** void CEC_Init(CEC_InitTypeDef* CEC_InitStruct)
- 135:./Drivers/src/stm32f10x_cec.c **** {
+ 124:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** 
+ 125:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** 
+ 126:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** /**
+ 127:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @brief  Initializes the CEC peripheral according to the specified 
+ 128:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   *         parameters in the CEC_InitStruct.
+ 129:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @param  CEC_InitStruct: pointer to an CEC_InitTypeDef structure that
+ 130:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   *         contains the configuration information for the specified
+ 131:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   *         CEC peripheral.
+ 132:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @retval None
+ 133:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   */
+ 134:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** void CEC_Init(CEC_InitTypeDef* CEC_InitStruct)
+ 135:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** {
   61              		.loc 1 135 1 is_stmt 1 view -0
   62              		.cfi_startproc
   63              		@ args = 0, pretend = 0, frame = 0
   64              		@ frame_needed = 0, uses_anonymous_args = 0
   65              		@ link register save eliminated.
- 136:./Drivers/src/stm32f10x_cec.c ****   uint16_t tmpreg = 0;
+ 136:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   uint16_t tmpreg = 0;
   66              		.loc 1 136 3 view .LVU5
- 137:./Drivers/src/stm32f10x_cec.c ****  
- 138:./Drivers/src/stm32f10x_cec.c ****   /* Check the parameters */
- 139:./Drivers/src/stm32f10x_cec.c ****   assert_param(IS_CEC_BIT_TIMING_ERROR_MODE(CEC_InitStruct->CEC_BitTimingMode)); 
+ 137:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****  
+ 138:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   /* Check the parameters */
+ 139:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   assert_param(IS_CEC_BIT_TIMING_ERROR_MODE(CEC_InitStruct->CEC_BitTimingMode)); 
   67              		.loc 1 139 3 view .LVU6
- 140:./Drivers/src/stm32f10x_cec.c ****   assert_param(IS_CEC_BIT_PERIOD_ERROR_MODE(CEC_InitStruct->CEC_BitPeriodMode));
+ 140:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   assert_param(IS_CEC_BIT_PERIOD_ERROR_MODE(CEC_InitStruct->CEC_BitPeriodMode));
   68              		.loc 1 140 3 view .LVU7
- 141:./Drivers/src/stm32f10x_cec.c ****      
- 142:./Drivers/src/stm32f10x_cec.c ****   /*---------------------------- CEC CFGR Configuration -----------------*/
- 143:./Drivers/src/stm32f10x_cec.c ****   /* Get the CEC CFGR value */
- 144:./Drivers/src/stm32f10x_cec.c ****   tmpreg = CEC->CFGR;
+ 141:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****      
+ 142:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   /*---------------------------- CEC CFGR Configuration -----------------*/
+ 143:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   /* Get the CEC CFGR value */
+ 144:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   tmpreg = CEC->CFGR;
   69              		.loc 1 144 3 view .LVU8
   70              		.loc 1 144 15 is_stmt 0 view .LVU9
   71 0000 0449     		ldr	r1, .L4
   72 0002 0A68     		ldr	r2, [r1]
   73              	.LVL3:
- 145:./Drivers/src/stm32f10x_cec.c ****   
- 146:./Drivers/src/stm32f10x_cec.c ****   /* Clear BTEM and BPEM bits */
- 147:./Drivers/src/stm32f10x_cec.c ****   tmpreg &= CFGR_CLEAR_Mask;
+ 145:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   
+ 146:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   /* Clear BTEM and BPEM bits */
+ 147:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   tmpreg &= CFGR_CLEAR_Mask;
   74              		.loc 1 147 3 is_stmt 1 view .LVU10
   75              		.loc 1 147 10 is_stmt 0 view .LVU11
   76 0004 02F0F302 		and	r2, r2, #243
   77              	.LVL4:
- 148:./Drivers/src/stm32f10x_cec.c ****   
- 149:./Drivers/src/stm32f10x_cec.c ****   /* Configure CEC: Bit Timing Error and Bit Period Error */
- 150:./Drivers/src/stm32f10x_cec.c ****   tmpreg |= (uint16_t)(CEC_InitStruct->CEC_BitTimingMode | CEC_InitStruct->CEC_BitPeriodMode);
+ 148:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   
+ 149:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   /* Configure CEC: Bit Timing Error and Bit Period Error */
+ 150:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   tmpreg |= (uint16_t)(CEC_InitStruct->CEC_BitTimingMode | CEC_InitStruct->CEC_BitPeriodMode);
   78              		.loc 1 150 3 is_stmt 1 view .LVU12
   79              		.loc 1 150 38 is_stmt 0 view .LVU13
   80 0008 0388     		ldrh	r3, [r0]
   81              		.loc 1 150 74 view .LVU14
-ARM GAS  /tmp/ccmMUiPy.s 			page 5
+ARM GAS  /tmp/ccYv0DLs.s 			page 5
 
 
   82 000a 4088     		ldrh	r0, [r0, #2]
@@ -248,14 +248,14 @@ ARM GAS  /tmp/ccmMUiPy.s 			page 1
   86              		.loc 1 150 10 view .LVU16
   87 000e 1343     		orrs	r3, r3, r2
   88              	.LVL6:
- 151:./Drivers/src/stm32f10x_cec.c **** 
- 152:./Drivers/src/stm32f10x_cec.c ****   /* Write to CEC CFGR  register*/
- 153:./Drivers/src/stm32f10x_cec.c ****   CEC->CFGR = tmpreg;
+ 151:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** 
+ 152:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   /* Write to CEC CFGR  register*/
+ 153:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   CEC->CFGR = tmpreg;
   89              		.loc 1 153 3 is_stmt 1 view .LVU17
   90              		.loc 1 153 13 is_stmt 0 view .LVU18
   91 0010 0B60     		str	r3, [r1]
- 154:./Drivers/src/stm32f10x_cec.c ****   
- 155:./Drivers/src/stm32f10x_cec.c **** }
+ 154:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   
+ 155:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** }
   92              		.loc 1 155 1 view .LVU19
   93 0012 7047     		bx	lr
   94              	.L5:
@@ -273,57 +273,57 @@ ARM GAS  /tmp/ccmMUiPy.s 			page 1
  108              	CEC_Cmd:
  109              	.LVL7:
  110              	.LFB31:
- 156:./Drivers/src/stm32f10x_cec.c **** 
- 157:./Drivers/src/stm32f10x_cec.c **** /**
- 158:./Drivers/src/stm32f10x_cec.c ****   * @brief  Enables or disables the specified CEC peripheral.
- 159:./Drivers/src/stm32f10x_cec.c ****   * @param  NewState: new state of the CEC peripheral. 
- 160:./Drivers/src/stm32f10x_cec.c ****   *     This parameter can be: ENABLE or DISABLE.
- 161:./Drivers/src/stm32f10x_cec.c ****   * @retval None
- 162:./Drivers/src/stm32f10x_cec.c ****   */
- 163:./Drivers/src/stm32f10x_cec.c **** void CEC_Cmd(FunctionalState NewState)
- 164:./Drivers/src/stm32f10x_cec.c **** {
+ 156:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** 
+ 157:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** /**
+ 158:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @brief  Enables or disables the specified CEC peripheral.
+ 159:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @param  NewState: new state of the CEC peripheral. 
+ 160:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   *     This parameter can be: ENABLE or DISABLE.
+ 161:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @retval None
+ 162:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   */
+ 163:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** void CEC_Cmd(FunctionalState NewState)
+ 164:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** {
  111              		.loc 1 164 1 is_stmt 1 view -0
  112              		.cfi_startproc
  113              		@ args = 0, pretend = 0, frame = 0
  114              		@ frame_needed = 0, uses_anonymous_args = 0
  115              		@ link register save eliminated.
- 165:./Drivers/src/stm32f10x_cec.c ****   /* Check the parameters */
- 166:./Drivers/src/stm32f10x_cec.c ****   assert_param(IS_FUNCTIONAL_STATE(NewState));
+ 165:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   /* Check the parameters */
+ 166:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   assert_param(IS_FUNCTIONAL_STATE(NewState));
  116              		.loc 1 166 3 view .LVU21
- 167:./Drivers/src/stm32f10x_cec.c **** 
- 168:./Drivers/src/stm32f10x_cec.c ****   *(__IO uint32_t *) CFGR_PE_BB = (uint32_t)NewState;
+ 167:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** 
+ 168:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   *(__IO uint32_t *) CFGR_PE_BB = (uint32_t)NewState;
  117              		.loc 1 168 3 view .LVU22
  118              		.loc 1 168 33 is_stmt 0 view .LVU23
  119 0000 044B     		ldr	r3, .L9
  120 0002 1860     		str	r0, [r3]
- 169:./Drivers/src/stm32f10x_cec.c **** 
- 170:./Drivers/src/stm32f10x_cec.c ****   if(NewState == DISABLE)
-ARM GAS  /tmp/ccmMUiPy.s 			page 6
+ 169:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** 
+ 170:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   if(NewState == DISABLE)
+ARM GAS  /tmp/ccYv0DLs.s 			page 6
 
 
  121              		.loc 1 170 3 is_stmt 1 view .LVU24
  122              		.loc 1 170 5 is_stmt 0 view .LVU25
  123 0004 20B9     		cbnz	r0, .L6
  124              	.L8:
- 171:./Drivers/src/stm32f10x_cec.c ****   {
- 172:./Drivers/src/stm32f10x_cec.c ****     /* Wait until the PE bit is cleared by hardware (Idle Line detected) */
- 173:./Drivers/src/stm32f10x_cec.c ****     while((CEC->CFGR & CEC_CFGR_PE) != (uint32_t)RESET)
- 174:./Drivers/src/stm32f10x_cec.c ****     {
- 175:./Drivers/src/stm32f10x_cec.c ****     }  
+ 171:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   {
+ 172:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****     /* Wait until the PE bit is cleared by hardware (Idle Line detected) */
+ 173:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****     while((CEC->CFGR & CEC_CFGR_PE) != (uint32_t)RESET)
+ 174:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****     {
+ 175:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****     }  
  125              		.loc 1 175 5 is_stmt 1 view .LVU26
- 173:./Drivers/src/stm32f10x_cec.c ****     {
+ 173:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****     {
  126              		.loc 1 173 37 discriminator 1 view .LVU27
- 173:./Drivers/src/stm32f10x_cec.c ****     {
+ 173:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****     {
  127              		.loc 1 173 15 is_stmt 0 discriminator 1 view .LVU28
  128 0006 044B     		ldr	r3, .L9+4
  129 0008 1B68     		ldr	r3, [r3]
- 173:./Drivers/src/stm32f10x_cec.c ****     {
+ 173:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****     {
  130              		.loc 1 173 37 discriminator 1 view .LVU29
  131 000a 13F0010F 		tst	r3, #1
  132 000e FAD1     		bne	.L8
  133              	.L6:
- 176:./Drivers/src/stm32f10x_cec.c ****   }  
- 177:./Drivers/src/stm32f10x_cec.c **** }
+ 176:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   }  
+ 177:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** }
  134              		.loc 1 177 1 view .LVU30
  135 0010 7047     		bx	lr
  136              	.L10:
@@ -342,33 +342,33 @@ ARM GAS  /tmp/ccmMUiPy.s 			page 1
  151              	CEC_ITConfig:
  152              	.LVL8:
  153              	.LFB32:
- 178:./Drivers/src/stm32f10x_cec.c **** 
- 179:./Drivers/src/stm32f10x_cec.c **** /**
- 180:./Drivers/src/stm32f10x_cec.c ****   * @brief  Enables or disables the CEC interrupt.
- 181:./Drivers/src/stm32f10x_cec.c ****   * @param  NewState: new state of the CEC interrupt.
- 182:./Drivers/src/stm32f10x_cec.c ****   *   This parameter can be: ENABLE or DISABLE.
- 183:./Drivers/src/stm32f10x_cec.c ****   * @retval None
- 184:./Drivers/src/stm32f10x_cec.c ****   */
- 185:./Drivers/src/stm32f10x_cec.c **** void CEC_ITConfig(FunctionalState NewState)
- 186:./Drivers/src/stm32f10x_cec.c **** {
+ 178:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** 
+ 179:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** /**
+ 180:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @brief  Enables or disables the CEC interrupt.
+ 181:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @param  NewState: new state of the CEC interrupt.
+ 182:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   *   This parameter can be: ENABLE or DISABLE.
+ 183:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @retval None
+ 184:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   */
+ 185:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** void CEC_ITConfig(FunctionalState NewState)
+ 186:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** {
  154              		.loc 1 186 1 is_stmt 1 view -0
  155              		.cfi_startproc
  156              		@ args = 0, pretend = 0, frame = 0
  157              		@ frame_needed = 0, uses_anonymous_args = 0
  158              		@ link register save eliminated.
- 187:./Drivers/src/stm32f10x_cec.c ****   /* Check the parameters */
- 188:./Drivers/src/stm32f10x_cec.c ****   assert_param(IS_FUNCTIONAL_STATE(NewState));
-ARM GAS  /tmp/ccmMUiPy.s 			page 7
+ 187:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   /* Check the parameters */
+ 188:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   assert_param(IS_FUNCTIONAL_STATE(NewState));
+ARM GAS  /tmp/ccYv0DLs.s 			page 7
 
 
  159              		.loc 1 188 3 view .LVU32
- 189:./Drivers/src/stm32f10x_cec.c **** 
- 190:./Drivers/src/stm32f10x_cec.c ****   *(__IO uint32_t *) CFGR_IE_BB = (uint32_t)NewState;
+ 189:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** 
+ 190:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   *(__IO uint32_t *) CFGR_IE_BB = (uint32_t)NewState;
  160              		.loc 1 190 3 view .LVU33
  161              		.loc 1 190 33 is_stmt 0 view .LVU34
  162 0000 014B     		ldr	r3, .L12
  163 0002 5860     		str	r0, [r3, #4]
- 191:./Drivers/src/stm32f10x_cec.c **** }
+ 191:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** }
  164              		.loc 1 191 1 view .LVU35
  165 0004 7047     		bx	lr
  166              	.L13:
@@ -386,30 +386,30 @@ ARM GAS  /tmp/ccmMUiPy.s 			page 1
  180              	CEC_OwnAddressConfig:
  181              	.LVL9:
  182              	.LFB33:
- 192:./Drivers/src/stm32f10x_cec.c **** 
- 193:./Drivers/src/stm32f10x_cec.c **** /**
- 194:./Drivers/src/stm32f10x_cec.c ****   * @brief  Defines the Own Address of the CEC device.
- 195:./Drivers/src/stm32f10x_cec.c ****   * @param  CEC_OwnAddress: The CEC own address
- 196:./Drivers/src/stm32f10x_cec.c ****   * @retval None
- 197:./Drivers/src/stm32f10x_cec.c ****   */
- 198:./Drivers/src/stm32f10x_cec.c **** void CEC_OwnAddressConfig(uint8_t CEC_OwnAddress)
- 199:./Drivers/src/stm32f10x_cec.c **** {
+ 192:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** 
+ 193:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** /**
+ 194:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @brief  Defines the Own Address of the CEC device.
+ 195:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @param  CEC_OwnAddress: The CEC own address
+ 196:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @retval None
+ 197:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   */
+ 198:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** void CEC_OwnAddressConfig(uint8_t CEC_OwnAddress)
+ 199:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** {
  183              		.loc 1 199 1 is_stmt 1 view -0
  184              		.cfi_startproc
  185              		@ args = 0, pretend = 0, frame = 0
  186              		@ frame_needed = 0, uses_anonymous_args = 0
  187              		@ link register save eliminated.
- 200:./Drivers/src/stm32f10x_cec.c ****   /* Check the parameters */
- 201:./Drivers/src/stm32f10x_cec.c ****   assert_param(IS_CEC_ADDRESS(CEC_OwnAddress));
+ 200:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   /* Check the parameters */
+ 201:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   assert_param(IS_CEC_ADDRESS(CEC_OwnAddress));
  188              		.loc 1 201 3 view .LVU37
- 202:./Drivers/src/stm32f10x_cec.c **** 
- 203:./Drivers/src/stm32f10x_cec.c ****   /* Set the CEC own address */
- 204:./Drivers/src/stm32f10x_cec.c ****   CEC->OAR = CEC_OwnAddress;
+ 202:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** 
+ 203:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   /* Set the CEC own address */
+ 204:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   CEC->OAR = CEC_OwnAddress;
  189              		.loc 1 204 3 view .LVU38
  190              		.loc 1 204 12 is_stmt 0 view .LVU39
  191 0000 014B     		ldr	r3, .L15
  192 0002 5860     		str	r0, [r3, #4]
- 205:./Drivers/src/stm32f10x_cec.c **** }
+ 205:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** }
  193              		.loc 1 205 1 view .LVU40
  194 0004 7047     		bx	lr
  195              	.L16:
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccmMUiPy.s 			page 1
  198 0008 00780040 		.word	1073772544
  199              		.cfi_endproc
  200              	.LFE33:
-ARM GAS  /tmp/ccmMUiPy.s 			page 8
+ARM GAS  /tmp/ccYv0DLs.s 			page 8
 
 
  202              		.section	.text.CEC_SetPrescaler,"ax",%progbits
@@ -430,30 +430,30 @@ ARM GAS  /tmp/ccmMUiPy.s 			page 1
  209              	CEC_SetPrescaler:
  210              	.LVL10:
  211              	.LFB34:
- 206:./Drivers/src/stm32f10x_cec.c **** 
- 207:./Drivers/src/stm32f10x_cec.c **** /**
- 208:./Drivers/src/stm32f10x_cec.c ****   * @brief  Sets the CEC prescaler value.
- 209:./Drivers/src/stm32f10x_cec.c ****   * @param  CEC_Prescaler: CEC prescaler new value
- 210:./Drivers/src/stm32f10x_cec.c ****   * @retval None
- 211:./Drivers/src/stm32f10x_cec.c ****   */
- 212:./Drivers/src/stm32f10x_cec.c **** void CEC_SetPrescaler(uint16_t CEC_Prescaler)
- 213:./Drivers/src/stm32f10x_cec.c **** {
+ 206:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** 
+ 207:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** /**
+ 208:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @brief  Sets the CEC prescaler value.
+ 209:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @param  CEC_Prescaler: CEC prescaler new value
+ 210:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @retval None
+ 211:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   */
+ 212:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** void CEC_SetPrescaler(uint16_t CEC_Prescaler)
+ 213:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** {
  212              		.loc 1 213 1 is_stmt 1 view -0
  213              		.cfi_startproc
  214              		@ args = 0, pretend = 0, frame = 0
  215              		@ frame_needed = 0, uses_anonymous_args = 0
  216              		@ link register save eliminated.
- 214:./Drivers/src/stm32f10x_cec.c ****   /* Check the parameters */
- 215:./Drivers/src/stm32f10x_cec.c ****   assert_param(IS_CEC_PRESCALER(CEC_Prescaler));
+ 214:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   /* Check the parameters */
+ 215:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   assert_param(IS_CEC_PRESCALER(CEC_Prescaler));
  217              		.loc 1 215 3 view .LVU42
- 216:./Drivers/src/stm32f10x_cec.c **** 
- 217:./Drivers/src/stm32f10x_cec.c ****   /* Set the  Prescaler value*/
- 218:./Drivers/src/stm32f10x_cec.c ****   CEC->PRES = CEC_Prescaler;
+ 216:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** 
+ 217:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   /* Set the  Prescaler value*/
+ 218:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   CEC->PRES = CEC_Prescaler;
  218              		.loc 1 218 3 view .LVU43
  219              		.loc 1 218 13 is_stmt 0 view .LVU44
  220 0000 014B     		ldr	r3, .L18
  221 0002 9860     		str	r0, [r3, #8]
- 219:./Drivers/src/stm32f10x_cec.c **** }
+ 219:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** }
  222              		.loc 1 219 1 view .LVU45
  223 0004 7047     		bx	lr
  224              	.L19:
@@ -471,29 +471,29 @@ ARM GAS  /tmp/ccmMUiPy.s 			page 1
  238              	CEC_SendDataByte:
  239              	.LVL11:
  240              	.LFB35:
- 220:./Drivers/src/stm32f10x_cec.c **** 
- 221:./Drivers/src/stm32f10x_cec.c **** /**
- 222:./Drivers/src/stm32f10x_cec.c ****   * @brief  Transmits single data through the CEC peripheral.
- 223:./Drivers/src/stm32f10x_cec.c ****   * @param  Data: the data to transmit.
- 224:./Drivers/src/stm32f10x_cec.c ****   * @retval None
- 225:./Drivers/src/stm32f10x_cec.c ****   */
- 226:./Drivers/src/stm32f10x_cec.c **** void CEC_SendDataByte(uint8_t Data)
-ARM GAS  /tmp/ccmMUiPy.s 			page 9
+ 220:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** 
+ 221:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** /**
+ 222:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @brief  Transmits single data through the CEC peripheral.
+ 223:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @param  Data: the data to transmit.
+ 224:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @retval None
+ 225:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   */
+ 226:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** void CEC_SendDataByte(uint8_t Data)
+ARM GAS  /tmp/ccYv0DLs.s 			page 9
 
 
- 227:./Drivers/src/stm32f10x_cec.c **** {  
+ 227:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** {  
  241              		.loc 1 227 1 is_stmt 1 view -0
  242              		.cfi_startproc
  243              		@ args = 0, pretend = 0, frame = 0
  244              		@ frame_needed = 0, uses_anonymous_args = 0
  245              		@ link register save eliminated.
- 228:./Drivers/src/stm32f10x_cec.c ****   /* Transmit Data */
- 229:./Drivers/src/stm32f10x_cec.c ****   CEC->TXD = Data ;
+ 228:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   /* Transmit Data */
+ 229:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   CEC->TXD = Data ;
  246              		.loc 1 229 3 view .LVU47
  247              		.loc 1 229 12 is_stmt 0 view .LVU48
  248 0000 014B     		ldr	r3, .L21
  249 0002 5861     		str	r0, [r3, #20]
- 230:./Drivers/src/stm32f10x_cec.c **** }
+ 230:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** }
  250              		.loc 1 230 1 view .LVU49
  251 0004 7047     		bx	lr
  252              	.L22:
@@ -510,27 +510,27 @@ ARM GAS  /tmp/ccmMUiPy.s 			page 1
  264              		.thumb_func
  266              	CEC_ReceiveDataByte:
  267              	.LFB36:
- 231:./Drivers/src/stm32f10x_cec.c **** 
- 232:./Drivers/src/stm32f10x_cec.c **** 
- 233:./Drivers/src/stm32f10x_cec.c **** /**
- 234:./Drivers/src/stm32f10x_cec.c ****   * @brief  Returns the most recent received data by the CEC peripheral.
- 235:./Drivers/src/stm32f10x_cec.c ****   * @param  None
- 236:./Drivers/src/stm32f10x_cec.c ****   * @retval The received data.
- 237:./Drivers/src/stm32f10x_cec.c ****   */
- 238:./Drivers/src/stm32f10x_cec.c **** uint8_t CEC_ReceiveDataByte(void)
- 239:./Drivers/src/stm32f10x_cec.c **** {
+ 231:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** 
+ 232:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** 
+ 233:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** /**
+ 234:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @brief  Returns the most recent received data by the CEC peripheral.
+ 235:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @param  None
+ 236:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @retval The received data.
+ 237:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   */
+ 238:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** uint8_t CEC_ReceiveDataByte(void)
+ 239:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** {
  268              		.loc 1 239 1 is_stmt 1 view -0
  269              		.cfi_startproc
  270              		@ args = 0, pretend = 0, frame = 0
  271              		@ frame_needed = 0, uses_anonymous_args = 0
  272              		@ link register save eliminated.
- 240:./Drivers/src/stm32f10x_cec.c ****   /* Receive Data */
- 241:./Drivers/src/stm32f10x_cec.c ****   return (uint8_t)(CEC->RXD);
+ 240:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   /* Receive Data */
+ 241:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   return (uint8_t)(CEC->RXD);
  273              		.loc 1 241 3 view .LVU51
  274              		.loc 1 241 23 is_stmt 0 view .LVU52
  275 0000 014B     		ldr	r3, .L24
  276 0002 9869     		ldr	r0, [r3, #24]
- 242:./Drivers/src/stm32f10x_cec.c **** }
+ 242:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** }
  277              		.loc 1 242 1 view .LVU53
  278 0004 C0B2     		uxtb	r0, r0
  279 0006 7047     		bx	lr
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccmMUiPy.s 			page 1
  281              		.align	2
  282              	.L24:
  283 0008 00780040 		.word	1073772544
-ARM GAS  /tmp/ccmMUiPy.s 			page 10
+ARM GAS  /tmp/ccYv0DLs.s 			page 10
 
 
  284              		.cfi_endproc
@@ -551,27 +551,27 @@ ARM GAS  /tmp/ccmMUiPy.s 			page 1
  292              		.thumb_func
  294              	CEC_StartOfMessage:
  295              	.LFB37:
- 243:./Drivers/src/stm32f10x_cec.c **** 
- 244:./Drivers/src/stm32f10x_cec.c **** /**
- 245:./Drivers/src/stm32f10x_cec.c ****   * @brief  Starts a new message.
- 246:./Drivers/src/stm32f10x_cec.c ****   * @param  None
- 247:./Drivers/src/stm32f10x_cec.c ****   * @retval None
- 248:./Drivers/src/stm32f10x_cec.c ****   */
- 249:./Drivers/src/stm32f10x_cec.c **** void CEC_StartOfMessage(void)
- 250:./Drivers/src/stm32f10x_cec.c **** {  
+ 243:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** 
+ 244:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** /**
+ 245:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @brief  Starts a new message.
+ 246:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @param  None
+ 247:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @retval None
+ 248:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   */
+ 249:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** void CEC_StartOfMessage(void)
+ 250:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** {  
  296              		.loc 1 250 1 is_stmt 1 view -0
  297              		.cfi_startproc
  298              		@ args = 0, pretend = 0, frame = 0
  299              		@ frame_needed = 0, uses_anonymous_args = 0
  300              		@ link register save eliminated.
- 251:./Drivers/src/stm32f10x_cec.c ****   /* Starts of new message */
- 252:./Drivers/src/stm32f10x_cec.c ****   *(__IO uint32_t *) CSR_TSOM_BB = (uint32_t)0x1;
+ 251:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   /* Starts of new message */
+ 252:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   *(__IO uint32_t *) CSR_TSOM_BB = (uint32_t)0x1;
  301              		.loc 1 252 3 view .LVU55
  302              		.loc 1 252 34 is_stmt 0 view .LVU56
  303 0000 024B     		ldr	r3, .L27
  304 0002 0122     		movs	r2, #1
  305 0004 C3F80022 		str	r2, [r3, #512]
- 253:./Drivers/src/stm32f10x_cec.c **** }
+ 253:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** }
  306              		.loc 1 253 1 view .LVU57
  307 0008 7047     		bx	lr
  308              	.L28:
@@ -589,16 +589,16 @@ ARM GAS  /tmp/ccmMUiPy.s 			page 1
  322              	CEC_EndOfMessageCmd:
  323              	.LVL12:
  324              	.LFB38:
- 254:./Drivers/src/stm32f10x_cec.c **** 
- 255:./Drivers/src/stm32f10x_cec.c **** /**
- 256:./Drivers/src/stm32f10x_cec.c ****   * @brief  Transmits message with or without an EOM bit.
- 257:./Drivers/src/stm32f10x_cec.c ****   * @param  NewState: new state of the CEC Tx End Of Message. 
- 258:./Drivers/src/stm32f10x_cec.c ****   *     This parameter can be: ENABLE or DISABLE.
- 259:./Drivers/src/stm32f10x_cec.c ****   * @retval None
- 260:./Drivers/src/stm32f10x_cec.c ****   */
- 261:./Drivers/src/stm32f10x_cec.c **** void CEC_EndOfMessageCmd(FunctionalState NewState)
- 262:./Drivers/src/stm32f10x_cec.c **** {   
-ARM GAS  /tmp/ccmMUiPy.s 			page 11
+ 254:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** 
+ 255:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** /**
+ 256:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @brief  Transmits message with or without an EOM bit.
+ 257:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @param  NewState: new state of the CEC Tx End Of Message. 
+ 258:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   *     This parameter can be: ENABLE or DISABLE.
+ 259:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @retval None
+ 260:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   */
+ 261:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** void CEC_EndOfMessageCmd(FunctionalState NewState)
+ 262:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** {   
+ARM GAS  /tmp/ccYv0DLs.s 			page 11
 
 
  325              		.loc 1 262 1 is_stmt 1 view -0
@@ -606,17 +606,17 @@ ARM GAS  /tmp/ccmMUiPy.s 			page 1
  327              		@ args = 0, pretend = 0, frame = 0
  328              		@ frame_needed = 0, uses_anonymous_args = 0
  329              		@ link register save eliminated.
- 263:./Drivers/src/stm32f10x_cec.c ****   /* Check the parameters */
- 264:./Drivers/src/stm32f10x_cec.c ****   assert_param(IS_FUNCTIONAL_STATE(NewState));
+ 263:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   /* Check the parameters */
+ 264:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   assert_param(IS_FUNCTIONAL_STATE(NewState));
  330              		.loc 1 264 3 view .LVU59
- 265:./Drivers/src/stm32f10x_cec.c ****   
- 266:./Drivers/src/stm32f10x_cec.c ****   /* The data byte will be transmitted with or without an EOM bit*/
- 267:./Drivers/src/stm32f10x_cec.c ****   *(__IO uint32_t *) CSR_TEOM_BB = (uint32_t)NewState;
+ 265:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   
+ 266:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   /* The data byte will be transmitted with or without an EOM bit*/
+ 267:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   *(__IO uint32_t *) CSR_TEOM_BB = (uint32_t)NewState;
  331              		.loc 1 267 3 view .LVU60
  332              		.loc 1 267 34 is_stmt 0 view .LVU61
  333 0000 014B     		ldr	r3, .L30
  334 0002 C3F80402 		str	r0, [r3, #516]
- 268:./Drivers/src/stm32f10x_cec.c **** }
+ 268:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** }
  335              		.loc 1 268 1 view .LVU62
  336 0006 7047     		bx	lr
  337              	.L31:
@@ -634,94 +634,94 @@ ARM GAS  /tmp/ccmMUiPy.s 			page 1
  351              	CEC_GetFlagStatus:
  352              	.LVL13:
  353              	.LFB39:
- 269:./Drivers/src/stm32f10x_cec.c **** 
- 270:./Drivers/src/stm32f10x_cec.c **** /**
- 271:./Drivers/src/stm32f10x_cec.c ****   * @brief  Gets the CEC flag status
- 272:./Drivers/src/stm32f10x_cec.c ****   * @param  CEC_FLAG: specifies the CEC flag to check. 
- 273:./Drivers/src/stm32f10x_cec.c ****   *   This parameter can be one of the following values:
- 274:./Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_FLAG_BTE: Bit Timing Error
- 275:./Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_FLAG_BPE: Bit Period Error
- 276:./Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_FLAG_RBTFE: Rx Block Transfer Finished Error
- 277:./Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_FLAG_SBE: Start Bit Error
- 278:./Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_FLAG_ACKE: Block Acknowledge Error
- 279:./Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_FLAG_LINE: Line Error
- 280:./Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_FLAG_TBTFE: Tx Block Transfer Finished Error
- 281:./Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_FLAG_TEOM: Tx End Of Message 
- 282:./Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_FLAG_TERR: Tx Error
- 283:./Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_FLAG_TBTRF: Tx Byte Transfer Request or Block Transfer Finished
- 284:./Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_FLAG_RSOM: Rx Start Of Message
- 285:./Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_FLAG_REOM: Rx End Of Message
- 286:./Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_FLAG_RERR: Rx Error
- 287:./Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_FLAG_RBTF: Rx Byte/Block Transfer Finished
- 288:./Drivers/src/stm32f10x_cec.c ****   * @retval The new state of CEC_FLAG (SET or RESET)
- 289:./Drivers/src/stm32f10x_cec.c ****   */
- 290:./Drivers/src/stm32f10x_cec.c **** FlagStatus CEC_GetFlagStatus(uint32_t CEC_FLAG) 
- 291:./Drivers/src/stm32f10x_cec.c **** {
+ 269:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** 
+ 270:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** /**
+ 271:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @brief  Gets the CEC flag status
+ 272:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @param  CEC_FLAG: specifies the CEC flag to check. 
+ 273:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   *   This parameter can be one of the following values:
+ 274:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_FLAG_BTE: Bit Timing Error
+ 275:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_FLAG_BPE: Bit Period Error
+ 276:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_FLAG_RBTFE: Rx Block Transfer Finished Error
+ 277:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_FLAG_SBE: Start Bit Error
+ 278:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_FLAG_ACKE: Block Acknowledge Error
+ 279:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_FLAG_LINE: Line Error
+ 280:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_FLAG_TBTFE: Tx Block Transfer Finished Error
+ 281:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_FLAG_TEOM: Tx End Of Message 
+ 282:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_FLAG_TERR: Tx Error
+ 283:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_FLAG_TBTRF: Tx Byte Transfer Request or Block Transfer Finished
+ 284:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_FLAG_RSOM: Rx Start Of Message
+ 285:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_FLAG_REOM: Rx End Of Message
+ 286:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_FLAG_RERR: Rx Error
+ 287:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_FLAG_RBTF: Rx Byte/Block Transfer Finished
+ 288:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @retval The new state of CEC_FLAG (SET or RESET)
+ 289:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   */
+ 290:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** FlagStatus CEC_GetFlagStatus(uint32_t CEC_FLAG) 
+ 291:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** {
  354              		.loc 1 291 1 is_stmt 1 view -0
-ARM GAS  /tmp/ccmMUiPy.s 			page 12
+ARM GAS  /tmp/ccYv0DLs.s 			page 12
 
 
  355              		.cfi_startproc
  356              		@ args = 0, pretend = 0, frame = 0
  357              		@ frame_needed = 0, uses_anonymous_args = 0
  358              		@ link register save eliminated.
- 292:./Drivers/src/stm32f10x_cec.c ****   FlagStatus bitstatus = RESET;
+ 292:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   FlagStatus bitstatus = RESET;
  359              		.loc 1 292 3 view .LVU64
- 293:./Drivers/src/stm32f10x_cec.c ****   uint32_t cecreg = 0, cecbase = 0;
+ 293:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   uint32_t cecreg = 0, cecbase = 0;
  360              		.loc 1 293 3 view .LVU65
- 294:./Drivers/src/stm32f10x_cec.c ****   
- 295:./Drivers/src/stm32f10x_cec.c ****   /* Check the parameters */
- 296:./Drivers/src/stm32f10x_cec.c ****   assert_param(IS_CEC_GET_FLAG(CEC_FLAG));
+ 294:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   
+ 295:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   /* Check the parameters */
+ 296:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   assert_param(IS_CEC_GET_FLAG(CEC_FLAG));
  361              		.loc 1 296 3 view .LVU66
- 297:./Drivers/src/stm32f10x_cec.c ****  
- 298:./Drivers/src/stm32f10x_cec.c ****   /* Get the CEC peripheral base address */
- 299:./Drivers/src/stm32f10x_cec.c ****   cecbase = (uint32_t)(CEC_BASE);
+ 297:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****  
+ 298:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   /* Get the CEC peripheral base address */
+ 299:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   cecbase = (uint32_t)(CEC_BASE);
  362              		.loc 1 299 3 view .LVU67
- 300:./Drivers/src/stm32f10x_cec.c ****   
- 301:./Drivers/src/stm32f10x_cec.c ****   /* Read flag register index */
- 302:./Drivers/src/stm32f10x_cec.c ****   cecreg = CEC_FLAG >> 28;
+ 300:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   
+ 301:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   /* Read flag register index */
+ 302:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   cecreg = CEC_FLAG >> 28;
  363              		.loc 1 302 3 view .LVU68
- 303:./Drivers/src/stm32f10x_cec.c ****   
- 304:./Drivers/src/stm32f10x_cec.c ****   /* Get bit[23:0] of the flag */
- 305:./Drivers/src/stm32f10x_cec.c ****   CEC_FLAG &= FLAG_Mask;
+ 303:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   
+ 304:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   /* Get bit[23:0] of the flag */
+ 305:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   CEC_FLAG &= FLAG_Mask;
  364              		.loc 1 305 3 view .LVU69
  365              		.loc 1 305 12 is_stmt 0 view .LVU70
  366 0000 20F07F43 		bic	r3, r0, #-16777216
  367              	.LVL14:
- 306:./Drivers/src/stm32f10x_cec.c ****   
- 307:./Drivers/src/stm32f10x_cec.c ****   if(cecreg != 0)
+ 306:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   
+ 307:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   if(cecreg != 0)
  368              		.loc 1 307 3 is_stmt 1 view .LVU71
  369              		.loc 1 307 5 is_stmt 0 view .LVU72
  370 0004 000F     		lsrs	r0, r0, #28
  371              	.LVL15:
  372              		.loc 1 307 5 view .LVU73
  373 0006 06D0     		beq	.L35
- 308:./Drivers/src/stm32f10x_cec.c ****   {
- 309:./Drivers/src/stm32f10x_cec.c ****     /* Flag in CEC ESR Register */
- 310:./Drivers/src/stm32f10x_cec.c ****     CEC_FLAG = (uint32_t)(CEC_FLAG >> 16);
+ 308:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   {
+ 309:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****     /* Flag in CEC ESR Register */
+ 310:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****     CEC_FLAG = (uint32_t)(CEC_FLAG >> 16);
  374              		.loc 1 310 5 is_stmt 1 view .LVU74
  375              		.loc 1 310 14 is_stmt 0 view .LVU75
  376 0008 1B0C     		lsrs	r3, r3, #16
  377              	.LVL16:
- 311:./Drivers/src/stm32f10x_cec.c ****     
- 312:./Drivers/src/stm32f10x_cec.c ****     /* Get the CEC ESR register address */
- 313:./Drivers/src/stm32f10x_cec.c ****     cecbase += 0xC;
+ 311:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****     
+ 312:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****     /* Get the CEC ESR register address */
+ 313:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****     cecbase += 0xC;
  378              		.loc 1 313 5 is_stmt 1 view .LVU76
  379              		.loc 1 313 13 is_stmt 0 view .LVU77
  380 000a 054A     		ldr	r2, .L37
  381              	.LVL17:
  382              	.L33:
- 314:./Drivers/src/stm32f10x_cec.c ****   }
- 315:./Drivers/src/stm32f10x_cec.c ****   else
- 316:./Drivers/src/stm32f10x_cec.c ****   {
- 317:./Drivers/src/stm32f10x_cec.c ****     /* Get the CEC CSR register address */
- 318:./Drivers/src/stm32f10x_cec.c ****     cecbase += 0x10;
- 319:./Drivers/src/stm32f10x_cec.c ****   }
- 320:./Drivers/src/stm32f10x_cec.c ****   
-ARM GAS  /tmp/ccmMUiPy.s 			page 13
+ 314:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   }
+ 315:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   else
+ 316:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   {
+ 317:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****     /* Get the CEC CSR register address */
+ 318:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****     cecbase += 0x10;
+ 319:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   }
+ 320:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   
+ARM GAS  /tmp/ccYv0DLs.s 			page 13
 
 
- 321:./Drivers/src/stm32f10x_cec.c ****   if(((*(__IO uint32_t *)cecbase) & CEC_FLAG) != (uint32_t)RESET)
+ 321:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   if(((*(__IO uint32_t *)cecbase) & CEC_FLAG) != (uint32_t)RESET)
  383              		.loc 1 321 3 is_stmt 1 view .LVU78
  384              		.loc 1 321 8 is_stmt 0 view .LVU79
  385 000c 1268     		ldr	r2, [r2]
@@ -729,34 +729,34 @@ ARM GAS  /tmp/ccmMUiPy.s 			page 1
  387              		.loc 1 321 5 view .LVU80
  388 000e 1A42     		tst	r2, r3
  389 0010 03D0     		beq	.L36
- 322:./Drivers/src/stm32f10x_cec.c ****   {
- 323:./Drivers/src/stm32f10x_cec.c ****     /* CEC_FLAG is set */
- 324:./Drivers/src/stm32f10x_cec.c ****     bitstatus = SET;
+ 322:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   {
+ 323:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****     /* CEC_FLAG is set */
+ 324:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****     bitstatus = SET;
  390              		.loc 1 324 15 view .LVU81
  391 0012 0120     		movs	r0, #1
  392 0014 7047     		bx	lr
  393              	.LVL19:
  394              	.L35:
- 318:./Drivers/src/stm32f10x_cec.c ****   }
+ 318:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   }
  395              		.loc 1 318 13 view .LVU82
  396 0016 034A     		ldr	r2, .L37+4
  397 0018 F8E7     		b	.L33
  398              	.LVL20:
  399              	.L36:
- 325:./Drivers/src/stm32f10x_cec.c ****   }
- 326:./Drivers/src/stm32f10x_cec.c ****   else
- 327:./Drivers/src/stm32f10x_cec.c ****   {
- 328:./Drivers/src/stm32f10x_cec.c ****     /* CEC_FLAG is reset */
- 329:./Drivers/src/stm32f10x_cec.c ****     bitstatus = RESET;
+ 325:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   }
+ 326:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   else
+ 327:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   {
+ 328:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****     /* CEC_FLAG is reset */
+ 329:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****     bitstatus = RESET;
  400              		.loc 1 329 15 view .LVU83
  401 001a 0020     		movs	r0, #0
  402              	.LVL21:
- 330:./Drivers/src/stm32f10x_cec.c ****   }
- 331:./Drivers/src/stm32f10x_cec.c ****   
- 332:./Drivers/src/stm32f10x_cec.c ****   /* Return the CEC_FLAG status */
- 333:./Drivers/src/stm32f10x_cec.c ****   return  bitstatus;
+ 330:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   }
+ 331:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   
+ 332:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   /* Return the CEC_FLAG status */
+ 333:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   return  bitstatus;
  403              		.loc 1 333 3 is_stmt 1 view .LVU84
- 334:./Drivers/src/stm32f10x_cec.c **** }
+ 334:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** }
  404              		.loc 1 334 1 is_stmt 0 view .LVU85
  405 001c 7047     		bx	lr
  406              	.L38:
@@ -775,37 +775,37 @@ ARM GAS  /tmp/ccmMUiPy.s 			page 1
  421              	CEC_ClearFlag:
  422              	.LVL22:
  423              	.LFB40:
- 335:./Drivers/src/stm32f10x_cec.c **** 
- 336:./Drivers/src/stm32f10x_cec.c **** /**
- 337:./Drivers/src/stm32f10x_cec.c ****   * @brief  Clears the CEC's pending flags.
-ARM GAS  /tmp/ccmMUiPy.s 			page 14
+ 335:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** 
+ 336:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** /**
+ 337:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @brief  Clears the CEC's pending flags.
+ARM GAS  /tmp/ccYv0DLs.s 			page 14
 
 
- 338:./Drivers/src/stm32f10x_cec.c ****   * @param  CEC_FLAG: specifies the flag to clear. 
- 339:./Drivers/src/stm32f10x_cec.c ****   *   This parameter can be any combination of the following values:
- 340:./Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_FLAG_TERR: Tx Error
- 341:./Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_FLAG_TBTRF: Tx Byte Transfer Request or Block Transfer Finished
- 342:./Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_FLAG_RSOM: Rx Start Of Message
- 343:./Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_FLAG_REOM: Rx End Of Message
- 344:./Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_FLAG_RERR: Rx Error
- 345:./Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_FLAG_RBTF: Rx Byte/Block Transfer Finished
- 346:./Drivers/src/stm32f10x_cec.c ****   * @retval None
- 347:./Drivers/src/stm32f10x_cec.c ****   */
- 348:./Drivers/src/stm32f10x_cec.c **** void CEC_ClearFlag(uint32_t CEC_FLAG)
- 349:./Drivers/src/stm32f10x_cec.c **** { 
+ 338:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @param  CEC_FLAG: specifies the flag to clear. 
+ 339:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   *   This parameter can be any combination of the following values:
+ 340:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_FLAG_TERR: Tx Error
+ 341:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_FLAG_TBTRF: Tx Byte Transfer Request or Block Transfer Finished
+ 342:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_FLAG_RSOM: Rx Start Of Message
+ 343:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_FLAG_REOM: Rx End Of Message
+ 344:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_FLAG_RERR: Rx Error
+ 345:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_FLAG_RBTF: Rx Byte/Block Transfer Finished
+ 346:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @retval None
+ 347:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   */
+ 348:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** void CEC_ClearFlag(uint32_t CEC_FLAG)
+ 349:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** { 
  424              		.loc 1 349 1 is_stmt 1 view -0
  425              		.cfi_startproc
  426              		@ args = 0, pretend = 0, frame = 0
  427              		@ frame_needed = 0, uses_anonymous_args = 0
  428              		@ link register save eliminated.
- 350:./Drivers/src/stm32f10x_cec.c ****   uint32_t tmp = 0x0;
+ 350:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   uint32_t tmp = 0x0;
  429              		.loc 1 350 3 view .LVU87
- 351:./Drivers/src/stm32f10x_cec.c ****   
- 352:./Drivers/src/stm32f10x_cec.c ****   /* Check the parameters */
- 353:./Drivers/src/stm32f10x_cec.c ****   assert_param(IS_CEC_CLEAR_FLAG(CEC_FLAG));
+ 351:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   
+ 352:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   /* Check the parameters */
+ 353:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   assert_param(IS_CEC_CLEAR_FLAG(CEC_FLAG));
  430              		.loc 1 353 3 view .LVU88
- 354:./Drivers/src/stm32f10x_cec.c **** 
- 355:./Drivers/src/stm32f10x_cec.c ****   tmp = CEC->CSR & 0x2;
+ 354:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** 
+ 355:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   tmp = CEC->CSR & 0x2;
  431              		.loc 1 355 3 view .LVU89
  432              		.loc 1 355 12 is_stmt 0 view .LVU90
  433 0000 054B     		ldr	r3, .L40
@@ -813,9 +813,9 @@ ARM GAS  /tmp/ccmMUiPy.s 			page 1
  435              		.loc 1 355 7 view .LVU91
  436 0004 01F00201 		and	r1, r1, #2
  437              	.LVL23:
- 356:./Drivers/src/stm32f10x_cec.c ****        
- 357:./Drivers/src/stm32f10x_cec.c ****   /* Clear the selected CEC flags */
- 358:./Drivers/src/stm32f10x_cec.c ****   CEC->CSR &= (uint32_t)(((~(uint32_t)CEC_FLAG) & 0xFFFFFFFC) | tmp);
+ 356:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****        
+ 357:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   /* Clear the selected CEC flags */
+ 358:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   CEC->CSR &= (uint32_t)(((~(uint32_t)CEC_FLAG) & 0xFFFFFFFC) | tmp);
  438              		.loc 1 358 3 is_stmt 1 view .LVU92
  439              		.loc 1 358 6 is_stmt 0 view .LVU93
  440 0008 1A69     		ldr	r2, [r3, #16]
@@ -830,7 +830,7 @@ ARM GAS  /tmp/ccmMUiPy.s 			page 1
  449              		.loc 1 358 12 view .LVU97
  450 0012 0240     		ands	r2, r2, r0
  451 0014 1A61     		str	r2, [r3, #16]
- 359:./Drivers/src/stm32f10x_cec.c **** }
+ 359:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** }
  452              		.loc 1 359 1 view .LVU98
  453 0016 7047     		bx	lr
  454              	.L41:
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccmMUiPy.s 			page 1
  456              	.L40:
  457 0018 00780040 		.word	1073772544
  458              		.cfi_endproc
-ARM GAS  /tmp/ccmMUiPy.s 			page 15
+ARM GAS  /tmp/ccYv0DLs.s 			page 15
 
 
  459              	.LFE40:
@@ -851,35 +851,35 @@ ARM GAS  /tmp/ccmMUiPy.s 			page 1
  468              	CEC_GetITStatus:
  469              	.LVL26:
  470              	.LFB41:
- 360:./Drivers/src/stm32f10x_cec.c **** 
- 361:./Drivers/src/stm32f10x_cec.c **** /**
- 362:./Drivers/src/stm32f10x_cec.c ****   * @brief  Checks whether the specified CEC interrupt has occurred or not.
- 363:./Drivers/src/stm32f10x_cec.c ****   * @param  CEC_IT: specifies the CEC interrupt source to check. 
- 364:./Drivers/src/stm32f10x_cec.c ****   *   This parameter can be one of the following values:
- 365:./Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_IT_TERR: Tx Error
- 366:./Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_IT_TBTF: Tx Block Transfer Finished
- 367:./Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_IT_RERR: Rx Error
- 368:./Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_IT_RBTF: Rx Block Transfer Finished
- 369:./Drivers/src/stm32f10x_cec.c ****   * @retval The new state of CEC_IT (SET or RESET).
- 370:./Drivers/src/stm32f10x_cec.c ****   */
- 371:./Drivers/src/stm32f10x_cec.c **** ITStatus CEC_GetITStatus(uint8_t CEC_IT)
- 372:./Drivers/src/stm32f10x_cec.c **** {
+ 360:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** 
+ 361:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** /**
+ 362:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @brief  Checks whether the specified CEC interrupt has occurred or not.
+ 363:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @param  CEC_IT: specifies the CEC interrupt source to check. 
+ 364:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   *   This parameter can be one of the following values:
+ 365:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_IT_TERR: Tx Error
+ 366:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_IT_TBTF: Tx Block Transfer Finished
+ 367:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_IT_RERR: Rx Error
+ 368:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_IT_RBTF: Rx Block Transfer Finished
+ 369:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @retval The new state of CEC_IT (SET or RESET).
+ 370:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   */
+ 371:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** ITStatus CEC_GetITStatus(uint8_t CEC_IT)
+ 372:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** {
  471              		.loc 1 372 1 is_stmt 1 view -0
  472              		.cfi_startproc
  473              		@ args = 0, pretend = 0, frame = 0
  474              		@ frame_needed = 0, uses_anonymous_args = 0
  475              		@ link register save eliminated.
- 373:./Drivers/src/stm32f10x_cec.c ****   ITStatus bitstatus = RESET;
+ 373:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   ITStatus bitstatus = RESET;
  476              		.loc 1 373 3 view .LVU100
- 374:./Drivers/src/stm32f10x_cec.c ****   uint32_t enablestatus = 0;
+ 374:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   uint32_t enablestatus = 0;
  477              		.loc 1 374 3 view .LVU101
- 375:./Drivers/src/stm32f10x_cec.c ****   
- 376:./Drivers/src/stm32f10x_cec.c ****   /* Check the parameters */
- 377:./Drivers/src/stm32f10x_cec.c ****    assert_param(IS_CEC_GET_IT(CEC_IT));
+ 375:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   
+ 376:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   /* Check the parameters */
+ 377:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****    assert_param(IS_CEC_GET_IT(CEC_IT));
  478              		.loc 1 377 4 view .LVU102
- 378:./Drivers/src/stm32f10x_cec.c ****    
- 379:./Drivers/src/stm32f10x_cec.c ****   /* Get the CEC IT enable bit status */
- 380:./Drivers/src/stm32f10x_cec.c ****   enablestatus = (CEC->CFGR & (uint8_t)CEC_CFGR_IE) ;
+ 378:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****    
+ 379:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   /* Get the CEC IT enable bit status */
+ 380:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   enablestatus = (CEC->CFGR & (uint8_t)CEC_CFGR_IE) ;
  479              		.loc 1 380 3 view .LVU103
  480              		.loc 1 380 22 is_stmt 0 view .LVU104
  481 0000 064A     		ldr	r2, .L46
@@ -887,9 +887,9 @@ ARM GAS  /tmp/ccmMUiPy.s 			page 1
  483              		.loc 1 380 16 view .LVU105
  484 0004 03F00203 		and	r3, r3, #2
  485              	.LVL27:
- 381:./Drivers/src/stm32f10x_cec.c ****   
- 382:./Drivers/src/stm32f10x_cec.c ****   /* Check the status of the specified CEC interrupt */
- 383:./Drivers/src/stm32f10x_cec.c ****   if (((CEC->CSR & CEC_IT) != (uint32_t)RESET) && enablestatus)
+ 381:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   
+ 382:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   /* Check the status of the specified CEC interrupt */
+ 383:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   if (((CEC->CSR & CEC_IT) != (uint32_t)RESET) && enablestatus)
  486              		.loc 1 383 3 is_stmt 1 view .LVU106
  487              		.loc 1 383 12 is_stmt 0 view .LVU107
  488 0008 1269     		ldr	r2, [r2, #16]
@@ -898,17 +898,17 @@ ARM GAS  /tmp/ccmMUiPy.s 			page 1
  491 000c 02D0     		beq	.L44
  492              		.loc 1 383 48 discriminator 1 view .LVU109
  493 000e 1BB9     		cbnz	r3, .L45
-ARM GAS  /tmp/ccmMUiPy.s 			page 16
+ARM GAS  /tmp/ccYv0DLs.s 			page 16
 
 
- 384:./Drivers/src/stm32f10x_cec.c ****   {
- 385:./Drivers/src/stm32f10x_cec.c ****     /* CEC_IT is set */
- 386:./Drivers/src/stm32f10x_cec.c ****     bitstatus = SET;
- 387:./Drivers/src/stm32f10x_cec.c ****   }
- 388:./Drivers/src/stm32f10x_cec.c ****   else
- 389:./Drivers/src/stm32f10x_cec.c ****   {
- 390:./Drivers/src/stm32f10x_cec.c ****     /* CEC_IT is reset */
- 391:./Drivers/src/stm32f10x_cec.c ****     bitstatus = RESET;
+ 384:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   {
+ 385:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****     /* CEC_IT is set */
+ 386:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****     bitstatus = SET;
+ 387:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   }
+ 388:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   else
+ 389:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   {
+ 390:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****     /* CEC_IT is reset */
+ 391:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****     bitstatus = RESET;
  494              		.loc 1 391 15 view .LVU110
  495 0010 0020     		movs	r0, #0
  496              	.LVL28:
@@ -923,15 +923,15 @@ ARM GAS  /tmp/ccmMUiPy.s 			page 1
  505 0016 7047     		bx	lr
  506              	.LVL31:
  507              	.L45:
- 386:./Drivers/src/stm32f10x_cec.c ****   }
+ 386:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   }
  508              		.loc 1 386 15 view .LVU114
  509 0018 0120     		movs	r0, #1
  510              	.LVL32:
- 392:./Drivers/src/stm32f10x_cec.c ****   }
- 393:./Drivers/src/stm32f10x_cec.c ****   /* Return the CEC_IT status */
- 394:./Drivers/src/stm32f10x_cec.c ****   return  bitstatus;
+ 392:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   }
+ 393:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   /* Return the CEC_IT status */
+ 394:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   return  bitstatus;
  511              		.loc 1 394 3 is_stmt 1 view .LVU115
- 395:./Drivers/src/stm32f10x_cec.c **** }
+ 395:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** }
  512              		.loc 1 395 1 is_stmt 0 view .LVU116
  513 001a 7047     		bx	lr
  514              	.L47:
@@ -949,35 +949,35 @@ ARM GAS  /tmp/ccmMUiPy.s 			page 1
  528              	CEC_ClearITPendingBit:
  529              	.LVL33:
  530              	.LFB42:
- 396:./Drivers/src/stm32f10x_cec.c **** 
- 397:./Drivers/src/stm32f10x_cec.c **** /**
- 398:./Drivers/src/stm32f10x_cec.c ****   * @brief  Clears the CEC's interrupt pending bits.
- 399:./Drivers/src/stm32f10x_cec.c ****   * @param  CEC_IT: specifies the CEC interrupt pending bit to clear.
- 400:./Drivers/src/stm32f10x_cec.c ****   *   This parameter can be any combination of the following values:
- 401:./Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_IT_TERR: Tx Error
- 402:./Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_IT_TBTF: Tx Block Transfer Finished
- 403:./Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_IT_RERR: Rx Error
- 404:./Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_IT_RBTF: Rx Block Transfer Finished
-ARM GAS  /tmp/ccmMUiPy.s 			page 17
+ 396:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** 
+ 397:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** /**
+ 398:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @brief  Clears the CEC's interrupt pending bits.
+ 399:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @param  CEC_IT: specifies the CEC interrupt pending bit to clear.
+ 400:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   *   This parameter can be any combination of the following values:
+ 401:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_IT_TERR: Tx Error
+ 402:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_IT_TBTF: Tx Block Transfer Finished
+ 403:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_IT_RERR: Rx Error
+ 404:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   *     @arg CEC_IT_RBTF: Rx Block Transfer Finished
+ARM GAS  /tmp/ccYv0DLs.s 			page 17
 
 
- 405:./Drivers/src/stm32f10x_cec.c ****   * @retval None
- 406:./Drivers/src/stm32f10x_cec.c ****   */
- 407:./Drivers/src/stm32f10x_cec.c **** void CEC_ClearITPendingBit(uint16_t CEC_IT)
- 408:./Drivers/src/stm32f10x_cec.c **** {
+ 405:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   * @retval None
+ 406:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   */
+ 407:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** void CEC_ClearITPendingBit(uint16_t CEC_IT)
+ 408:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** {
  531              		.loc 1 408 1 is_stmt 1 view -0
  532              		.cfi_startproc
  533              		@ args = 0, pretend = 0, frame = 0
  534              		@ frame_needed = 0, uses_anonymous_args = 0
  535              		@ link register save eliminated.
- 409:./Drivers/src/stm32f10x_cec.c ****   uint32_t tmp = 0x0;
+ 409:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   uint32_t tmp = 0x0;
  536              		.loc 1 409 3 view .LVU118
- 410:./Drivers/src/stm32f10x_cec.c ****   
- 411:./Drivers/src/stm32f10x_cec.c ****   /* Check the parameters */
- 412:./Drivers/src/stm32f10x_cec.c ****   assert_param(IS_CEC_GET_IT(CEC_IT));
+ 410:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   
+ 411:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   /* Check the parameters */
+ 412:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   assert_param(IS_CEC_GET_IT(CEC_IT));
  537              		.loc 1 412 3 view .LVU119
- 413:./Drivers/src/stm32f10x_cec.c ****   
- 414:./Drivers/src/stm32f10x_cec.c ****   tmp = CEC->CSR & 0x2;
+ 413:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   
+ 414:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   tmp = CEC->CSR & 0x2;
  538              		.loc 1 414 3 view .LVU120
  539              		.loc 1 414 12 is_stmt 0 view .LVU121
  540 0000 054B     		ldr	r3, .L49
@@ -985,9 +985,9 @@ ARM GAS  /tmp/ccmMUiPy.s 			page 1
  542              		.loc 1 414 7 view .LVU122
  543 0004 01F00201 		and	r1, r1, #2
  544              	.LVL34:
- 415:./Drivers/src/stm32f10x_cec.c ****   
- 416:./Drivers/src/stm32f10x_cec.c ****   /* Clear the selected CEC interrupt pending bits */
- 417:./Drivers/src/stm32f10x_cec.c ****   CEC->CSR &= (uint32_t)(((~(uint32_t)CEC_IT) & 0xFFFFFFFC) | tmp);
+ 415:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   
+ 416:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   /* Clear the selected CEC interrupt pending bits */
+ 417:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c ****   CEC->CSR &= (uint32_t)(((~(uint32_t)CEC_IT) & 0xFFFFFFFC) | tmp);
  545              		.loc 1 417 3 is_stmt 1 view .LVU123
  546              		.loc 1 417 6 is_stmt 0 view .LVU124
  547 0008 1A69     		ldr	r2, [r3, #16]
@@ -1002,7 +1002,7 @@ ARM GAS  /tmp/ccmMUiPy.s 			page 1
  556              		.loc 1 417 12 view .LVU128
  557 0012 0240     		ands	r2, r2, r0
  558 0014 1A61     		str	r2, [r3, #16]
- 418:./Drivers/src/stm32f10x_cec.c **** }
+ 418:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/Drivers/src/stm32f10x_cec.c **** }
  559              		.loc 1 418 1 view .LVU129
  560 0016 7047     		bx	lr
  561              	.L50:
@@ -1018,55 +1018,55 @@ ARM GAS  /tmp/ccmMUiPy.s 			page 1
  572              		.file 4 "cmsis/stm32f10x.h"
  573              		.file 5 "Drivers/inc/stm32f10x_cec.h"
  574              		.file 6 "Drivers/inc/stm32f10x_rcc.h"
-ARM GAS  /tmp/ccmMUiPy.s 			page 18
+ARM GAS  /tmp/ccYv0DLs.s 			page 18
 
 
-ARM GAS  /tmp/ccmMUiPy.s 			page 19
+ARM GAS  /tmp/ccYv0DLs.s 			page 19
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f10x_cec.c
-     /tmp/ccmMUiPy.s:19     .text.CEC_DeInit:00000000 $t
-     /tmp/ccmMUiPy.s:25     .text.CEC_DeInit:00000000 CEC_DeInit
-     /tmp/ccmMUiPy.s:52     .text.CEC_Init:00000000 $t
-     /tmp/ccmMUiPy.s:58     .text.CEC_Init:00000000 CEC_Init
-     /tmp/ccmMUiPy.s:97     .text.CEC_Init:00000014 $d
-     /tmp/ccmMUiPy.s:102    .text.CEC_Cmd:00000000 $t
-     /tmp/ccmMUiPy.s:108    .text.CEC_Cmd:00000000 CEC_Cmd
-     /tmp/ccmMUiPy.s:139    .text.CEC_Cmd:00000014 $d
-     /tmp/ccmMUiPy.s:145    .text.CEC_ITConfig:00000000 $t
-     /tmp/ccmMUiPy.s:151    .text.CEC_ITConfig:00000000 CEC_ITConfig
-     /tmp/ccmMUiPy.s:169    .text.CEC_ITConfig:00000008 $d
-     /tmp/ccmMUiPy.s:174    .text.CEC_OwnAddressConfig:00000000 $t
-     /tmp/ccmMUiPy.s:180    .text.CEC_OwnAddressConfig:00000000 CEC_OwnAddressConfig
-     /tmp/ccmMUiPy.s:198    .text.CEC_OwnAddressConfig:00000008 $d
-     /tmp/ccmMUiPy.s:203    .text.CEC_SetPrescaler:00000000 $t
-     /tmp/ccmMUiPy.s:209    .text.CEC_SetPrescaler:00000000 CEC_SetPrescaler
-     /tmp/ccmMUiPy.s:227    .text.CEC_SetPrescaler:00000008 $d
-     /tmp/ccmMUiPy.s:232    .text.CEC_SendDataByte:00000000 $t
-     /tmp/ccmMUiPy.s:238    .text.CEC_SendDataByte:00000000 CEC_SendDataByte
-     /tmp/ccmMUiPy.s:255    .text.CEC_SendDataByte:00000008 $d
-     /tmp/ccmMUiPy.s:260    .text.CEC_ReceiveDataByte:00000000 $t
-     /tmp/ccmMUiPy.s:266    .text.CEC_ReceiveDataByte:00000000 CEC_ReceiveDataByte
-     /tmp/ccmMUiPy.s:283    .text.CEC_ReceiveDataByte:00000008 $d
-     /tmp/ccmMUiPy.s:288    .text.CEC_StartOfMessage:00000000 $t
-     /tmp/ccmMUiPy.s:294    .text.CEC_StartOfMessage:00000000 CEC_StartOfMessage
-     /tmp/ccmMUiPy.s:311    .text.CEC_StartOfMessage:0000000c $d
-     /tmp/ccmMUiPy.s:316    .text.CEC_EndOfMessageCmd:00000000 $t
-     /tmp/ccmMUiPy.s:322    .text.CEC_EndOfMessageCmd:00000000 CEC_EndOfMessageCmd
-     /tmp/ccmMUiPy.s:340    .text.CEC_EndOfMessageCmd:00000008 $d
-     /tmp/ccmMUiPy.s:345    .text.CEC_GetFlagStatus:00000000 $t
-     /tmp/ccmMUiPy.s:351    .text.CEC_GetFlagStatus:00000000 CEC_GetFlagStatus
-     /tmp/ccmMUiPy.s:409    .text.CEC_GetFlagStatus:00000020 $d
-     /tmp/ccmMUiPy.s:415    .text.CEC_ClearFlag:00000000 $t
-     /tmp/ccmMUiPy.s:421    .text.CEC_ClearFlag:00000000 CEC_ClearFlag
-     /tmp/ccmMUiPy.s:457    .text.CEC_ClearFlag:00000018 $d
-     /tmp/ccmMUiPy.s:462    .text.CEC_GetITStatus:00000000 $t
-     /tmp/ccmMUiPy.s:468    .text.CEC_GetITStatus:00000000 CEC_GetITStatus
-     /tmp/ccmMUiPy.s:517    .text.CEC_GetITStatus:0000001c $d
-     /tmp/ccmMUiPy.s:522    .text.CEC_ClearITPendingBit:00000000 $t
-     /tmp/ccmMUiPy.s:528    .text.CEC_ClearITPendingBit:00000000 CEC_ClearITPendingBit
-     /tmp/ccmMUiPy.s:564    .text.CEC_ClearITPendingBit:00000018 $d
+     /tmp/ccYv0DLs.s:19     .text.CEC_DeInit:00000000 $t
+     /tmp/ccYv0DLs.s:25     .text.CEC_DeInit:00000000 CEC_DeInit
+     /tmp/ccYv0DLs.s:52     .text.CEC_Init:00000000 $t
+     /tmp/ccYv0DLs.s:58     .text.CEC_Init:00000000 CEC_Init
+     /tmp/ccYv0DLs.s:97     .text.CEC_Init:00000014 $d
+     /tmp/ccYv0DLs.s:102    .text.CEC_Cmd:00000000 $t
+     /tmp/ccYv0DLs.s:108    .text.CEC_Cmd:00000000 CEC_Cmd
+     /tmp/ccYv0DLs.s:139    .text.CEC_Cmd:00000014 $d
+     /tmp/ccYv0DLs.s:145    .text.CEC_ITConfig:00000000 $t
+     /tmp/ccYv0DLs.s:151    .text.CEC_ITConfig:00000000 CEC_ITConfig
+     /tmp/ccYv0DLs.s:169    .text.CEC_ITConfig:00000008 $d
+     /tmp/ccYv0DLs.s:174    .text.CEC_OwnAddressConfig:00000000 $t
+     /tmp/ccYv0DLs.s:180    .text.CEC_OwnAddressConfig:00000000 CEC_OwnAddressConfig
+     /tmp/ccYv0DLs.s:198    .text.CEC_OwnAddressConfig:00000008 $d
+     /tmp/ccYv0DLs.s:203    .text.CEC_SetPrescaler:00000000 $t
+     /tmp/ccYv0DLs.s:209    .text.CEC_SetPrescaler:00000000 CEC_SetPrescaler
+     /tmp/ccYv0DLs.s:227    .text.CEC_SetPrescaler:00000008 $d
+     /tmp/ccYv0DLs.s:232    .text.CEC_SendDataByte:00000000 $t
+     /tmp/ccYv0DLs.s:238    .text.CEC_SendDataByte:00000000 CEC_SendDataByte
+     /tmp/ccYv0DLs.s:255    .text.CEC_SendDataByte:00000008 $d
+     /tmp/ccYv0DLs.s:260    .text.CEC_ReceiveDataByte:00000000 $t
+     /tmp/ccYv0DLs.s:266    .text.CEC_ReceiveDataByte:00000000 CEC_ReceiveDataByte
+     /tmp/ccYv0DLs.s:283    .text.CEC_ReceiveDataByte:00000008 $d
+     /tmp/ccYv0DLs.s:288    .text.CEC_StartOfMessage:00000000 $t
+     /tmp/ccYv0DLs.s:294    .text.CEC_StartOfMessage:00000000 CEC_StartOfMessage
+     /tmp/ccYv0DLs.s:311    .text.CEC_StartOfMessage:0000000c $d
+     /tmp/ccYv0DLs.s:316    .text.CEC_EndOfMessageCmd:00000000 $t
+     /tmp/ccYv0DLs.s:322    .text.CEC_EndOfMessageCmd:00000000 CEC_EndOfMessageCmd
+     /tmp/ccYv0DLs.s:340    .text.CEC_EndOfMessageCmd:00000008 $d
+     /tmp/ccYv0DLs.s:345    .text.CEC_GetFlagStatus:00000000 $t
+     /tmp/ccYv0DLs.s:351    .text.CEC_GetFlagStatus:00000000 CEC_GetFlagStatus
+     /tmp/ccYv0DLs.s:409    .text.CEC_GetFlagStatus:00000020 $d
+     /tmp/ccYv0DLs.s:415    .text.CEC_ClearFlag:00000000 $t
+     /tmp/ccYv0DLs.s:421    .text.CEC_ClearFlag:00000000 CEC_ClearFlag
+     /tmp/ccYv0DLs.s:457    .text.CEC_ClearFlag:00000018 $d
+     /tmp/ccYv0DLs.s:462    .text.CEC_GetITStatus:00000000 $t
+     /tmp/ccYv0DLs.s:468    .text.CEC_GetITStatus:00000000 CEC_GetITStatus
+     /tmp/ccYv0DLs.s:517    .text.CEC_GetITStatus:0000001c $d
+     /tmp/ccYv0DLs.s:522    .text.CEC_ClearITPendingBit:00000000 $t
+     /tmp/ccYv0DLs.s:528    .text.CEC_ClearITPendingBit:00000000 CEC_ClearITPendingBit
+     /tmp/ccYv0DLs.s:564    .text.CEC_ClearITPendingBit:00000018 $d
 
 UNDEFINED SYMBOLS
 RCC_APB1PeriphResetCmd

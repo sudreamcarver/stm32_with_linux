@@ -1,5 +1,7 @@
-build/sys.o: Libraries/src/sys.c Libraries/inc/sys.h cmsis/stm32f10x.h \
- cmsis/core_cm3.h cmsis/system_stm32f10x.h source/stm32f10x_conf.h \
+build/sys.o: \
+ .ccls_cache/home/carver/Documents/stm32_with_linux/medical/Libraries/src/sys.c \
+ Libraries/inc/sys.h cmsis/stm32f10x.h cmsis/core_cm3.h \
+ cmsis/system_stm32f10x.h source/stm32f10x_conf.h \
  Drivers/inc/stm32f10x_adc.h Drivers/inc/stm32f10x_bkp.h \
  Drivers/inc/stm32f10x_can.h Drivers/inc/stm32f10x_cec.h \
  Drivers/inc/stm32f10x_crc.h Drivers/inc/stm32f10x_dac.h \

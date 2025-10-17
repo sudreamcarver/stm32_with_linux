@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccCd6QbA.s 			page 1
+ARM GAS  /tmp/ccM7CD98.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -17,7 +17,7 @@ ARM GAS  /tmp/ccCd6QbA.s 			page 1
   14              		.text
   15              	.Ltext0:
   16              		.cfi_sections	.debug_frame
-  17              		.file 1 "./source/stm32f10x_it.c"
+  17              		.file 1 "./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c"
   18              		.section	.text.NMI_Handler,"ax",%progbits
   19              		.align	1
   20              		.global	NMI_Handler
@@ -26,66 +26,66 @@ ARM GAS  /tmp/ccCd6QbA.s 			page 1
   23              		.thumb_func
   25              	NMI_Handler:
   26              	.LFB29:
-   1:./source/stm32f10x_it.c **** /**
-   2:./source/stm32f10x_it.c ****   ******************************************************************************
-   3:./source/stm32f10x_it.c ****   * @file    GPIO/IOToggle/stm32f10x_it.c 
-   4:./source/stm32f10x_it.c ****   * @author  MCD Application Team
-   5:./source/stm32f10x_it.c ****   * @version V3.6.0
-   6:./source/stm32f10x_it.c ****   * @date    20-September-2021
-   7:./source/stm32f10x_it.c ****   * @brief   Main Interrupt Service Routines.
-   8:./source/stm32f10x_it.c ****   *          This file provides template for all exceptions handler and peripherals
-   9:./source/stm32f10x_it.c ****   *          interrupt service routine.
-  10:./source/stm32f10x_it.c ****   ******************************************************************************
-  11:./source/stm32f10x_it.c ****   * @attention
-  12:./source/stm32f10x_it.c ****   *
-  13:./source/stm32f10x_it.c ****   * Copyright (c) 2011 STMicroelectronics.
-  14:./source/stm32f10x_it.c ****   * All rights reserved.
-  15:./source/stm32f10x_it.c ****   *
-  16:./source/stm32f10x_it.c ****   * This software is licensed under terms that can be found in the LICENSE file
-  17:./source/stm32f10x_it.c ****   * in the root directory of this software component.
-  18:./source/stm32f10x_it.c ****   * If no LICENSE file comes with this software, it is provided AS-IS.
-  19:./source/stm32f10x_it.c ****   *
-  20:./source/stm32f10x_it.c ****   ******************************************************************************
-  21:./source/stm32f10x_it.c ****   */
-  22:./source/stm32f10x_it.c **** 
-  23:./source/stm32f10x_it.c **** /* Includes ------------------------------------------------------------------*/
-  24:./source/stm32f10x_it.c **** #include "stm32f10x_it.h"
-  25:./source/stm32f10x_it.c **** 
-  26:./source/stm32f10x_it.c **** /** @addtogroup STM32F10x_StdPeriph_Examples
-  27:./source/stm32f10x_it.c ****   * @{
-  28:./source/stm32f10x_it.c ****   */
-  29:./source/stm32f10x_it.c **** 
-  30:./source/stm32f10x_it.c **** /** @addtogroup GPIO_IOToggle
-  31:./source/stm32f10x_it.c ****   * @{
-  32:./source/stm32f10x_it.c ****   */
-ARM GAS  /tmp/ccCd6QbA.s 			page 2
+   1:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** /**
+   2:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   ******************************************************************************
+   3:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   * @file    GPIO/IOToggle/stm32f10x_it.c 
+   4:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   * @author  MCD Application Team
+   5:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   * @version V3.6.0
+   6:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   * @date    20-September-2021
+   7:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   * @brief   Main Interrupt Service Routines.
+   8:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   *          This file provides template for all exceptions handler and peripherals
+   9:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   *          interrupt service routine.
+  10:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   ******************************************************************************
+  11:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   * @attention
+  12:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   *
+  13:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   * Copyright (c) 2011 STMicroelectronics.
+  14:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   * All rights reserved.
+  15:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   *
+  16:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   * This software is licensed under terms that can be found in the LICENSE file
+  17:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   * in the root directory of this software component.
+  18:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   * If no LICENSE file comes with this software, it is provided AS-IS.
+  19:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   *
+  20:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   ******************************************************************************
+  21:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   */
+  22:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** 
+  23:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** /* Includes ------------------------------------------------------------------*/
+  24:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** #include "stm32f10x_it.h"
+  25:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** 
+  26:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** /** @addtogroup STM32F10x_StdPeriph_Examples
+  27:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   * @{
+  28:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   */
+  29:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** 
+  30:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** /** @addtogroup GPIO_IOToggle
+  31:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   * @{
+  32:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   */
+ARM GAS  /tmp/ccM7CD98.s 			page 2
 
 
-  33:./source/stm32f10x_it.c **** 
-  34:./source/stm32f10x_it.c **** /* Private typedef -----------------------------------------------------------*/
-  35:./source/stm32f10x_it.c **** /* Private define ------------------------------------------------------------*/
-  36:./source/stm32f10x_it.c **** /* Private macro -------------------------------------------------------------*/
-  37:./source/stm32f10x_it.c **** /* Private variables ---------------------------------------------------------*/
-  38:./source/stm32f10x_it.c **** /* Private function prototypes -----------------------------------------------*/
-  39:./source/stm32f10x_it.c **** /* Private functions ---------------------------------------------------------*/
-  40:./source/stm32f10x_it.c **** 
-  41:./source/stm32f10x_it.c **** /******************************************************************************/
-  42:./source/stm32f10x_it.c **** /*            Cortex-M3 Processor Exceptions Handlers                         */
-  43:./source/stm32f10x_it.c **** /******************************************************************************/
-  44:./source/stm32f10x_it.c **** 
-  45:./source/stm32f10x_it.c **** /**
-  46:./source/stm32f10x_it.c ****   * @brief  This function handles NMI exception.
-  47:./source/stm32f10x_it.c ****   * @param  None
-  48:./source/stm32f10x_it.c ****   * @retval None
-  49:./source/stm32f10x_it.c ****   */
-  50:./source/stm32f10x_it.c **** void NMI_Handler(void)
-  51:./source/stm32f10x_it.c **** {
+  33:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** 
+  34:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** /* Private typedef -----------------------------------------------------------*/
+  35:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** /* Private define ------------------------------------------------------------*/
+  36:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** /* Private macro -------------------------------------------------------------*/
+  37:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** /* Private variables ---------------------------------------------------------*/
+  38:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** /* Private function prototypes -----------------------------------------------*/
+  39:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** /* Private functions ---------------------------------------------------------*/
+  40:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** 
+  41:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** /******************************************************************************/
+  42:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** /*            Cortex-M3 Processor Exceptions Handlers                         */
+  43:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** /******************************************************************************/
+  44:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** 
+  45:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** /**
+  46:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   * @brief  This function handles NMI exception.
+  47:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   * @param  None
+  48:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   * @retval None
+  49:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   */
+  50:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** void NMI_Handler(void)
+  51:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** {
   27              		.loc 1 51 1 view -0
   28              		.cfi_startproc
   29              		@ args = 0, pretend = 0, frame = 0
   30              		@ frame_needed = 0, uses_anonymous_args = 0
   31              		@ link register save eliminated.
-  52:./source/stm32f10x_it.c **** }
+  52:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** }
   32              		.loc 1 52 1 view .LVU1
   33 0000 7047     		bx	lr
   34              		.cfi_endproc
@@ -98,14 +98,14 @@ ARM GAS  /tmp/ccCd6QbA.s 			page 1
   42              		.thumb_func
   44              	HardFault_Handler:
   45              	.LFB30:
-  53:./source/stm32f10x_it.c **** 
-  54:./source/stm32f10x_it.c **** /**
-  55:./source/stm32f10x_it.c ****   * @brief  This function handles Hard Fault exception.
-  56:./source/stm32f10x_it.c ****   * @param  None
-  57:./source/stm32f10x_it.c ****   * @retval None
-  58:./source/stm32f10x_it.c ****   */
-  59:./source/stm32f10x_it.c **** void HardFault_Handler(void)
-  60:./source/stm32f10x_it.c **** {
+  53:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** 
+  54:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** /**
+  55:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   * @brief  This function handles Hard Fault exception.
+  56:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   * @param  None
+  57:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   * @retval None
+  58:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   */
+  59:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** void HardFault_Handler(void)
+  60:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** {
   46              		.loc 1 60 1 view -0
   47              		.cfi_startproc
   48              		@ Volatile: function does not return.
@@ -113,16 +113,16 @@ ARM GAS  /tmp/ccCd6QbA.s 			page 1
   50              		@ frame_needed = 0, uses_anonymous_args = 0
   51              		@ link register save eliminated.
   52              	.L3:
-  61:./source/stm32f10x_it.c ****   /* Go to infinite loop when Hard Fault exception occurs */
-  62:./source/stm32f10x_it.c ****   while (1)
+  61:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   /* Go to infinite loop when Hard Fault exception occurs */
+  62:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   while (1)
   53              		.loc 1 62 3 view .LVU3
-  63:./source/stm32f10x_it.c ****   {
-  64:./source/stm32f10x_it.c ****   }
-ARM GAS  /tmp/ccCd6QbA.s 			page 3
+  63:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   {
+  64:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   }
+ARM GAS  /tmp/ccM7CD98.s 			page 3
 
 
   54              		.loc 1 64 3 view .LVU4
-  62:./source/stm32f10x_it.c ****   {
+  62:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   {
   55              		.loc 1 62 9 view .LVU5
   56 0000 FEE7     		b	.L3
   57              		.cfi_endproc
@@ -135,15 +135,15 @@ ARM GAS  /tmp/ccCd6QbA.s 			page 1
   65              		.thumb_func
   67              	MemManage_Handler:
   68              	.LFB31:
-  65:./source/stm32f10x_it.c **** }
-  66:./source/stm32f10x_it.c **** 
-  67:./source/stm32f10x_it.c **** /**
-  68:./source/stm32f10x_it.c ****   * @brief  This function handles Memory Manage exception.
-  69:./source/stm32f10x_it.c ****   * @param  None
-  70:./source/stm32f10x_it.c ****   * @retval None
-  71:./source/stm32f10x_it.c ****   */
-  72:./source/stm32f10x_it.c **** void MemManage_Handler(void)
-  73:./source/stm32f10x_it.c **** {
+  65:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** }
+  66:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** 
+  67:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** /**
+  68:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   * @brief  This function handles Memory Manage exception.
+  69:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   * @param  None
+  70:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   * @retval None
+  71:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   */
+  72:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** void MemManage_Handler(void)
+  73:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** {
   69              		.loc 1 73 1 view -0
   70              		.cfi_startproc
   71              		@ Volatile: function does not return.
@@ -151,13 +151,13 @@ ARM GAS  /tmp/ccCd6QbA.s 			page 1
   73              		@ frame_needed = 0, uses_anonymous_args = 0
   74              		@ link register save eliminated.
   75              	.L5:
-  74:./source/stm32f10x_it.c ****   /* Go to infinite loop when Memory Manage exception occurs */
-  75:./source/stm32f10x_it.c ****   while (1)
+  74:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   /* Go to infinite loop when Memory Manage exception occurs */
+  75:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   while (1)
   76              		.loc 1 75 3 view .LVU7
-  76:./source/stm32f10x_it.c ****   {
-  77:./source/stm32f10x_it.c ****   }
+  76:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   {
+  77:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   }
   77              		.loc 1 77 3 view .LVU8
-  75:./source/stm32f10x_it.c ****   {
+  75:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   {
   78              		.loc 1 75 9 view .LVU9
   79 0000 FEE7     		b	.L5
   80              		.cfi_endproc
@@ -170,18 +170,18 @@ ARM GAS  /tmp/ccCd6QbA.s 			page 1
   88              		.thumb_func
   90              	BusFault_Handler:
   91              	.LFB32:
-  78:./source/stm32f10x_it.c **** }
-  79:./source/stm32f10x_it.c **** 
-  80:./source/stm32f10x_it.c **** /**
-  81:./source/stm32f10x_it.c ****   * @brief  This function handles Bus Fault exception.
-  82:./source/stm32f10x_it.c ****   * @param  None
-  83:./source/stm32f10x_it.c ****   * @retval None
-  84:./source/stm32f10x_it.c ****   */
-  85:./source/stm32f10x_it.c **** void BusFault_Handler(void)
-ARM GAS  /tmp/ccCd6QbA.s 			page 4
+  78:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** }
+  79:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** 
+  80:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** /**
+  81:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   * @brief  This function handles Bus Fault exception.
+  82:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   * @param  None
+  83:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   * @retval None
+  84:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   */
+  85:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** void BusFault_Handler(void)
+ARM GAS  /tmp/ccM7CD98.s 			page 4
 
 
-  86:./source/stm32f10x_it.c **** {
+  86:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** {
   92              		.loc 1 86 1 view -0
   93              		.cfi_startproc
   94              		@ Volatile: function does not return.
@@ -189,13 +189,13 @@ ARM GAS  /tmp/ccCd6QbA.s 			page 1
   96              		@ frame_needed = 0, uses_anonymous_args = 0
   97              		@ link register save eliminated.
   98              	.L7:
-  87:./source/stm32f10x_it.c ****   /* Go to infinite loop when Bus Fault exception occurs */
-  88:./source/stm32f10x_it.c ****   while (1)
+  87:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   /* Go to infinite loop when Bus Fault exception occurs */
+  88:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   while (1)
   99              		.loc 1 88 3 view .LVU11
-  89:./source/stm32f10x_it.c ****   {
-  90:./source/stm32f10x_it.c ****   }
+  89:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   {
+  90:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   }
  100              		.loc 1 90 3 view .LVU12
-  88:./source/stm32f10x_it.c ****   {
+  88:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   {
  101              		.loc 1 88 9 view .LVU13
  102 0000 FEE7     		b	.L7
  103              		.cfi_endproc
@@ -208,15 +208,15 @@ ARM GAS  /tmp/ccCd6QbA.s 			page 1
  111              		.thumb_func
  113              	UsageFault_Handler:
  114              	.LFB33:
-  91:./source/stm32f10x_it.c **** }
-  92:./source/stm32f10x_it.c **** 
-  93:./source/stm32f10x_it.c **** /**
-  94:./source/stm32f10x_it.c ****   * @brief  This function handles Usage Fault exception.
-  95:./source/stm32f10x_it.c ****   * @param  None
-  96:./source/stm32f10x_it.c ****   * @retval None
-  97:./source/stm32f10x_it.c ****   */
-  98:./source/stm32f10x_it.c **** void UsageFault_Handler(void)
-  99:./source/stm32f10x_it.c **** {
+  91:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** }
+  92:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** 
+  93:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** /**
+  94:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   * @brief  This function handles Usage Fault exception.
+  95:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   * @param  None
+  96:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   * @retval None
+  97:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   */
+  98:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** void UsageFault_Handler(void)
+  99:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** {
  115              		.loc 1 99 1 view -0
  116              		.cfi_startproc
  117              		@ Volatile: function does not return.
@@ -224,13 +224,13 @@ ARM GAS  /tmp/ccCd6QbA.s 			page 1
  119              		@ frame_needed = 0, uses_anonymous_args = 0
  120              		@ link register save eliminated.
  121              	.L9:
- 100:./source/stm32f10x_it.c ****   /* Go to infinite loop when Usage Fault exception occurs */
- 101:./source/stm32f10x_it.c ****   while (1)
+ 100:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   /* Go to infinite loop when Usage Fault exception occurs */
+ 101:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   while (1)
  122              		.loc 1 101 3 view .LVU15
- 102:./source/stm32f10x_it.c ****   {
- 103:./source/stm32f10x_it.c ****   }
+ 102:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   {
+ 103:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   }
  123              		.loc 1 103 3 view .LVU16
- 101:./source/stm32f10x_it.c ****   {
+ 101:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   {
  124              		.loc 1 101 9 view .LVU17
  125 0000 FEE7     		b	.L9
  126              		.cfi_endproc
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccCd6QbA.s 			page 1
  129              		.section	.text.SVC_Handler,"ax",%progbits
  130              		.align	1
  131              		.global	SVC_Handler
-ARM GAS  /tmp/ccCd6QbA.s 			page 5
+ARM GAS  /tmp/ccM7CD98.s 			page 5
 
 
  132              		.syntax unified
@@ -246,21 +246,21 @@ ARM GAS  /tmp/ccCd6QbA.s 			page 1
  134              		.thumb_func
  136              	SVC_Handler:
  137              	.LFB34:
- 104:./source/stm32f10x_it.c **** }
- 105:./source/stm32f10x_it.c **** 
- 106:./source/stm32f10x_it.c **** /**
- 107:./source/stm32f10x_it.c ****   * @brief  This function handles SVCall exception.
- 108:./source/stm32f10x_it.c ****   * @param  None
- 109:./source/stm32f10x_it.c ****   * @retval None
- 110:./source/stm32f10x_it.c ****   */
- 111:./source/stm32f10x_it.c **** void SVC_Handler(void)
- 112:./source/stm32f10x_it.c **** {
+ 104:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** }
+ 105:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** 
+ 106:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** /**
+ 107:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   * @brief  This function handles SVCall exception.
+ 108:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   * @param  None
+ 109:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   * @retval None
+ 110:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   */
+ 111:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** void SVC_Handler(void)
+ 112:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** {
  138              		.loc 1 112 1 view -0
  139              		.cfi_startproc
  140              		@ args = 0, pretend = 0, frame = 0
  141              		@ frame_needed = 0, uses_anonymous_args = 0
  142              		@ link register save eliminated.
- 113:./source/stm32f10x_it.c **** }
+ 113:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** }
  143              		.loc 1 113 1 view .LVU19
  144 0000 7047     		bx	lr
  145              		.cfi_endproc
@@ -273,20 +273,20 @@ ARM GAS  /tmp/ccCd6QbA.s 			page 1
  153              		.thumb_func
  155              	DebugMon_Handler:
  156              	.LFB35:
- 114:./source/stm32f10x_it.c **** 
- 115:./source/stm32f10x_it.c **** /**
- 116:./source/stm32f10x_it.c ****   * @brief  This function handles Debug Monitor exception.
- 117:./source/stm32f10x_it.c ****   * @param  None
- 118:./source/stm32f10x_it.c ****   * @retval None
- 119:./source/stm32f10x_it.c ****   */
- 120:./source/stm32f10x_it.c **** void DebugMon_Handler(void)
- 121:./source/stm32f10x_it.c **** {
+ 114:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** 
+ 115:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** /**
+ 116:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   * @brief  This function handles Debug Monitor exception.
+ 117:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   * @param  None
+ 118:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   * @retval None
+ 119:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   */
+ 120:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** void DebugMon_Handler(void)
+ 121:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** {
  157              		.loc 1 121 1 view -0
  158              		.cfi_startproc
  159              		@ args = 0, pretend = 0, frame = 0
  160              		@ frame_needed = 0, uses_anonymous_args = 0
  161              		@ link register save eliminated.
- 122:./source/stm32f10x_it.c **** }
+ 122:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** }
  162              		.loc 1 122 1 view .LVU21
  163 0000 7047     		bx	lr
  164              		.cfi_endproc
@@ -298,24 +298,24 @@ ARM GAS  /tmp/ccCd6QbA.s 			page 1
  171              		.thumb
  172              		.thumb_func
  174              	PendSV_Handler:
-ARM GAS  /tmp/ccCd6QbA.s 			page 6
+ARM GAS  /tmp/ccM7CD98.s 			page 6
 
 
  175              	.LFB36:
- 123:./source/stm32f10x_it.c **** 
- 124:./source/stm32f10x_it.c **** /**
- 125:./source/stm32f10x_it.c ****   * @brief  This function handles PendSV_Handler exception.
- 126:./source/stm32f10x_it.c ****   * @param  None
- 127:./source/stm32f10x_it.c ****   * @retval None
- 128:./source/stm32f10x_it.c ****   */
- 129:./source/stm32f10x_it.c **** void PendSV_Handler(void)
- 130:./source/stm32f10x_it.c **** {
+ 123:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** 
+ 124:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** /**
+ 125:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   * @brief  This function handles PendSV_Handler exception.
+ 126:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   * @param  None
+ 127:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   * @retval None
+ 128:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   */
+ 129:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** void PendSV_Handler(void)
+ 130:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** {
  176              		.loc 1 130 1 view -0
  177              		.cfi_startproc
  178              		@ args = 0, pretend = 0, frame = 0
  179              		@ frame_needed = 0, uses_anonymous_args = 0
  180              		@ link register save eliminated.
- 131:./source/stm32f10x_it.c **** }
+ 131:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** }
  181              		.loc 1 131 1 view .LVU23
  182 0000 7047     		bx	lr
  183              		.cfi_endproc
@@ -328,48 +328,48 @@ ARM GAS  /tmp/ccCd6QbA.s 			page 1
  191              		.thumb_func
  193              	SysTick_Handler:
  194              	.LFB37:
- 132:./source/stm32f10x_it.c **** 
- 133:./source/stm32f10x_it.c **** /**
- 134:./source/stm32f10x_it.c ****   * @brief  This function handles SysTick Handler.
- 135:./source/stm32f10x_it.c ****   * @param  None
- 136:./source/stm32f10x_it.c ****   * @retval None
- 137:./source/stm32f10x_it.c ****   */
- 138:./source/stm32f10x_it.c **** void SysTick_Handler(void)
- 139:./source/stm32f10x_it.c **** {
+ 132:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** 
+ 133:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** /**
+ 134:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   * @brief  This function handles SysTick Handler.
+ 135:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   * @param  None
+ 136:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   * @retval None
+ 137:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c ****   */
+ 138:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** void SysTick_Handler(void)
+ 139:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** {
  195              		.loc 1 139 1 view -0
  196              		.cfi_startproc
  197              		@ args = 0, pretend = 0, frame = 0
  198              		@ frame_needed = 0, uses_anonymous_args = 0
  199              		@ link register save eliminated.
- 140:./source/stm32f10x_it.c **** }
+ 140:./.ccls_cache/home/carver/Documents/stm32_with_linux/medical/source/stm32f10x_it.c **** }
  200              		.loc 1 140 1 view .LVU25
  201 0000 7047     		bx	lr
  202              		.cfi_endproc
  203              	.LFE37:
  205              		.text
  206              	.Letext0:
-ARM GAS  /tmp/ccCd6QbA.s 			page 7
+ARM GAS  /tmp/ccM7CD98.s 			page 7
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f10x_it.c
-     /tmp/ccCd6QbA.s:19     .text.NMI_Handler:00000000 $t
-     /tmp/ccCd6QbA.s:25     .text.NMI_Handler:00000000 NMI_Handler
-     /tmp/ccCd6QbA.s:38     .text.HardFault_Handler:00000000 $t
-     /tmp/ccCd6QbA.s:44     .text.HardFault_Handler:00000000 HardFault_Handler
-     /tmp/ccCd6QbA.s:61     .text.MemManage_Handler:00000000 $t
-     /tmp/ccCd6QbA.s:67     .text.MemManage_Handler:00000000 MemManage_Handler
-     /tmp/ccCd6QbA.s:84     .text.BusFault_Handler:00000000 $t
-     /tmp/ccCd6QbA.s:90     .text.BusFault_Handler:00000000 BusFault_Handler
-     /tmp/ccCd6QbA.s:107    .text.UsageFault_Handler:00000000 $t
-     /tmp/ccCd6QbA.s:113    .text.UsageFault_Handler:00000000 UsageFault_Handler
-     /tmp/ccCd6QbA.s:130    .text.SVC_Handler:00000000 $t
-     /tmp/ccCd6QbA.s:136    .text.SVC_Handler:00000000 SVC_Handler
-     /tmp/ccCd6QbA.s:149    .text.DebugMon_Handler:00000000 $t
-     /tmp/ccCd6QbA.s:155    .text.DebugMon_Handler:00000000 DebugMon_Handler
-     /tmp/ccCd6QbA.s:168    .text.PendSV_Handler:00000000 $t
-     /tmp/ccCd6QbA.s:174    .text.PendSV_Handler:00000000 PendSV_Handler
-     /tmp/ccCd6QbA.s:187    .text.SysTick_Handler:00000000 $t
-     /tmp/ccCd6QbA.s:193    .text.SysTick_Handler:00000000 SysTick_Handler
+     /tmp/ccM7CD98.s:19     .text.NMI_Handler:00000000 $t
+     /tmp/ccM7CD98.s:25     .text.NMI_Handler:00000000 NMI_Handler
+     /tmp/ccM7CD98.s:38     .text.HardFault_Handler:00000000 $t
+     /tmp/ccM7CD98.s:44     .text.HardFault_Handler:00000000 HardFault_Handler
+     /tmp/ccM7CD98.s:61     .text.MemManage_Handler:00000000 $t
+     /tmp/ccM7CD98.s:67     .text.MemManage_Handler:00000000 MemManage_Handler
+     /tmp/ccM7CD98.s:84     .text.BusFault_Handler:00000000 $t
+     /tmp/ccM7CD98.s:90     .text.BusFault_Handler:00000000 BusFault_Handler
+     /tmp/ccM7CD98.s:107    .text.UsageFault_Handler:00000000 $t
+     /tmp/ccM7CD98.s:113    .text.UsageFault_Handler:00000000 UsageFault_Handler
+     /tmp/ccM7CD98.s:130    .text.SVC_Handler:00000000 $t
+     /tmp/ccM7CD98.s:136    .text.SVC_Handler:00000000 SVC_Handler
+     /tmp/ccM7CD98.s:149    .text.DebugMon_Handler:00000000 $t
+     /tmp/ccM7CD98.s:155    .text.DebugMon_Handler:00000000 DebugMon_Handler
+     /tmp/ccM7CD98.s:168    .text.PendSV_Handler:00000000 $t
+     /tmp/ccM7CD98.s:174    .text.PendSV_Handler:00000000 PendSV_Handler
+     /tmp/ccM7CD98.s:187    .text.SysTick_Handler:00000000 $t
+     /tmp/ccM7CD98.s:193    .text.SysTick_Handler:00000000 SysTick_Handler
 
 NO UNDEFINED SYMBOLS
